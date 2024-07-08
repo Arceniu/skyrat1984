@@ -8,7 +8,8 @@
 	icon_living = "regalrat"
 	icon_dead = "regalrat_dead"
 	gender = MALE
-
+	var/poison_per_bite = 0.5
+	var/poison_type = /datum/reagent/toxin
 	maxHealth = 70
 	health = 70
 
@@ -54,6 +55,7 @@
 
 	AddElementTrait(TRAIT_WADDLING, INNATE_TRAIT, /datum/element/waddling)
 	AddElement(/datum/element/ai_retaliate)
+	AddElement(/datum/element/venomous, poison_type, poison_per_bite)
 	AddElement(/datum/element/door_pryer, pry_time = 5 SECONDS, interaction_key = REGALRAT_INTERACTION)
 	AddElement(/datum/element/poster_tearer, interaction_key = REGALRAT_INTERACTION)
 	AddComponent(\

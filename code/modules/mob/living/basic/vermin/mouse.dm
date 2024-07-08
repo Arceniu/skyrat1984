@@ -16,6 +16,8 @@
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	gold_core_spawnable = FRIENDLY_SPAWN
 	faction = list(FACTION_RAT, FACTION_MAINT_CREATURES)
+	var/poison_per_bite = 0.5
+	var/poison_type = /datum/reagent/toxin
 	butcher_results = list(/obj/item/food/meat/slab/mouse = 1)
 
 	speak_emote = list("squeaks")
@@ -50,6 +52,7 @@
 		body_color = pick("brown", "gray", "white")
 	held_state = "mouse_[body_color]" // not handled by variety element
 	AddElement(/datum/element/animal_variety, "mouse", body_color, FALSE)
+	AddElement(/datum/element/venomous, poison_type, poison_per_bite)
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOUSE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 10)
 	AddComponent(/datum/component/squeak, list('sound/creatures/mousesqueek.ogg' = 1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE) //as quiet as a mouse or whatever
 	var/static/list/loc_connections = list(
