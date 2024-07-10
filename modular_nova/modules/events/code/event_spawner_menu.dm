@@ -12,7 +12,7 @@
 	var/list/additional_equipment = list()
 	var/disappear_after_spawn = FALSE
 	var/prompt_players = FALSE
-
+	var/infinite = FALSE
 	var/show_outfit_equipment = FALSE
 
 /datum/event_spawner_instance/New(_id, template_id)
@@ -58,6 +58,7 @@
 	blocks["gender_whitelist"] = gender_whitelist.Copy()
 	blocks["ckey_whitelist"] = ckey_whitelist.Copy()
 	blocks["disappear_after_spawn"] = disappear_after_spawn
+	blocks["infinite_use"] = infinite
 	blocks["prompt_players"] = prompt_players
 	return json_encode(blocks)
 
