@@ -70,6 +70,7 @@
 #define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
 #define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
 #define JOB_CORRECTIONS_OFFICER "Corrections Officer" // NOVA EDIT ADDITION
+#define JOB_SECURITY_MEDIC "Security Medic"
 //Engineering
 #define JOB_STATION_ENGINEER "Station Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
