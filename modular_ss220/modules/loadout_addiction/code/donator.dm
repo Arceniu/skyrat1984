@@ -461,13 +461,13 @@
 /datum/loadout_item/suit/butter
 	ckeywhitelist = null
 
-/datum/loadout_item/under/jumpsuit/donatorr
+/datum/loadout_item/under/jumpsuit/donator
 	donator_only = FALSE
 
 /datum/loadout_item/under/donator
 	donator_only = FALSE
 
-/datum/loadout_item/suit/donatorr
+/datum/loadout_item/suit/donator
 	donator_only = FALSE
 
 /datum/loadout_item/shoes/donator
