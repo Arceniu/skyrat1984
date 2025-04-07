@@ -429,10 +429,10 @@
 	ckeywhitelist = null
 
 /datum/loadout_item/under/jumpsuit/techpants
-    ckeywhitelist = null
+	ckeywhitelist = null
 
 /datum/loadout_item/inhand/drop_pouch
-    ckeywhitelist = null
+	ckeywhitelist = null
 
 /datum/loadout_item/inhand/melonseva
 	ckeywhitelist = null
