@@ -8839,6 +8839,7 @@
 #include "modular_ss220\modules\return_prs\gunsgalore\code\guns\ppsh.dm"
 #include "modular_ss220\modules\return_prs\gunsgalore\code\guns\scar.dm"
 #include "modular_ss220\modules\return_prs\gunsgalore\code\guns\stg.dm"
+#include "modular_ss220\modules\return_prs\microfusion\code\_gun_hud_component.dm"
 #include "modular_ss220\modules\return_prs\microfusion\code\_microfusion_defines.dm"
 #include "modular_ss220\modules\return_prs\microfusion\code\cargo_stuff.dm"
 #include "modular_ss220\modules\return_prs\microfusion\code\gun_types.dm"
