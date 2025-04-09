@@ -27,7 +27,7 @@
 	. = ..()
 
 	if(istype(hitby, /obj/projectile))
-/*		var/obj/projectile/incoming_projectile = hitby
+/*		var/obj/projectile/incoming_projectile = hitby //ss1984 edit
 		incoming_projectile.armour_penetration = 0 */
 		playsound(owner, SFX_RICOCHET, BLOCK_SOUND_VOLUME, vary = TRUE)
 
@@ -75,7 +75,7 @@
 	. = ..()
 
 	if(istype(hitby, /obj/projectile))
-/*		var/obj/projectile/incoming_projectile = hitby
+/*		var/obj/projectile/incoming_projectile = hitby //ss1984 edit
 		incoming_projectile.armour_penetration = 0 */
 		playsound(src, SFX_RICOCHET, BLOCK_SOUND_VOLUME, vary = TRUE)
 
