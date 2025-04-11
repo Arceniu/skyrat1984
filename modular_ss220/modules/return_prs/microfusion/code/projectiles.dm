@@ -22,7 +22,7 @@
 	name = "microfusion disabler laser"
 	icon = 'modular_ss220/modules/return_prs/microfusion/icons/projectiles.dmi'
 	icon_state = "disabler"
-	damage = 41
+	damage = 30
 	damage_type = STAMINA
 	armor_flag = ENERGY
 	hitsound = 'sound/items/weapons/tap.ogg'
@@ -74,7 +74,7 @@
 
 /obj/projectile/beam/laser/microfusion/lance
 	name = "lance microfusion laser"
-	damage = 50 // We're turning the gun into a heavylaser
+	damage = 40 // We're turning the gun into a heavylaser
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
