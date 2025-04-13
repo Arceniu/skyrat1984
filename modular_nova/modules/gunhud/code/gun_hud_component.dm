@@ -165,7 +165,7 @@
 				oth_t = "t9"
 				oth_h = "h9"
 		hud.set_hud(backing_color, oth_o, oth_t, oth_h, indicator)
-
+// ss1984 edit start
 	else if(istype(parent, /obj/item/gun/microfusion))
 		var/obj/item/gun/microfusion/parent_gun = parent
 		if(!parent_gun.phase_emitter)
@@ -202,7 +202,7 @@
 			hud.maptext = span_maptext("<div align='center' valign='middle' style='position:relative'><font color='[COLOR_YELLOW]'>[battery_percent]%</font><br><font color='[COLOR_CYAN]'>[shot_cost_percent]%</font></div>")
 			return
 		hud.maptext = span_maptext("<div align='center' valign='middle' style='position:relative'><font color='[COLOR_VIBRANT_LIME]'>[battery_percent]%</font><br><font color='[COLOR_CYAN]'>[shot_cost_percent]%</font></div>")
-
+// ss1984 edit end
 /obj/item/gun/ballistic/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/ammo_hud)
