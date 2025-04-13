@@ -13,7 +13,7 @@
 	var/finished_recharging = FALSE
 
 	var/static/list/allowed_devices = typecacheof(list(
-		/obj/item/gun/microfusion, // ss984 edit
+		/obj/item/gun/microfusion, // ss1984 edit
 		/obj/item/gun/energy,
 		/obj/item/melee/baton/security,
 		/obj/item/ammo_box/magazine/recharge,
