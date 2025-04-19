@@ -5,8 +5,6 @@
 
 /area/awaymission/black_mesa
 	name = "Black Mesa Inside"
-	requires_power = FALSE
-	always_unpowered = FALSE
 
 /area/awaymission/black_mesa/entrance
 	name = "Black Mesa Entrance"
