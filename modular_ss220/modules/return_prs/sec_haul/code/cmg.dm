@@ -155,6 +155,20 @@
 /obj/item/gun/energy/laser/hellgun/blueshield
 	pin = /obj/item/firing_pin/implant/mindshield
 
+/obj/item/gun/energy/laser/thermal/inferno/blueshield
+	pin = /obj/item/firing_pin/implant/mindshield
+
+/obj/item/gun/energy/laser/thermal/cryo/blueshield
+	pin = /obj/item/firing_pin/implant/mindshield
+
+/obj/item/storage/belt/holster/energy/thermal/blueshield
+
+/obj/item/storage/belt/holster/energy/thermal/blueshield/PopulateContents()
+	generate_items_inside(list(
+		/obj/item/gun/energy/laser/thermal/inferno/blueshield = 1,
+		/obj/item/gun/energy/laser/thermal/cryo/blueshield = 1,
+	),src)
+
 /obj/item/choice_beacon/blueshield
 	name = "gunset beacon"
 	desc = "A single use beacon to deliver a gunset of your choice. Please only call this in your office"
@@ -165,6 +179,7 @@
 	var/static/list/selectable_gun_types = list(
 		"Custom Hellfire Laser Rifle" = /obj/item/gun/energy/laser/hellgun/blueshield,
 		"Blueshield's CMG-2 Gunset" = /obj/item/storage/toolbox/guncase/nova/blueshield_cmg,
+		"Blueshield's Thermal Holster" = /obj/item/storage/belt/holster/energy/thermal/blueshield,
 	)
 
 	return selectable_gun_types
