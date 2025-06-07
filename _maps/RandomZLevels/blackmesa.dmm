@@ -49,7 +49,7 @@
 /turf/open/floor/iron/textured_large,
 /area/awaymission/black_mesa/entrance_hall)
 "aaO" = (
-/obj/item/clothing/mask/gas/hecu1,
+/obj/item/clothing/mask/gas/hecu/old,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/awaymission/black_mesa/security_outpost)
