@@ -12,14 +12,14 @@
 	worn_icon = 'modular_ss220/modules/return_prs/gunsgalore/icons/misc/mask_worn.dmi'
 	icon_state = "m38_mask"
 
-	/obj/item/clothing/mask/gas/hecu/old
+/obj/item/clothing/mask/gas/hecu/old
 	name = "modern gas mask"
 	desc = "MY. ASS. IS. HEAVY."
 	icon = 'modular_ss220/modules/return_prs/gunsgalore/icons/misc/mask_obj.dmi'
 	worn_icon = 'modular_ss220/modules/return_prs/gunsgalore/icons/misc/mask_worn.dmi'
 	icon_state = "hecu"
 
-	/obj/item/clothing/mask/gas/hecu/alt
+/obj/item/clothing/mask/gas/hecu/alt
 	icon = 'modular_ss220/modules/return_prs/gunsgalore/icons/misc/mask_obj.dmi'
 	worn_icon = 'modular_ss220/modules/return_prs/gunsgalore/icons/misc/mask_worn.dmi'
 	worn_icon_teshari = 'modular_ss220/modules/return_prs/gunsgalore/icons/misc/mask_worn_t.dmi'
