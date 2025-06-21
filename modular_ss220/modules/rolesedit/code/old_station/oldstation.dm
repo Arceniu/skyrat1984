@@ -1,5 +1,6 @@
 //  old trims overrides and new one's
-datum/id_trim/away/old/sci		
+
+/datum/id_trim/away/old/sci		
 	sechud_icon_state = SECHUD_OLD_SCI		
 
 /datum/id_trim/away/old/robo		
