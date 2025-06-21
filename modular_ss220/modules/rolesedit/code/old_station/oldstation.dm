@@ -349,6 +349,19 @@
 
 	return ..()
 
+//spawner override
+
+/obj/effect/mob_spawn/ghost_role/human/oldeng
+	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
+
+/obj/effect/mob_spawn/ghost_role/human/oldsci
+	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
+
+/obj/effect/mob_spawn/ghost_role/human/oldsec
+	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
+
+
+
 //medic spawner
 
 /obj/effect/mob_spawn/ghost_role/human/oldmed
@@ -365,6 +378,8 @@
 	important_text = "Work as a team with your fellow survivors and do not abandon them."
 	outfit = /datum/outfit/oldmed
 	spawner_job_path = /datum/job/ancient_crew
+	random_appearance = FALSE
+	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
 
 /obj/effect/mob_spawn/ghost_role/human/oldmed/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
@@ -388,3 +403,7 @@
 	new /obj/item/clothing/suit/bio_suit/general(src)
 	new /obj/item/clothing/suit/toggle/labcoat/medical(src)
 	new /obj/item/storage/box/masks(src)
+
+/obj/structure/showcase/machinery/oldpod/used
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper-open"
