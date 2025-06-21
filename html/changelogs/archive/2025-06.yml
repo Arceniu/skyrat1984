@@ -811,6 +811,9 @@
   - map: Added new tarkon express console pad, sales pad, and budget card to their
       base.
 2025-06-21:
+  Arceniu:
+  - qol: returned 3 quirks back
   DenIS318:
   - admin: Admins can properly cancel non-recallable shuttles now (no more need to
       disable/enable shuttle for that)
+  - bugfix: Temporal fix for resizeobserver error
