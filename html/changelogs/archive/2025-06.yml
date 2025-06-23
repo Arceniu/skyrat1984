@@ -817,3 +817,13 @@
   - admin: Admins can properly cancel non-recallable shuttles now (no more need to
       disable/enable shuttle for that)
   - bugfix: Temporal fix for resizeobserver error
+2025-06-22:
+  Arceniu:
+  - bugfix: oldstation spawners now able to have custom character(human, felinid,
+      synth), cryo icon fixed
+  - rscadd: added ACCESS_MINERAL_STOREROOM access to spare oldstation id
+  DenIS318:
+  - qol: Return UI buttons at top of screen that were removed by TG
+2025-06-23:
+  DenIS318:
+  - spellcheck: Localize most default telecomms messages (credits to Dexter0506)
