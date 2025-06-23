@@ -54,7 +54,18 @@
 	always_place = TRUE
 
 
+/obj/machinery/computer/communications/syndicate/ds
+	name = "syndicate communications console"
+	desc = "A console meant to communicate with Syndicate upper command. This one seems to be busy processing flight calculations since you last saw it, usage is limited..."
+	icon_keyboard = "tech_key"
+	icon_screen = "commsyndie"
+	circuit = /obj/item/circuitboard/computer/communications/syndicate/ds
+	away = TRUE
+	syndicate = TRUE
 
+/obj/item/circuitboard/computer/communications/syndicate/ds
+	greyscale_colors = CIRCUIT_COLOR_SECURITY
+	build_path = /obj/machinery/computer/communications/syndicate/ds
 
 
 

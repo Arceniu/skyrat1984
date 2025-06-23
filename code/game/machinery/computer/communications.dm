@@ -262,7 +262,7 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				message_syndicate(message, user)
 				to_chat(user, span_danger("Message transmitted to Syndicate Command."))
 			else if(away) // ss1984 add start
-				message_centcom(message, user) 
+				message_centcom(message, user)
 				to_chat(user, span_danger("Message transmitted to Nanotrasen Navy.")) // ss1984 add end
 			else
 				message_centcom(message, user)
@@ -624,13 +624,6 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 					data["canMessageAssociates"] = TRUE
 					data["canRequestNuke"] = TRUE
 
-				if(away) //ss1984 add start
-					data["away"] = TRUE
-					data["canMessageAssociates"] = TRUE
-					data["canRequestNuke"] = FALSE
-				if(!away)
-					data["away"] = FALSE //ss1984 add end
-
 				if (can_send_messages_to_other_sectors(user))
 					data["canSendToSectors"] = TRUE
 
@@ -654,6 +647,14 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 					data["canSetAlertLevel"] = HAS_SILICON_ACCESS(user) ? "NO_SWIPE_NEEDED" : "SWIPE_NEEDED"
 				else if(syndicate)
 					data["canMakeAnnouncement"] = TRUE
+
+				if(away) //ss1984 add start
+					data["away"] = TRUE
+					data["canMessageAssociates"] = TRUE
+					data["canMakeAnnouncement"] = FALSE
+					data["canRequestNuke"] = FALSE
+				if(!away)
+					data["away"] = FALSE //ss1984 add end
 
 				if (authenticated_as_ai_or_captain(user)) // NOVA EDIT CHANGE - Allows AI to report to CC in the event of there being no command alive/to begin with - ORIGINAL: if (authenticated_as_non_silicon_captain(user))
 					data["canMessageAssociates"] = TRUE
