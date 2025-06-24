@@ -648,13 +648,11 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				else if(syndicate)
 					data["canMakeAnnouncement"] = TRUE
 
-				if(away) //ss1984 add start
-					data["away"] = TRUE
+				data["away"] = away //ss1984 add start
+				if(away)
 					data["canMessageAssociates"] = TRUE
 					data["canMakeAnnouncement"] = FALSE
-					data["canRequestNuke"] = FALSE
-				if(!away)
-					data["away"] = FALSE //ss1984 add end
+					data["canRequestNuke"] = FALSE //ss1984 add end
 
 				if (authenticated_as_ai_or_captain(user)) // NOVA EDIT CHANGE - Allows AI to report to CC in the event of there being no command alive/to begin with - ORIGINAL: if (authenticated_as_non_silicon_captain(user))
 					data["canMessageAssociates"] = TRUE
