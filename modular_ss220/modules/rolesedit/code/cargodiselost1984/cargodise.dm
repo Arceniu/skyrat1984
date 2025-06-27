@@ -28,6 +28,7 @@
 	suit = /obj/item/clothing/suit/toggle/cargo_tech
 	gloves = /obj/item/clothing/gloves/fingerless
 	role_job = /datum/job/freighter_crew
+	paycheck_name = "Freighter staff: Salary"
 	backpack_contents = list(
 		/obj/item/boxcutter=1,
 		/obj/item/universal_scanner=1,
@@ -42,6 +43,7 @@
 	mask = /obj/item/clothing/mask/neck_gaiter
 	gloves = /obj/item/clothing/gloves/color/black
 	role_job = /datum/job/freighter_crew
+	paycheck_name = "Freighter staff: Salary"
 	backpack_contents = list(/obj/item/flashlight/seclite=1,\
 		/obj/item/knife/combat/survival=1,
 		/obj/item/mining_voucher=1,
@@ -62,6 +64,7 @@
 	l_pocket = /obj/item/clipboard
 	r_pocket = /obj/item/stamp/head/qm
 	role_job = /datum/job/freighter_command
+	paycheck_name = "Accrual from private business: 'Salary'"
 	backpack_contents = list(
 		/obj/item/megaphone/cargo=1,
 		/obj/item/clothing/gloves/cargo_gauntlet=1,
