@@ -23,6 +23,7 @@
 		/obj/item/stack/sheet/bronze = 2,
 		/obj/item/stack/sheet/runed_metal = 1,
 		/obj/item/stack/sheet/titaniumglass = 2,
+		/obj/item/stack/sheet/mineral/plastitanium = 2,
 		exotic_material = 2 // this needs to be refactored properly
 	)
 
@@ -224,6 +225,23 @@
 					var/obj/structure/girder/reinforced/R = new (loc)
 					user.mind?.adjust_experience(/datum/skill/construction, 2) //NOVA EDIT ADDITION: Construction Skill
 					transfer_fingerprints_to(R)
+					qdel(src)
+				return
+
+		if(istype(sheets, /obj/item/stack/sheet/mineral/plastitanium))
+			var/amount = construction_cost[/obj/item/stack/sheet/mineral/plastitanium]
+			if(state == GIRDER_REINF)
+				if(sheets.get_amount() < amount)
+					return
+				balloon_alert(user, "adding plating...")
+				if(do_after(user, 50 * platingmodifier * skill_modifier, target = src))
+					if(sheets.get_amount() < amount)
+						return
+					sheets.use(amount)
+					var/turf/T = get_turf(src)
+					T.place_on_top(/turf/closed/wall/r_wall/syndicate)
+					user.mind?.adjust_experience(/datum/skill/construction, 2)
+					transfer_fingerprints_to(T)
 					qdel(src)
 				return
 
