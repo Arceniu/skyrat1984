@@ -104,7 +104,7 @@
 	return FALSE
 
 /obj/machinery/computer/communications/old/can_send_messages_to_other_sectors(mob/user)
-	return FALSE
+	return TRUE
 
 // comps overrides
 //this because ds2/blackmarket maybe can spawn in sector, and try to steal data
