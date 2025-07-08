@@ -12,7 +12,11 @@
 	sechud_icon_state = SECHUD_SYNDICATE_INTERDYNE_GREEN_HEAD
 	access = list(ACCESS_SYNDICATE, ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_LEADER, ACCESS_ROBOTICS)
 
+/obj/item/mod/control/pre_equipped/interdyne/nerfed
+	req_one_access = list(ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_DS)
 
+/obj/machinery/computer/shuttle/interdyne_cargo
+	req_one_access = list(ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_DS)
 
 /datum/map_template/ruin/lavaland/nova/interdyne_base1984
 	name = "Lava-Ruin Interdyne Pharmaceutics Nova Sector Base 3c76928 (1984)"
