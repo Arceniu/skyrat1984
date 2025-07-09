@@ -17,3 +17,7 @@
 
 /datum/quirk/cursed/add(client/client_source)
 	quirk_holder.AddComponent(/datum/component/omen/quirk)
+
+/datum/quirk/equipping/nerve_staple
+	desc = "You're a pacifist. Not because you want to be from birth, but because of the device stapled into your eye after you really wanted to become pacifist, but without brain damage."
+	value = 0
