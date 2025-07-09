@@ -27,6 +27,12 @@
 	stripe_color = "#4f8f56"
 	payment_department = ACCOUNT_INT
 
+/obj/item/mod/control/pre_equipped/interdyne/nerfed
+	req_one_access = list(ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_DS)
+
+/obj/machinery/computer/shuttle/interdyne_cargo
+	req_one_access = list(ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_DS)
+
 // map files
 /datum/map_template/ruin/lavaland/nova/interdyne_base1984
 	name = "Lava-Ruin Interdyne Pharmaceutics Nova Sector Base 3c76928 (1984)"
