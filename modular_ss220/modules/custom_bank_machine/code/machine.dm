@@ -210,10 +210,11 @@
 
 /obj/machinery/computer/custom_bank_machine/proc/start_siphon(mob/living/carbon/user)
 	var/obj/item/card/id/card = user.get_idcard(hand_first = TRUE)
-	if(!istype(card) || !check_access(card))
-		unauthorized = TRUE
-	else
+	if(istype(card) || check_access(card))
 		unauthorized = FALSE
+	else
+		card = user.get_idcard(hand_first = FALSE)
+		unauthorized = istype(card) && check_access(card)
 	siphoning = TRUE
 
 #define TECHWEB_NODE_CUSTOM_BANK "custom_bank"
