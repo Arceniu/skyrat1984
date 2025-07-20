@@ -204,7 +204,7 @@
 		else
 			say("Error acquired! Bank account not protected!")
 		away=card.away
-		if(!card.away & !gps)
+		if(!card.away && !gps)
 			AddComponent(/datum/component/gps, "Cash Signal")
 			gps = TRUE
 			say("Console bluespace protection enabled! GPS signal dispatched.")
