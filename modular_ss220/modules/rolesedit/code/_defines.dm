@@ -162,9 +162,6 @@
 	else
 		say("Please authorize console to budget bank card")
 
-	if(gps)
-		AddComponent(/datum/component/gps, "Cash Signal")
-
 /obj/machinery/computer/custom_bank_machine/Destroy()
 	QDEL_NULL(radio)
 	synced_bank_account = null
@@ -207,9 +204,10 @@
 		else
 			say("Error acquired! Bank account not protected!")
 		away=card.away
-		if(!card.away)
+		if(!card.away & !gps)
 			AddComponent(/datum/component/gps, "Cash Signal")
-			say("Account bluespace protection enabled!")
+			gps = TRUE
+			say("Console bluespace protection enabled! GPS signal dispatched.")
 
 	if(value)
 		if(synced_bank_account)
