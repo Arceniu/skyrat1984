@@ -83,7 +83,7 @@
 	payment_department = ACCOUNT_DS2
 
 /obj/item/card/id/departmental_budget/ds2
-	budget_name = " Syndicate - Deep Space"
+	budget_name = "Syndicate - Deep Space"
 	radio_channel = RADIO_CHANNEL_INTERDYNE //before i add ds2 freq
 	departament_access = ACCESS_SYNDICATE_DS
 	away = TRUE

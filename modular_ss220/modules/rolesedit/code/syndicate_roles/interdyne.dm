@@ -57,7 +57,7 @@
 
 // bank code
 /obj/item/card/id/departmental_budget/interdyne
-	budget_name = " Interdyne Pharmaceuticals"
+	budget_name = "Interdyne Pharmaceuticals"
 	radio_channel = RADIO_CHANNEL_INTERDYNE
 	departament_access = ACCESS_SYNDICATE_IP
 	away = TRUE
