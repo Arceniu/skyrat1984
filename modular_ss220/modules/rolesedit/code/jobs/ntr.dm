@@ -186,6 +186,9 @@
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
+/obj/item/clothing/gloves/combat/naval/nanotrasen_consultant/black
+	name = "\improper CentCom combat gloves"
+
 /obj/item/door_remote/nanotrasen_consultant
 	name = "Nanotrasen Consultant's door remote"
 	desc = "Remotely controls airlocks. This remote has specific access. Despite that, holding it makes you feel insecure for some reason."
