@@ -200,7 +200,7 @@
 	icon_state = "com_budget"
 	department_ID = ACCOUNT_CMD
 	department_name = ACCOUNT_CMD_NAME
-	//budget_name = "Command Budget"
-	//departament_access = ACCESS_CENT_GENERAL
-	//radio_channel = RADIO_CHANNEL_CENTCOM
+	budget_name = "Command Budget"
+	departament_access = ACCESS_CENT_GENERAL
+	radio_channel = RADIO_CHANNEL_CENTCOM
 
