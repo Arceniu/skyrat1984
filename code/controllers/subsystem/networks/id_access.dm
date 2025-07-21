@@ -120,6 +120,7 @@ SUBSYSTEM_DEF(id_access)
 	accesses_by_region[REGION_SUPPLY] = REGION_ACCESS_SUPPLY
 	accesses_by_region[REGION_COMMAND] = REGION_ACCESS_COMMAND
 	accesses_by_region[REGION_CENTCOM] = REGION_ACCESS_CENTCOM
+	accesses_by_region[REGION_NTR] = REGION_ACCESS_NTR
 
 	station_regions = REGION_AREA_STATION
 
@@ -190,6 +191,12 @@ SUBSYSTEM_DEF(id_access)
 		"[ACCESS_QM]" = list(
 			"regions" = list(REGION_SUPPLY),
 			"head" = JOB_QUARTERMASTER,
+			"templates" = list(),
+			"pdas" = list(),
+		),
+		"[ACCESS_CENT_GENERAL]" = list(
+			"regions" = list(REGION_NTR),
+			"head" = JOB_NT_REP,
 			"templates" = list(),
 			"pdas" = list(),
 		),

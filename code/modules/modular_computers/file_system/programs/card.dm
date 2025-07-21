@@ -60,8 +60,8 @@
 		var/list/info = managers[access_as_text]
 		var/access = access_as_text
 		// NOVA EDIT ADDITION BEGIN - Prevents those with captain access only from changing their own access (Blueshields and NTCs)
-		if(access == ACCESS_CAPTAIN)
-			continue
+		//if(access == ACCESS_CAPTAIN) //ss1984 remove
+		//	continue //ss1984 remove
 		// NOVA EDIT ADDITION END
 		if((access in auth_card.access) && ((target_dept in info["regions"]) || !target_dept))
 			region_access |= info["regions"]
