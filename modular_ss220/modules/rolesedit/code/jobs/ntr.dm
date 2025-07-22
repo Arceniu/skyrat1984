@@ -195,7 +195,6 @@
 	icon = 'modular_ss220/modules/rolesedit/icons/jobs/remote.dmi'
 	department = "ntr"
 	region_access = REGION_NTR
-	owner_trim = /datum/id_trim/job/nanotrasen_consultant
 	our_domain = list( /area/station/ )
 
 /obj/item/card/id/departmental_budget/com
