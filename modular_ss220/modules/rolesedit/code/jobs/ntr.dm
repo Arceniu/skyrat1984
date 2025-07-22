@@ -122,7 +122,7 @@
 
 	belt = /obj/item/modular_computer/pda/nanotrasen_consultant
 	glasses = /obj/item/clothing/glasses/sunglasses
-	ears = /obj/item/radio/headset/heads/nanotrasen_consultant
+	ears = /obj/item/radio/headset/heads/nanotrasen_consultant/alt
 	gloves = /obj/item/clothing/gloves/combat/naval/nanotrasen_consultant/black
 	uniform =  /obj/item/clothing/under/rank/nanotrasen_consultant
 	suit = /obj/item/clothing/suit/armor/vest/nanotrasen_consultant
