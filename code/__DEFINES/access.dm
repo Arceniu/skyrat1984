@@ -538,10 +538,9 @@
 #define REGION_NTR "Nanotrasen Official"
 /// Used to seed the accesses_by_region list in SSid_access.
 #define REGION_ACCESS_NTR list( \
-	ACCESS_CAPTAIN, \
 	ACCESS_CENT_GENERAL, \
-	ACCESS_VAULT, \
 	ACCESS_COMMAND, \
+	ACCESS_VAULT, \
 )
 //ss1984 edit end
 
