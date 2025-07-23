@@ -25,8 +25,8 @@
 	var/list/job_templates = list()
 	/// Which departments this program has access to. See region defines.
 	var/target_dept
-	/// if used by ntr or any other who doesnt have centcom_captain
-	var/centcom_minor = FALSE
+	/// if used by ntr or any other who doesnt have centcom_captain		// SS1984 ADDITION
+	var/centcom_minor = FALSE						// SS1984 ADDITION
 
 /**
  * Authenticates the program based on the specific ID card.
@@ -51,7 +51,10 @@
 		minor = FALSE
 		authenticated_card = "[auth_card.name]"
 		authenticated_user = auth_card.registered_name ? auth_card.registered_name : "Unknown"
-		if((is_centcom) && (ACCESS_CENT_CAPTAIN in auth_card.access))
+	//	job_templates = is_centcom ? SSid_access.centcom_job_templates.Copy() : SSid_access.station_job_templates.Copy()					// SS1984 REMOVAL START
+	//	valid_access = is_centcom ? SSid_access.get_region_access_list(list(REGION_CENTCOM)) : SSid_access.get_region_access_list(list(REGION_ALL_STATION))	// SS1984 REMOVAL END
+
+		if((is_centcom) && (ACCESS_CENT_CAPTAIN in auth_card.access))				// SS1984 ADDITION START
 			job_templates = SSid_access.centcom_job_templates.Copy()
 			centcom_minor = FALSE
 			valid_access = SSid_access.get_region_access_list(list(REGION_CENTCOM))
@@ -64,7 +67,7 @@
 		else
 			centcom_minor = FALSE
 			job_templates = SSid_access.station_job_templates_no_ntr.Copy()
-			valid_access = SSid_access.get_region_access_list(list(REGION_ALL_STATION))
+			valid_access = SSid_access.get_region_access_list(list(REGION_ALL_STATION))	// SS1984 ADDITION END
 		computer.update_static_data_for_all_viewers()
 		return TRUE
 
@@ -83,7 +86,8 @@
 
 	if(length(region_access))
 		minor = TRUE
-		if((is_centcom) && ((ACCESS_CENT_CAPTAIN in auth_card.access)))
+	//	valid_access |= SSid_access.get_region_access_list(region_access)		//SS1984 REMOVAL
+		if((is_centcom) && ((ACCESS_CENT_CAPTAIN in auth_card.access)))			//SS1984 ADD START
 			centcom_minor = FALSE
 			valid_access = SSid_access.get_region_access_list(list(REGION_CENTCOM))
 		else if((is_centcom) && ((ACCESS_CENT_LIVING in auth_card.access)))
@@ -92,7 +96,7 @@
 		else if(is_centcom)
 			return FALSE
 		else if(!is_centcom)
-			centcom_minor = FALSE
+			centcom_minor = FALSE		//SS1984 ADD END
 			valid_access |= SSid_access.get_region_access_list(region_access)
 		authenticated_card = "[auth_card.name] \[LIMITED ACCESS\]"
 		computer.update_static_data_for_all_viewers()
@@ -290,14 +294,14 @@
 /datum/computer_file/program/card_mod/ui_static_data(mob/user)
 	var/list/data = list()
 	data["station_name"] = station_name()
-	data["centcom_access"] = (is_centcom && (!(centcom_minor)))
+	data["centcom_access"] = (is_centcom && (!(centcom_minor)))	// SS1984 EDIT, original: data["centcom_access"] = is_centcom
 	data["minor"] = target_dept || minor ? TRUE : FALSE
 
 	var/list/regions = list()
 	var/list/tgui_region_data = SSid_access.all_region_access_tgui
-	if(is_centcom && centcom_minor)
+	if(is_centcom && centcom_minor)					// SS1984 EDIT START, original: if(is_centcom)
 		regions = tgui_region_data[REGION_NTR]
-	else if(is_centcom && (!(centcom_minor)))
+	else if(is_centcom && (!(centcom_minor)))			// SS1984 EDIT END
 		regions += tgui_region_data[REGION_CENTCOM]
 	else
 		for(var/region in SSid_access.station_regions)
