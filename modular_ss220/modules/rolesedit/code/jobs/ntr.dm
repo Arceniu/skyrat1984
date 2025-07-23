@@ -61,6 +61,7 @@
 	extra_access = list()
 	minimal_access = list(
 		ACCESS_CENT_GENERAL,
+		ACCESS_CENT_LIVING,
 		ACCESS_CHANGE_IDS,
 		ACCESS_COMMAND,
 		ACCESS_AI_UPLOAD,
@@ -111,8 +112,7 @@
 		ACCESS_CENT_GENERAL,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
-		ACCESS_CHANGE_IDS,
+		ACCESS_CENT_CAPTAIN,
 	)
 	job = /datum/job/nanotrasen_consultant
 

@@ -535,7 +535,7 @@
 
 //ss1984 edit add
 ///name for nanotrasen consultant "region".
-#define REGION_NTR "Nanotrasen Consultant"
+#define REGION_NTR "Nanotrasen Official"
 /// Used to seed the accesses_by_region list in SSid_access.
 #define REGION_ACCESS_NTR list( \
 	ACCESS_CAPTAIN, \

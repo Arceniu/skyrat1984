@@ -31,6 +31,8 @@ SUBSYSTEM_DEF(id_access)
 	var/list/station_pda_templates = list()
 	/// Helper list containing all station regions.
 	var/list/station_regions = list()
+	/// Contains all station trims, but not nt rep
+	var/list/station_job_templates_no_ntr = list()
 
 	/// The roundstart generated code for the spare ID safe. This is given to the Captain on shift start. If there's no Captain, it's given to the HoP. If there's no HoP
 	var/spare_id_safe_code = ""
@@ -194,9 +196,15 @@ SUBSYSTEM_DEF(id_access)
 			"templates" = list(),
 			"pdas" = list(),
 		),
-		"[ACCESS_CENT_GENERAL]" = list(
+		"[ACCESS_CENT_LIVING]" = list(
 			"regions" = list(REGION_NTR),
 			"head" = JOB_NT_REP,
+			"templates" = list(),
+			"pdas" = list(),
+		),
+		"[ACCESS_CENT_CAPTAIN]" = list(
+			"regions" = list(REGION_CENTCOM),
+			"head" = JOB_NAVAL_FLEET_ADMIRAL,
 			"templates" = list(),
 			"pdas" = list(),
 		),
@@ -218,7 +226,23 @@ SUBSYSTEM_DEF(id_access)
 			var/list/templates = manager["templates"]
 			templates[trim_path] = trim.assignment
 
-	var/list/centcom_job_trims = typesof(/datum/id_trim/centcom) - typesof(/datum/id_trim/centcom/corpse)
+	var/list/station_job_trims_no_ntr = subtypesof(/datum/id_trim/job) - (/datum/id_trim/job/nanotrasen_consultant)
+	for(var/trim_path in station_job_trims_no_ntr)
+		var/datum/id_trim/job/trim = trim_singletons_by_path[trim_path]
+		if(!length(trim.template_access))
+			continue
+
+		station_job_templates_no_ntr[trim_path] = trim.assignment
+		for(var/access in trim.template_access)
+			var/list/manager = sub_department_managers_tgui["[access]"]
+			if(!manager)
+				if(access != ACCESS_CHANGE_IDS)
+					WARNING("Invalid template access access \[[access]\] registered with [trim_path]. Template added to global list anyway.")
+				continue
+			var/list/templates = manager["templates"]
+			templates[trim_path] = trim.assignment
+
+	var/list/centcom_job_trims = typesof(/datum/id_trim/centcom) - typesof(/datum/id_trim/centcom/corpse) + (/datum/id_trim/job/nanotrasen_consultant)
 	for(var/trim_path in centcom_job_trims)
 		var/datum/id_trim/trim = trim_singletons_by_path[trim_path]
 		centcom_job_templates[trim_path] = trim.assignment

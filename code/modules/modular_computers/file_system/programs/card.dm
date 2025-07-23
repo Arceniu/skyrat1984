@@ -25,6 +25,8 @@
 	var/list/job_templates = list()
 	/// Which departments this program has access to. See region defines.
 	var/target_dept
+	/// if used by ntr or any other who doesnt have centcom_captain
+	var/centcom_minor = FALSE
 
 /**
  * Authenticates the program based on the specific ID card.
@@ -49,8 +51,20 @@
 		minor = FALSE
 		authenticated_card = "[auth_card.name]"
 		authenticated_user = auth_card.registered_name ? auth_card.registered_name : "Unknown"
-		job_templates = is_centcom ? SSid_access.centcom_job_templates.Copy() : SSid_access.station_job_templates.Copy()
-		valid_access = is_centcom ? SSid_access.get_region_access_list(list(REGION_CENTCOM)) : SSid_access.get_region_access_list(list(REGION_ALL_STATION))
+		if((is_centcom) && (ACCESS_CENT_CAPTAIN in auth_card.access))
+			job_templates = SSid_access.centcom_job_templates.Copy()
+			centcom_minor = FALSE
+			valid_access = SSid_access.get_region_access_list(list(REGION_CENTCOM))
+		else if((is_centcom) && ((ACCESS_CENT_LIVING in auth_card.access)))
+			centcom_minor = TRUE
+			job_templates = SSid_access.station_job_templates_no_ntr.Copy()
+			valid_access = SSid_access.get_region_access_list(list(REGION_NTR))
+		else if(is_centcom)
+			return FALSE
+		else
+			centcom_minor = FALSE
+			job_templates = SSid_access.station_job_templates_no_ntr.Copy()
+			valid_access = SSid_access.get_region_access_list(list(REGION_ALL_STATION))
 		computer.update_static_data_for_all_viewers()
 		return TRUE
 
@@ -69,7 +83,17 @@
 
 	if(length(region_access))
 		minor = TRUE
-		valid_access |= SSid_access.get_region_access_list(region_access)
+		if((is_centcom) && ((ACCESS_CENT_CAPTAIN in auth_card.access)))
+			centcom_minor = FALSE
+			valid_access = SSid_access.get_region_access_list(list(REGION_CENTCOM))
+		else if((is_centcom) && ((ACCESS_CENT_LIVING in auth_card.access)))
+			centcom_minor = TRUE
+			valid_access = SSid_access.get_region_access_list(list(REGION_NTR))
+		else if(is_centcom)
+			return FALSE
+		else if(!is_centcom)
+			centcom_minor = FALSE
+			valid_access |= SSid_access.get_region_access_list(region_access)
 		authenticated_card = "[auth_card.name] \[LIMITED ACCESS\]"
 		computer.update_static_data_for_all_viewers()
 		return TRUE
@@ -266,12 +290,14 @@
 /datum/computer_file/program/card_mod/ui_static_data(mob/user)
 	var/list/data = list()
 	data["station_name"] = station_name()
-	data["centcom_access"] = is_centcom
+	data["centcom_access"] = (is_centcom && (!(centcom_minor)))
 	data["minor"] = target_dept || minor ? TRUE : FALSE
 
 	var/list/regions = list()
 	var/list/tgui_region_data = SSid_access.all_region_access_tgui
-	if(is_centcom)
+	if(is_centcom && centcom_minor)
+		regions = tgui_region_data[REGION_NTR]
+	else if(is_centcom && (!(centcom_minor)))
 		regions += tgui_region_data[REGION_CENTCOM]
 	else
 		for(var/region in SSid_access.station_regions)
