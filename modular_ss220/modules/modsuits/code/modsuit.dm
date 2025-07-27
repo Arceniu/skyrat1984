@@ -170,8 +170,8 @@
 	energy = 15
 	bomb = 25
 	bio = 100
-	fire = 100
-	acid = 100
+	fire = 75
+	acid = 75
 	wound = 30
 
 /datum/mod_theme/corporate/ntr
