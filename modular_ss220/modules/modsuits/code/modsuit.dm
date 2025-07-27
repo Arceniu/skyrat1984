@@ -166,9 +166,9 @@
 /datum/armor/mod_theme_corporate_official
 	melee = 20
 	bullet = 20
-	laser = 20
-	energy = 25
-	bomb = 35
+	laser = 15
+	energy = 15
+	bomb = 25
 	bio = 100
 	fire = 100
 	acid = 100
