@@ -64,8 +64,8 @@
 
 /datum/techweb_node/permabrig_tech
 	id = TECHWEB_NODE_PERMABRIG_TECH
-	display_name = "Advanced Bank Console"
-	description = "Special console that able to connect to departamental bank accounts."
+	display_name = "Prison Research"
+	description = "Research of specialized prison headsets."
 	prereq_ids = list(TECHWEB_NODE_SEC_EQUIP)
 	design_ids = list(
 		"permabrig_key",
