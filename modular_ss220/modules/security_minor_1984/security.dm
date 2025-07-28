@@ -64,6 +64,7 @@
 
 /datum/techweb_node/permabrig_tech
 	id = TECHWEB_NODE_PERMABRIG_TECH
+	starting_node = TRUE
 	display_name = "Prison Research"
 	description = "Research of specialized prison headsets."
 	prereq_ids = list(TECHWEB_NODE_SEC_EQUIP)
@@ -71,5 +72,3 @@
 		"permabrig_key",
 		"permabrig_headset",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
-	announce_channels = list(RADIO_CHANNEL_SECURITY)
