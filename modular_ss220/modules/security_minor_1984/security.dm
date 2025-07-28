@@ -66,3 +66,15 @@
 		"permabrig_headset",
 	)
 	return ..()
+
+/obj/machinery/telecomms/bus/preset_three/Initialize(mapload)
+	. = ..()
+	freq_listening += FREQ_PRISON
+
+/obj/machinery/telecomms/receiver/preset_right/Initialize(mapload)
+	. = ..()
+	freq_listening += FREQ_PRISON
+
+/obj/machinery/telecomms/server/presets/security/Initialize(mapload)
+	. = ..()
+	freq_listening += FREQ_PRISON
