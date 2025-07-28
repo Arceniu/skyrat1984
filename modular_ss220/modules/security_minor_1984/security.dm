@@ -60,8 +60,9 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
-/datum/techweb_node/sec_equip
+/datum/techweb_node/sec_equip/New()
 	design_ids += list(
 		"permabrig_key",
 		"permabrig_headset",
 	)
+	return ..()
