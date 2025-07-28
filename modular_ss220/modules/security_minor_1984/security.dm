@@ -9,8 +9,11 @@
 	icon = 'icons/obj/clothing/headsets.dmi'
 	icon_state = "headset"
 	freerange = TRUE
-	frequency = FREQ_PRISON
 	freqlock = TRUE
+
+/obj/item/radio/headset/prison/Initialize(mapload)
+	. = ..()
+	frequency = FREQ_PRISON
 
 /obj/item/encryptionkey/prison
 	name = "prison radio encryption key"
