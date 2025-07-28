@@ -37,8 +37,6 @@
 	new /obj/item/clothing/shoes/sneakers/orange( src )
 	new /obj/item/radio/headset/prison( src )
 
-#define TECHWEB_NODE_PERMABRIG_TECH "permabrig_tech"
-
 /datum/design/permabrig_key
 	name = "prison radio encryption key"
 	desc = "Radio encryption key to hear prison channel."
@@ -62,13 +60,8 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 
-/datum/techweb_node/permabrig_tech
-	id = TECHWEB_NODE_PERMABRIG_TECH
-	starting_node = TRUE
-	display_name = "Prison Research"
-	description = "Research of specialized prison headsets."
-	prereq_ids = list(TECHWEB_NODE_SEC_EQUIP)
-	design_ids = list(
+/datum/techweb_node/sec_equip
+	design_ids += list(
 		"permabrig_key",
 		"permabrig_headset",
 	)
