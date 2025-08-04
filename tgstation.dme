@@ -9258,6 +9258,7 @@
 #include "modular_ss220\modules\tts\code\providers\silero.dm"
 #include "modular_ss220\modules\tts\code\seeds\silero.dm"
 #include "modular_ss220\modules\tts\code\~undefs\~tts_undefs.dm"
+#include "modular_ss220\modules\vendors\code\dorms.dm"
 #include "modular_ss220\modules\weapons_addon\code\energy1911.dm"
 #include "modular_ss220\modules\weapons_addon\code\qmgun.dm"
 #include "modular_ss220\modules\enhanced_messaging\nttc_globals.dm"
