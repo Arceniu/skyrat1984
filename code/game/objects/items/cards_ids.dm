@@ -1856,6 +1856,7 @@
 				message_admins("[ADMIN_LOOKUPFLW(usr)] just added [SSid_access.get_access_desc(access_type)] to an ID card [ADMIN_VV(src)] [(registered_name) ? "belonging to [registered_name]." : "with no registered name."]")
 			LOG_ID_ACCESS_CHANGE(usr, src, "added [SSid_access.get_access_desc(access_type)]")
 			return TRUE
+	ui_act_extra(target_card, action, params, ui, state)
 
 /obj/item/card/id/advanced/chameleon/attack_self(mob/user)
 	if(!user.can_perform_action(user, NEED_DEXTERITY| FORBID_TELEKINESIS_REACH))
@@ -1895,7 +1896,7 @@
 		if(user.gender == MALE)
 			input_name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
 		else if(user.gender == FEMALE)
-			input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names)]"
+			input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names_female)]" // SS1984 EDIT, original: input_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names)]"
 		else
 			input_name = "[pick(GLOB.first_names)] [pick(GLOB.last_names)]"
 

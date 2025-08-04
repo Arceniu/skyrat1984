@@ -201,7 +201,7 @@
 /area/station/command/corporate_showroom)
 "aeD" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/computer/scan_consolenew{
+/obj/machinery/computer/dna_console{
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/purple{
@@ -10709,7 +10709,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/central)
 "dSu" = (
-/obj/structure/closet/secure_closet/brig,
+/obj/structure/closet/secure_closet/brig/permanent,
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
 "dSz" = (
@@ -23145,7 +23145,7 @@
 /area/station/hallway/primary/aft)
 "hVY" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/computer/scan_consolenew{
+/obj/machinery/computer/dna_console{
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/purple{
@@ -41415,7 +41415,7 @@
 /turf/open/floor/iron/smooth,
 /area/station/engineering/main)
 "nPH" = (
-/obj/structure/closet/secure_closet/brig,
+/obj/structure/closet/secure_closet/brig/permanent,
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
@@ -68289,7 +68289,7 @@
 /area/station/security/checkpoint/customs)
 "wyy" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
-/obj/machinery/computer/scan_consolenew{
+/obj/machinery/computer/dna_console{
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/purple{
