@@ -1,7 +1,6 @@
 /obj/item/encryptionkey/heads/captain
 	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_PRISON = 1, RADIO_CHANNEL_ENGINEERING = 0, RADIO_CHANNEL_SCIENCE = 0, RADIO_CHANNEL_MEDICAL = 0, RADIO_CHANNEL_SUPPLY = 0, RADIO_CHANNEL_SERVICE = 0)
 
-
 //bridge officer edit
 #define JOB_BRIDGE_OFFICER "Bridge Officer"
 
@@ -116,7 +115,6 @@
 		/obj/item/choice_beacon/coffee = 1,
 	)
 
-
 /datum/outfit/job/bridge_officer/plasmaman
 	name = "Bridge Officer (Plasmaman)"
 	uniform = /obj/item/clothing/under/plasmaman/security/nova
@@ -130,13 +128,7 @@
 		/obj/item/clothing/head/hats/caphat/parade/fedcap/black = 1,
 	)
 
-
-
-
-
-
 // bridge assistant return from nova edit
-
 /datum/station_trait/job/bridge_assistant
 	weight = 2
 
@@ -240,4 +232,3 @@
 	backpack_contents = list(
 		/obj/item/modular_computer/pda/bridge_assistant = 1,
 	)
-
