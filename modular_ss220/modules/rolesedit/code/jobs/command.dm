@@ -1,9 +1,6 @@
 /obj/item/encryptionkey/heads/captain
 	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_PRISON = 1, RADIO_CHANNEL_ENGINEERING = 0, RADIO_CHANNEL_SCIENCE = 0, RADIO_CHANNEL_MEDICAL = 0, RADIO_CHANNEL_SUPPLY = 0, RADIO_CHANNEL_SERVICE = 0)
 
-//define
-#define JOB_BRIDGE_ASSISTANT "Bridge Assistant"
-#define JOB_BRIDGE_OFFICER "Bridge Officer"
 // bridge assistant return from nova edit
 
 /datum/station_trait/job/bridge_assistant
@@ -111,6 +108,8 @@
 	)
 
 //bridge officer
+#define JOB_BRIDGE_OFFICER "Bridge Officer"
+
 /datum/job/bridge_officer
 	title = JOB_BRIDGE_OFFICER
 	description = "Watch over the Bridge, and spend your days commanding Bridge Assistants to brew coffee for higher-ups."
