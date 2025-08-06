@@ -137,7 +137,7 @@
 // bridge assistant return from nova edit
 /datum/station_trait/job/bridge_assistant
 	weight = 2
-	can_roll_antag = CAN_ROLL_ALWAYS
+	can_roll_antag = 1
 
 /obj/item/modular_computer/pda/bridge_assistant
 	name = "bridge assistant PDA"
