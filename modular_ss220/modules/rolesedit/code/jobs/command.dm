@@ -165,7 +165,7 @@
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	description = "Watch over the Bridge, command its consoles, and spend your days brewing coffee for higher-ups."
 	supervisors = "the Nanotrasen Officials, Station Captain, Bridge Officer and in non-Bridge related situations the other heads"
-	department_head = list(JOB_CAPTAIN, JOB_NT_REP, JOB_BRIDGE_OFFICER)
+	department_head = list(JOB_CAPTAIN, JOB_CENTCOM_OFFICIAL)
 	faction = FACTION_STATION
 	total_positions = 0
 	spawn_positions = 0
@@ -211,13 +211,6 @@
 	backpack_contents = list(
 		/obj/item/modular_computer/pda/bridge_assistant = 1,
 	)
-
-
-/datum/job/bridge_assistant/after_spawn(mob/living/spawned, client/player_client)
-	. = ..()
-	var/mob/living/carbon/bridgie = spawned
-	if(istype(bridgie))
-		bridgie.gain_trauma(/datum/brain_trauma/special/axedoration)
 
 /datum/outfit/job/bridge_assistant/plasmaman
 	name = "Bridge Assistant (Plasmaman)"
