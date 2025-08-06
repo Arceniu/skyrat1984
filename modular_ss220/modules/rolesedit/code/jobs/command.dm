@@ -49,6 +49,12 @@
 		/obj/item/pen/fountain = 1,
 	)
 
+/datum/job/bridge_officer/after_spawn(mob/living/spawned, client/player_client)
+	. = ..()
+	var/mob/living/carbon/bridgie = spawned
+	if(istype(bridgie))
+		bridgie.gain_trauma(/datum/brain_trauma/special/axedoration)
+
 /datum/id_trim/job/bridge_officer
 	assignment = JOB_BRIDGE_OFFICER
 	trim_state = "trim_securityofficer"
@@ -131,6 +137,7 @@
 // bridge assistant return from nova edit
 /datum/station_trait/job/bridge_assistant
 	weight = 2
+	can_roll_antag = CAN_ROLL_ALWAYS
 
 /obj/item/modular_computer/pda/bridge_assistant
 	name = "bridge assistant PDA"
