@@ -153,10 +153,19 @@
 		ACCESS_CENT_CAPTAIN,
 	)
 
+#ifndef CAN_ROLL_ALWAYS // includes from code\datums\station_traits\job_traits.dm
+	#define CAN_ROLL_ALWAYS 1 //always can roll for antag
+#endif
+#ifndef CAN_ROLL_PROTECTED
+	#define CAN_ROLL_PROTECTED 2 //can roll if config lets protected roles roll
+#endif
+#ifndef CAN_ROLL_NEVER
+	#define CAN_ROLL_NEVER 3 //never roll antag
+#endif
 
 /datum/station_trait/job/bridge_assistant
 	weight = 2
-	can_roll_antag = 1
+	can_roll_antag = CAN_ROLL_ALWAYS
 	job_to_add = /datum/job/bridge_assistant_1984
 
 /obj/item/modular_computer/pda/bridge_assistant_1984
