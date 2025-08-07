@@ -135,18 +135,38 @@
 	)
 
 // bridge assistant return from nova edit
+
+/datum/job/bridge_assistant //disabling some code to make this role not spawnable
+	title = "Bridge Assistant"
+	faction = FACTION_NONE
+	total_positions = 0
+	spawn_positions = 0
+	config_tag = "BRIDGE_OFFICER_DISABLED"
+	allow_bureaucratic_error = FALSE
+	job_flags = JOB_CANNOT_OPEN_SLOTS | JOB_HIDE_WHEN_EMPTY | JOB_LATEJOIN_ONLY
+	display_order = null
+	department_for_prefs = null
+
+/datum/id_trim/job/bridge_assistant
+	assignment = "Bridge Assistant"
+	template_access = list(
+		ACCESS_CENT_CAPTAIN,
+	)
+
+
 /datum/station_trait/job/bridge_assistant
 	weight = 2
 	can_roll_antag = 1
+	job_to_add = /datum/job/bridge_assistant_1984
 
-/obj/item/modular_computer/pda/bridge_assistant
+/obj/item/modular_computer/pda/bridge_assistant_1984
 	name = "bridge assistant PDA"
 	greyscale_colors = "#374f7e#a92323"
 	starting_programs = list(
 		/datum/computer_file/program/status,
 	)
 
-/datum/id_trim/job/bridge_assistant
+/datum/id_trim/job/bridge_assistant_1984
 	assignment = JOB_BRIDGE_ASSISTANT
 	trim_state = "trim_assistant"
 	department_color = COLOR_COMMAND_BLUE
@@ -161,33 +181,47 @@
 		ACCESS_TELEPORTER,
 		ACCESS_WEAPONS,
 	)
-
-/datum/job/bridge_assistant
-	alt_titles = list(
-		"Bridge Assistant",
+	extra_access = list()
+	template_access = list(
+		ACCESS_CAPTAIN,
+		ACCESS_CHANGE_IDS,
 	)
+	job = /datum/job/bridge_assistant
+	honorifics = list("Underling", "Assistant", "Mate")
+	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
 
-/datum/job/bridge_assistant
+
+/datum/job/bridge_assistant_1984
 	title = JOB_BRIDGE_ASSISTANT
-	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	description = "Watch over the Bridge, command its consoles, and spend your days brewing coffee for higher-ups."
-	supervisors = "the Nanotrasen Officials, Station Captain, Bridge Officer and in non-Bridge related situations the other heads"
+	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN, JOB_CENTCOM_OFFICIAL)
 	faction = FACTION_STATION
 	total_positions = 0
 	spawn_positions = 0
-	job_flags = STATION_JOB_FLAGS | STATION_TRAIT_JOB_FLAGS
+	supervisors = "the Nanotrasen Officials, Station Captain, Bridge Officer and in non-Bridge related situations the other heads"
+	minimal_player_age = 7
+	exp_requirements = 300
+	exp_required_type = EXP_TYPE_CREW
+	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "BRIDGE_ASSISTANT"
 	nova_stars_only = FALSE
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_CIV
 	antagonist_restricted = FALSE
 	allow_bureaucratic_error = FALSE
-
-	outfit = /datum/outfit/job/bridge_assistant
-	plasmaman_outfit = /datum/outfit/job/bridge_assistant/plasmaman
+	job_flags = STATION_JOB_FLAGS | STATION_TRAIT_JOB_FLAGS
+	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
+	rpg_title = "Royal Guard"
+	human_authority = JOB_AUTHORITY_NON_HUMANS_ALLOWED
+	display_order = JOB_DISPLAY_ORDER_BRIDGE_ASSISTANT
+	outfit = /datum/outfit/job/bridge_assistant_1984
+	plasmaman_outfit = /datum/outfit/job/bridge_assistant_1984/plasmaman
+	alt_titles = list(
+		"Bridge Assistant",
+	)
 
 	department_for_prefs = null
-
 	departments_list = list(
 		/datum/job_department/command,
 		)
@@ -198,12 +232,33 @@
 		/obj/item/pen/fountain = 1,
 	)
 
+/datum/job/bridge_assistant_1984/get_roundstart_spawn_point()
+	var/list/chair_turfs = list()
+	var/list/possible_turfs = list()
+	var/area/bridge = GLOB.areas_by_type[/area/station/command/bridge]
+	if(isnull(bridge))
+		return ..() //if no bridge, spawn on the arrivals shuttle (but also what the fuck)
+	for (var/list/zlevel_turfs as anything in bridge.get_zlevel_turf_lists())
+		for (var/turf/possible_turf as anything in zlevel_turfs)
+			if(possible_turf.is_blocked_turf())
+				continue
+			if(locate(/obj/structure/chair) in possible_turf)
+				chair_turfs += possible_turf
+				continue
+			possible_turfs += possible_turf
+	if(length(chair_turfs))
+		return pick(chair_turfs) //prioritize turfs with a chair
+	if(length(possible_turfs))
+		return pick(possible_turfs) //if none, just pick a random turf in the bridge
+	return ..() //if the bridge has no turfs, spawn on the arrivals shuttle
+
+
 //outfit datum
-/datum/outfit/job/bridge_assistant
+/datum/outfit/job/bridge_assistant_1984
 	name = "Bridge Assistant"
 
-	jobtype = /datum/job/bridge_assistant
-	id_trim = /datum/id_trim/job/bridge_assistant
+	jobtype = /datum/job/bridge_assistant_1984
+	id_trim = /datum/id_trim/job/bridge_assistant_1984
 	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/trek/command/next
 	neck = /obj/item/clothing/neck/large_scarf/blue
@@ -216,10 +271,10 @@
 	l_pocket = /obj/item/gun/energy/e_gun/mini
 	r_pocket = /obj/item/assembly/flash/handheld
 	backpack_contents = list(
-		/obj/item/modular_computer/pda/bridge_assistant = 1,
+		/obj/item/modular_computer/pda/bridge_assistant_1984 = 1,
 	)
 
-/datum/outfit/job/bridge_assistant/plasmaman
+/datum/outfit/job/bridge_assistant_1984/plasmaman
 	name = "Bridge Assistant (Plasmaman)"
 	uniform = /obj/item/clothing/under/plasmaman/enviroslacks
 	gloves = /obj/item/clothing/gloves/color/plasmaman/black
@@ -230,5 +285,5 @@
 	l_pocket = /obj/item/gun/energy/e_gun/mini
 	r_pocket = /obj/item/assembly/flash/handheld
 	backpack_contents = list(
-		/obj/item/modular_computer/pda/bridge_assistant = 1,
+		/obj/item/modular_computer/pda/bridge_assistant_1984 = 1,
 	)
