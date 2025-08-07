@@ -2,6 +2,17 @@
 	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_PRISON = 1, RADIO_CHANNEL_ENGINEERING = 0, RADIO_CHANNEL_SCIENCE = 0, RADIO_CHANNEL_MEDICAL = 0, RADIO_CHANNEL_SUPPLY = 0, RADIO_CHANNEL_SERVICE = 0)
 
 //bridge officer edit
+
+#ifndef CAN_ROLL_ALWAYS // includes from code\datums\station_traits\job_traits.dm
+	#define CAN_ROLL_ALWAYS 1 //always can roll for antag
+#endif
+#ifndef CAN_ROLL_PROTECTED
+	#define CAN_ROLL_PROTECTED 2 //can roll if config lets protected roles roll
+#endif
+#ifndef CAN_ROLL_NEVER
+	#define CAN_ROLL_NEVER 3 //never roll antag
+#endif
+
 #define JOB_BRIDGE_OFFICER "Bridge Officer"
 
 /datum/job/bridge_officer
@@ -152,16 +163,6 @@
 	template_access = list(
 		ACCESS_CENT_CAPTAIN,
 	)
-
-#ifndef CAN_ROLL_ALWAYS // includes from code\datums\station_traits\job_traits.dm
-	#define CAN_ROLL_ALWAYS 1 //always can roll for antag
-#endif
-#ifndef CAN_ROLL_PROTECTED
-	#define CAN_ROLL_PROTECTED 2 //can roll if config lets protected roles roll
-#endif
-#ifndef CAN_ROLL_NEVER
-	#define CAN_ROLL_NEVER 3 //never roll antag
-#endif
 
 /datum/station_trait/job/bridge_assistant
 	weight = 2
