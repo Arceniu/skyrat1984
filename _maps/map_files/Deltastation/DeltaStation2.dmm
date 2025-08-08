@@ -14459,23 +14459,6 @@
 	},
 /turf/open/floor/plating,
 /area/station/science/lab)
-"dzQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/poddoor/massdriver_ordnance,
-/obj/machinery/atmos_shield_gen/active{
-	dir = 1
-	},
-/obj/machinery/atmos_shield_gen/active,
-/turf/open/floor/plating/airless,
-/area/station/science/ordnance/testlab)
-"dAl" = (
-/obj/structure/cable,
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/plating,
-/area/station/engineering/supermatter/room)
 "dBc" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/remains/human,
