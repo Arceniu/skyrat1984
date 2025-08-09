@@ -13,10 +13,8 @@
 	#define CAN_ROLL_NEVER 3 //never roll antag
 #endif
 
-#define JOB_BRIDGE_OFFICER "Bridge Officer"
-
-/datum/job/bridge_officer
-	title = JOB_BRIDGE_OFFICER
+/datum/job/bridge_assistant
+	title = JOB_BRIDGE_ASSISTANT
 	description = "Watch over the Bridge, and spend your days commanding Bridge Assistants to brew coffee for higher-ups."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD | DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_CAPTAIN, JOB_NT_REP)
@@ -36,22 +34,18 @@
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
-	outfit = /datum/outfit/job/bridge_officer
-	plasmaman_outfit = /datum/outfit/job/bridge_officer/plasmaman
+	outfit = /datum/outfit/job/bridge_assistant
+	plasmaman_outfit = /datum/outfit/job/bridge_assistant/plasmaman
 	department_for_prefs = null
 	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
 	mind_traits = TRAIT_FAST_TYING
 	voice_of_god_power = 1.2 //Almost Command Member
 	config_tag = "BRIDGE_OFFICER"
-	alt_titles = list(
-		"Bridge Officer",
-	)
 	allow_bureaucratic_error = FALSE
 	departments_list = list(
 		/datum/job_department/central_command,
 		/datum/job_department/command,
 		)
-
 
 	family_heirlooms = list(/obj/item/banner/command/mundane)
 	mail_goodies = list(
@@ -60,14 +54,14 @@
 		/obj/item/pen/fountain = 1,
 	)
 
-/datum/job/bridge_officer/after_spawn(mob/living/spawned, client/player_client)
+/datum/job/bridge_assistant/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
 	var/mob/living/carbon/bridgie = spawned
 	if(istype(bridgie))
 		bridgie.gain_trauma(/datum/brain_trauma/special/axedoration)
 
-/datum/id_trim/job/bridge_officer
-	assignment = JOB_BRIDGE_OFFICER
+/datum/id_trim/job/bridge_assistant
+	assignment = JOB_BRIDGE_ASSISTANT
 	trim_state = "trim_securityofficer"
 	department_color = COLOR_SECURITY_RED
 	subdepartment_color = COLOR_COMMAND_BLUE
@@ -94,14 +88,13 @@
 		ACCESS_EXTERNAL_AIRLOCKS,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
-		ACCESS_CENT_LIVING,
+		ACCESS_CENT_CAPTAIN,
 	)
-	job = /datum/job/bridge_officer
+	job = /datum/job/bridge_assistant
 	honorifics = list("Upper Underling", "Officer", "Head Mate")
 	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
 
-/obj/item/modular_computer/pda/bridge_officer
+/obj/item/modular_computer/pda/bridge_assistant
 	name = "bridge officer PDA"
 	greyscale_colors = "#374f7e#a92323"
 	starting_programs = list(
@@ -109,10 +102,10 @@
 		/datum/computer_file/program/records/security
 	)
 
-/datum/outfit/job/bridge_officer
+/datum/outfit/job/bridge_assistant
 	name = "Bridge Officer"
-	jobtype = /datum/job/bridge_officer
-	id_trim = /datum/id_trim/job/bridge_officer
+	jobtype = /datum/job/bridge_assistant
+	id_trim = /datum/id_trim/job/bridge_assistant
 	id = /obj/item/card/id/advanced/silver
 	uniform = /obj/item/clothing/under/rank/bridge_officer
 	neck = /obj/item/clothing/neck/bowtie
@@ -127,43 +120,32 @@
 	r_pocket = /obj/item/assembly/flash/handheld
 	implants = list(/obj/item/implant/mindshield)
 	backpack_contents = list(
-		/obj/item/modular_computer/pda/bridge_officer = 1,
+		/obj/item/modular_computer/pda/bridge_assistant = 1,
 		/obj/item/choice_beacon/job_locker/bridge_officer = 1,
 		/obj/item/choice_beacon/coffee = 1,
 	)
 
-/datum/outfit/job/bridge_officer/plasmaman
+/datum/outfit/job/bridge_assistant/plasmaman
 	name = "Bridge Officer (Plasmaman)"
 	uniform = /obj/item/clothing/under/plasmaman/security/nova
 	gloves = /obj/item/clothing/gloves/color/plasmaman/black
-	head = /obj/item/clothing/head/helmet/space/plasmaman
+	head = /obj/item/clothing/head/helmet/space/plasmaman/security/nova
 	belt = /obj/item/melee/baton/telescopic/bronze
+	l_pocket = /obj/item/gun/energy/e_gun/mini
+	r_pocket = /obj/item/assembly/flash/handheld
 	backpack_contents = list(
-		/obj/item/modular_computer/pda/bridge_officer = 1,
+		/obj/item/modular_computer/pda/bridge_assistant = 1,
 		/obj/item/choice_beacon/job_locker/bridge_officer = 1,
 		/obj/item/choice_beacon/coffee = 1,
 		/obj/item/clothing/head/hats/caphat/parade/fedcap/black = 1,
 	)
 
-// bridge assistant return from nova edit
+/datum/outfit/plasmaman/bridge_assistant
+	head = /obj/item/clothing/head/helmet/space/plasmaman/security/nova
+	uniform = /obj/item/clothing/under/plasmaman/security/nova
+	gloves = /obj/item/clothing/gloves/color/plasmaman/black
 
-/datum/job/bridge_assistant //disabling some code to make this role not spawnable
-	title = "Bridge Assistant"
-	faction = FACTION_NONE
-	total_positions = 0
-	spawn_positions = 0
-	config_tag = "BRIDGE_OFFICER_DISABLED"
-	allow_bureaucratic_error = FALSE
-	job_flags = JOB_CANNOT_OPEN_SLOTS | JOB_HIDE_WHEN_EMPTY | JOB_LATEJOIN_ONLY
-	display_order = null
-	department_for_prefs = null
-
-/datum/id_trim/job/bridge_assistant
-	assignment = "Bridge Assistant"
-	template_access = list(
-		ACCESS_CENT_CAPTAIN,
-	)
-
+// bridge assistant
 /datum/station_trait/job/bridge_assistant
 	weight = 2
 	can_roll_antag = CAN_ROLL_ALWAYS
@@ -177,7 +159,7 @@
 	)
 
 /datum/id_trim/job/bridge_assistant_1984
-	assignment = JOB_BRIDGE_ASSISTANT
+	assignment = JOB_BRIDGE_ASSISTANT_1984
 	trim_state = "trim_assistant"
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_COMMAND_BLUE
@@ -196,13 +178,12 @@
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,
 	)
-	job = /datum/job/bridge_assistant
+	job = /datum/job/bridge_assistant_1984
 	honorifics = list("Underling", "Assistant", "Mate")
 	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
 
-
 /datum/job/bridge_assistant_1984
-	title = JOB_BRIDGE_ASSISTANT
+	title = JOB_BRIDGE_ASSISTANT_1984
 	description = "Watch over the Bridge, command its consoles, and spend your days brewing coffee for higher-ups."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN, JOB_CENTCOM_OFFICIAL)
@@ -261,7 +242,6 @@
 	if(length(possible_turfs))
 		return pick(possible_turfs) //if none, just pick a random turf in the bridge
 	return ..() //if the bridge has no turfs, spawn on the arrivals shuttle
-
 
 //outfit datum
 /datum/outfit/job/bridge_assistant_1984
