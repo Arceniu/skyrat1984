@@ -68,9 +68,6 @@
 /obj/item/ammo_casing/add_weapon_description()
 	AddElement(/datum/element/weapon_description, attached_proc = PROC_REF(add_notes_ammo))
 
-/obj/item/ammo_box
-	var/projectile_damage_multiplier_basic = 1 //for special magazines
-
 /**
  *
  * Outputs type-specific weapon stats for ammunition based on the projectile loaded inside the casing.
@@ -90,8 +87,6 @@
 	// are we in an ammo box?
 	if(isammobox(loc))
 		var/obj/item/ammo_box/our_box = loc
-		// preset code for some magasines
-		proj_damage_mult = our_box.projectile_damage_multiplier_basic
 		// is our ammo box in a gun?
 		if(isgun(our_box.loc))
 			var/obj/item/gun/our_gun = our_box.loc

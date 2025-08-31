@@ -32,7 +32,6 @@
 	caliber = CALIBER_9MM
 	max_ammo = 10
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
-	projectile_damage_multiplier_basic = 0.5
 
 /obj/item/ammo_box/magazine/multi_sprite/firefly/lethal
 	icon_state = "pdh_lethal"
