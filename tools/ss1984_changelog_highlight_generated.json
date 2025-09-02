@@ -1,5 +1,82 @@
 [
   {
+    "date": "2025-09-02",
+    "author": "DenIS318",
+    "changes": [
+      "Basic Health Analyzer is now default at medbay equipment technode (spawn in med techfab) from start",
+      "Taser mode is now available at advanced energy gun",
+      "Max Size of species reduced 1.5 -> 1.2. This includes settings in editor and quirks. Admins can still set it higher manually.",
+      "Oversized quirk size reduced 2.0 -> 1.5",
+      "Handgun holster is added to detective closet",
+      "Now if species doesnt have custom basic emotes sounds, then it use human sounds",
+      "Free flip for everyone. No longer requires any traits to be done without delay"
+    ]
+  },
+  {
+    "date": "2025-08-31",
+    "author": "DenIS318",
+    "changes": [
+      "Justice mech code & icons moved to modular. So now it can be constructed again",
+      "Fixed errors related to justice that arise due to removal justice from TG",
+      "Dynamic admin panel height increased in tabs that are not rulesets from 400 to 500",
+      "ID computer login fixed errors on Nova's security levels (such as Orange and so on)",
+      "Now once casing left from gun that had custom projectile damage modifier, it's combat information displays info relative to previous gun. Also shows for normal modifier as well"
+    ]
+  },
+  {
+    "date": "2025-08-30",
+    "author": "DenIS318",
+    "changes": [
+      "cargo ui plasmacost is shown at express console interface & pda intreface",
+      "Round Timer no longer start with something like 23:55:00... Instead from 00:00:00",
+      "Round Timer no longer jumps back to 00:00:00 once round start, round timer is calculated since start of server",
+      "Actual Round Timer is removed from status display, since Round Timer is actually \"actual\" now",
+      "Progressive Dynamic is reworked and added back",
+      "Progressive Dynamic now increase current dynamic tier level once certain amount of threat, based on how much non-antag alive security/heads/crew alive the same way, as it was before. Simple: if nothing happens for long (especially the longer shift) and you have alive security, dynamic level could be raised",
+      "Once dynamic level is raised by progressive dynamic, a report is sent to communications console and announced",
+      "New progressive dynamic UI added to Dynamic Panel"
+    ]
+  },
+  {
+    "date": "2025-08-29",
+    "author": "DenIS318",
+    "changes": [
+      "Singulo no longer invisible",
+      "Whisper and italics text now properly shown in runechat",
+      "Reworked and fixed dynamic tweaks for new dynamic, including restricted species (mainly for changelings)",
+      "Minimal enemies (security/captain/blueshield/consultant) is added back to new dynamic",
+      "Set minimal enemies to similar values as it was before, but based on dynamic tier",
+      "Head of Staff (non-mindshield like Captain, Consultant) can now really become antags"
+    ]
+  },
+  {
+    "date": "2025-08-28",
+    "author": "DenIS318",
+    "changes": [
+      "Man Up response for a-tickets",
+      "Revert \"Removes the Justice mech (TG #92486)\"",
+      "Revert \"NT/E \"Laevateinn\" - a magnetic .38 revolver (Nova №5947)\"",
+      "Max Health is reduced from 135 to 100 (so now in soft crit you can sustain up to 200 damage before falling to hard crit, instead of 270). However keep in mind, that health is tied to bodyparts damage, so it's not always exactly 100 health for softcrit, with 100 brute damage there might be \"5\" health, instead of 0. TL;DR One extra hit almost always would be be required."
+    ]
+  },
+  {
+    "date": "2025-08-25",
+    "author": "DenIS318",
+    "changes": [
+      "Adminwho for non-admins players no longer shows no-admins info, when there are admins",
+      "Added sprite to toy turret kit for request console (instead of ERROR)",
+      "Fixed double-equip outfit items for ghost role spawners"
+    ]
+  },
+  {
+    "date": "2025-08-24",
+    "author": "DenIS318",
+    "changes": [
+      "Disabled automatic light flickering (from explosions and other stuff). Should result in better perfomance",
+      "Disable autotransfer vote when there's no players"
+    ]
+  },
+  {
     "date": "2025-08-24",
     "author": "Arceniu",
     "changes": [
