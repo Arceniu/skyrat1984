@@ -1,5 +1,42 @@
 [
   {
+    "date": "2025-09-06",
+    "author": "DenIS318",
+    "changes": [
+      "Monkey AI in softcrit fixed",
+      "Monkey AI now also tries to search it's back (NOT IN BACKPACK) and belt (NOT IN IT'S STORAGE) slots as weapons when needed"
+    ]
+  },
+  {
+    "date": "2025-09-05",
+    "author": "DenIS318",
+    "changes": [
+      "Ctrl + Shift + Click menu interactons translated."
+    ]
+  },
+  {
+    "date": "2025-09-04",
+    "author": "DenIS318",
+    "changes": [
+      "Minor emote localization fixes",
+      "Salute is now correctly displayed as non-mime"
+    ]
+  },
+  {
+    "date": "2025-09-03",
+    "author": "DenIS318",
+    "changes": [
+      "PDA no longer lose charge when in recharger (no infinity charging)",
+      "Replaces most game font usages to MS Serif to fix cyrillic issues",
+      "Eyelids now shown even if blinking is disabled",
+      "Localized all basic emotions (some alien emotions/in emote panel and so on might still be not localized)",
+      "Emotes in emote panel localized",
+      "Emotes now can use nouns based on gender",
+      "Nova's Emotes+ panel disalbed (still can use /Me for it)",
+      "Nova's Silicon emotes disabled (still can use /Me for it)"
+    ]
+  },
+  {
     "date": "2025-09-02",
     "author": "DenIS318",
     "changes": [
@@ -10,6 +47,20 @@
       "Handgun holster is added to detective closet",
       "Now if species doesnt have custom basic emotes sounds, then it use human sounds",
       "Free flip for everyone. No longer requires any traits to be done without delay"
+    ]
+  },
+  {
+    "date": "2025-09-02",
+    "author": "FlufflesTheDog",
+    "changes": [
+      "Fix missing opfor/ghost/respawn buttons on the escape menu."
+    ]
+  },
+  {
+    "date": "2025-09-02",
+    "author": "OrionTheFox",
+    "changes": [
+      "fixed RPED icons disappearing when applying upgrades (they now use TG's updated icons)"
     ]
   },
   {
