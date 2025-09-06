@@ -211,19 +211,19 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	apply_all_client_preferences()
 
 	//general preferences
-	lastchangelog = savefile.get_entry("lastchangelog")
-	be_special = savefile.get_entry("be_special")
-	default_slot = savefile.get_entry("default_slot")
-	chat_toggles = savefile.get_entry("chat_toggles")
-	toggles = savefile.get_entry("toggles")
-	ignoring = savefile.get_entry("ignoring")
+	lastchangelog = savefile.get_entry("lastchangelog", lastchangelog)
+	be_special = savefile.get_entry("be_special", be_special)
+	default_slot = savefile.get_entry("default_slot", default_slot)
+	chat_toggles = savefile.get_entry("chat_toggles", chat_toggles)
+	toggles = savefile.get_entry("toggles", toggles)
+	ignoring = savefile.get_entry("ignoring", ignoring)
 
 	// OOC commendations
-	hearted_until = savefile.get_entry("hearted_until")
+	hearted_until = savefile.get_entry("hearted_until", hearted_until)
 	if(hearted_until > world.realtime)
 		hearted = TRUE
 	//favorite outfits
-	favorite_outfits = savefile.get_entry("favorite_outfits")
+	favorite_outfits = savefile.get_entry("favorite_outfits", favorite_outfits)
 
 	var/list/parsed_favs = list()
 	for(var/typetext in favorite_outfits)
@@ -233,7 +233,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	favorite_outfits = unique_list(parsed_favs)
 
 	// Custom hotkeys
-	key_bindings = savefile.get_entry("key_bindings")
+	key_bindings = savefile.get_entry("key_bindings", key_bindings)
 
 	//try to fix any outdated data if necessary
 	if(SHOULD_UPDATE_DATA(data_validity_integer))
@@ -277,6 +277,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 /datum/preferences/proc/save_preferences()
 	if(!savefile)
 		CRASH("Attempted to save the preferences of [parent] without a savefile. This should have been handled by load_preferences()")
+	if(path == DEV_PREFS_PATH)
+		// Don't save over dev preferences
+		return TRUE
+
 	savefile.set_entry("version", SAVEFILE_VERSION_MAX) //updates (or failing that the sanity checks) will ensure data is not invalid at load. Assume up-to-date
 
 	for (var/preference_type in GLOB.preference_entries)
@@ -443,7 +447,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	var/list/output = list()
 
 	for (var/role in input_be_special)
-		if (role in GLOB.special_roles)
+		if (role in get_all_antag_flags())
 			output += role
 
 	return output.len == input_be_special.len ? input_be_special : output

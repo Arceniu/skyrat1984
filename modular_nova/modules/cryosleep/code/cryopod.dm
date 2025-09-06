@@ -363,7 +363,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod, 32)
 		// Handle tater cleanup.
 		if(LAZYLEN(mob_occupant.mind.objectives))
 			mob_occupant.mind.objectives.Cut()
-			mob_occupant.mind.special_role = null
+			mob_occupant.mind.special_roles = null
 		// Handle freeing the high priest role for the next chaplain in line
 		if(mob_occupant.mind.holy_role == HOLY_ROLE_HIGHPRIEST)
 			reset_religion()
@@ -595,8 +595,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/cryopod/prison, 18)
 	/// For figuring out where the local cryopod computer is. Must be set for cryo computer announcements.
 	var/area/computer_area
 
-/obj/effect/mob_spawn/ghost_role/create(mob/mob_possessor, newname, use_loadout = FALSE)
-	var/mob/living/spawned_mob = ..()
+/obj/effect/mob_spawn/ghost_role/proc/after_create_nova(mob/living/spawned_mob) // SS1984 EDIT, original: /obj/effect/mob_spawn/ghost_role/create(mob/mob_possessor, newname, use_loadout = FALSE)
 	var/obj/machinery/computer/cryopod/control_computer = find_control_computer()
 
 	var/alt_name = get_spawner_outfit_name()

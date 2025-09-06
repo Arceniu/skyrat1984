@@ -1,0 +1,41 @@
+2025-09-02:
+  DenIS318:
+  - bugfix: Now if species doesnt have custom basic emotes sounds, then it use human
+      sounds
+  - rscadd: Handgun holster is added to detective closet
+  - balance: Taser mode is now available at advanced energy gun
+  - qol: Free flip for everyone. No longer requires any traits to be done without
+      delay
+  - rscadd: Basic Health Analyzer is now default at medbay equipment technode (spawn
+      in med techfab) from start
+  - balance: Max Size of species reduced 1.5 -> 1.2. This includes settings in editor
+      and quirks. Admins can still set it higher manually.
+  - balance: Oversized quirk size reduced 2.0 -> 1.5
+  FlufflesTheDog:
+  - bugfix: Fix missing opfor/ghost/respawn buttons on the escape menu.
+  OrionTheFox:
+  - bugfix: fixed RPED icons disappearing when applying upgrades (they now use TG's
+      updated icons)
+2025-09-03:
+  DenIS318:
+  - spellcheck: Localized all basic emotions (some alien emotions/in emote panel and
+      so on might still be not localized)
+  - spellcheck: Emotes in emote panel localized
+  - spellcheck: Emotes now can use nouns based on gender
+  - rscdel: Nova's Emotes+ panel disalbed (still can use /Me for it)
+  - rscdel: Nova's Silicon emotes disabled (still can use /Me for it)
+  - bugfix: Eyelids now shown even if blinking is disabled
+  - qol: PDA no longer lose charge when in recharger (no infinity charging)
+  - bugfix: Replaces most game font usages to MS Serif to fix cyrillic issues
+2025-09-04:
+  DenIS318:
+  - bugfix: Salute is now correctly displayed as non-mime
+  - spellcheck: Minor emote localization fixes
+2025-09-05:
+  DenIS318:
+  - spellcheck: Ctrl + Shift + Click menu interactons translated.
+2025-09-06:
+  DenIS318:
+  - bugfix: Monkey AI in softcrit fixed
+  - code_imp: Monkey AI now also tries to search it's back (NOT IN BACKPACK) and belt
+      (NOT IN IT'S STORAGE) slots as weapons when needed
