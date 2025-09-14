@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Loadout error icons fixed for dutch suit, white papakha, eastern monk's robes"
