@@ -193,3 +193,19 @@
   - qol: Security records console now requires reason for changing status (could be
       empty) - so it will log all status changes
   - bugfix: Cancel button now properly work on sechud status change
+2025-09-15:
+  DenIS318:
+  - rscadd: Nucleations race added
+  - rscadd: Nucleations organs added
+  - config: Nucleations are available for selection at roundstart
+  - balance: Nucleations receive 2x burn and 4x burn damage
+  - balance: Nucleations dies permamently with items, causing small explosion on death
+  - balance: Nucleations are immune to virus, does not breath, do not feel pain, immune
+      to radiation
+  - balance: Radium heals nucleations by 3 burn/brute per tick
+  - qol: Added extra description for some species traits, can be seen when selecting
+      species (virus immune, radiation immune)
+  - balance: Removed chestrigs from loadout
+  - balance: Removed seeds, pills, binoculars, some medkits from loadout
+  - bugfix: Loadout error icons fixed for dutch suit, white papakha, eastern monk's
+      robes
