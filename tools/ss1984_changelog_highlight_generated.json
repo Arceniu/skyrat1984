@@ -1,5 +1,22 @@
 [
   {
+    "date": "2025-09-15",
+    "author": "DenIS318",
+    "changes": [
+      "Loadout error icons fixed for dutch suit, white papakha, eastern monk's robes",
+      "Nucleations race added",
+      "Nucleations organs added",
+      "Nucleations are available for selection at roundstart",
+      "Nucleations receive 2x burn and 4x burn damage",
+      "Nucleations dies permamently with items, causing small explosion on death",
+      "Nucleations are immune to virus, does not breath, do not feel pain, immune to radiation",
+      "Radium heals nucleations by 3 burn/brute per tick",
+      "Added extra description for some species traits, can be seen when selecting species (virus immune, radiation immune)",
+      "Removed chestrigs from loadout",
+      "Removed seeds, pills, binoculars, some medkits from loadout"
+    ]
+  },
+  {
     "date": "2025-09-09",
     "author": "DenIS318",
     "changes": [
