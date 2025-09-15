@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Removed chestrigs from loadout"
+  - balance: "Removed seeds, pills, binoculars, some medkits from loadout"
