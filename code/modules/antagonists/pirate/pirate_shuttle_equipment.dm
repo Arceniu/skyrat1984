@@ -364,11 +364,11 @@
 			continue
 		for(var/mob/living/hidden as anything in hidden_mobs)
 			///Sell mobs, but leave their contents intact.
-			export_single_item(hidden, apply_elastic = FALSE, dry_run = dry_run, external_report = report, export_market = export_market) // SS1984 EDIT, original: export_single_item(hidden, apply_elastic = FALSE, dry_run = dry_run, external_report = report)
+			export_single_item(hidden, apply_elastic = FALSE, dry_run = dry_run, external_report = report, export_markets = export_markets_override) // SS1984 EDIT, original: export_single_item(hidden, apply_elastic = FALSE, dry_run = dry_run, external_report = report)
 		///there are still licing mobs inside that item. Stop, don't sell it ffs.
 		if(locate(/mob/living) in item_on_pad.get_all_contents())
 			continue
-		export_item_and_contents(item_on_pad, apply_elastic = FALSE, dry_run = dry_run, delete_unsold = FALSE, external_report = report, ignore_typecache = nosell_typecache, export_markets = list(EXPORT_MARKET_STATION, EXPORT_MARKET_PIRACY))
+		export_item_and_contents(item_on_pad, apply_elastic = FALSE, dry_run = dry_run, delete_unsold = FALSE, external_report = report, ignore_typecache = nosell_typecache, export_markets = export_markets_override) // SS1984 EDIT, original: export_item_and_contents(item_on_pad, apply_elastic = FALSE, dry_run = dry_run, delete_unsold = FALSE, external_report = report, ignore_typecache = nosell_typecache, export_markets = list(EXPORT_MARKET_STATION, EXPORT_MARKET_PIRACY))
 	SSplasma_inflation?.update_dry(dry_run, FALSE) // SS1984 ADDITION
 	return report
 
