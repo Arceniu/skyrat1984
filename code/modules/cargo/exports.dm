@@ -195,12 +195,15 @@ Then the player gets the profit from selling his own wasted time.
 	// SS1984 REMOVAL END
 	// SS1984 ADDITION START
 	var/target_market
-	if (!isnull(export_markets) && islist(export_markets))
-		for(var/found_market in export_markets)
-			if(!is_compatible_market(found_market))
-				continue
-			target_market = found_market
-			break // use first found, it's not really was intended to use multiple markets
+	if (!isnull(export_markets))
+		if (islist(export_markets))
+			for(var/found_market in export_markets)
+				if(!is_compatible_market(found_market))
+					continue
+				target_market = found_market
+				break // use first found, it's not really was intended to use multiple markets
+		else
+			target_market = "[export_markets]"
 	var/export_value = get_cost_ready_to_sell(sold_item, apply_elastic, target_market ? target_market : sales_market)
 	if (export_value < 0)
 		export_value = get_cost(sold_item, apply_elastic)
