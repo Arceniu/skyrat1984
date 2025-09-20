@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-09-20",
+    "author": "DenIS318",
+    "changes": [
+      "Antag info TGUI UI fixed (was empty due to error)"
+    ]
+  },
+  {
     "date": "2025-09-15",
     "author": "DenIS318",
     "changes": [
