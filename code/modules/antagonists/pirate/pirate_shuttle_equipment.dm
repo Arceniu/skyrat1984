@@ -347,6 +347,7 @@
 /obj/machinery/computer/piratepad_control/proc/pirate_export_loop(obj/machinery/piratepad/pad, dry_run = TRUE)
 	var/datum/export_report/report = new
 	SSplasma_inflation?.update_dry(dry_run, TRUE) // SS1984 ADDITION
+	var/list/export_markets_override = target_market_to_export ? list(target_market_to_export) : list(EXPORT_MARKET_STATION) // SS1984 ADDITION
 	for(var/atom/movable/item_on_pad as anything in get_turf(pad))
 		if(item_on_pad == pad)
 			continue

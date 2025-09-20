@@ -195,7 +195,7 @@ Then the player gets the profit from selling his own wasted time.
 	// SS1984 REMOVAL END
 	// SS1984 ADDITION START
 	var/target_market
-	if (!isnull(exports_markets) && islist(export_markets))
+	if (!isnull(export_markets) && islist(export_markets))
 		for(var/found_market in export_markets)
 			if(!is_compatible_market(found_market))
 				continue

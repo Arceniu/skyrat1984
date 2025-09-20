@@ -162,16 +162,15 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	var/freqpart = radio_freq ? "\[[get_radio_name(radio_freq, radio_freq_name)]\] " : ""
 	//Speaker name
 	var/namepart = speaker.get_message_voice(visible_name)
-	var/list/stored_name = list(null)
-	// SS1984 EDIT START
+	// SS1984 ADDITION START
 	var/is_carbonspeaker = iscarbon(speaker)
 	var/speaker_source = is_carbonspeaker ? speaker : speaker.GetSource()
 	if(is_carbonspeaker || iscarbon(speaker_source)) //First, try to pull the modified title from a carbon's ID. This will override both visual and audible names.
 		var/mob/living/carbon/carbon_human = speaker_source
 		var/obj/item/id_slot = carbon_human.get_item_by_slot(ITEM_SLOT_ID)
 		if(id_slot)
-			id_card = id_slot?.GetID() // SS1984 EDIT
-	// SS1984 EDIT END
+			id_card = id_slot?.GetID()
+	// SS1984 ADDITION END
 
 	//End name span.
 	var/endspanpart = "</span>"
