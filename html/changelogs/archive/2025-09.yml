@@ -726,3 +726,6 @@
   carpotoxin:
   - bugfix: The mapping helpers that add the voucher element to the marauder base's
       equipment now function again
+2025-09-20:
+  DenIS318:
+  - bugfix: Antag info TGUI UI fixed (was empty due to error)
