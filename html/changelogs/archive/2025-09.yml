@@ -729,3 +729,13 @@
 2025-09-20:
   DenIS318:
   - bugfix: Antag info TGUI UI fixed (was empty due to error)
+2025-09-24:
+  DenIS318:
+  - qol: Tip for loadout medkit for players with < 3 hours
+  - balance: Junk caliber casings now can be loaded into shotguns (to anything with
+      shotgun caliber, however shotgun shells still can't be loaded in pipegun)
+  - qol: Health Analyzer now shows popup after performing scan (it's the same, as
+      written to chat). The extra buttons such as "Print", "Clear" "Switch mode" are
+      also here
+  - qol: You can examine Health Analyzer (in close range) to see last scan (in case
+      there any stored)
