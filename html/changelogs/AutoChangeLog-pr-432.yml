@@ -1,0 +1,7 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Blank keybindings removed (all emote+ panel non-localized emotes binds)"
+  - rscdel: "Deletes some non-localized keybindings (perhaps will be returned back once localized)"
+  - rscdel: "Toggle gun's safety keybinding removed (there's no gun safety added to weapons already)"
+  - rscdel: "Combat indicator keybinding removed (there's no combat indicator for several months)"
