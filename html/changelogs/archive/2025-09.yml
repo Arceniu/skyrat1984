@@ -739,3 +739,22 @@
       also here
   - qol: You can examine Health Analyzer (in close range) to see last scan (in case
       there any stored)
+  - rscadd: License plate press circuit is added to "Security Equipment" technode
+  - rscadd: License plate press machine now require 1 servo and 1 matter bin to be
+      built
+  - rscadd: License plate press with upgraded matter bin provides tier * 0.03 speed
+      efficiency after 1 tier
+  - rscadd: License plate press with upgraded servo provides tier * 0.07 speed efficiency
+      after 1 tier (tier 4 bin + servo provides in total 1+0.3 efficiency, that results
+      in 0.7 * 4 seconds delay between filling plate)
+  - bugfix: Ian no longer becomes invisible once reaches old age
+  - bugfix: Blank keybindings removed (all emote+ panel non-localized emotes binds)
+  - rscdel: Deletes some non-localized keybindings (perhaps will be returned back
+      once localized)
+  - rscdel: Toggle gun's safety keybinding removed (there's no gun safety added to
+      weapons already)
+  - rscdel: Combat indicator keybinding removed (there's no combat indicator for several
+      months)
+  - config: Heads roles (including AI and some event roles such as Veteran advisor
+      and so on) now require at least 5 hours playtime in department
+  - config: Heads roles now also require 30 year old character

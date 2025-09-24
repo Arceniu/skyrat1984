@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - config: "Heads roles (including AI and some event roles such as Veteran advisor and so on) now require at least 5 hours playtime in department"
-  - config: "Heads roles now also require 30 year old character"

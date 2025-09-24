@@ -1,7 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - rscadd: "License plate press circuit is added to \"Security Equipment\" technode"
-  - rscadd: "License plate press machine now require 1 servo and 1 matter bin to be built"
-  - rscadd: "License plate press with upgraded matter bin provides tier * 0.03 speed efficiency after 1 tier"
-  - rscadd: "License plate press with upgraded servo provides tier * 0.07 speed efficiency after 1 tier (tier 4 bin + servo provides in total 1+0.3 efficiency, that results in 0.7 * 4 seconds delay between filling plate)"
