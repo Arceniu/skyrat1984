@@ -1,5 +1,15 @@
 [
   {
+    "date": "2025-09-24",
+    "author": "DenIS318",
+    "changes": [
+      "Tip for loadout medkit for players with < 3 hours",
+      "Health Analyzer now shows popup after performing scan (it's the same, as written to chat). The extra buttons such as \"Print\", \"Clear\" \"Switch mode\" are also here",
+      "You can examine Health Analyzer (in close range) to see last scan (in case there any stored)",
+      "Junk caliber casings now can be loaded into shotguns (to anything with shotgun caliber, however shotgun shells still can't be loaded in pipegun)"
+    ]
+  },
+  {
     "date": "2025-09-20",
     "author": "DenIS318",
     "changes": [
