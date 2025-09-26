@@ -1,3 +1,5 @@
+// im tired of fixing that. We don't have tts anyway now. So lets just comment it out completly, if there ever be tts again, then fix arguments passed to match same as in TG
+/*
 // might need change later once we will have TTS (if we will EVER have it)
 /mob/proc/Hear_tts(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods, message_range)
 	if(!SSttsSilero.is_enabled)
@@ -72,3 +74,4 @@
 	. = ..()
 
 	Hear_tts(message, speaker, message_language, raw_message, radio_freq, spans, message_mods, message_range)
+*/
