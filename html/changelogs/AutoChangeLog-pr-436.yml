@@ -1,0 +1,6 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Lavaloop fish now is \"limited\" with the same amount, but with respawn time 1 minute (to prevent it's spam on lavaland)"
+  - balance: "All fishing sources with explosive penalties now provide much less reward by explosions, especially rapid repeated (explosive penalty exponent 0.55 => 1.488)"
+  - balance: "Explosive penalty recovery for fishing increased (0.18 => 0.8), to compensate very high penalty"
