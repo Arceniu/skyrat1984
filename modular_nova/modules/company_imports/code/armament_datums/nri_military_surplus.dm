@@ -145,5 +145,14 @@
 /datum/armament_entry/company_import/nri_surplus/firearm_ammo/plasma_battery
 	item_type = /obj/item/ammo_box/magazine/recharge/plasma_battery
 
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/sakhno
-	item_type = /obj/item/ammo_box/strilka310
+// SS1984 REMOVAL START
+// /datum/armament_entry/company_import/nri_surplus/firearm_ammo/sakhno
+// 	item_type = /obj/item/ammo_box/speedloader/strilka310
+
+// /datum/armament_entry/company_import/nri_surplus/firearm_ammo/lanca
+// 	item_type = /obj/item/ammo_box/magazine/lanca/spawns_empty
+
+// /datum/armament_entry/company_import/nri_surplus/firearm_ammo/amr_magazine
+// 	item_type = /obj/item/ammo_box/magazine/wylom
+// 	cost = PAYCHECK_CREW * 3
+// SS1984 REMOVAL END
