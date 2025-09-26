@@ -24,13 +24,39 @@
 /datum/dynamic_ruleset/proc/get_minimal_num_of_enemies(tier = DYNAMIC_TIER_LOW)
 	if (islist(min_enemies))
 		var/len = length(min_enemies)
+
 		if (len < 1)
 			return 0
+
 		if (tier < len)
-			return min_enemies[tier]
-		return min_enemies[len - 1] // last defined tier num
+			// example: min_enemies for tier 1 is 5, and we checking for tier 1
+			if (tier in min_enemies)
+				return min_enemies[tier]
+
+			// Consider we checking for tier 0 how much enemies we should have for heretics
+			// If we just return 0, then we possible get heretics in greenshifts
+			// So instead, start from the end and go until we reach target tier, then use latest that we had
+
+			// byond indexing not from 0 to len-1 is confusing sometimes, but consider that:
+			// (E) (C) (M) min_enemies = /list (4)
+			// 1 = 3
+			// 2 = 2
+			// 3 = 2
+			// 4 = 2
+
+			var/last_valid_tier = len
+			for(var/tier_iter in len to 1 step -1)
+				if (tier_iter > tier)
+					last_valid_tier = tier_iter
+				else
+					return min_enemies[last_valid_tier]
+
+		// case when specified tier is higher than defined in min_enemies
+		return min_enemies[len] // last defined tier num
+
 	if (min_enemies > 0)
 		return min_enemies
+
 	return 0
 
 /datum/dynamic_ruleset/can_be_selected()
