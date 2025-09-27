@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Fixes few progressive dynamic runtimes, silicons now correctly considered for population to roll rulesets. Also min required enemies now properly working for tier 0 (greenshift), it's just takes it from next defined tier (usually tier 1)"

@@ -992,3 +992,21 @@
   - rscadd: Add cooking oil, nutraslop, and beer keg to cargo supply packs. Nutraslop
       serving trays and cooking oil vats can now be pushed and moved.
   - qol: Climbable objects now show up as an examine tag.
+2025-09-27:
+  DenIS318:
+  - bugfix: Fixes few progressive dynamic runtimes, silicons now correctly considered
+      for population to roll rulesets. Also min required enemies now properly working
+      for tier 0 (greenshift), it's just takes it from next defined tier (usually
+      tier 1)
+  - bugfix: Cyborgs now properly hear NTTC
+  - rscdel: Remove nonlocalized nova's lawsets
+  - balance: Lavaloop fish now is "limited" with the same amount, but with respawn
+      time 1 minute (to prevent it's spam on lavaland)
+  - balance: All fishing sources with explosive penalties now provide much less reward
+      by explosions, especially rapid repeated (explosive penalty exponent 0.55 =>
+      1.488)
+  - balance: Explosive penalty recovery for fishing increased (0.18 => 0.8), to compensate
+      very high penalty
+  OrionTheFox:
+  - balance: all 'accessory' webbings are now 'belt' webbings
+  - balance: all loadout belts can now hold a few more items
