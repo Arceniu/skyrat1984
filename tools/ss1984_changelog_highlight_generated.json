@@ -1,5 +1,17 @@
 [
   {
+    "date": "2025-09-27",
+    "author": "DenIS318",
+    "changes": [
+      "Fixes few progressive dynamic runtimes, silicons now correctly considered for population to roll rulesets. Also min required enemies now properly working for tier 0 (greenshift), it's just takes it from next defined tier (usually tier 1)",
+      "Lavaloop fish now is \"limited\" with the same amount, but with respawn time 1 minute (to prevent it's spam on lavaland)",
+      "All fishing sources with explosive penalties now provide much less reward by explosions, especially rapid repeated (explosive penalty exponent 0.55 => 1.488)",
+      "Explosive penalty recovery for fishing increased (0.18 => 0.8), to compensate very high penalty",
+      "Cyborgs now properly hear NTTC",
+      "Remove nonlocalized nova's lawsets"
+    ]
+  },
+  {
     "date": "2025-09-24",
     "author": "DenIS318",
     "changes": [
