@@ -1010,3 +1010,11 @@
   OrionTheFox:
   - balance: all 'accessory' webbings are now 'belt' webbings
   - balance: all loadout belts can now hold a few more items
+2025-09-30:
+  DenIS318:
+  - qol: Cyborgs (latejoin) now tries to spawn at cyborg chargers at relevant robotics
+      area or satellite, instead of appearing from nowhere
+  - qol: Cyborgs (latejoin) arrival is announced
+  - bugfix: Ghosting from AI-controlled mob no longer keep's their controller bound
+      to you (you won't forcesay to deadchat chicken random phrases when ghosting
+      from it)

@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Ghosting from AI-controlled mob no longer keep's their controller bound to you (you won't forcesay to deadchat chicken random phrases when ghosting from it)"

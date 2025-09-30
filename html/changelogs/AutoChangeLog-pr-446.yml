@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - qol: "Cyborgs (latejoin) now tries to spawn at cyborg chargers at relevant robotics area or satellite, instead of appearing from nowhere"
-  - qol: "Cyborgs (latejoin) arrival is announced"
