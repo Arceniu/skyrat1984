@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-09-30",
+    "author": "DenIS318",
+    "changes": [
+      "Ghosting from AI-controlled mob no longer keep's their controller bound to you (you won't forcesay to deadchat chicken random phrases when ghosting from it)",
+      "Cyborgs (latejoin) now tries to spawn at cyborg chargers at relevant robotics area or satellite, instead of appearing from nowhere",
+      "Cyborgs (latejoin) arrival is announced"
+    ]
+  },
+  {
     "date": "2025-09-27",
     "author": "DenIS318",
     "changes": [
@@ -9,6 +18,14 @@
       "Explosive penalty recovery for fishing increased (0.18 => 0.8), to compensate very high penalty",
       "Cyborgs now properly hear NTTC",
       "Remove nonlocalized nova's lawsets"
+    ]
+  },
+  {
+    "date": "2025-09-27",
+    "author": "OrionTheFox",
+    "changes": [
+      "all 'accessory' webbings are now 'belt' webbings",
+      "all loadout belts can now hold a few more items"
     ]
   },
   {
