@@ -1,5 +1,15 @@
 [
   {
+    "date": "2025-10-01",
+    "author": "DenIS318",
+    "changes": [
+      "Fixed unica ammo on maps",
+      "Fixed maiden headband in loadout",
+      "Fixed pre-built DNA console on interdyne",
+      "Fixed .310 Strilka ammo on maps, in which it was placed"
+    ]
+  },
+  {
     "date": "2025-09-30",
     "author": "DenIS318",
     "changes": [
