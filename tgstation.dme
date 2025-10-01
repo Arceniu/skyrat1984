@@ -512,6 +512,7 @@
 #include "code\__DEFINES\~nova_defines\traits\declarations.dm"
 #include "code\__DEFINES\~ss1984_defines\prisoner.dm"
 #include "code\__DEFINES\~ss1984_defines\job.dm"
+#include "modular_ss220\modules\sechuds_nonmodular_defines\__DEFINES\huds_non_modular.dm"
 #include "modular_ss220\modules\plasma_inflation\__DEFINES\cargo.dm"
 #include "modular_ss220\modules\return_prs\justice_modular\code\__DEFINES\mecha.dm"
 #include "modular_ss220\modules\return_prs\justice_modular\code\__DEFINES\research_categories.dm"

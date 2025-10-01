@@ -26,7 +26,7 @@
 			/obj/item/gun/chem,
 			/obj/item/gun/syringe,
 			/obj/item/kinetic_crusher,
-			/obj/item/gun/microfusion, // SS1984 ADDITION, would be better if move modular later
+			/obj/item/gun/microfusion, // SS1984 ADDITION, TODO: make it modular later
 		))
 
 /obj/item/mod/module/magnetic_harness/on_install()
