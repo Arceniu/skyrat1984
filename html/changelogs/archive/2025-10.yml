@@ -1,0 +1,6 @@
+2025-10-01:
+  DenIS318:
+  - bugfix: Fixed unica ammo on maps
+  - bugfix: Fixed maiden headband in loadout
+  - bugfix: Fixed pre-built DNA console on interdyne
+  - bugfix: Fixed .310 Strilka ammo on maps, in which it was placed

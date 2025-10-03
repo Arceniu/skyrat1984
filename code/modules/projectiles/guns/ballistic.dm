@@ -1,9 +1,10 @@
 ///Subtype for any kind of ballistic gun
 ///This has a shitload of vars on it, and I'm sorry for that, but it does make making new subtypes really easy
 /obj/item/gun/ballistic
-	desc = "Now comes in flavors like GUN. Uses 10mm ammo, for some reason."
 	name = "projectile gun"
+	desc = "Now comes in flavors like GUN. Uses 10mm ammo, for some reason."
 	icon_state = "debug"
+	abstract_type = /obj/item/gun/ballistic
 	w_class = WEIGHT_CLASS_NORMAL
 	pickup_sound = 'sound/items/handling/gun/gun_pick_up.ogg'
 	drop_sound = 'sound/items/handling/gun/gun_drop.ogg'
@@ -548,7 +549,7 @@
 /obj/item/gun/ballistic/proc/load_gun(obj/item/ammo, mob/living/user)
 	if (chambered && !chambered.loaded_projectile)
 		chambered.forceMove(drop_location())
-		if(chambered != magazine?.stored_ammo[1])
+		if(magazine && magazine.stored_ammo.len > 0 && chambered != magazine.stored_ammo[1]) // SS1984 EDIT, original: if(chambered != magazine?.stored_ammo[1])
 			magazine.stored_ammo -= chambered
 		set_chambered(null) // SS1984 EDIT, original: chambered = null
 

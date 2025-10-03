@@ -3,6 +3,7 @@
 	name = "ammo box (null_reference_exception)"
 	desc = "A box of ammo."
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
+	abstract_type = /obj/item/ammo_box
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT
 	inhand_icon_state = "syringe_kit"
@@ -29,7 +30,7 @@
 	var/multiple_sprite_use_base = FALSE
 	///String, used for checking if ammo of different types but still fits can fit inside it; generally used for magazines
 	var/caliber
-	/// Determines whether ammo boxes can multiload in or out.
+	/// Determines whether ammo boxes can multiload in or out. See code/__DEFINES/combat.dm for details.
 	var/ammo_box_multiload = AMMO_BOX_MULTILOAD_BOTH
 
 	///Whether the magazine should start with nothing in it
@@ -103,7 +104,7 @@
 		load_type = ammo_type
 
 	var/obj/item/ammo_casing/round_check = load_type
-	if(!starting && !(caliber ? (caliber == initial(round_check.caliber)) : (ammo_type == load_type)))
+	if(!starting && !(caliber ? (caliber == initial(round_check.caliber) || (caliber == CALIBER_SHOTGUN && round_check.caliber == CALIBER_JUNK)) : (ammo_type == load_type))) // SS1984 EDIT, original: if(!starting && !(caliber ? (caliber == initial(round_check.caliber)) : (ammo_type == load_type)))
 		stack_trace("Tried loading unsupported ammocasing type [load_type] into ammo box [type].")
 		return
 
@@ -134,7 +135,7 @@
 ///puts a round into the magazine
 /obj/item/ammo_box/proc/give_round(obj/item/ammo_casing/new_round, replace_spent = 0)
 	// Boxes don't have a caliber type, magazines do. Not sure if it's intended or not, but if we fail to find a caliber, then we fall back to ammo_type.
-	if(!new_round || !(caliber ? (caliber == new_round.caliber) : (ammo_type == new_round.type)))
+	if(!new_round || !(caliber ? (caliber == new_round.caliber || (caliber == CALIBER_SHOTGUN && new_round.caliber == CALIBER_JUNK)) : (ammo_type == new_round.type))) // SS1984 EDIT, original: if(!new_round || !(caliber ? (caliber == new_round.caliber) : (ammo_type == new_round.type)))
 		return FALSE
 
 	if (stored_ammo.len < max_ammo)
@@ -188,7 +189,17 @@
 			if(did_load)
 				other_box.stored_ammo -= casing
 				num_loaded++
-			if(!did_load || !(ammo_box_multiload & AMMO_BOX_MULTILOAD_IN) || !(other_box.ammo_box_multiload & AMMO_BOX_MULTILOAD_OUT))
+			// failed to load (full already? ran out of ammo?)
+			if(!did_load)
+				break
+			// this box can't accept being multiloaded into
+			if(!(ammo_box_multiload & AMMO_BOX_MULTILOAD_IN))
+				break
+			// the other box can't give multiple bullets in one go to an unloaded magazine
+			if(!isgun(loc) && !(other_box.ammo_box_multiload & AMMO_BOX_MULTILOAD_OUT))
+				break
+			// the other box can't give multiple bullets in one go to a loaded magazine
+			if(isgun(loc) && !(other_box.ammo_box_multiload & AMMO_BOX_MULTILOAD_OUT_LOADED))
 				break
 
 		if(num_loaded)
@@ -258,6 +269,7 @@
 /obj/item/ammo_box/magazine
 	name = "A magazine (what?)"
 	desc = "A magazine of rounds, they look like error signs... this should probably be reported somewhere."
+	abstract_type = /obj/item/ammo_box/magazine
 	ammo_box_multiload = AMMO_BOX_MULTILOAD_IN // so you can't use a magazine like a bootleg speedloader
 	drop_sound = 'sound/items/handling/gun/ballistics/magazine/magazine_drop1.ogg'
 	pickup_sound = 'sound/items/handling/gun/ballistics/magazine/magazine_pickup1.ogg'
