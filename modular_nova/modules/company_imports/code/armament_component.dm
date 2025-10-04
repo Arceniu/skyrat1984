@@ -116,6 +116,13 @@
 					if(!parent_console.contraband)
 						continue
 
+				if(gun_entry.high_contraband) //SS1984 ADD START
+					if(!(console_state == CARGO_CONSOLE))
+						continue
+					var/obj/machinery/computer/cargo/parent_console = parent
+					if(!(parent_console.obj_flags & EMAGGED))
+						continue //SS1984 ADD END
+
 				subcategory_items += list(list(
 					"ref" = REF(armament_entry),
 					"icon" = armament_entry.cached_base64,
