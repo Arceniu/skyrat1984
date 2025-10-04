@@ -137,8 +137,6 @@
 		/obj/item/circuitboard/computer/communications,
 		/obj/machinery/computer/arcade,
 		/obj/item/circuitboard/computer/arcade,
-		/obj/machinery/computer/cargo,
-		/obj/item/circuitboard/computer/cargo,
 		/obj/machinery/computer/holodeck,
 		/obj/machinery/computer/emergency_shuttle,
 		/obj/machinery/recycler,

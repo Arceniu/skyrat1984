@@ -15,7 +15,7 @@
 
 /datum/armament_entry/company_import/kahraman/basic/fireproof_spray
 	item_type = /obj/item/fireproof_spray
-
+	cost = PAYCHECK_COMMAND * 4
 
 /// Kahraman-made machines
 /datum/armament_entry/company_import/kahraman/machinery
@@ -119,4 +119,4 @@
 
 /datum/armament_entry/company_import/kahraman/storage_equipment/vest
 	item_type = /obj/item/storage/belt/webbing/colonial
-	cost = PAYCHECK_COMMAND * 2
+	cost = PAYCHECK_COMMAND
