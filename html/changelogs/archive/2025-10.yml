@@ -4,3 +4,10 @@
   - bugfix: Fixed maiden headband in loadout
   - bugfix: Fixed pre-built DNA console on interdyne
   - bugfix: Fixed .310 Strilka ammo on maps, in which it was placed
+2025-10-04:
+  DenIS318:
+  - rscdel: Revert "Stasis Beds no longer let you do surgeries while its on"
+  - rscadd: Organ-related emotions (wings, tails) now require wing/tail, otherwise
+      not usable
+  - spellcheck: Removed 's ending form localized interactions, such as headpat, fistbump,
+      handshake

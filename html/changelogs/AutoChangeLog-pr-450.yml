@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - rscdel: "Revert \"Stasis Beds no longer let you do surgeries while its on\""
