@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-10-04",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Stasis Beds no longer let you do surgeries while its on\"",
+      "Organ-related emotions (wings, tails) now require wing/tail, otherwise not usable",
+      "Removed 's ending form localized interactions, such as headpat, fistbump, handshake"
+    ]
+  },
+  {
     "date": "2025-10-01",
     "author": "DenIS318",
     "changes": [
