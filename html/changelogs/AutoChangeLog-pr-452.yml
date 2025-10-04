@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - rscadd: "Organ-related emotions (wings, tails) now require wing/tail, otherwise not usable"
