@@ -11,3 +11,15 @@
       not usable
   - spellcheck: Removed 's ending form localized interactions, such as headpat, fistbump,
       handshake
+2025-10-05:
+  Arceniu:
+  - rscadd: Added new items to imports from offs(synth neuroware, some more flatpacks)
+  - bugfix: fixed missing wound/decease analyzer in import
+  - rscdel: Removed restriction for hacking cargo console with emag implant
+  - qol: separated longarms from pistols in nri import
+  - qol: moved a couple of items in the import list(energy weapons import and taser
+      item from nri guns to nri items) for a more beautiful look
+  - balance: rebalanced some cargo import items price
+  DenIS318:
+  - balance: Revert "Downgraded CE tools to T1 instead of T2"
+  - bugfix: Shouler holster when attached now have proper icon size

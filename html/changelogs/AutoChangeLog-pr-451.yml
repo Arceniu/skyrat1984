@@ -1,9 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscadd: "Added new items to imports from offs(synth neuroware, some more flatpacks)"
-  - bugfix: "fixed missing wound/decease analyzer in import"
-  - rscdel: "Removed restriction for hacking cargo console with emag implant"
-  - qol: "separated longarms from pistols in nri import"
-  - qol: "moved a couple of items in the import list(energy weapons import and taser item from nri guns to nri items) for a more beautiful look"
-  - balance: "rebalanced some cargo import items price"
