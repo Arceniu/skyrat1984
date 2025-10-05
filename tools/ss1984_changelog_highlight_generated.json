@@ -1,5 +1,25 @@
 [
   {
+    "date": "2025-10-05",
+    "author": "Arceniu",
+    "changes": [
+      "Added new items to imports from offs(synth neuroware, some more flatpacks)",
+      "fixed missing wound/decease analyzer in import",
+      "Removed restriction for hacking cargo console with emag implant",
+      "separated longarms from pistols in nri import",
+      "moved a couple of items in the import list(energy weapons import and taser item from nri guns to nri items) for a more beautiful look",
+      "rebalanced some cargo import items price"
+    ]
+  },
+  {
+    "date": "2025-10-05",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Downgraded CE tools to T1 instead of T2\"",
+      "Shouler holster when attached now have proper icon size"
+    ]
+  },
+  {
     "date": "2025-10-04",
     "author": "DenIS318",
     "changes": [
