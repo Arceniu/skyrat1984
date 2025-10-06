@@ -1,0 +1,6 @@
+author: "Arceniu"
+delete-after: True
+changes:
+  - balance: "Updated Blueshield MODsuit: Armour buff 40>45 melee, 20>25 wound. Added loud sound protection module and expanded storage module."
+  - balance: "Updated NTR corporate MODsuit: slowdown decreased 0.35 > 0.25. Armour buff: melee 20 > 25, laser 15 > 20, energy 15 > 20, bomb 25 > 30, added loud sound protection module."
+  - balance: "Updated Surplus Security MODsuit protection: energy 35 > 40,  bomb 25 > 30."
