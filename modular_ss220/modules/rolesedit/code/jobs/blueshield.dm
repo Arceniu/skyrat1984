@@ -66,7 +66,7 @@
 
 //modsuit
 /datum/armor/mod_theme_blueshield
-	melee = 40
+	melee = 45
 	bullet = 30
 	laser = 30
 	energy = 40
@@ -74,7 +74,7 @@
 	bio = 100
 	fire = 100
 	acid = 100
-	wound = 20
+	wound = 25
 
 /datum/mod_theme/blueshield
 	armor_type = /datum/armor/mod_theme_blueshield
@@ -83,13 +83,13 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
-	inbuilt_modules = list(/obj/item/mod/module/shove_blocker/locked)
+	inbuilt_modules = list(/obj/item/mod/module/shove_blocker/locked, /obj/item/mod/module/hearing_protection)
 
 /obj/item/mod/control/pre_equipped/blueshield
 	req_access = list(ACCESS_CENT_GENERAL)
 	applied_modules = list(
 		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/storage,
+		/obj/item/mod/module/storage/large_capacity,
 		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/projectile_dampener,
