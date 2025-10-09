@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - qol: "Shoulder holster now doesn't draw gun (drop it) when hands are not usable (full)"
+  - bugfix: "Shoulder holster icon now properly scaled at uniform"
