@@ -32,3 +32,15 @@
       sound protection module.'
   - balance: 'Updated Surplus Security MODsuit protection: energy 35 > 40,  bomb 25
       > 30.'
+2025-10-10:
+  DenIS318:
+  - qol: Shoulder holster now doesn't draw gun (drop it) when hands are not usable
+      (full)
+  - bugfix: Shoulder holster icon now properly scaled at uniform
+  - bugfix: Nucleations now can hear their own death explosion sound
+  DenIS318 & larentoun & AyIong:
+  - rscadd: Nanomaps rendering for UI
+  - rscadd: Camera Console UI updated (now uses Nanomaps)
+  - rscadd: Crew Monitor UI updated (now uses Nanomaps)
+  - qol: Crew Monitor can track personal with trackers on Nanomap
+  - qol: Can switch between cameras using mouse in Camera console
