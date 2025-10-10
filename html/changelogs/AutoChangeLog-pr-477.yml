@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - qol: "Blueshield monitor UI changed to use new crew monitor UI"
