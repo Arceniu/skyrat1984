@@ -38,6 +38,7 @@
       (full)
   - bugfix: Shoulder holster icon now properly scaled at uniform
   - bugfix: Nucleations now can hear their own death explosion sound
+  - qol: Blueshield monitor UI changed to use new crew monitor UI
   DenIS318 & larentoun & AyIong:
   - rscadd: Nanomaps rendering for UI
   - rscadd: Camera Console UI updated (now uses Nanomaps)
