@@ -1,5 +1,26 @@
 [
   {
+    "date": "2025-10-10",
+    "author": "DenIS318",
+    "changes": [
+      "Shoulder holster now doesn't draw gun (drop it) when hands are not usable (full)",
+      "Shoulder holster icon now properly scaled at uniform",
+      "Nucleations now can hear their own death explosion sound",
+      "DenIS318 & larentoun & "
+    ]
+  },
+  {
+    "date": "2025-10-10",
+    "author": "AyIong",
+    "changes": [
+      "Nanomaps rendering for UI",
+      "Camera Console UI updated (now uses Nanomaps)",
+      "Crew Monitor UI updated (now uses Nanomaps)",
+      "Crew Monitor can track personal with trackers on Nanomap",
+      "Can switch between cameras using mouse in Camera console"
+    ]
+  },
+  {
     "date": "2025-10-06",
     "author": "Arceniu",
     "changes": [
