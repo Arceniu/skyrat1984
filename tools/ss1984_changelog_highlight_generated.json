@@ -3,6 +3,7 @@
     "date": "2025-10-10",
     "author": "DenIS318",
     "changes": [
+      "Blueshield monitor UI changed to use new crew monitor UI",
       "Shoulder holster now doesn't draw gun (drop it) when hands are not usable (full)",
       "Shoulder holster icon now properly scaled at uniform",
       "Nucleations now can hear their own death explosion sound",
