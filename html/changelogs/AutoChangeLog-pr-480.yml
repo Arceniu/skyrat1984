@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - config: "Pirates config fixed and now they can be properly spawned by dynamic"
