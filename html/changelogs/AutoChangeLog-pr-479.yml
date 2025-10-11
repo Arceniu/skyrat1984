@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - admin: "Forcing dynamic rulesets now skipping checks, that would prevent it from spawning normally (like required amount of enemies)"
