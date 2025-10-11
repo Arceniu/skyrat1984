@@ -45,3 +45,8 @@
   - rscadd: Crew Monitor UI updated (now uses Nanomaps)
   - qol: Crew Monitor can track personal with trackers on Nanomap
   - qol: Can switch between cameras using mouse in Camera console
+2025-10-11:
+  DenIS318:
+  - config: Pirates config fixed and now they can be properly spawned by dynamic
+  - admin: Forcing dynamic rulesets now skipping checks, that would prevent it from
+      spawning normally (like required amount of enemies)
