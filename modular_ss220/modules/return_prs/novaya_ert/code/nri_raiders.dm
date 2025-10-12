@@ -171,7 +171,7 @@ GLOBAL_VAR(first_officer)
 	trim_state = "trim_nri_police"
 	department_color = COLOR_NRI_POLICE_BLUE
 	subdepartment_color = COLOR_NRI_POLICE_SILVER
-	sechud_icon_state = "hud_nri_police"
+	sechud_icon_state = SECHUD_NRI_POLICE
 	access = list(ACCESS_SYNDICATE, ACCESS_MAINT_TUNNELS)
 	threat_modifier = 1
 
@@ -261,10 +261,10 @@ GLOBAL_VAR(first_officer)
 	var/obj/item/card/id/advanced/card = spawned_human.get_idcard()
 	if(GLOB.first_officer == spawned_human)
 		card.assignment = pick(NRI_LEADER_JOB_LIST)
-		card.trim.sechud_icon_state = "hud_nri_police_lead"
+		card.trim.sechud_icon_state = SECHUD_NRI_POLICE_LEAD
 	else
 		card.assignment = pick(NRI_JOB_LIST)
-		card.trim.sechud_icon_state = "hud_nri_police"
+		card.trim.sechud_icon_state = SECHUD_NRI_POLICE
 
 	card.update_label()
 
