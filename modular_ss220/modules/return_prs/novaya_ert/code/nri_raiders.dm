@@ -212,10 +212,6 @@ GLOBAL_VAR(first_officer)
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
 
-/datum/job/fugitive_hunter
-	title = ROLE_FUGITIVE_HUNTER
-	policy_index = ROLE_FUGITIVE_HUNTER
-
 /obj/effect/mob_spawn/ghost_role/human/nri_raider/officer
 	name = "NRI Officer sleeper"
 	prompt_name = "a NRI Field Officer"
