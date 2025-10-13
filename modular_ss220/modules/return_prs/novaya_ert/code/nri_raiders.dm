@@ -37,11 +37,10 @@
 /// To know whether or not we have an officer already
 GLOBAL_VAR(first_officer)
 
-///NRI police patrol with a mission to find out if the fine reason is legitimate and then act from there.
-/datum/pirate_gang/nri_raiders
+/datum/pirate_gang/nri_police
 	name = "NRI IAC Police Patrol"
 
-	ship_template_id = "nri_raider"
+	ship_template_id = "nri_police"
 	ship_name_pool = "imperial_names"
 
 	threat_title = "NRI Audit"
@@ -58,92 +57,28 @@ GLOBAL_VAR(first_officer)
 
 	response_received = "Should be it, thank you for cooperation. Novaya Rossiyskaya Imperiya collegial secretary out."
 	response_too_late = "Your response was very delayed. We have been instructed to send in the patrol ship for second attempt negotiations, stand by."
+	response_rejected = "We are sending a patrol ship for second attempt negotiations, stand by."
 	response_not_enough = "Your bank balance does not hold enough money at the moment or the system has been overriden. We are sending a patrol ship for second attempt negotiations, stand by."
 	announcement_color = "purple"
 
-/datum/pirate_gang/nri_raiders/generate_message(payoff)
+/datum/pirate_gang/nri_police/generate_message(payoff)
 	var/number = rand(1,99)
-	///Station name one is the most important pick and is pretty much the station's main argument against getting fined, thus it better be mostly always right.
-	var/station_designation = pick_weight(list(
-		"Nanotrasen Research Station" = 70,
-		"Nanotrasen Refueling Outpost" = 5,
-		"Interdyne Pharmaceuticals Chemical Factory" = 5,
-		"Free Teshari League Engineering Station" = 5,
-		"Agurkrral Military Base" = 5,
-		"Sol Federation Embassy" = 5,
-		"Novaya Rossiyskaya Imperiya Civilian Port" = 5,
-	))
-	///"right" = Right for the raiders to use as an argument; usually pretty difficult to avoid.
-	var/right_pick = pick(
+	var/focus = pick(
 		"high probability of NRI-affiliated civilian casualties aboard the facility",
 		"highly increased funding by the SolFed authorities; neglected NRI-backed subsidiaries' contracts",
 		"unethical hiring practices and unfair payment allocation for the NRI citizens",
 		"recently discovered BSA-[number] or similar model in close proximity to the neutral space aboard this or nearby affiliated facility",
 	)
-	///"wrong" = Loosely based accusations that can be easily disproven if people think.
-	var/wrong_pick = pick(
-		"inadequate support of the local producer",
-		"unregulated production of Gauss weaponry aboard this installation",
-		"SolFed-backed stationary military formation on the surface of Indecipheres",
-		"AUTOMATED REGULATORY VIOLATION DETECTION SYSTEM CRITICAL FAILURE. PLEASE CONTACT AND INFORM THE DISPATCHED AUTHORITIES TO RESOLVE THE ISSUE. \
-		ANY POSSIBLE INDENTURE HAS BEEN CLEARED. WE APOLOGIZE FOR THE INCONVENIENCE",
-	)
-	var/final_result = pick(right_pick, wrong_pick)
 	var/built_threat_content = replacetext(threat_content, "%SHIPNAME", ship_name)
 	built_threat_content = replacetext(built_threat_content, "%PAYOFF", payoff)
-	built_threat_content = replacetext(built_threat_content, "%RESULT", final_result)
-	built_threat_content = replacetext(built_threat_content, "%STATION", station_designation)
+	built_threat_content = replacetext(built_threat_content, "%RESULT", focus)
+	built_threat_content = replacetext(built_threat_content, "%STATION", station_name())
 	arrival_announcement = replacetext(arrival_announcement, "%NUMBER1", pick(GLOB.phonetic_alphabet))
 	arrival_announcement = replacetext(arrival_announcement, "%NUMBER2", pick(GLOB.phonetic_alphabet))
 	arrival_announcement = replacetext(arrival_announcement, "%NUMBER3", pick(GLOB.phonetic_alphabet))
 	return new /datum/comm_message(threat_title, built_threat_content, possible_answers)
 
-/datum/outfit/pirate/nri/post_equip(mob/living/carbon/human/equipped)
-	. = ..()
-	equipped.faction -= "pirate"
-	equipped.faction |= "raider"
-
-	// make sure we update the ID's name too
-	var/obj/item/card/id/id_card = equipped.wear_id
-	if(istype(id_card))
-		id_card.registered_name = equipped.real_name
-		id_card.update_icon()
-		id_card.update_label()
-
-	handlebank(equipped)
-
-/datum/outfit/pirate/nri/officer
-	name = "NRI Field Officer"
-
-	head = /obj/item/clothing/head/hats/colonial/nri_police
-	glasses = /obj/item/clothing/glasses/sunglasses
-	ears = /obj/item/radio/headset/guild/command
-	mask = null
-	neck = /obj/item/clothing/neck/cloak/colonial/nri_police
-
-	uniform = /obj/item/clothing/under/colonial/nri_police
-	suit = null
-
-	gloves = /obj/item/clothing/gloves/combat
-
-	shoes = /obj/item/clothing/shoes/combat
-
-	belt = /obj/item/storage/belt/security/nri
-	back = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(
-		/obj/item/storage/box/nri_survival_pack/police = 1,
-		/obj/item/ammo_box/magazine/recharge/plasma_battery = 3,
-		/obj/item/gun/ballistic/automatic/pistol/plasma_marksman = 1,
-		/obj/item/crucifix = 1,
-		/obj/item/clothing/mask/gas/nri_police = 1,
-		/obj/item/modular_computer/pda/nri_police = 1,
-	)
-	l_pocket = /obj/item/folder/blue/nri_police
-	r_pocket = /obj/item/storage/pouch/ammo
-
-	id = /obj/item/card/id/advanced/nri_police
-	id_trim = /datum/id_trim/nri_police
-
+// items
 /obj/item/modular_computer/pda/nri_police
 	name = "\improper NRI police PDA"
 	device_theme = PDA_THEME_TERMINAL
@@ -172,177 +107,8 @@ GLOBAL_VAR(first_officer)
 	department_color = COLOR_NRI_POLICE_BLUE
 	subdepartment_color = COLOR_NRI_POLICE_SILVER
 	sechud_icon_state = SECHUD_NRI_POLICE
-	access = list(ACCESS_SYNDICATE, ACCESS_MAINT_TUNNELS)
-	threat_modifier = 1
-
-/obj/item/gun/energy/e_gun/advtaser/normal
-	w_class = WEIGHT_CLASS_NORMAL
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider
-	name = "NRI Raider sleeper"
-	desc = "Cozy. You get the feeling you aren't supposed to be here, though..."
-	prompt_name = "a NRI Marine"
-	icon = 'modular_nova/modules/cryosleep/icons/cryogenics.dmi'
-	icon_state = "cryopod"
-	mob_species = /datum/species/human
-	faction = list(FACTION_RAIDER)
-	you_are_text = "You are a Novaya Rossiyskaya Imperiya task force."
-	flavour_text = "The station has refused to pay the fine for breaking Imperial regulations, you are here to recover the debt. Do so by demanding the funds. Force approach is usually recommended, but isn't the only method."
-	important_text = "Allowed races are humans, Akulas, IPCs. Follow your field officer's orders. Important mention - while you are listed as the pirates gamewise, you really aren't lore-and-everything-else-wise. Roleplay accordingly."
-	outfit = /datum/outfit/pirate/nri
-	restricted_species = list(/datum/species/human, /datum/species/akula, /datum/species/synthetic)
-	random_appearance = FALSE
-	show_flavor = TRUE
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/proc/apply_codename(mob/living/carbon/human/spawned_human)
-	var/callsign = pick(GLOB.callsigns_nri)
-	var/number = pick(GLOB.phonetic_alphabet_numbers)
-	spawned_human.fully_replace_character_name(null, "[callsign] [number]")
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/special(mob/living/carbon/human/spawned_human)
-	. = ..()
-	spawned_human.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
-	apply_codename(spawned_human)
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/post_transfer_prefs(mob/living/carbon/human/spawned_human)
-	. = ..()
-	apply_codename(spawned_human)
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/Destroy()
-	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
-	return ..()
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/officer
-	name = "NRI Officer sleeper"
-	prompt_name = "a NRI Field Officer"
-	outfit = /datum/outfit/pirate/nri/officer
-	flavour_text = "The station has refused to pay the fine for breaking Imperial regulations, as a consequence you are here to perform a prolonged inspection."
-	important_text = "Allowed races are humans, Akulas, IPCs. Roleplay accordingly. There is an important document in your pocket I'd advise you to read and keep safe."
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/officer/apply_codename(mob/living/carbon/human/spawned_human)
-	var/callsign = pick(GLOB.callsigns_nri)
-	var/number = pick(GLOB.phonetic_alphabet_numbers)
-	spawned_human.fully_replace_character_name(null, "[callsign] [number][GLOB.first_officer == spawned_human ? " Actual" : ""]")
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/officer/special(mob/living/carbon/human/spawned_human)
-	. = ..()
-	spawned_human.mind.add_antag_datum(/datum/antagonist/police)
-	spawned_human.grant_language(/datum/language/uncommon, source = LANGUAGE_SPAWNER)
-	spawned_human.grant_language(/datum/language/yangyu, source = LANGUAGE_SPAWNER)
-	spawned_human.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
-	spawned_human.grant_language(/datum/language/akulan, source = LANGUAGE_SPAWNER)
-
-	// if this is the first officer, keep a reference to them
-	if(!GLOB.first_officer)
-		GLOB.first_officer = spawned_human
-		to_chat(spawned_human, span_bold("With you being the leader of the group and having a special designation, 'Actual', it's your duty to make sure this entire operation \
-			goes smoothly. As in, doesn't result in an intergalactic political scandal, or an unneecessary shooting. It's also very likely expected for you to be performing \
-			all the necessary negotiations, so do prepare yourself for that."))
-
-	to_chat(spawned_human, "[span_bold("The station has overriden the response system for the reasons unknown, keep the ship intact, communicate with the station, \
-		perform an inspection to determine the legitimacy of the fine, and try to get the funds yourself, if it's legitimate. \
-		In any case, perform your predefined duties and uphold some semblance of intergalactic law and professionalism, even if just for show.")] <br><br>\
-		[span_small("Also, a small OOC clarification: none of your objectives are meant to be completable mechanically, so don't stress yourself over not greentexting or anything; \
-		If you have a better plan than 'completing' them, like an idea for a gimmick, it's better to communicate with the admins and your colleagues to possibly allow you to \
-		do something custom.")]")
-	apply_codename(spawned_human)
-
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/officer/post_transfer_prefs(mob/living/carbon/human/spawned_human)
-	. = ..()
-	apply_codename(spawned_human)
-
-/obj/effect/mob_spawn/ghost_role/human/nri_raider/officer/equip(mob/living/carbon/human/spawned_human)
-	. = ..()
-	var/obj/item/card/id/advanced/card = spawned_human.get_idcard()
-	if(GLOB.first_officer == spawned_human)
-		card.assignment = pick(NRI_LEADER_JOB_LIST)
-		card.trim.sechud_icon_state = SECHUD_NRI_POLICE_LEAD
-	else
-		card.assignment = pick(NRI_JOB_LIST)
-		card.trim.sechud_icon_state = SECHUD_NRI_POLICE
-
-	card.update_label()
-
-/datum/map_template/shuttle/pirate/nri_raider
-	prefix = "_maps/shuttles/nova/"
-	suffix = "nri_raider"
-	name = "pirate ship (NRI Enforcer-Class Starship)"
-	port_x_offset = -5
-	port_y_offset = 5
-
-
-/area/shuttle/pirate/nri
-	name = "NRI Starship"
-	forced_ambience = TRUE
-	ambient_buzz = 'modular_ss220/modules/return_prs/novaya_ert/sound/police/amb_ship_01.ogg'
-	ambient_buzz_vol = 15
-	ambientsounds = list('modular_ss220/modules/return_prs/novaya_ert/sound/police/alarm_radio.ogg',
-						'modular_ss220/modules/return_prs/novaya_ert/sound/police/alarm_small_09.ogg',
-						'modular_ss220/modules/return_prs/novaya_ert/sound/police/gear_loop.ogg',
-						'modular_ss220/modules/return_prs/novaya_ert/sound/police/gear_start.ogg',
-						'modular_ss220/modules/return_prs/novaya_ert/sound/police/gear_stop.ogg',
-						'modular_ss220/modules/return_prs/novaya_ert/sound/police/intercom_loop.ogg')
-
-/obj/machinery/computer/shuttle/pirate/nri
-	name = "police shuttle console"
-
-/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/pirate/nri
-	name = "police shuttle navigation computer"
-	desc = "Used to designate a precise transit location for the police shuttle."
-
-/obj/machinery/porta_turret/syndicate/nri_raider
-	name = "anti-projectile turret"
-	desc = "An automatic defense turret designed for point-defense, it's probably not that wise to try approaching it."
-	scan_range = 9
-	shot_delay = 15
-	faction = list(FACTION_RAIDER)
-	icon = 'modular_ss220/modules/return_prs/novaya_ert/icons/turrets.dmi'
-	icon_state = "gun_turret"
-	base_icon_state = "gun_turret"
-	max_integrity = 250
-	stun_projectile = /obj/projectile/bullet/ciws
-	lethal_projectile = /obj/projectile/bullet/ciws
-	lethal_projectile_sound = 'modular_ss220/modules/return_prs/novaya_ert/sound/police/shell_out_tiny.ogg'
-	stun_projectile_sound = 'modular_ss220/modules/return_prs/novaya_ert/sound/police/shell_out_tiny.ogg'
-
-/obj/machinery/porta_turret/syndicate/nri_raider/target(atom/movable/target)
-	if(target)
-		setDir(get_dir(base, target))//even if you can't shoot, follow the target
-		shootAt(target)
-		addtimer(CALLBACK(src, PROC_REF(shootAt), target), shot_delay)
-		addtimer(CALLBACK(src, PROC_REF(shootAt), target), shot_delay * 2)
-		addtimer(CALLBACK(src, PROC_REF(shootAt), target), shot_delay * 3)
-		return TRUE
-
-/obj/projectile/bullet/ciws
-	name = "anti-projectile salvo"
-	icon_state = "guardian"
-	damage = 15
-	armour_penetration = 10
-
-/obj/docking_port/mobile/pirate/nri_raider
-	name = "NRI IAC-PV 'Evangelium'" //Nobody will care about the translation but basically NRI Internal Affairs Collegium-Patrol Vessel
-	initial_engine_power = 6
-	port_direction = EAST
-	preferred_direction = EAST
-	callTime = 2 MINUTES
-	rechargeTime = 3 MINUTES
-	movement_force = list("KNOCKDOWN"=0,"THROW"=0)
-	can_move_docking_ports = TRUE
-	takeoff_sound = sound('modular_ss220/modules/return_prs/novaya_ert/sound/police/engine_ignit_int.ogg')
-	landing_sound = sound('modular_ss220/modules/return_prs/novaya_ert/sound/police/env_ship_down.ogg')
-
-/obj/structure/plaque/static_plaque/golden/commission/ks13/nri_raider
-	desc = "NRI Terentiev-Yermolayev Orbital Shipworks, Providence High Orbit, Ship OSTs-02\n'Potato Beetle' Class Corvette\nCommissioned 10/11/2562 'Keeping Promises'"
-
-/obj/machinery/computer/centcom_announcement/nri_raider
-	name = "police announcement console"
-	desc = "A console used for making priority Internal Affairs Collegium dispatch reports."
-	req_access = null
-	circuit = null
-	command_name = "NRI Enforcer-Class Starship Telegram"
-	report_sound = ANNOUNCER_NRI_POLICE
+	access = list(ACCESS_NRI, ACCESS_NRI_POLICE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE)
+	threat_modifier = -1 //this is the police, not raiders
 
 /obj/item/storage/belt/security/nri/PopulateContents()
 	generate_items_inside(list(
@@ -424,18 +190,6 @@ GLOBAL_VAR(first_officer)
 	<br><small>Thus, the creation of independent branches in the Empire led to the fact that these units directed the activities of the entire police to combat ordinary crimes. Prior to their formation, the task of combating corporal crime was the direct responsibility of the ranks of the local planetary patrols and, in special cases, the Planetary Guard. The ranks of independent departments were given equal rights in the investigation of criminal offenses with the ranks of the planetary police, since they acted on the basis of the same adopted normative legal acts. The provisions of the law created in accordance with the recent Instruction were more specifically defined: the goals, tasks of independent departments, their internal structure, the procedure for conducting operational investigative actions. At the same time, it, in general, has not changed the principle of organizational structure of patrols and therefore they, nevertheless, in part, remain limited in their activities within the territory under their jurisdiction. In this regard, they cannot carry out operational search activities outside the stations to which they were assigned.</small>
 	<br> <span style=\"color:black;font-family:'Segoe Script';\"><p><b>Printed by: Novaya Rossiyskaya Imperiya Internal Affairs Collegium, for educational and referential purposes only.</b></p></span>"}
 
-/obj/item/paper/fluff/nri_police
-	name = "hastily printed note"
-	default_raw_text = {"Hey, officer, we couldn't arrange getting you a proper military frigate, -you know, those goddamn bureaucrats with their permission requests and paperwork-, so the police corvette will have to suffice.
-	<br> It was not designed for any kind of long-term deployments and anything more aggressive than shooting up a bunch of punks, so expect frequent power outages and a significant lack of raiding machinery.
-	<br> We have done some quick modifications to make it more suitable for military use, and smuggled you some defensive and military-grade medical equipment to balance it out. And some SMGs that were so convenient to \"go out of service and get scrapped". It should do the job for now.
-	<br> It is worth mentioning that your fourth marine, the maintenance crew man, went on a vacation. Dude's been pretty nervous as of late so it's only fair to let him get some well deserved rest - he has been maintaining this ship the whole time you've been in cryosleep. This should not affect your performance anyways.
-	<br> As for the broken Krinkov, there is nothing we can do for now. Will have to use the policemen's, not like you're here to fight the solarians anyways.
-	<br> And, please, for the love of God and the Eternal Empress - do not make this mission into a shootout. We can't afford any more casualties in this sector, especially with the most of our military being on the frontline.
-	<br>
-	<br> Don't screw this up,
-	<br> <span style=\"color:black;font-family:'Segoe Script';\"><p><b>Defense Collegia Shipmaster, Akulan Contractor, Shinrun Kantes.</b></p></span>"}
-
 /obj/item/folder/blue/nri_police
 	name = "NRI police SOPs"
 
@@ -445,7 +199,222 @@ GLOBAL_VAR(first_officer)
 	new /obj/item/paper/fluff/nri_document_two(src)
 	update_appearance()
 
-/obj/machinery/suit_storage_unit/nri
+// outfit code
+/datum/outfit/pirate/nri/post_equip(mob/living/carbon/human/equipped)
+	. = ..()
+	equipped.faction -= "pirate"
+	equipped.faction |= "nri"
+	equipped.faction |= "neutral"
+
+	// make sure we update the ID's name too
+	var/obj/item/card/id/id_card = equipped.wear_id
+	if(istype(id_card))
+		id_card.registered_name = equipped.real_name
+		id_card.update_icon()
+		id_card.update_label()
+
+	handlebank(equipped)
+
+/datum/outfit/pirate/nri/officer
+	name = "NRI Field Officer"
+
+	head = /obj/item/clothing/head/hats/colonial/nri_police
+	glasses = /obj/item/clothing/glasses/sunglasses
+	ears = /obj/item/radio/headset/guild/command
+	mask = null
+	neck = /obj/item/clothing/neck/cloak/colonial/nri_police
+
+	uniform = /obj/item/clothing/under/colonial/nri_police
+	suit = null
+
+	gloves = /obj/item/clothing/gloves/combat
+
+	shoes = /obj/item/clothing/shoes/combat
+
+	belt = /obj/item/storage/belt/security/nri
+	back = /obj/item/storage/backpack/satchel/leather
+	backpack_contents = list(
+		/obj/item/storage/box/nri_survival_pack/police = 1,
+		/obj/item/ammo_box/magazine/recharge/plasma_battery = 3,
+		/obj/item/gun/ballistic/automatic/pistol/plasma_marksman = 1,
+		/obj/item/crucifix = 1,
+		/obj/item/clothing/mask/gas/nri_police = 1,
+		/obj/item/modular_computer/pda/nri_police = 1,
+	)
+	l_pocket = /obj/item/folder/blue/nri_police
+	r_pocket = /obj/item/storage/pouch/ammo
+
+	id = /obj/item/card/id/advanced/nri_police
+	id_trim = /datum/id_trim/nri_police
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police
+	name = "NRI Police sleeper"
+	desc = "Cozy. You get the feeling you aren't supposed to be here, though..."
+	prompt_name = "a NRI Marine"
+	icon = 'modular_nova/modules/cryosleep/icons/cryogenics.dmi'
+	icon_state = "cryopod"
+	mob_species = /datum/species/human
+	faction = list(FACTION_NRI)
+	you_are_text = "You are a Novaya Rossiyskaya Imperiya task force."
+	flavour_text = "The station has refused to pay the fine for breaking Imperial regulations, you are here to recover the debt. Do so by demanding the funds. Force approach is usually recommended, but isn't the only method."
+	important_text = "Allowed races are humans, Akulas, IPCs. Follow your field officer's orders. Important mention - while you are listed as the pirates gamewise, you really aren't lore-and-everything-else-wise. Roleplay accordingly."
+	outfit = /datum/outfit/pirate/nri
+	restricted_species = list(/datum/species/human, /datum/species/akula, /datum/species/synthetic)
+	random_appearance = FALSE
+	show_flavor = TRUE
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/proc/apply_codename(mob/living/carbon/human/spawned_human)
+	var/callsign = pick(GLOB.callsigns_nri)
+	var/number = pick(GLOB.phonetic_alphabet_numbers)
+	spawned_human.fully_replace_character_name(null, "[callsign] [number]")
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/special(mob/living/carbon/human/spawned_human)
+	. = ..()
+	spawned_human.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
+	apply_codename(spawned_human)
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/post_transfer_prefs(mob/living/carbon/human/spawned_human)
+	. = ..()
+	apply_codename(spawned_human)
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/Destroy()
+	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
+	return ..()
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/officer
+	name = "NRI Officer sleeper"
+	prompt_name = "a NRI Field Officer"
+	outfit = /datum/outfit/pirate/nri/officer
+	flavour_text = "The station has refused to pay the fine for breaking Imperial regulations, as a consequence you are here to perform a prolonged inspection."
+	important_text = "Allowed races are humans, Akulas, IPCs. Roleplay accordingly. There is an important document in your pocket I'd advise you to read and keep safe."
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/apply_codename(mob/living/carbon/human/spawned_human)
+	var/callsign = pick(GLOB.callsigns_nri)
+	var/number = pick(GLOB.phonetic_alphabet_numbers)
+	spawned_human.fully_replace_character_name(null, "[callsign] [number][GLOB.first_officer == spawned_human ? " Actual" : ""]")
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/special(mob/living/carbon/human/spawned_human)
+	. = ..()
+	spawned_human.mind.add_antag_datum(/datum/antagonist/police)
+	spawned_human.grant_language(/datum/language/uncommon, source = LANGUAGE_SPAWNER)
+	spawned_human.grant_language(/datum/language/yangyu, source = LANGUAGE_SPAWNER)
+	spawned_human.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
+	spawned_human.grant_language(/datum/language/akulan, source = LANGUAGE_SPAWNER)
+
+	// if this is the first officer, keep a reference to them
+	if(!GLOB.first_officer)
+		GLOB.first_officer = spawned_human
+		to_chat(spawned_human, span_bold("With you being the leader of the group and having a special designation, 'Actual', it's your duty to make sure this entire operation \
+			goes smoothly. As in, doesn't result in an intergalactic political scandal, or an unneecessary shooting. It's also very likely expected for you to be performing \
+			all the necessary negotiations, so do prepare yourself for that."))
+
+	to_chat(spawned_human, "[span_bold("The station has overriden the response system for the reasons unknown, keep the ship intact, communicate with the station, \
+		perform an inspection to determine the legitimacy of the fine, and try to get the funds yourself, if it's legitimate. \
+		In any case, perform your predefined duties and uphold some semblance of intergalactic law and professionalism, even if just for show.")] <br><br>\
+		[span_small("Also, a small OOC clarification: none of your objectives are meant to be completable mechanically, so don't stress yourself over not greentexting or anything; \
+		If you have a better plan than 'completing' them, like an idea for a gimmick, it's better to communicate with the admins and your colleagues to possibly allow you to \
+		do something custom.")]")
+	apply_codename(spawned_human)
+
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/post_transfer_prefs(mob/living/carbon/human/spawned_human)
+	. = ..()
+	apply_codename(spawned_human)
+
+/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/equip(mob/living/carbon/human/spawned_human)
+	. = ..()
+	var/obj/item/card/id/advanced/card = spawned_human.get_idcard()
+	if(GLOB.first_officer == spawned_human)
+		card.assignment = pick(NRI_LEADER_JOB_LIST)
+		card.trim.sechud_icon_state = SECHUD_NRI_POLICE_LEAD
+	else
+		card.assignment = pick(NRI_JOB_LIST)
+		card.trim.sechud_icon_state = SECHUD_NRI_POLICE
+
+	card.update_label()
+
+//shuttle code
+/datum/map_template/shuttle/pirate/nri_police
+	prefix = "_maps/shuttles/"
+	suffix = "nri_police"
+	name = "NRI Police ship (NRI Enforcer-Class Starship)"
+	port_x_offset = -5
+	port_y_offset = 5
+
+/area/shuttle/nri_police
+	name = "NRI Starship"
+	requires_power = TRUE
+	forced_ambience = TRUE
+	ambient_buzz = 'modular_ss220/modules/return_prs/novaya_ert/sound/police/amb_ship_01.ogg'
+	ambient_buzz_vol = 15
+	ambientsounds = list('modular_ss220/modules/return_prs/novaya_ert/sound/police/alarm_radio.ogg',
+						'modular_ss220/modules/return_prs/novaya_ert/sound/police/alarm_small_09.ogg',
+						'modular_ss220/modules/return_prs/novaya_ert/sound/police/gear_loop.ogg',
+						'modular_ss220/modules/return_prs/novaya_ert/sound/police/gear_start.ogg',
+						'modular_ss220/modules/return_prs/novaya_ert/sound/police/gear_stop.ogg',
+						'modular_ss220/modules/return_prs/novaya_ert/sound/police/intercom_loop.ogg')
+
+/obj/machinery/computer/shuttle/pirate/nri
+	name = "police shuttle console"
+
+/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/pirate/nri
+	name = "police shuttle navigation computer"
+	desc = "Used to designate a precise transit location for the police shuttle."
+
+/obj/machinery/porta_turret/syndicate/nri_police
+	name = "anti-projectile turret"
+	desc = "An automatic defense turret designed for point-defense, it's probably not that wise to try approaching it."
+	scan_range = 9
+	shot_delay = 15
+	faction = list(FACTION_NRI)
+	icon = 'modular_ss220/modules/return_prs/novaya_ert/icons/turrets.dmi'
+	icon_state = "gun_turret"
+	base_icon_state = "gun_turret"
+	max_integrity = 250
+	stun_projectile = /obj/projectile/bullet/nri_ciws
+	lethal_projectile = /obj/projectile/bullet/nri_ciws
+	lethal_projectile_sound = 'modular_ss220/modules/return_prs/novaya_ert/sound/police/shell_out_tiny.ogg'
+	stun_projectile_sound = 'modular_ss220/modules/return_prs/novaya_ert/sound/police/shell_out_tiny.ogg'
+
+/obj/machinery/porta_turret/syndicate/nri_police/target(atom/movable/target)
+	if(target)
+		setDir(get_dir(base, target))//even if you can't shoot, follow the target
+		shootAt(target)
+		addtimer(CALLBACK(src, PROC_REF(shootAt), target), shot_delay)
+		addtimer(CALLBACK(src, PROC_REF(shootAt), target), shot_delay * 2)
+		addtimer(CALLBACK(src, PROC_REF(shootAt), target), shot_delay * 3)
+		return TRUE
+
+/obj/projectile/bullet/nri_ciws
+	name = "anti-projectile salvo"
+	icon_state = "guardian"
+	damage = 15
+	armour_penetration = 10
+
+/obj/docking_port/mobile/pirate/nri_police
+	name = "NRI IAC-PV 'Evangelium'" //Nobody will care about the translation but basically NRI Internal Affairs Collegium-Patrol Vessel
+	initial_engine_power = 6
+	port_direction = EAST
+	preferred_direction = EAST
+	callTime = 2 MINUTES
+	rechargeTime = 3 MINUTES
+	movement_force = list("KNOCKDOWN"=0,"THROW"=0)
+	can_move_docking_ports = TRUE
+	takeoff_sound = sound('modular_ss220/modules/return_prs/novaya_ert/sound/police/engine_ignit_int.ogg')
+	landing_sound = sound('modular_ss220/modules/return_prs/novaya_ert/sound/police/env_ship_down.ogg')
+
+/obj/structure/plaque/static_plaque/golden/commission/ks13/nri_police
+	desc = "NRI Terentiev-Yermolayev Orbital Shipworks, Providence High Orbit, Ship OSTs-02\n'Potato Beetle' Class Corvette\nCommissioned 10/11/2562 'Keeping Promises'"
+
+/obj/machinery/computer/centcom_announcement/nri_police
+	name = "police announcement console"
+	desc = "A console used for making priority Internal Affairs Collegium dispatch reports."
+	req_access = null
+	circuit = null
+	command_name = "NRI Enforcer-Class Starship Telegram"
+	report_sound = ANNOUNCER_NRI_POLICE
+
+/obj/machinery/suit_storage_unit/nri_police
 	mod_type = /obj/item/mod/control/pre_equipped/policing
 	storage_type = /obj/item/tank/internals/oxygen/yellow
 
@@ -508,9 +477,9 @@ GLOBAL_VAR(first_officer)
 	else
 		priority_announce("We've received a signal to stop the blockade; you're once again free to do whatever you were doing before.","NRI IAC HQ",ANNOUNCER_NRI_POLICE,"Priority", color_override = "purple")
 
+//"antag" datum
 /datum/antagonist/police
 	name = "\improper NRI Police Officer"
-	//Even if their goal's almost a complete antithesis to what pirates normally do, their spawn is, well, done via pirate code.
 	pref_flag = ROLE_SPACE_PIRATE
 	roundend_category = "nri police"
 	antagpanel_category = "NRI Police"
