@@ -1,5 +1,73 @@
 [
   {
+    "date": "2025-10-11",
+    "author": "DenIS318",
+    "changes": [
+      "Forcing dynamic rulesets now skipping checks, that would prevent it from spawning normally (like required amount of enemies)",
+      "Pirates config fixed and now they can be properly spawned by dynamic"
+    ]
+  },
+  {
+    "date": "2025-10-10",
+    "author": "DenIS318",
+    "changes": [
+      "Blueshield monitor UI changed to use new crew monitor UI",
+      "Shoulder holster now doesn't draw gun (drop it) when hands are not usable (full)",
+      "Shoulder holster icon now properly scaled at uniform",
+      "Nucleations now can hear their own death explosion sound",
+      "DenIS318 & larentoun & "
+    ]
+  },
+  {
+    "date": "2025-10-10",
+    "author": "AyIong",
+    "changes": [
+      "Nanomaps rendering for UI",
+      "Camera Console UI updated (now uses Nanomaps)",
+      "Crew Monitor UI updated (now uses Nanomaps)",
+      "Crew Monitor can track personal with trackers on Nanomap",
+      "Can switch between cameras using mouse in Camera console"
+    ]
+  },
+  {
+    "date": "2025-10-06",
+    "author": "Arceniu",
+    "changes": [
+      "Updated Blueshield MODsuit: Armour buff 40>45 melee, 20>25 wound. Added loud sound protection module and expanded storage module.",
+      "Updated NTR corporate MODsuit: slowdown decreased 0.35 > 0.25. Armour buff: melee 20 > 25, laser 15 > 20, energy 15 > 20, bomb 25 > 30, added loud sound protection module.",
+      "Updated Surplus Security MODsuit protection: energy 35 > 40, bomb 25 > 30."
+    ]
+  },
+  {
+    "date": "2025-10-05",
+    "author": "Arceniu",
+    "changes": [
+      "Added new items to imports from offs(synth neuroware, some more flatpacks)",
+      "fixed missing wound/decease analyzer in import",
+      "Removed restriction for hacking cargo console with emag implant",
+      "separated longarms from pistols in nri import",
+      "moved a couple of items in the import list(energy weapons import and taser item from nri guns to nri items) for a more beautiful look",
+      "rebalanced some cargo import items price"
+    ]
+  },
+  {
+    "date": "2025-10-05",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Downgraded CE tools to T1 instead of T2\"",
+      "Shouler holster when attached now have proper icon size"
+    ]
+  },
+  {
+    "date": "2025-10-04",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Stasis Beds no longer let you do surgeries while its on\"",
+      "Organ-related emotions (wings, tails) now require wing/tail, otherwise not usable",
+      "Removed 's ending form localized interactions, such as headpat, fistbump, handshake"
+    ]
+  },
+  {
     "date": "2025-10-01",
     "author": "DenIS318",
     "changes": [

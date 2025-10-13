@@ -4,3 +4,49 @@
   - bugfix: Fixed maiden headband in loadout
   - bugfix: Fixed pre-built DNA console on interdyne
   - bugfix: Fixed .310 Strilka ammo on maps, in which it was placed
+2025-10-04:
+  DenIS318:
+  - rscdel: Revert "Stasis Beds no longer let you do surgeries while its on"
+  - rscadd: Organ-related emotions (wings, tails) now require wing/tail, otherwise
+      not usable
+  - spellcheck: Removed 's ending form localized interactions, such as headpat, fistbump,
+      handshake
+2025-10-05:
+  Arceniu:
+  - rscadd: Added new items to imports from offs(synth neuroware, some more flatpacks)
+  - bugfix: fixed missing wound/decease analyzer in import
+  - rscdel: Removed restriction for hacking cargo console with emag implant
+  - qol: separated longarms from pistols in nri import
+  - qol: moved a couple of items in the import list(energy weapons import and taser
+      item from nri guns to nri items) for a more beautiful look
+  - balance: rebalanced some cargo import items price
+  DenIS318:
+  - balance: Revert "Downgraded CE tools to T1 instead of T2"
+  - bugfix: Shouler holster when attached now have proper icon size
+2025-10-06:
+  Arceniu:
+  - balance: 'Updated Blueshield MODsuit: Armour buff 40>45 melee, 20>25 wound. Added
+      loud sound protection module and expanded storage module.'
+  - balance: 'Updated NTR corporate MODsuit: slowdown decreased 0.35 > 0.25. Armour
+      buff: melee 20 > 25, laser 15 > 20, energy 15 > 20, bomb 25 > 30, added loud
+      sound protection module.'
+  - balance: 'Updated Surplus Security MODsuit protection: energy 35 > 40,  bomb 25
+      > 30.'
+2025-10-10:
+  DenIS318:
+  - qol: Shoulder holster now doesn't draw gun (drop it) when hands are not usable
+      (full)
+  - bugfix: Shoulder holster icon now properly scaled at uniform
+  - bugfix: Nucleations now can hear their own death explosion sound
+  - qol: Blueshield monitor UI changed to use new crew monitor UI
+  DenIS318 & larentoun & AyIong:
+  - rscadd: Nanomaps rendering for UI
+  - rscadd: Camera Console UI updated (now uses Nanomaps)
+  - rscadd: Crew Monitor UI updated (now uses Nanomaps)
+  - qol: Crew Monitor can track personal with trackers on Nanomap
+  - qol: Can switch between cameras using mouse in Camera console
+2025-10-11:
+  DenIS318:
+  - config: Pirates config fixed and now they can be properly spawned by dynamic
+  - admin: Forcing dynamic rulesets now skipping checks, that would prevent it from
+      spawning normally (like required amount of enemies)

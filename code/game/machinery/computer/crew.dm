@@ -80,9 +80,11 @@
 /obj/machinery/computer/crew/syndie
 	icon_keyboard = "syndie_key"
 
-/obj/machinery/computer/crew/ui_interact(mob/user)
-	. = ..()
-	GLOB.crewmonitor.show(user,src)
+// SS1984 REMOVAL START
+// /obj/machinery/computer/crew/ui_interact(mob/user)
+// 	. = ..()
+// 	GLOB.crewmonitor.show(user,src)
+// SS1984 REMOVAL END
 
 GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 
@@ -181,7 +183,7 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 /datum/crewmonitor/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-		ui = new(user, src, "CrewConsoleNova") // NOVA EDIT CHANGE - ORIGINAL: ui = new(user, src, "CrewConsole")
+		ui = new(user, src, "CrewConsole1984") // SS1984 EDIT, ORIGINAL: ui = new(user, src, "CrewConsole")
 		ui.open()
 
 /datum/crewmonitor/proc/show(mob/M, source)
@@ -295,7 +297,15 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 
 		// Location
 		if (sensor_mode >= SENSOR_COORDS)
-			entry["area"] = get_area_name(tracked_living_mob, format_text = TRUE)
+			// SS1984 REMOVAL entry["area"] = get_area_name(tracked_living_mob, format_text = TRUE)
+			// SS1984 ADDITION START
+			entry["position"] = list(
+				"area" = capitalize(get_area_name(tracked_living_mob, format_text = TRUE)),
+				"x" = tracked_living_mob.x,
+				"y" = tracked_living_mob.y,
+				"z" = tracked_living_mob.z,
+			)
+			// SS1984 ADDITION END
 
 		results[++results.len] = entry
 
