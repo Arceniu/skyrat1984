@@ -84,6 +84,7 @@ GLOBAL_VAR(first_officer)
 	device_theme = PDA_THEME_TERMINAL
 	icon = 'modular_ss220/modules/return_prs/novaya_ert/icons/pda.dmi'
 	icon_state = "/obj/item/modular_computer/pda/nri_police"
+	greyscale_colors = "#363655#7878f7"
 	comp_light_luminosity = 6.3 //Matching a flashlight
 	comp_light_color = "#5c20aa" //Simulated ultraviolet light for finding blood
 	starting_programs = list(
@@ -92,6 +93,32 @@ GLOBAL_VAR(first_officer)
 		/datum/computer_file/program/robocontrol,
 	)
 	inserted_item = /obj/item/pen/fourcolor
+
+/obj/item/radio/headset/nri/police
+	desc = "Headset used by the NRI police."
+	icon_state = "headset"
+	keyslot = new /obj/item/encryptionkey/headset_syndicate/guild //before i create better thing
+
+/obj/item/radio/headset/nri/police/alt
+	desc = "Headset used by the NRI police. Protects ears from flashbangs."
+	icon_state = "com_headset_alt"
+
+/obj/item/radio/headset/nri/police/alt/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
+
+/obj/item/radio/headset/nri/police/leader
+	desc = "Headset used by the NRI police commanders."
+	icon_state = "com_headset"
+	command = TRUE
+
+/obj/item/radio/headset/nri/police/leader/alt
+	desc = "Headset used by the NRI police commanders. Protects ears from flashbangs."
+	icon_state = "com_headset_alt"
+
+/obj/item/radio/headset/nri/police/leader/alt/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
 /obj/item/card/id/advanced/nri_police
 	name = "\improper NRI police identification card"
@@ -220,7 +247,7 @@ GLOBAL_VAR(first_officer)
 
 	head = /obj/item/clothing/head/hats/colonial/nri_police
 	glasses = /obj/item/clothing/glasses/sunglasses
-	ears = /obj/item/radio/headset/guild/command
+	ears = /obj/item/radio/headset/nri/police/leader/alt
 	mask = null
 	neck = /obj/item/clothing/neck/cloak/colonial/nri_police
 
@@ -235,7 +262,7 @@ GLOBAL_VAR(first_officer)
 	back = /obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/storage/box/nri_survival_pack/police = 1,
-		/obj/item/ammo_box/magazine/recharge/plasma_battery = 3,
+		/obj/item/ammo_box/magazine/recharge/plasma_battery = 4,
 		/obj/item/gun/ballistic/automatic/pistol/plasma_marksman = 1,
 		/obj/item/crucifix = 1,
 		/obj/item/clothing/mask/gas/nri_police = 1,

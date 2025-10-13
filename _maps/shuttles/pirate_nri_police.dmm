@@ -33,6 +33,21 @@
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/shuttle/nri_police)
+"bw" = (
+/obj/structure/closet/crate/secure/weapon{
+	anchored = 1
+	},
+/obj/item/mod/module/headprotector,
+/obj/item/mod/module/headprotector,
+/obj/item/mod/module/headprotector,
+/obj/item/mod/module/ert_auto_doc,
+/obj/item/reagent_containers/cup/glass/waterbottle/large/cryptobiolin,
+/obj/item/reagent_containers/cup/glass/waterbottle/large/cryptobiolin,
+/obj/item/mod/module/visor/night,
+/obj/item/mod/module/visor/night,
+/obj/item/mod/module/visor/thermal,
+/turf/open/floor/pod/dark,
+/area/shuttle/nri_police)
 "bE" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/sign/flag/nri/directional/north,
@@ -178,10 +193,10 @@
 /area/shuttle/nri_police)
 "hn" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	dir = 4
+	dir = 4;
+	req_access = list("nri_police")
 	},
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/iron/dark,
@@ -197,10 +212,10 @@
 /area/shuttle/nri_police)
 "hK" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	dir = 1
+	dir = 1;
+	req_access = list("nri_police")
 	},
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/catwalk_floor,
@@ -214,7 +229,6 @@
 /turf/open/floor/pod/light,
 /area/shuttle/nri_police)
 "ie" = (
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/fans/tiny,
@@ -245,7 +259,9 @@
 	},
 /obj/machinery/computer/shuttle/pirate/nri{
 	dir = 8;
-	req_access = list("nri_police")
+	req_access = list("nri_police");
+	icon_keyboard = "tech_key";
+	icon_screen = "shuttle"
 	},
 /turf/open/floor/carpet/green,
 /area/shuttle/nri_police)
@@ -268,10 +284,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/item/gun/ballistic/shotgun/riot{
-	pixel_x = -4
-	},
-/obj/item/gun/ballistic/automatic/miecz,
+/obj/item/gun/ballistic/automatic/akm,
+/obj/item/gun/ballistic/automatic/akm,
+/obj/item/gun/ballistic/automatic/akm,
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "kQ" = (
@@ -331,7 +346,7 @@
 /area/shuttle/nri_police)
 "mJ" = (
 /obj/structure/table/optable,
-/obj/machinery/defibrillator_mount/directional/east,
+/obj/machinery/defibrillator_mount/loaded/directional/east,
 /turf/open/floor/pod/dark,
 /area/shuttle/nri_police)
 "nX" = (
@@ -388,7 +403,13 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/peacekeeper,
 /obj/item/clothing/head/helmet/nri_police,
 /obj/item/clothing/suit/armor/vest/nri_police,
-/obj/item/encryptionkey/heads/ce,
+/obj/item/encryptionkey/headset_faction{
+	special_channels = null;
+	channels = list("Command" = 1, "SolFed" = 1, "Security" = 1, "AI Private" = 1, "Prison" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Entertainment" = 1);
+	desc = "An  NRI grade modified encryption key for a radio headset.";
+	name = "NRI radar type radio encryption key"
+	},
+/obj/item/melee/baton/security/stun_gun/loaded,
 /turf/open/floor/pod/light,
 /area/shuttle/nri_police)
 "pQ" = (
@@ -432,7 +453,9 @@
 	name = "police shuttle navigation computer";
 	desc = "Used to designate a precise transit location for the police shuttle.";
 	x_offset = -2;
-	y_offset = -5
+	y_offset = -5;
+	icon_keyboard = "tech_key";
+	icon_screen = "comm_monitor"
 	},
 /turf/open/floor/carpet/green,
 /area/shuttle/nri_police)
@@ -491,8 +514,10 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/table/reinforced,
-/obj/item/stack/sheet/plastic/five,
+/obj/item/stack/sheet/plastic/fifty,
 /obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/iron/fifty,
 /obj/item/stack/sheet/iron/fifty,
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
@@ -512,6 +537,7 @@
 /obj/item/melee/baton,
 /obj/item/melee/baton,
 /obj/item/melee/baton,
+/obj/item/storage/box/flashbangs,
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "ty" = (
@@ -532,6 +558,11 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/item/gun/ballistic/rifle/boltaction,
+/obj/item/gun/ballistic/automatic/miecz,
+/obj/item/gun/ballistic/shotgun/riot{
+	pixel_x = -4
+	},
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "ui" = (
@@ -543,7 +574,6 @@
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "uo" = (
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
 	},
@@ -590,10 +620,7 @@
 /area/shuttle/nri_police)
 "vj" = (
 /obj/structure/cable,
-/obj/machinery/power/port_gen/pacman/super{
-	anchored = 1;
-	sheets = 20
-	},
+/obj/machinery/power/micro_reactor/bapgm,
 /turf/open/floor/plating,
 /area/shuttle/nri_police)
 "wh" = (
@@ -611,8 +638,9 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/nri_police)
 "wM" = (
-/obj/machinery/door/airlock/survival_pod/glass,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/machinery/door/airlock/survival_pod/glass{
+	req_access = list("nri_police")
+	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/pod/light,
@@ -634,19 +662,20 @@
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "xg" = (
-/obj/machinery/door/airlock/survival_pod/glass,
+/obj/machinery/door/airlock/survival_pod/glass{
+	req_access = list("nri_police")
+	},
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/catwalk_floor,
 /area/shuttle/nri_police)
 "xp" = (
 /obj/machinery/door/airlock/survival_pod{
-	dir = 8
+	dir = 8;
+	req_access = list("nri_police")
 	},
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -680,6 +709,10 @@
 /obj/item/ammo_box/advanced/s12gauge/beehive,
 /obj/item/ammo_box/advanced/s12gauge/beehive,
 /obj/item/ammo_box/advanced/s12gauge/beehive,
+/obj/item/ammo_box/advanced/s12gauge/bean,
+/obj/item/ammo_box/advanced/s12gauge/bean,
+/obj/item/ammo_box/advanced/s12gauge/magnum,
+/obj/item/ammo_box/advanced/s12gauge/express,
 /obj/structure/rack/shelf,
 /turf/open/floor/pod/light,
 /area/shuttle/nri_police)
@@ -816,7 +849,6 @@
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "Dl" = (
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/external/glass{
@@ -848,7 +880,13 @@
 /obj/item/storage/belt/military/cin_surplus/marine,
 /obj/item/clothing/head/helmet/nri_police,
 /obj/item/clothing/suit/armor/vest/nri_police,
-/obj/item/encryptionkey/heads/hos,
+/obj/item/encryptionkey/headset_faction{
+	special_channels = null;
+	channels = list("Command" = 1, "SolFed" = 1, "Security" = 1, "AI Private" = 1, "Prison" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Entertainment" = 1);
+	desc = "An  NRI grade modified encryption key for a radio headset.";
+	name = "NRI radar type radio encryption key"
+	},
+/obj/item/melee/baton/security/stun_gun/loaded,
 /turf/open/floor/pod/light,
 /area/shuttle/nri_police)
 "Eh" = (
@@ -950,9 +988,9 @@
 /area/shuttle/nri_police)
 "HO" = (
 /obj/machinery/door/airlock/survival_pod/glass{
-	dir = 1
+	dir = 1;
+	req_access = list("nri_police")
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/cable,
 /obj/effect/mapping_helpers/airlock/autoname,
@@ -1008,10 +1046,13 @@
 	anchored = 1
 	},
 /obj/machinery/light/small/red/directional/south,
-/obj/item/ammo_box/advanced/s12gauge/bean,
-/obj/item/ammo_box/advanced/s12gauge/bean,
-/obj/item/ammo_box/advanced/s12gauge/magnum,
-/obj/item/ammo_box/advanced/s12gauge/express,
+/obj/item/ammo_box/magazine/akm,
+/obj/item/ammo_box/magazine/akm,
+/obj/item/ammo_box/magazine/akm,
+/obj/item/ammo_box/magazine/akm,
+/obj/item/ammo_box/magazine/akm,
+/obj/item/ammo_box/magazine/akm,
+/obj/item/ammo_box/magazine/akm,
 /turf/open/floor/pod/dark,
 /area/shuttle/nri_police)
 "JS" = (
@@ -1034,7 +1075,13 @@
 /obj/item/storage/belt/military/cin_surplus/marine,
 /obj/item/clothing/head/helmet/nri_police,
 /obj/item/clothing/suit/armor/vest/nri_police,
-/obj/item/encryptionkey/heads/cmo,
+/obj/item/encryptionkey/headset_faction{
+	special_channels = null;
+	channels = list("Command" = 1, "SolFed" = 1, "Security" = 1, "AI Private" = 1, "Prison" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Entertainment" = 1);
+	desc = "An  NRI grade modified encryption key for a radio headset.";
+	name = "NRI radar type radio encryption key"
+	},
+/obj/item/melee/baton/security/stun_gun/loaded,
 /turf/open/floor/pod/light,
 /area/shuttle/nri_police)
 "Kc" = (
@@ -1057,7 +1104,8 @@
 /obj/structure/closet/crate/secure/engineering,
 /obj/item/mod/module/active_sonar,
 /obj/item/mod/module/megaphone,
-/obj/item/mod/module/quick_carry,
+/obj/item/mod/module/projectile_dampener,
+/obj/item/mod/module/holster,
 /obj/item/mod/module/holster,
 /obj/item/mod/module/holster,
 /turf/open/floor/pod/dark,
@@ -1141,9 +1189,9 @@
 /area/shuttle/nri_police)
 "Pp" = (
 /obj/machinery/door/airlock/survival_pod{
-	dir = 8
+	dir = 8;
+	req_access = list("nri_police")
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/pod,
@@ -1157,7 +1205,6 @@
 /turf/open/floor/engine/hull,
 /area/shuttle/nri_police)
 "PW" = (
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -1205,10 +1252,10 @@
 "Su" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/survival_pod{
-	dir = 8
+	dir = 8;
+	req_access = list("nri_police")
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/structure/fans/tiny,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -1297,6 +1344,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small/red/directional/east,
+/obj/machinery/health_station/directional/east,
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "Wa" = (
@@ -1312,7 +1360,6 @@
 /obj/machinery/door/airlock/survival_pod{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/effect/mapping_helpers/airlock/autoname,
 /turf/open/floor/catwalk_floor,
@@ -1394,7 +1441,11 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
-/obj/item/defibrillator/loaded,
+/obj/item/mod/module/injector,
+/obj/item/mod/module/quick_carry,
+/obj/item/mod/module/health_analyzer,
+/obj/item/mod/module/defibrillator,
+/obj/item/mod/module/thread_ripper,
 /turf/open/floor/pod/dark,
 /area/shuttle/nri_police)
 "Zw" = (
@@ -1641,7 +1692,7 @@ tk
 lU
 Tj
 od
-tk
+bw
 Hz
 bE
 qp
