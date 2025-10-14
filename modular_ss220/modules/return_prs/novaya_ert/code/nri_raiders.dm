@@ -94,12 +94,19 @@ GLOBAL_VAR(first_officer)
 	)
 	inserted_item = /obj/item/pen/fourcolor
 
+/obj/item/radio/headset/nri
+	name = "NRI radio headset"
+	desc = "Headset used by the NRI civilians."
+	icon_state = "headset"
+
 /obj/item/radio/headset/nri/police
+	name = "NRI Police radio headset"
 	desc = "Headset used by the NRI police."
 	icon_state = "headset"
 	keyslot = new /obj/item/encryptionkey/headset_syndicate/guild //before i create better thing
 
 /obj/item/radio/headset/nri/police/alt
+	name = "NRI Police bowman headset"
 	desc = "Headset used by the NRI police. Protects ears from flashbangs."
 	icon_state = "com_headset_alt"
 
@@ -108,11 +115,13 @@ GLOBAL_VAR(first_officer)
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
 /obj/item/radio/headset/nri/police/leader
+	name = "NRI Police commander radio headset"
 	desc = "Headset used by the NRI police commanders."
 	icon_state = "com_headset"
 	command = TRUE
 
 /obj/item/radio/headset/nri/police/leader/alt
+	name = "NRI Police commander bowman headset"
 	desc = "Headset used by the NRI police commanders. Protects ears from flashbangs."
 	icon_state = "com_headset_alt"
 
@@ -247,7 +256,7 @@ GLOBAL_VAR(first_officer)
 
 	head = /obj/item/clothing/head/hats/colonial/nri_police
 	glasses = /obj/item/clothing/glasses/sunglasses
-	ears = /obj/item/radio/headset/nri/police/leader/alt
+	ears = null
 	mask = null
 	neck = /obj/item/clothing/neck/cloak/colonial/nri_police
 
@@ -267,6 +276,7 @@ GLOBAL_VAR(first_officer)
 		/obj/item/crucifix = 1,
 		/obj/item/clothing/mask/gas/nri_police = 1,
 		/obj/item/modular_computer/pda/nri_police = 1,
+		/obj/item/radio/headset/nri/police/leader/alt = 1,
 	)
 	l_pocket = /obj/item/folder/blue/nri_police
 	r_pocket = /obj/item/storage/pouch/ammo
