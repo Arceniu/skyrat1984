@@ -287,7 +287,7 @@ GLOBAL_VAR(first_officer)
 	id = /obj/item/card/id/advanced/nri_police
 	id_trim = /datum/id_trim/nri_police
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police
 	name = "NRI Police sleeper"
 	desc = "Cozy. You get the feeling you aren't supposed to be here, though..."
 	prompt_name = "a NRI Marine"
@@ -303,37 +303,37 @@ GLOBAL_VAR(first_officer)
 	random_appearance = FALSE
 	show_flavor = TRUE
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/proc/apply_codename(mob/living/carbon/human/spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/proc/apply_codename(mob/living/carbon/human/spawned_human)
 	var/callsign = pick(GLOB.callsigns_nri)
 	var/number = pick(GLOB.phonetic_alphabet_numbers)
 	spawned_human.fully_replace_character_name(null, "[callsign] [number]")
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/special(mob/living/carbon/human/spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/special(mob/living/carbon/human/spawned_human)
 	. = ..()
 	spawned_human.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
 	apply_codename(spawned_human)
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/post_transfer_prefs(mob/living/carbon/human/spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/post_transfer_prefs(mob/living/carbon/human/spawned_human)
 	. = ..()
 	apply_codename(spawned_human)
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/Destroy()
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/Destroy()
 	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
 	return ..()
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/officer
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/officer
 	name = "NRI Officer sleeper"
 	prompt_name = "a NRI Field Officer"
 	outfit = /datum/outfit/pirate/nri/officer
 	flavour_text = "The station has refused to pay the fine for breaking Imperial regulations, as a consequence you are here to perform a prolonged inspection."
 	important_text = "Allowed races are humans, Akulas, IPCs. Roleplay accordingly. There is an important document in your pocket I'd advise you to read and keep safe."
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/apply_codename(mob/living/carbon/human/spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/officer/apply_codename(mob/living/carbon/human/spawned_human)
 	var/callsign = pick(GLOB.callsigns_nri)
 	var/number = pick(GLOB.phonetic_alphabet_numbers)
 	spawned_human.fully_replace_character_name(null, "[callsign] [number][GLOB.first_officer == spawned_human ? " Actual" : ""]")
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/special(mob/living/carbon/human/spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/officer/special(mob/living/carbon/human/spawned_human)
 	. = ..()
 	spawned_human.mind.add_antag_datum(/datum/antagonist/police)
 	spawned_human.grant_language(/datum/language/uncommon, source = LANGUAGE_SPAWNER)
@@ -354,11 +354,11 @@ GLOBAL_VAR(first_officer)
 	apply_codename(spawned_human)
 
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/post_transfer_prefs(mob/living/carbon/human/spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/officer/post_transfer_prefs(mob/living/carbon/human/spawned_human)
 	. = ..()
 	apply_codename(spawned_human)
 
-/obj/effect/mob_spawn/ghost_role/human/nri_police/officer/equip(mob/living/carbon/human/spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/officer/equip(mob/living/carbon/human/spawned_human)
 	. = ..()
 	var/obj/item/card/id/advanced/card = spawned_human.get_idcard()
 	if(GLOB.first_officer == spawned_human)
