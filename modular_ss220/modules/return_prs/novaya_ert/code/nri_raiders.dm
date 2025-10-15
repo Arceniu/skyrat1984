@@ -242,6 +242,10 @@ GLOBAL_VAR(first_officer)
 	equipped.faction |= "nri"
 	equipped.faction |= "neutral"
 
+	if(outfit_radio)
+		outfit_radio.set_frequency(FREQ_COMMON)
+		outfit_radio.freqlock = RADIO_FREQENCY_UNLOCKED
+
 	// make sure we update the ID's name too
 	var/obj/item/card/id/id_card = equipped.wear_id
 	if(istype(id_card))
@@ -256,7 +260,7 @@ GLOBAL_VAR(first_officer)
 
 	head = /obj/item/clothing/head/hats/colonial/nri_police
 	glasses = /obj/item/clothing/glasses/sunglasses
-	ears = null
+	ears = /obj/item/radio/headset/nri/police/leader/alt
 	mask = null
 	neck = /obj/item/clothing/neck/cloak/colonial/nri_police
 
@@ -276,7 +280,6 @@ GLOBAL_VAR(first_officer)
 		/obj/item/crucifix = 1,
 		/obj/item/clothing/mask/gas/nri_police = 1,
 		/obj/item/modular_computer/pda/nri_police = 1,
-		/obj/item/radio/headset/nri/police/leader/alt = 1,
 	)
 	l_pocket = /obj/item/folder/blue/nri_police
 	r_pocket = /obj/item/storage/pouch/ammo
@@ -347,10 +350,7 @@ GLOBAL_VAR(first_officer)
 
 	to_chat(spawned_human, "[span_bold("The station has overriden the response system for the reasons unknown, keep the ship intact, communicate with the station, \
 		perform an inspection to determine the legitimacy of the fine, and try to get the funds yourself, if it's legitimate. \
-		In any case, perform your predefined duties and uphold some semblance of intergalactic law and professionalism, even if just for show.")] <br><br>\
-		[span_small("Also, a small OOC clarification: none of your objectives are meant to be completable mechanically, so don't stress yourself over not greentexting or anything; \
-		If you have a better plan than 'completing' them, like an idea for a gimmick, it's better to communicate with the admins and your colleagues to possibly allow you to \
-		do something custom.")]")
+		In any case, perform your predefined duties and uphold some semblance of intergalactic law and professionalism, even if just for show.")] <br><br>\")
 	apply_codename(spawned_human)
 
 
