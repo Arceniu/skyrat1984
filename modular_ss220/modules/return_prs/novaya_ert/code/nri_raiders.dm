@@ -242,6 +242,7 @@ GLOBAL_VAR(first_officer)
 	equipped.faction |= "nri"
 	equipped.faction |= "neutral"
 
+	var/obj/item/radio/outfit_radio = equipped.ears
 	if(outfit_radio)
 		outfit_radio.set_frequency(FREQ_COMMON)
 		outfit_radio.freqlock = RADIO_FREQENCY_UNLOCKED
@@ -350,7 +351,7 @@ GLOBAL_VAR(first_officer)
 
 	to_chat(spawned_human, "[span_bold("The station has overriden the response system for the reasons unknown, keep the ship intact, communicate with the station, \
 		perform an inspection to determine the legitimacy of the fine, and try to get the funds yourself, if it's legitimate. \
-		In any case, perform your predefined duties and uphold some semblance of intergalactic law and professionalism, even if just for show.")] <br><br>\")
+		In any case, perform your predefined duties and uphold some semblance of intergalactic law and professionalism, even if just for show.")]")
 	apply_codename(spawned_human)
 
 
