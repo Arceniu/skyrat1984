@@ -300,6 +300,7 @@ GLOBAL_VAR(first_officer)
 	flavour_text = "The station has refused to pay the fine for breaking Imperial regulations, you are here to recover the debt. Do so by demanding the funds. Force approach is usually recommended, but isn't the only method."
 	important_text = "Allowed races are humans, Akulas, IPCs. Follow your field officer's orders. Important mention - while you are listed as the pirates gamewise, you really aren't lore-and-everything-else-wise. Roleplay accordingly."
 	outfit = /datum/outfit/pirate/nri
+	fluff_spawn = null //no second spawner
 	restricted_species = list(/datum/species/human, /datum/species/akula, /datum/species/synthetic)
 	random_appearance = FALSE
 	show_flavor = TRUE
@@ -309,10 +310,55 @@ GLOBAL_VAR(first_officer)
 	var/number = pick(GLOB.phonetic_alphabet_numbers)
 	spawned_human.fully_replace_character_name(null, "[callsign] [number]")
 
-/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/special(mob/living/carbon/human/spawned_human)
-	. = ..()
-	spawned_human.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
-	apply_codename(spawned_human)
+/obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/special(mob/living/carbon/human/spawned_mob, mob/mob_possessor)
+	SHOULD_CALL_PARENT(TRUE)
+	if(faction)
+		spawned_mob.faction = faction
+	if(ishuman(spawned_mob))
+		var/mob/living/carbon/human/spawned_human = spawned_mob
+		if(mob_species)
+			spawned_human.set_species(mob_species)
+		spawned_human.dna.species.give_important_for_life(spawned_human)
+		spawned_human.underwear = "Nude"
+		spawned_human.undershirt = "Nude"
+		spawned_human.socks = "Nude"
+		spawned_human.bra = "Nude"
+		if(random_appearance)
+			randomize_human_normie(spawned_human)
+		if(hairstyle)
+			spawned_human.set_hairstyle(hairstyle, update = FALSE)
+		if(facial_hairstyle)
+			spawned_human.set_facial_hairstyle(facial_hairstyle, update = FALSE)
+		if(haircolor)
+			spawned_human.set_haircolor(haircolor, update = FALSE)
+		if(facial_haircolor)
+			spawned_human.set_facial_haircolor(facial_haircolor, update = FALSE)
+		spawned_human.update_body(is_creating = TRUE)
+	if(mob_possessor)
+		if(mob_possessor.mind)
+			mob_possessor.mind.transfer_to(spawned_mob, force_key_move = TRUE)
+		else
+			spawned_mob.PossessByPlayer(mob_possessor.key)
+	var/datum/mind/spawned_mind = spawned_mob.mind
+	if(spawned_mind)
+		spawned_mob.mind.set_assigned_role_with_greeting(SSjob.get_job_type(spawner_job_path))
+		spawned_mind.name = spawned_mob.real_name
+
+	if(show_flavor)
+		var/output_message = span_infoplain("<span class='big bold'>[you_are_text]</span>")
+		if(flavour_text != "")
+			output_message += "\n<span class='infoplain'><b>[flavour_text]</b></span>"
+		if(important_text != "")
+			output_message += "\n[span_userdanger("[important_text]")]"
+		to_chat(spawned_mob, output_message)
+
+	var/datum/job/spawned_job = SSjob.get_job_type(spawner_job_path)
+	spawned_mob.job = spawned_job.title
+
+	spawned_mob.mind.add_antag_datum(/datum/antagonist/police)
+	spawned_mob.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
+	spawned_mob.grant_language(/datum/language/spinwarder, source = LANGUAGE_SPAWNER)
+	apply_codename(spawned_mob)
 
 /obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/post_transfer_prefs(mob/living/carbon/human/spawned_human)
 	. = ..()
@@ -336,9 +382,9 @@ GLOBAL_VAR(first_officer)
 
 /obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/officer/special(mob/living/carbon/human/spawned_human)
 	. = ..()
-	spawned_human.mind.add_antag_datum(/datum/antagonist/police)
 	spawned_human.grant_language(/datum/language/uncommon, source = LANGUAGE_SPAWNER)
 	spawned_human.grant_language(/datum/language/yangyu, source = LANGUAGE_SPAWNER)
+	spawned_human.grant_language(/datum/language/spinwarder, source = LANGUAGE_SPAWNER)
 	spawned_human.grant_language(/datum/language/panslavic, source = LANGUAGE_SPAWNER)
 	spawned_human.grant_language(/datum/language/akulan, source = LANGUAGE_SPAWNER)
 
@@ -565,17 +611,19 @@ GLOBAL_VAR(first_officer)
 	. = ..()
 	var/mob/living/owner_mob = mob_override || owner.current
 	var/datum/language_holder/holder = owner_mob.get_language_holder()
-	holder.grant_language(/datum/language/uncommon, TRUE, TRUE, LANGUAGE_PIRATE)
-	holder.grant_language(/datum/language/panslavic, TRUE, TRUE, LANGUAGE_PIRATE)
-	holder.grant_language(/datum/language/yangyu, TRUE, TRUE, LANGUAGE_PIRATE)
-	holder.grant_language(/datum/language/akulan, TRUE, TRUE, LANGUAGE_PIRATE)
+	holder.grant_language(/datum/language/uncommon, TRUE, TRUE, LANGUAGE_SPAWNER)
+	holder.grant_language(/datum/language/panslavic, TRUE, TRUE, LANGUAGE_SPAWNER)
+	holder.grant_language(/datum/language/spinwarder, TRUE, TRUE, LANGUAGE_SPAWNER)
+	holder.grant_language(/datum/language/yangyu, TRUE, TRUE, LANGUAGE_SPAWNER)
+	holder.grant_language(/datum/language/akulan, TRUE, TRUE, LANGUAGE_SPAWNER)
 
 /datum/antagonist/police/remove_innate_effects(mob/living/mob_override)
 	var/mob/living/owner_mob = mob_override || owner.current
-	owner_mob.remove_language(/datum/language/uncommon, TRUE, TRUE, LANGUAGE_PIRATE)
-	owner_mob.remove_language(/datum/language/panslavic, TRUE, TRUE, LANGUAGE_PIRATE)
-	owner_mob.remove_language(/datum/language/yangyu, TRUE, TRUE, LANGUAGE_PIRATE)
-	owner_mob.remove_language(/datum/language/akulan, TRUE, TRUE, LANGUAGE_PIRATE)
+	owner_mob.remove_language(/datum/language/uncommon, TRUE, TRUE, LANGUAGE_SPAWNER)
+	owner_mob.remove_language(/datum/language/panslavic, TRUE, TRUE, LANGUAGE_SPAWNER)
+	owner_mob.remove_language(/datum/language/spinwarder, TRUE, TRUE, LANGUAGE_SPAWNER)
+	owner_mob.remove_language(/datum/language/yangyu, TRUE, TRUE, LANGUAGE_SPAWNER)
+	owner_mob.remove_language(/datum/language/akulan, TRUE, TRUE, LANGUAGE_SPAWNER)
 	return ..()
 
 /datum/team/police
