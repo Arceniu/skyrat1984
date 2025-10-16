@@ -311,6 +311,7 @@ GLOBAL_VAR(first_officer)
 	spawned_human.fully_replace_character_name(null, "[callsign] [number]")
 
 /obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/special(mob/living/carbon/human/spawned_mob, mob/mob_possessor)
+	SHOULD_CALL_PARENT(FALSE)
 	if(faction)
 		spawned_mob.faction = faction
 	if(ishuman(spawned_mob))
