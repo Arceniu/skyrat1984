@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Revert \"adds 1.2s fire delay to ion gun.\", now it's no delay as it was before"
