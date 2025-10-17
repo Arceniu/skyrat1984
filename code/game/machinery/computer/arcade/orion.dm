@@ -546,7 +546,7 @@
 
 /datum/aas_config_entry/orion_violent_behavior_alert
 	// Well we don't want to show that only Orion Trails reports violent behavior, eh-h?
-	name = "Violent Behavior Alert"
+	name = "Global: Violent Behavior Alert"
 	announcement_lines_map = list(
 		RADIO_CHANNEL_SECURITY = "ПРЕДУПРЕЖДЕНИЕ БЕЗОПАСНОСТИ: Член экипажа %PERSON зафиксирован как проявляющий антисоциальные наклонности в %LOCATION %SOURCE. Пожалуйста, следите за агрессивным поведением.",
 		RADIO_CHANNEL_MEDICAL = "ПСИХИЧЕСКАЯ ТРЕВОГА: Член экипажа %PERSON зафиксирован как проявляющий антисоциальные наклонности в %LOCATION %SOURCE. Пожалуйста, запланируйте психологическую оценку.",

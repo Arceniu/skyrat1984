@@ -464,11 +464,7 @@
 	message = "бормоч%(ет,ут)%."
 	message_mime = "кажется бормоч%(ет,ут)%."
 
-/datum/emote/living/carbon/human/scream // seems like TG overriding it, so we need as well
-	message = "крич%(ит,ат)%!"
-	message_mime = "делает вид, что крич%(ит,ат)%!"
-
-/datum/emote/living/carbon/human/scream/screech //If a human tries to screech it'll just scream.
+/datum/emote/living/carbon/human/screech // seems like TG overriding it, so we need as well
 	message = "крич%(ит,ат)%!"
 	message_mime = "делает вид, что крич%(ит,ат)%!"
 
