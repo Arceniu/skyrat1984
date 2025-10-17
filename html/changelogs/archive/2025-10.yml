@@ -500,6 +500,14 @@
   - bugfix: Fixes riot shotgun unintentional melee when point blank shooting
   ArchBTW, NecromancerAnne (original code, sprites), SmArtKar (sprites), DrDiasyl (sprites):
   - rscadd: adds Stunsword
+  DenIS318:
+  - rscadd: Latejoin heretic is back
+  - bugfix: Metastation missed cargo autolathe is added back
+  - bugfix: Fixed required access back to brig on security EVA on some maps
+  - balance: 'Added 50 iron & glass sheets to cargo, at table not far away from autolathe.
+      For all recommended maps: Delta, Meta, Icebox, Tram'
+  - balance: Revert "adds 1.2s fire delay to ion gun.", now it's no delay as it was
+      before
   EnterTheJake:
   - rscadd: All Heretic paths now start with a gradually evolving passive ability.
   - balance: the entire heretic tree has been rebalanced.
