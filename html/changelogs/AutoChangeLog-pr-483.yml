@@ -1,0 +1,6 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Metastation missed cargo autolathe is added back"
+  - bugfix: "Fixed required access back to brig on security EVA on some maps"
+  - balance: "Added 50 iron & glass sheets to cargo, at table not far away from autolathe. For all recommended maps: Delta, Meta, Icebox, Tram"
