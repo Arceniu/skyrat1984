@@ -186,21 +186,25 @@
 	item_type = /obj/item/gun/ballistic/automatic/battle_rifle
 	cost = PAYCHECK_COMMAND * 8
 
-/datum/armament_entry/company_import/sol_defense/longarm/elite
-	item_type = /obj/item/gun/ballistic/automatic/sol_classic/marksman
-	cost = PAYCHECK_COMMAND * 12
+// SS1984 REMOVAL START
+// /datum/armament_entry/company_import/sol_defense/longarm/elite
+// 	item_type = /obj/item/gun/ballistic/automatic/sol_classic/marksman
+// 	cost = PAYCHECK_COMMAND * 12
 
-/datum/armament_entry/company_import/sol_defense/longarm/bogseo
-	item_type = /obj/item/gun/ballistic/automatic/xhihao_smg
-	cost = PAYCHECK_COMMAND * 10
+// /datum/armament_entry/company_import/sol_defense/longarm/bogseo
+// 	item_type = /obj/item/gun/ballistic/automatic/xhihao_smg
+// 	cost = PAYCHECK_COMMAND * 10
+// SS1984 REMOVAL END
 
 /datum/armament_entry/company_import/sol_defense/longarm/jager
 	item_type = /obj/item/gun/ballistic/shotgun/katyusha/jager
 	cost = PAYCHECK_COMMAND * 16
 
-/datum/armament_entry/company_import/sol_defense/longarm/infanterie
-	item_type = /obj/item/gun/ballistic/automatic/sol_classic
-	cost = PAYCHECK_COMMAND * 14
+// SS1984 REMOVAL START
+// /datum/armament_entry/company_import/sol_defense/longarm/infanterie
+// 	item_type = /obj/item/gun/ballistic/automatic/sol_classic
+// 	cost = PAYCHECK_COMMAND * 14
+// SS1984 REMOVAL END
 
 /* //
 datum/armament_entry/company_import/sol_defense/longarm/outomaties
