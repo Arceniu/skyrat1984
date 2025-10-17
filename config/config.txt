@@ -666,3 +666,6 @@ TGUI_MAX_CHUNK_COUNT 32
 
 ## Disables all tutorials if uncommented
 #DISABLE_TUTORIALS
+
+## Minimum time before a heretic can ascend, in minutes
+# MINIMUM_ASCENSION_TIME 3
