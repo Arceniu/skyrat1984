@@ -1,6 +1,6 @@
 /datum/emote/living/scream
 	vary = TRUE
-	mob_type_blacklist_typecache = list(/mob/living/carbon/human, /mob/living/basic/slime, /mob/living/brain) //Humans get specialized scream.
+	// SS1984 REMOVAL, non modular so upstream most likely will fix and override it as well: mob_type_blacklist_typecache = list(/mob/living/carbon/human, /mob/living/basic/slime, /mob/living/brain) //Humans get specialized scream.
 
 /datum/emote/living/scream/get_sound(mob/living/user)
 	if(issilicon(user))
@@ -18,6 +18,7 @@
 		return 'sound/mobs/non-humanoids/gorilla/gorilla.ogg'
 	if(isalien(user))
 		return 'sound/mobs/non-humanoids/hiss/hiss6.ogg'
+	return ..() // SS1984 ADDITION
 
 /datum/emote/living/scream/can_run_emote(mob/living/user, status_check, intentional, params)
 	if(iscyborg(user))
@@ -29,10 +30,10 @@
 		robot_user.cell.use(STANDARD_CELL_CHARGE * 0.2)
 	return ..()
 
-/datum/emote/living/carbon/human/scream
+/datum/emote/living/carbon/human/screech
 	only_forced_audio = FALSE
 
-/datum/emote/living/carbon/human/scream/get_sound(mob/living/carbon/human/user)
+/datum/emote/living/carbon/human/screech/get_sound(mob/living/carbon/human/user)
 	if(!istype(user))
 		return
 	if(isnull(user.selected_scream) || !(LAZYLEN(user.selected_scream.male_screamsounds) || LAZYLEN(user.selected_scream.female_screamsounds))) //For things that don't have a selected scream(npcs)

@@ -112,7 +112,7 @@
 
 /obj/item/choice_beacon/blueshield/generate_display_names()
 	var/static/list/selectable_gun_types = list(
-		"Takbok Revolver Set" = /obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/takbok,
+		"Fendér Revolver Set" = /obj/item/storage/toolbox/guncase/nova/pistol/trappiste_small_case/bluvolva,
 		"Custom Hellfire Laser Rifle" = /obj/item/gun/energy/laser/hellgun/blueshield,
 		"Sindano Submachine Gun" = /obj/item/gun/ballistic/automatic/sol_smg,
 		"Katyusha Shotgun Gunset" = /obj/item/storage/toolbox/guncase/nova/katyusha,

@@ -1,5 +1,24 @@
 [
   {
+    "date": "2025-10-18",
+    "author": "DenIS318",
+    "changes": [
+      "Mech Chassis is now visible again",
+      "scream emote is usable again"
+    ]
+  },
+  {
+    "date": "2025-10-17",
+    "author": "DenIS318",
+    "changes": [
+      "Metastation missed cargo autolathe is added back",
+      "Fixed required access back to brig on security EVA on some maps",
+      "Added 50 iron & glass sheets to cargo, at table not far away from autolathe. For all recommended maps: Delta, Meta, Icebox, Tram",
+      "Latejoin heretic is back",
+      "Revert \"adds 1.2s fire delay to ion gun.\", now it's no delay as it was before"
+    ]
+  },
+  {
     "date": "2025-10-11",
     "author": "DenIS318",
     "changes": [
