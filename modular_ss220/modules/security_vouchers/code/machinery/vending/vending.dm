@@ -19,6 +19,11 @@
 				),
 		)
 
+		var/list/kit_to_box = list(
+			"Hybrid Taser Kit" = /obj/item/storage/toolbox/guncase/nova/ntcase/pistol,
+			"Sol Pistol with incapacitator ammo Kit" = /obj/item/storage/toolbox/guncase/nova/solfed/pistol,
+		)
+
 		var/weapon_kit = input(user, "Select a weaponary kit.") as null|anything in available_kits
 		if(!weapon_kit)
 			return
@@ -29,7 +34,8 @@
 		qdel(inserted_item)
 		sleep(0.5 SECONDS)
 
-		var/obj/item/storage/box/security/box = new(get_turf(src))
+		var/box_type = kit_to_box[weapon_kit]
+		var/obj/item/storage/box = new box_type(get_turf(src))
 		var/list/kit_content = available_kits[weapon_kit]
 		for(var/path in kit_content)
 			var/amount = kit_content[path]
