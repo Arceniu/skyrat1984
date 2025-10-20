@@ -1,5 +1,15 @@
 [
   {
+    "date": "2025-10-20",
+    "author": "Arceniu",
+    "changes": [
+      "Returned NRI police",
+      "Fixed some misc huds",
+      "Blueshield and NTR recieved new DESENSITIZED trait (decreases mood penalty for someones death)",
+      "Added voice of god power = 1.2 to blueshield (Like bridge assistant)"
+    ]
+  },
+  {
     "date": "2025-10-18",
     "author": "DenIS318",
     "changes": [
