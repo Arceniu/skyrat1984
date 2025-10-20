@@ -695,6 +695,9 @@
 2025-10-18:
   Bannhammger:
   - rscadd: Knuckleduster and it's variant to uplink!
+  DenIS318:
+  - bugfix: Mech Chassis is now visible again
+  - bugfix: scream emote is usable again
   Stalkeros, splet for the sprites:
   - rscadd: Adds a new piece of Coalition police clothing, being a pretty official
       shirt-pencil skirt combo
@@ -706,9 +709,13 @@
   - rscadd: Adds two new taurs, chemlight, and striped canine.
   - rscadd: Adds a new set of tall ears for those canines looking to get those ear
       scritches.
-  DenIS318:
-  - bugfix: Mech Chassis is now visible again
-  - bugfix: scream emote is usable again
 2025-10-19:
   vinylspiders:
   - bugfix: fixes teshari icons for storage belts, waistpacks, and chest pouches
+2025-10-20:
+  Arceniu:
+  - rscadd: Returned NRI police
+  - bugfix: Fixed some misc huds
+  - balance: Blueshield and NTR recieved new DESENSITIZED trait (decreases mood penalty
+      for someones death)
+  - balance: Added voice of god power = 1.2 to blueshield (Like bridge assistant)
