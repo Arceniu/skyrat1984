@@ -41,6 +41,7 @@
 		ANNOUNCER_ERTYES = 'modular_nova/modules/alerts/sound/alerts/yesert.ogg',
 		ANNOUNCER_MUTANTS = 'modular_nova/modules/alerts/sound/alerts/hazdet.ogg',
 		ANNOUNCER_KLAXON = 'modular_ss220/modules/return_prs/black_mesa/sound/siren1_long.ogg', // SS1984 ADDITION
+		ANNOUNCER_NRI_POLICE = 'modular_ss220/modules/return_prs/novaya_ert/sound/police/morse.ogg', // SS1984 ADDITION
 		ANNOUNCER_HC_POLICE = 'modular_nova/modules/random_ship_event/random_ships/heliostatic_inspectors/sounds/morse.ogg',
 		ANNOUNCER_DEPARTMENTAL = 'modular_nova/modules/alerts/sound/alerts/alert3.ogg',
 		ANNOUNCER_SHUTTLE = 'modular_nova/modules/alerts/sound/alerts/alert3.ogg',

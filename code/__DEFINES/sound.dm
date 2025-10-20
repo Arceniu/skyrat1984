@@ -185,13 +185,16 @@
 #define ANNOUNCER_SPOOKY "announcer_spooky"
 #define ANNOUNCER_ERTYES "announcer_ertyes"
 #define ANNOUNCER_MUTANTS "announcer_mutants"
-#define ANNOUNCER_KLAXON "announcer_klaxon" // SS1984 ADDITION
 #define ANNOUNCER_HC_POLICE "announcer_hc_police"
 #define ANNOUNCER_OUTBREAK6 "announcer_outbreak6"
 #define ANNOUNCER_DEPARTMENTAL "announcer_departmental"
 #define ANNOUNCER_SHUTTLE "announcer_shuttle"
 //NOVA EDIT END
 
+// SS1984 ADDITION START
+#define ANNOUNCER_KLAXON "announcer_klaxon"
+#define ANNOUNCER_NRI_POLICE "announcer_nri_police"
+// SS1984 ADDITION END
 
 /// Global list of all of our announcer keys.
 GLOBAL_LIST_INIT(announcer_keys, list(
@@ -232,10 +235,13 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 	ANNOUNCER_SPOOKY,
 	ANNOUNCER_ERTYES,
 	ANNOUNCER_MUTANTS,
-	ANNOUNCER_KLAXON, // SS1984 ADDITION
 	ANNOUNCER_HC_POLICE,
 	ANNOUNCER_OUTBREAK6,
 	//NOVA EDIT END
+	// SS1984 ADDITION START
+	ANNOUNCER_KLAXON,
+	ANNOUNCER_NRI_POLICE,
+	// SS1984 ADDITION END
 ))
 
 /**
