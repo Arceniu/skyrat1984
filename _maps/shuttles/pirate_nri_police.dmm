@@ -284,9 +284,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/item/gun/ballistic/automatic/akm,
-/obj/item/gun/ballistic/automatic/akm,
-/obj/item/gun/ballistic/automatic/akm,
+/obj/item/gun/ballistic/automatic/akm/civvie,
+/obj/item/gun/ballistic/automatic/akm/civvie,
+/obj/item/gun/ballistic/automatic/akm/civvie,
 /turf/open/floor/pod,
 /area/shuttle/nri_police)
 "kQ" = (
@@ -479,9 +479,9 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/light/small/red/directional/north,
 /obj/machinery/recharger,
-/obj/item/gun/energy/taser/crank,
-/obj/item/gun/energy/taser/crank,
-/obj/item/gun/energy/taser/crank,
+/obj/item/gun/energy/taser/crank/militia,
+/obj/item/gun/energy/taser/crank/militia,
+/obj/item/gun/energy/taser/crank/militia,
 /turf/open/floor/pod/light,
 /area/shuttle/nri_police)
 "rp" = (
@@ -1046,13 +1046,13 @@
 	anchored = 1
 	},
 /obj/machinery/light/small/red/directional/south,
-/obj/item/ammo_box/magazine/akm,
-/obj/item/ammo_box/magazine/akm,
-/obj/item/ammo_box/magazine/akm,
-/obj/item/ammo_box/magazine/akm,
-/obj/item/ammo_box/magazine/akm,
-/obj/item/ammo_box/magazine/akm,
-/obj/item/ammo_box/magazine/akm,
+/obj/item/ammo_box/magazine/akm/civvie,
+/obj/item/ammo_box/magazine/akm/civvie,
+/obj/item/ammo_box/magazine/akm/civvie,
+/obj/item/ammo_box/magazine/akm/civvie,
+/obj/item/ammo_box/magazine/akm/civvie,
+/obj/item/ammo_box/magazine/akm/civvie,
+/obj/item/ammo_box/magazine/akm/civvie,
 /turf/open/floor/pod/dark,
 /area/shuttle/nri_police)
 "JS" = (

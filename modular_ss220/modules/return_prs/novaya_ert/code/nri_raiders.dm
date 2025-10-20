@@ -146,6 +146,13 @@ GLOBAL_VAR(first_officer)
 	access = list(ACCESS_NRI, ACCESS_NRI_POLICE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_SYNDICATE)
 	threat_modifier = -1 //this is the police, not raiders
 
+/obj/item/gun/energy/taser/crank/militia
+	name = "\improper Mírotvůrce militia grade pacifier"
+	desc = "A low-capacity, electrode-based taser, outfitted with an efficient dynamo machine to replenish its charge. \
+		Utilised first as a means of first line of defense among NRI militiamen, this version updated to do more paralizing effect; \
+		on a assailants."
+	projectile_damage_multiplier = 2
+
 /obj/item/storage/belt/security/nri/PopulateContents()
 	generate_items_inside(list(
 		/obj/item/knife/combat = 1,
@@ -501,6 +508,7 @@ GLOBAL_VAR(first_officer)
 /obj/machinery/suit_storage_unit/nri_police
 	mod_type = /obj/item/mod/control/pre_equipped/policing
 	storage_type = /obj/item/tank/internals/oxygen/yellow
+	mask_type = /obj/item/clothing/mask/gas/nri_police
 
 /obj/machinery/shuttle_scrambler/nri
 	name = "system crasher"
