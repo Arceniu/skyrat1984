@@ -17,21 +17,23 @@
 /datum/armament_entry/company_import/nri_surplus/clothing/backpack
 	item_type = /obj/item/storage/backpack/industrial/cin_surplus/random_color
 
-/datum/armament_entry/company_import/nri_surplus/clothing/police_uniform
-	item_type = /obj/item/clothing/under/colonial/nri_police
+// TODO: (start) uncomment once merge NRI PR (#478)
+// /datum/armament_entry/company_import/nri_surplus/clothing/police_uniform
+// 	item_type = /obj/item/clothing/under/colonial/nri_police
 
-/datum/armament_entry/company_import/nri_surplus/clothing/police_cloak
-	item_type = /obj/item/clothing/neck/cloak/colonial/nri_police
+// /datum/armament_entry/company_import/nri_surplus/clothing/police_cloak
+// 	item_type = /obj/item/clothing/neck/cloak/colonial/nri_police
 
-/datum/armament_entry/company_import/nri_surplus/clothing/police_cap
-	item_type = /obj/item/clothing/head/hats/colonial/nri_police
+// /datum/armament_entry/company_import/nri_surplus/clothing/police_cap
+// 	item_type = /obj/item/clothing/head/hats/colonial/nri_police
 
-/datum/armament_entry/company_import/nri_surplus/clothing/police_baseball_cap
-	item_type = /obj/item/clothing/head/soft/nri_police
+// /datum/armament_entry/company_import/nri_surplus/clothing/police_baseball_cap
+// 	item_type = /obj/item/clothing/head/soft/nri_police
 
-/datum/armament_entry/company_import/nri_surplus/clothing/police_mask
-	item_type = /obj/item/clothing/mask/gas/nri_police
-	cost = PAYCHECK_CREW * 2
+// /datum/armament_entry/company_import/nri_surplus/clothing/police_mask
+// 	item_type = /obj/item/clothing/mask/gas/nri_police
+// 	cost = PAYCHECK_CREW * 2
+// TODO: (end)
 
 /datum/armament_entry/company_import/nri_surplus/space
 	subcategory = "Special Supplies"
@@ -69,20 +71,22 @@
 /datum/armament_entry/company_import/nri_surplus/armor/cin_vest
 	item_type = /obj/item/clothing/suit/armor/vest/cin_surplus_vest
 
-/datum/armament_entry/company_import/nri_surplus/armor/police_vest
-	item_type = /obj/item/clothing/head/helmet/nri_police
+// TODO: (start) uncomment once merge NRI PR (#478)
+// /datum/armament_entry/company_import/nri_surplus/armor/police_vest
+// 	item_type = /obj/item/clothing/head/helmet/nri_police
 
-/datum/armament_entry/company_import/nri_surplus/armor/police_helmet
-	item_type = /obj/item/clothing/suit/armor/vest/nri_police
+// /datum/armament_entry/company_import/nri_surplus/armor/police_helmet
+// 	item_type = /obj/item/clothing/suit/armor/vest/nri_police
 
 
-/datum/armament_entry/company_import/nri_surplus/armor/police_jacket
-	item_type = /obj/item/clothing/suit/armor/vest/nri_police_jacket
+// /datum/armament_entry/company_import/nri_surplus/armor/police_jacket
+// 	item_type = /obj/item/clothing/suit/armor/vest/nri_police_jacket
 
-/datum/armament_entry/company_import/nri_surplus/armor/police_suit_jacket
-	item_type = /obj/item/clothing/suit/armor/vest/nri_police_jacket/suit
-	description = "A black uniform jacket with Zvirdnyan Colonial Militia's signature white rectangle on its right sleeve and backside. \
-	Letters inside the collar usually read the wearer's rank and internal kink. The jacket is of exceptional quality."
+// /datum/armament_entry/company_import/nri_surplus/armor/police_suit_jacket
+// 	item_type = /obj/item/clothing/suit/armor/vest/nri_police_jacket/suit
+// 	description = "A black uniform jacket with Zvirdnyan Colonial Militia's signature white rectangle on its right sleeve and backside. \
+// 	Letters inside the collar usually read the wearer's rank and internal kink. The jacket is of exceptional quality."
+// TODO: (end)
 
 // Pouches
 
