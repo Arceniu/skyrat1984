@@ -7,16 +7,20 @@
 			to_chat(user, span_notice("[src] does not respond."))
 			return
 
-		var/list/available_kits = list(
+		var/static/list/available_kits = list(
 			"Hybrid Taser Kit" = list(
-				/obj/item/gun/energy/e_gun/advtaser = 1,
-				/obj/item/clothing/accessory/holster = 1,
-				),
+				/obj/item/storage/toolbox/guncase/nova/ntcase/pistol, list(
+					/obj/item/gun/energy/e_gun/advtaser = 1,
+					/obj/item/clothing/accessory/holster = 1,
+				)
+			),
 			"Sol Pistol with incapacitator ammo Kit" = list(
-				/obj/item/gun/ballistic/automatic/pistol/sol/incapacitator_prefilled = 1,
-				/obj/item/ammo_box/magazine/c35sol_pistol/incapacitator = 2,
-				/obj/item/clothing/accessory/holster = 1,
-				),
+				/obj/item/storage/toolbox/guncase/nova/solfed/pistol, list(
+					/obj/item/gun/ballistic/automatic/pistol/sol/incapacitator_prefilled = 1,
+					/obj/item/ammo_box/magazine/c35sol_pistol/incapacitator = 2,
+					/obj/item/clothing/accessory/holster = 1,
+				)
+			),
 		)
 
 		var/weapon_kit = input(user, "Select a weaponary kit.") as null|anything in available_kits
