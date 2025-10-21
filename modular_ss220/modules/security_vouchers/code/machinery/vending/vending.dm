@@ -7,16 +7,20 @@
 			to_chat(user, span_notice("[src] does not respond."))
 			return
 
-		var/list/available_kits = list(
+		var/static/list/available_kits = list(
 			"Hybrid Taser Kit" = list(
-				/obj/item/gun/energy/e_gun/advtaser = 1,
-				/obj/item/clothing/accessory/holster = 1,
-				),
+				/obj/item/storage/toolbox/guncase/nova/ntcase/pistol, list(
+					/obj/item/gun/energy/e_gun/advtaser = 1,
+					/obj/item/clothing/accessory/holster = 1,
+				)
+			),
 			"Sol Pistol with incapacitator ammo Kit" = list(
-				/obj/item/gun/ballistic/automatic/pistol/sol/incapacitator_prefilled = 1,
-				/obj/item/ammo_box/magazine/c35sol_pistol/incapacitator = 2,
-				/obj/item/clothing/accessory/holster = 1,
-				),
+				/obj/item/storage/toolbox/guncase/nova/solfed/pistol, list(
+					/obj/item/gun/ballistic/automatic/pistol/sol/incapacitator_prefilled = 1,
+					/obj/item/ammo_box/magazine/c35sol_pistol/incapacitator = 2,
+					/obj/item/clothing/accessory/holster = 1,
+				)
+			),
 		)
 
 		var/weapon_kit = input(user, "Select a weaponary kit.") as null|anything in available_kits
@@ -29,8 +33,10 @@
 		qdel(inserted_item)
 		sleep(0.5 SECONDS)
 
-		var/obj/item/storage/box/security/box = new(get_turf(src))
-		var/list/kit_content = available_kits[weapon_kit]
+		var/list/nested_list = available_kits[weapon_kit]
+		var/box_type = nested_list[1]
+		var/obj/item/storage/box = new box_type(get_turf(src))
+		var/list/kit_content = nested_list[2]
 		for(var/path in kit_content)
 			var/amount = kit_content[path]
 			if(!isnum(amount)) //Default to 1
