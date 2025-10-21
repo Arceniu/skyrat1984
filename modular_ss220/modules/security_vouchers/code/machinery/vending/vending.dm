@@ -33,9 +33,10 @@
 		qdel(inserted_item)
 		sleep(0.5 SECONDS)
 
-		var/box_type = kit_to_box[weapon_kit]
+		var/list/nested_list = available_kits[weapon_kit]
+		var/box_type = nested_list[1]
 		var/obj/item/storage/box = new box_type(get_turf(src))
-		var/list/kit_content = available_kits[weapon_kit]
+		var/list/kit_content = nested_list[2]
 		for(var/path in kit_content)
 			var/amount = kit_content[path]
 			if(!isnum(amount)) //Default to 1
