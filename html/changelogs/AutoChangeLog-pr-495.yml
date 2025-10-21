@@ -1,5 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscadd: "Security vouchers now give branded guncase Instead of carton box"
-  - rscdel: "Removed security voucher box"
