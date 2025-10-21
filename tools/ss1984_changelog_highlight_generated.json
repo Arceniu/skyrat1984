@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-10-21",
+    "author": "Arceniu",
+    "changes": [
+      "Security vouchers now give branded guncase Instead of carton box",
+      "Removed security voucher box"
+    ]
+  },
+  {
     "date": "2025-10-20",
     "author": "Arceniu",
     "changes": [
