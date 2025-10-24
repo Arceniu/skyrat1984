@@ -1,7 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscadd: "Prosthetic/synth stomach can now be safely emptied by using a screwdriver, or pried open with crowbar."
-  - balance: "Synthetic stomaches now have separate basic chance to vomit items from vomit(surplus= 100 with at least 1 dropped item + damage), tier1(70  + damage), tier2(40 + damage), tier3(10 + damage), synth(10, without damage)"
-  - balance: "Synth and tier3 stomach no longer vomit from being punched"
-  - balance: "Xenomorphs stomach acid damage per cycle 75 => 15 for living (still 75 for non-living), and they no longer delete dead corpses"
