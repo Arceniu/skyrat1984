@@ -56,7 +56,6 @@
 
 //synth "stomach"
 /obj/item/organ/stomach/synth/screwdriver_act(mob/living/user, obj/item/tool)
-	. = ..()
 	if (cut_open_damage < 0)
 		balloon_alert(user, "already cut open!")
 		return ITEM_INTERACT_FAILURE
