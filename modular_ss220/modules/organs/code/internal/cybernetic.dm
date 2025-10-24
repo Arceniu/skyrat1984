@@ -7,9 +7,8 @@
 
 	balloon_alert(user, "opening hatch...")
 	playsound(user, 'sound/items/tools/screwdriver_operating.ogg', 75)
-	if (!do_after(user, 3 SECONDS, src))
+	if (!tool.use_tool(src, user, 3 SECONDS))
 		balloon_alert(user, "interrupted!")
-		apply_organ_damage(tool.force)
 		return ITEM_INTERACT_FAILURE
 
 	playsound(user, 'sound/items/tools/screwdriver.ogg', 75)
@@ -28,9 +27,8 @@
 
 	balloon_alert(user, "opening hatch...")
 	playsound(user, 'sound/items/tools/crowbar_prying.ogg', 75)
-	if (!do_after(user, 3 SECONDS, src))
+	if (!tool.use_tool(src, user, 3 SECONDS))
 		balloon_alert(user, "interrupted!")
-		apply_organ_damage(tool.force)
 		return ITEM_INTERACT_FAILURE
 
 	playsound(user, 'sound/items/tools/crowbar.ogg', 75)
@@ -65,9 +63,8 @@
 
 	balloon_alert(user, "opening hatch...")
 	playsound(user, 'sound/items/tools/screwdriver_operating.ogg', 75)
-	if (!do_after(user, 3 SECONDS, src))
+	if (!tool.use_tool(src, user, 3 SECONDS))
 		balloon_alert(user, "interrupted!")
-		apply_organ_damage(tool.force)
 		return ITEM_INTERACT_FAILURE
 
 	playsound(user, 'sound/items/tools/screwdriver.ogg', 75)
@@ -86,9 +83,8 @@
 
 	balloon_alert(user, "opening hatch...")
 	playsound(user, 'sound/items/tools/crowbar_prying.ogg', 75)
-	if (!do_after(user, 3 SECONDS, src))
+	if (!tool.use_tool(src, user, 3 SECONDS))
 		balloon_alert(user, "interrupted!")
-		apply_organ_damage(tool.force)
 		return ITEM_INTERACT_FAILURE
 
 	playsound(user, 'sound/items/tools/crowbar.ogg', 75)
