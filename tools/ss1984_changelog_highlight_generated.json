@@ -1,5 +1,15 @@
 [
   {
+    "date": "2025-10-24",
+    "author": "Arceniu",
+    "changes": [
+      "Prosthetic/synth stomach can now be safely emptied by using a screwdriver, or pried open with crowbar.",
+      "Synthetic stomaches now have separate basic chance to vomit items from vomit(surplus= 100 with at least 1 dropped item + damage), tier1(70 + damage), tier2(40 + damage), tier3(10 + damage), synth(10, without damage)",
+      "Synth and tier3 stomach no longer vomit from being punched",
+      "Xenomorphs stomach acid damage per cycle 75 => 15 for living (still 75 for non-living), and they no longer delete dead corpses"
+    ]
+  },
+  {
     "date": "2025-10-21",
     "author": "Arceniu",
     "changes": [
