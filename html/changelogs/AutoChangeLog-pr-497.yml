@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Flashdark darkness now properly follows & some other complex static lightning fixed"

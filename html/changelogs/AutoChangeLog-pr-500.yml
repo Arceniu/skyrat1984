@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "Living mobs now can die from single damage type normally (so 200 oxygen damage cap increased to 300, you need 230 oxy damage to die normally)"

@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Dynamic now properly checks enemy roles (before it was not selecting any ruleset that required enemies due to error)"

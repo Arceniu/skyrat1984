@@ -733,3 +733,16 @@
   - balance: Synth and tier3 stomach no longer vomit from being punched
   - balance: Xenomorphs stomach acid damage per cycle 75 => 15 for living (still 75
       for non-living), and they no longer delete dead corpses
+2025-10-25:
+  DenIS318:
+  - balance: Living mobs now can die from single damage type normally (so 200 oxygen
+      damage cap increased to 300, you need 230 oxy damage to die normally)
+  - bugfix: Flashdark darkness now properly follows & some other complex static lightning
+      fixed
+  - bugfix: Dynamic now properly checks enemy roles (before it was not selecting any
+      ruleset that required enemies due to error)
+  - balance: Electrocutes (from grille and all other sources) now gives you 2 second
+      invulnerability from electrocute (so you won't die in half second by running
+      into grille)
+  - bugfix: Experimental-partial fix papers markup, now %s works and some other markups
+      as well (%f not work properly though)

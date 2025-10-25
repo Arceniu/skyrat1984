@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Experimental-partial fix papers markup, now %s works and some other markups as well (%f not work properly though)"
