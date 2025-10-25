@@ -1,5 +1,16 @@
 [
   {
+    "date": "2025-10-25",
+    "author": "DenIS318",
+    "changes": [
+      "Flashdark darkness now properly follows & some other complex static lightning fixed",
+      "Dynamic now properly checks enemy roles (before it was not selecting any ruleset that required enemies due to error)",
+      "Electrocutes (from grille and all other sources) now gives you 2 second invulnerability from electrocute (so you won't die in half second by running into grille)",
+      "Living mobs now can die from single damage type normally (so 200 oxygen damage cap increased to 300, you need 230 oxy damage to die normally)",
+      "Experimental-partial fix papers markup, now %s works and some other markups as well (%f not work properly though)"
+    ]
+  },
+  {
     "date": "2025-10-24",
     "author": "Arceniu",
     "changes": [
