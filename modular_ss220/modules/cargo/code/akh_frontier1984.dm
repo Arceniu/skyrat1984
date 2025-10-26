@@ -104,7 +104,7 @@
 /datum/armament_entry/company_import/akh_frontier/deployables/rtg
 	item_type = /obj/item/flatpacked_machine/rtg
 	cost = PAYCHECK_COMMAND * 7
-	restricted = TRUE
+	//restricted = TRUE //untill i will make changable restricted
 
 /datum/armament_entry/company_import/akh_frontier/deployables/solar
 	item_type = /obj/item/flatpacked_machine/solar

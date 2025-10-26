@@ -58,6 +58,11 @@
 	item_type = /obj/item/summon_beacon/vendors
 	cost = PAYCHECK_CREW * 12
 
+/datum/armament_entry/company_import/donk/merch/flag
+	item_type = /obj/item/sign/flag/syndicate
+	cost = PAYCHECK_LOWER
+	high_contraband = TRUE
+
 /datum/armament_entry/company_import/donk/merch/donk_carpet
 	item_type = /obj/item/stack/tile/carpet/donk/thirty
 
@@ -108,6 +113,9 @@
 /datum/armament_entry/company_import/donk/foamforce
 	subcategory = "Foam Force (TM) Blasters"
 
+/datum/armament_entry/company_import/donk/foamforce/cb
+	contraband = TRUE
+
 /datum/armament_entry/company_import/donk/foamforce/foam_shotgun
 	item_type = /obj/item/gun/ballistic/shotgun/toy
 	cost = PAYCHECK_LOWER * 5
@@ -120,26 +128,22 @@
 	item_type = /obj/item/gun/ballistic/automatic/pistol/toy
 	cost = PAYCHECK_COMMAND * 4
 
-/datum/armament_entry/company_import/donk/foamforce/foam_smg
+/datum/armament_entry/company_import/donk/foamforce/cb/foam_smg
 	item_type = /obj/item/gun/ballistic/automatic/toy
 	cost = PAYCHECK_COMMAND * 5
-	contraband = TRUE
 
-/datum/armament_entry/company_import/donk/foamforce/foam_c20
+/datum/armament_entry/company_import/donk/foamforce/cb/foam_c20
 	item_type = /obj/item/gun/ballistic/automatic/c20r/toy/unrestricted
 	cost = PAYCHECK_COMMAND * 5
-	contraband = TRUE
 
-/datum/armament_entry/company_import/donk/foamforce/foam_turret
+/datum/armament_entry/company_import/donk/foamforce/cb/foam_turret
 	item_type = /obj/item/storage/toolbox/emergency/turret/mag_fed/toy/pre_filled
 	cost = PAYCHECK_COMMAND * 6
-	contraband = TRUE
 
-/datum/armament_entry/company_import/donk/foamforce/foam_lmg
+/datum/armament_entry/company_import/donk/foamforce/cb/foam_lmg
 	item_type = /obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted
-	contraband = TRUE
-	restricted = TRUE
 	cost = PAYCHECK_COMMAND * 10
+	high_contraband = TRUE
 
 /datum/armament_entry/company_import/donk/mod_modules
 	subcategory = "Donk Co. MOD modules"
@@ -150,7 +154,6 @@
 
 /datum/armament_entry/company_import/donk/mod_modules/dart_collector
 	item_type = /obj/item/mod/module/recycler/donk
-	contraband = TRUE
 	restricted = TRUE
 	cost = PAYCHECK_COMMAND * 4
 
@@ -164,24 +167,24 @@
 
 /datum/armament_entry/company_import/donk/foamforce_ammo/riot_darts
 	item_type = /obj/item/ammo_box/foambox/riot
-	contraband = TRUE
 	restricted = TRUE
 	cost = PAYCHECK_COMMAND * 2
+
+/datum/armament_entry/company_import/donk/foamforce_ammo/cb
+	contraband = TRUE
 
 /datum/armament_entry/company_import/donk/foamforce_ammo/pistol_mag
 	item_type = /obj/item/ammo_box/magazine/toy/pistol
 
-/datum/armament_entry/company_import/donk/foamforce_ammo/smg_mag
+/datum/armament_entry/company_import/donk/foamforce_ammo/cb/smg_mag
 	item_type = /obj/item/ammo_box/magazine/toy/smg
 	cost = PAYCHECK_COMMAND
-	contraband = TRUE
 
-/datum/armament_entry/company_import/donk/foamforce_ammo/smgm45_mag
+/datum/armament_entry/company_import/donk/foamforce_ammo/cb/smgm45_mag
 	item_type = /obj/item/ammo_box/magazine/toy/smgm45
 	cost = PAYCHECK_COMMAND
-	contraband = TRUE
 
-/datum/armament_entry/company_import/donk/foamforce_ammo/m762_mag
+/datum/armament_entry/company_import/donk/foamforce_ammo/cb/m762_mag
 	item_type = /obj/item/ammo_box/magazine/toy/m762
 	cost = PAYCHECK_COMMAND * 2
-	contraband = TRUE
+	high_contraband = TRUE

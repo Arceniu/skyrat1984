@@ -39,6 +39,7 @@
 
 /datum/armament_entry/company_import/vitezstvi/accessory/suppressor
 	item_type = /obj/item/suppressor/standard
+	restricted = TRUE
 
 /datum/armament_entry/company_import/vitezstvi/accessory/small_case
 	item_type = /obj/item/storage/toolbox/guncase/nova/pistol
@@ -46,6 +47,22 @@
 /datum/armament_entry/company_import/vitezstvi/accessory/large_case
 	item_type = /obj/item/storage/toolbox/guncase/nova
 	cost = PAYCHECK_COMMAND * 4
+
+/datum/armament_entry/company_import/vitezstvi/accessory/ntp
+	item_type = /obj/item/storage/toolbox/guncase/nova/ntcase/pistol
+	cost = PAYCHECK_COMMAND * 4
+
+/datum/armament_entry/company_import/vitezstvi/accessory/ntl
+	item_type = /obj/item/storage/toolbox/guncase/nova/ntcase
+	cost = PAYCHECK_COMMAND * 6
+
+/datum/armament_entry/company_import/vitezstvi/accessory/ntsp
+	item_type = /obj/item/storage/toolbox/guncase/nova/ntspecial/pistol
+	cost = PAYCHECK_COMMAND * 5
+
+/datum/armament_entry/company_import/vitezstvi/accessory/ntpl
+	item_type = /obj/item/storage/toolbox/guncase/nova/ntspecial
+	cost = PAYCHECK_COMMAND * 7
 
 /datum/armament_entry/company_import/vitezstvi/accessory/bandolier
 	item_type = /obj/item/storage/belt/bandolier
@@ -63,8 +80,6 @@
 /datum/armament_entry/company_import/vitezstvi/ammo_boxes
 	subcategory = "Ammunition Boxes"
 	cost = PAYCHECK_CREW
-	restricted = FALSE
-	contraband = FALSE
 
 /datum/armament_entry/company_import/vitezstvi/ammo_boxes/lethal
 	cost = PAYCHECK_COMMAND
@@ -80,15 +95,15 @@
 /datum/armament_entry/company_import/vitezstvi/ammo_boxes/rubber_9mm
 	item_type = /obj/item/ammo_box/c9mm/rubber
 
+/datum/armament_entry/company_import/vitezstvi/ammo_boxes/rubber_10mm
+	item_type = /obj/item/ammo_box/c10mm/rubber
+
 /datum/armament_entry/company_import/vitezstvi/ammo_boxes/lethal/cal_10mm
 	item_type = /obj/item/ammo_box/c10mm
 
 /datum/armament_entry/company_import/vitezstvi/ammo_boxes/lethal/hp_10mm
 	item_type = /obj/item/ammo_box/c10mm/hp
 	contraband = TRUE
-
-/datum/armament_entry/company_import/vitezstvi/ammo_boxes/rubber_10mm
-	item_type = /obj/item/ammo_box/c10mm/rubber
 
 /datum/armament_entry/company_import/vitezstvi/ammo_boxes/lethal/cal_310
 	item_type = /obj/item/ammo_box/c310_cargo_box
@@ -148,7 +163,7 @@
 /datum/armament_entry/company_import/vitezstvi/ammo_boxes/lethal/pulse_gun_ammo
 	item_type = /obj/item/ammo_box/pulse_cargo_box
 	cost = PAYCHECK_COMMAND * 5
-	contraband = TRUE
+	high_contraband = TRUE
 
 // Revolver speedloaders
 
@@ -170,6 +185,7 @@
 /datum/armament_entry/company_import/vitezstvi/shot_shells
 	subcategory = "Shotgun Shells"
 	cost = PAYCHECK_COMMAND
+	restricted = TRUE
 
 /datum/armament_entry/company_import/vitezstvi/shot_shells/lethal
 	cost = PAYCHECK_COMMAND * 2
