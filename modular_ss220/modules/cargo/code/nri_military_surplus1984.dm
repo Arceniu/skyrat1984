@@ -35,7 +35,7 @@
 
 /datum/armament_entry/company_import/nri_surplus/space
 	subcategory = "Special Supplies"
-	restricted = TRUE
+	contraband = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/space/voskhod_suit
 	item_type = /obj/item/clothing/suit/space/voskhod
@@ -45,23 +45,23 @@
 	item_type = /obj/item/clothing/head/helmet/space/voskhod
 	cost = PAYCHECK_COMMAND * 5
 
-/datum/armament_entry/company_import/nri_surplus/misc/voskhod_refit_kit
+/datum/armament_entry/company_import/nri_surplus/space/voskhod_refit_kit
 	item_type = /obj/item/crafting_conversion_kit/voskhod_refit
 	cost = PAYCHECK_COMMAND * 15
 
-/datum/armament_entry/company_import/nri_surplus/misc/voskhod_autodoc_refill
+/datum/armament_entry/company_import/nri_surplus/space/voskhod_autodoc_refill
 	item_type = /obj/item/reagent_containers/cup/glass/waterbottle/large/protozine
 	cost = PAYCHECK_COMMAND * 2
 
-/datum/armament_entry/company_import/nri_surplus/misc/military_nri_autodoc_refill
+/datum/armament_entry/company_import/nri_surplus/space/military_nri_autodoc_refill
 	item_type = /obj/item/reagent_containers/cup/glass/waterbottle/large/cryptobiolin
 	cost = PAYCHECK_COMMAND * 3
-	contraband = TRUE
+	high_contraband = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/armor
 	subcategory = "Armor Supplies"
 	cost = PAYCHECK_COMMAND * 3
-	contraband = TRUE
+	restricted = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/armor/cin_helmet
 	item_type = /obj/item/clothing/head/helmet/cin_surplus_helmet/random_color
@@ -141,33 +141,35 @@
 /datum/armament_entry/company_import/nri_surplus/misc/hc_flag
 	item_type = /obj/item/sign/flag/hc
 	cost = PAYCHECK_LOWER
-	contraband = TRUE
+	high_contraband = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/sidearm
 	subcategory = "Sidearms"
 	cost = PAYCHECK_COMMAND * 12
 	restricted = TRUE
 
-/datum/armament_entry/company_import/nri_surplus/sidearm/shotgun_revolver
-	item_type = /obj/item/gun/ballistic/revolver/shotgun_revolver
-	contraband = TRUE
-
-/datum/armament_entry/company_import/nri_surplus/sidearm/zashch
-	item_type = /obj/item/gun/ballistic/automatic/pistol/zashch
-	contraband = TRUE
-
-/datum/armament_entry/company_import/nri_surplus/sidearm/plasma_thrower
-	item_type = /obj/item/gun/ballistic/automatic/pistol/plasma_thrower
-	contraband = TRUE
-
-/datum/armament_entry/company_import/nri_surplus/sidearm/plasma_marksman
-	item_type = /obj/item/gun/ballistic/automatic/pistol/plasma_marksman
+/datum/armament_entry/company_import/nri_surplus/sidearm/cb
 	contraband = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/sidearm/crank_taser
 	item_type = /obj/item/gun/energy/taser/crank
-	cost = PAYCHECK_COMMAND * 15 //No disabler, less charge in general in comparison to a normal double-mode taser; yet chargable on the spot (even if unwieldy)
+	cost = PAYCHECK_COMMAND * 10
 	restricted = FALSE
+
+/datum/armament_entry/company_import/nri_surplus/sidearm/cb/shotgun_revolver
+	item_type = /obj/item/gun/ballistic/revolver/shotgun_revolver
+
+/datum/armament_entry/company_import/nri_surplus/sidearm/cb/zashch
+	item_type = /obj/item/gun/ballistic/automatic/pistol/zashch
+	cost = PAYCHECK_COMMAND * 19
+
+/datum/armament_entry/company_import/nri_surplus/sidearm/cb/plasma_thrower
+	item_type = /obj/item/gun/ballistic/automatic/pistol/plasma_thrower
+	cost = PAYCHECK_COMMAND * 15
+
+/datum/armament_entry/company_import/nri_surplus/sidearm/cb/plasma_marksman
+	item_type = /obj/item/gun/ballistic/automatic/pistol/plasma_marksman
+	cost = PAYCHECK_COMMAND * 15
 
 /datum/armament_entry/company_import/nri_surplus/longarm
 	subcategory = "Longarms"
@@ -220,42 +222,46 @@
 	cost = PAYCHECK_CREW * 2
 	restricted = TRUE
 
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/plasma_battery
-	item_type = /obj/item/ammo_box/magazine/recharge/plasma_battery
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb
 	contraband = TRUE
 
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/zashch
-	item_type = /obj/item/ammo_box/magazine/zashch/spawns_empty
-	contraband = TRUE
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb/zashch
+	item_type = /obj/item/ammo_box/magazine/zashch
+	cost = PAYCHECK_COMMAND * 2
 
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/miecz
-	item_type = /obj/item/ammo_box/magazine/miecz/spawns_empty
-	contraband = TRUE
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb/miecz
+	item_type = /obj/item/ammo_box/magazine/miecz
+	cost = PAYCHECK_COMMAND * 3
+	high_contraband = TRUE
 
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/napad
-	item_type = /obj/item/ammo_box/magazine/napad/spawns_empty
-	cost = PAYCHECK_CREW * 4
-	contraband = TRUE
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb/napad
+	item_type = /obj/item/ammo_box/magazine/napad
+	cost = PAYCHECK_COMMAND * 9
+	high_contraband = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/firearm_ammo/sakhno
 	item_type = /obj/item/ammo_box/speedloader/strilka310
 	cost = PAYCHECK_CREW * 6
-
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/lanca
-	item_type = /obj/item/ammo_box/magazine/lanca/spawns_empty
-	contraband = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/firearm_ammo/lanca_qm
 	item_type = /obj/item/ammo_box/magazine/lanca/qmr
 	cost = PAYCHECK_CREW * 3
 	restricted = FALSE
 
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/zaibas
-	item_type = /obj/item/ammo_box/magazine/pulse/spawns_empty
-	cost = PAYCHECK_CREW * 4
-	contraband = TRUE
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb/lanca
+	item_type = /obj/item/ammo_box/magazine/lanca
+	cost = PAYCHECK_COMMAND * 6
 
-/datum/armament_entry/company_import/nri_surplus/firearm_ammo/amr_magazine
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb/plasma_battery
+	item_type = /obj/item/ammo_box/magazine/recharge/plasma_battery
+	cost = PAYCHECK_CREW * 3
+
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb/zaibas
+	item_type = /obj/item/ammo_box/magazine/pulse
+	cost = PAYCHECK_COMMAND * 5
+	high_contraband = TRUE
+
+/datum/armament_entry/company_import/nri_surplus/firearm_ammo/cb/amr_magazine
 	item_type = /obj/item/ammo_box/magazine/wylom
-	cost = PAYCHECK_CREW * 8
-	contraband = TRUE
+	cost = PAYCHECK_COMMAND * 7
+	high_contraband = TRUE

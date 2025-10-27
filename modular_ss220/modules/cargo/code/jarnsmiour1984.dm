@@ -15,40 +15,38 @@
 	item_type = /obj/item/knife/combat/survival
 	cost = PAYCHECK_CREW * 6
 
-/datum/armament_entry/company_import/blacksteel/blade/throwing_knife
-	item_type = /obj/item/knife/combat/throwing
-	contraband = TRUE
-	restricted = TRUE
-	cost = PAYCHECK_COMMAND * 10
+/datum/armament_entry/company_import/blacksteel/blade/switchblade
+	item_type = /obj/item/switchblade
+	cost = PAYCHECK_COMMAND * 13
 
 /datum/armament_entry/company_import/blacksteel/blade/bowie_knife
 	item_type = /obj/item/storage/belt/bowie_sheath
-	contraband = TRUE
+	cost = PAYCHECK_COMMAND * 12
 	restricted = TRUE
-	cost = PAYCHECK_COMMAND * 10
+	contraband = TRUE
 
-/datum/armament_entry/company_import/blacksteel/blade/switchblade
-	item_type = /obj/item/switchblade
-	contraband = TRUE
-	restricted = TRUE
+/datum/armament_entry/company_import/blacksteel/blade/throwing_knife
+	item_type = /obj/item/knife/combat/throwing
 	cost = PAYCHECK_COMMAND * 14
+	restricted = TRUE
+	contraband = TRUE
 
 /datum/armament_entry/company_import/blacksteel/blade/combat_knife
 	item_type = /obj/item/knife/combat
-	contraband = TRUE
-	restricted = TRUE
 	cost = PAYCHECK_COMMAND * 20
+	restricted = TRUE
+	contraband = TRUE
 
 /datum/armament_entry/company_import/blacksteel/blade/tomahawk
 	item_type = /obj/item/melee/tomahawk
-	contraband = TRUE
-	restricted = TRUE
 	cost = PAYCHECK_COMMAND * 25
+	restricted = TRUE
+	contraband = TRUE
 
 /datum/armament_entry/company_import/blacksteel/blade/shamshir_sabre
 	item_type = /obj/item/storage/belt/sheath/sabre/cargo
-	restricted = TRUE
 	cost = PAYCHECK_COMMAND * 18
+	restricted = TRUE
 
 // Shields.
 

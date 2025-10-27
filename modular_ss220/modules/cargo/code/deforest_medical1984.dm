@@ -196,7 +196,7 @@
 /datum/armament_entry/company_import/deforest/medpens_stim
 	subcategory = "Stimulant Autoinjectors"
 	cost = PAYCHECK_COMMAND * 4
-	restricted = TRUE
+	//restricted = TRUE //untill i will make changable restricted
 
 /datum/armament_entry/company_import/deforest/medpens_stim/adrenaline
 	item_type = /obj/item/reagent_containers/hypospray/medipen/deforest/adrenaline
@@ -301,25 +301,27 @@
 // Advanced implants, some of these can be printed but this is a way to get them before tech if you REALLY wanted
 
 /datum/armament_entry/company_import/deforest/cyber_implants
-	subcategory = "Combat Cybernetic Implants"
+	subcategory = "Cybernetic Implants"
 	cost = PAYCHECK_COMMAND * 3
-	restricted = TRUE
 
 /datum/armament_entry/company_import/deforest/cyber_implants/razorwire
 	name = "Razorwire Spool Implant"
 	item_type = /obj/item/organ/cyberimp/arm/toolkit/razorwire
 	cost = PAYCHECK_COMMAND * 6
+	restricted = TRUE
 
 /datum/armament_entry/company_import/deforest/cyber_implants/shell_launcher
 	name = "Shell Launch System Implant"
 	item_type = /obj/item/organ/cyberimp/arm/toolkit/shell_launcher
 	cost = PAYCHECK_COMMAND * 8
+	restricted = TRUE
 	contraband = TRUE
 
 /datum/armament_entry/company_import/deforest/cyber_implants/sandy
 	name = "Qani-Laaca Sensory Computer Implant"
 	item_type = /obj/item/organ/cyberimp/sensory_enhancer
 	cost = PAYCHECK_COMMAND * 15
+	restricted = TRUE
 	contraband = TRUE
 
 /datum/armament_entry/company_import/deforest/cyber_implants/hackerman

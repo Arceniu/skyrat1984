@@ -37,10 +37,15 @@
 	item_type = /obj/item/sign/flag/terragov
 	cost = PAYCHECK_LOWER
 
+/datum/armament_entry/company_import/sol_defense/misc/old_flag
+	item_type = /obj/item/sign/flag/usa
+	cost = PAYCHECK_LOWER
+	high_contraband = TRUE
+
 /datum/armament_entry/company_import/sol_defense/armor
 	subcategory = "Ballistic Armor"
-	contraband = TRUE
 	cost = PAYCHECK_CREW * 6
+	restricted = TRUE
 
 /datum/armament_entry/company_import/sol_defense/armor/slim_vest
 	name = "type I vest - slim"
@@ -72,11 +77,30 @@
 	item_type = /obj/item/storage/toolbox/guncase/nova/carwo_large_case
 	cost = PAYCHECK_COMMAND * 5
 
+/datum/armament_entry/company_import/sol_defense/case/sfp
+	item_type = /obj/item/storage/toolbox/guncase/nova/solfed/pistol
+	cost = PAYCHECK_COMMAND * 4
+
+/datum/armament_entry/company_import/sol_defense/case/sfl
+	item_type = /obj/item/storage/toolbox/guncase/nova/solfed
+	cost = PAYCHECK_COMMAND * 6
+
+/datum/armament_entry/company_import/sol_defense/case/sfsp
+	item_type = /obj/item/storage/toolbox/guncase/nova/solfedspec/pistol
+	cost = PAYCHECK_COMMAND * 5
+
+/datum/armament_entry/company_import/sol_defense/case/sfsl
+	item_type = /obj/item/storage/toolbox/guncase/nova/solfedspec
+	cost = PAYCHECK_COMMAND * 7
+
+
 /datum/armament_entry/company_import/sol_defense/sidearm
 	subcategory = "Sidearms"
 	cost = PAYCHECK_COMMAND * 5
-	contraband = TRUE
 	restricted = TRUE
+
+/datum/armament_entry/company_import/sol_defense/sidearm/cb
+	contraband = TRUE
 
 /datum/armament_entry/company_import/sol_defense/sidearm/eland
 	item_type = /obj/item/gun/ballistic/revolver/sol
@@ -88,51 +112,51 @@
 
 /datum/armament_entry/company_import/sol_defense/sidearm/type207
 	item_type = /obj/item/gun/ballistic/automatic/pistol/type207
-	contraband = FALSE
 	restricted = FALSE
 
-/datum/armament_entry/company_import/sol_defense/sidearm/skild
+/datum/armament_entry/company_import/sol_defense/sidearm/cb/skild
 	item_type = /obj/item/gun/ballistic/automatic/pistol/trappiste
 	cost = PAYCHECK_COMMAND * 12
 
-/datum/armament_entry/company_import/sol_defense/sidearm/takbok
+/datum/armament_entry/company_import/sol_defense/sidearm/cb/takbok
 	item_type = /obj/item/gun/ballistic/revolver/takbok
 	cost = PAYCHECK_COMMAND * 12
-
 
 /datum/armament_entry/company_import/sol_defense/longarm
 	subcategory = "Longarms"
 	cost = PAYCHECK_COMMAND * 8
 	restricted = TRUE
+
+/datum/armament_entry/company_import/sol_defense/longarm/cb
 	contraband = TRUE
 
 /datum/armament_entry/company_import/sol_defense/longarm/renoster
 	item_type = /obj/item/gun/ballistic/shotgun/riot/sol
 	cost = PAYCHECK_COMMAND * 12
 
-/datum/armament_entry/company_import/sol_defense/longarm/sindano
+/datum/armament_entry/company_import/sol_defense/longarm/cb/sindano
 	item_type = /obj/item/gun/ballistic/automatic/sol_smg
 	cost = PAYCHECK_COMMAND * 11
 
 /datum/armament_entry/company_import/sol_defense/longarm/type213
 	item_type = /obj/item/gun/ballistic/automatic/type213
 	restricted = FALSE
-	contraband = FALSE
 
-/datum/armament_entry/company_import/sol_defense/longarm/jager
+/datum/armament_entry/company_import/sol_defense/longarm/cb/jager
 	item_type = /obj/item/gun/ballistic/shotgun/katyusha/jager
 	cost = PAYCHECK_COMMAND * 22
 
-/datum/armament_entry/company_import/sol_defense/longarm/kiboko
+/datum/armament_entry/company_import/sol_defense/longarm/cb/kiboko
 	item_type = /obj/item/gun/ballistic/automatic/sol_grenade_launcher
 	cost = PAYCHECK_COMMAND * 50
-
 
 /datum/armament_entry/company_import/sol_defense/magazines
 	subcategory = "Magazines"
 	cost = PAYCHECK_CREW * 2
-	contraband = TRUE
 	restricted = TRUE
+
+/datum/armament_entry/company_import/sol_defense/magazines/cb
+	contraband = TRUE
 
 /datum/armament_entry/company_import/sol_defense/magazines/c35_mag
 	item_type = /obj/item/ammo_box/magazine/c35sol_pistol/starts_empty
@@ -142,39 +166,37 @@
 	item_type = /obj/item/ammo_box/magazine/c35sol_pistol/stendo/starts_empty
 	cost = PAYCHECK_CREW * 4
 
-/datum/armament_entry/company_import/sol_defense/magazines/c585_mag
+/datum/armament_entry/company_import/sol_defense/magazines/cb/c585_mag
 	item_type = /obj/item/ammo_box/magazine/c585trappiste_pistol/spawns_empty
-	cost = PAYCHECK_CREW * 3
+	cost = PAYCHECK_CREW * 5
 
-/datum/armament_entry/company_import/sol_defense/magazines/br38
+/datum/armament_entry/company_import/sol_defense/magazines/cb/br38 //nt gun, add later nt imports?
 	item_type = /obj/item/ammo_box/magazine/m38/empty
-	cost = PAYCHECK_CREW * 4
+	cost = PAYCHECK_CREW * 6
 
 /datum/armament_entry/company_import/sol_defense/magazines/kineticballs
 	item_type = /obj/item/ammo_box/magazine/kineticballs/starts_empty
-	contraband = FALSE
 	restricted = FALSE
 
 /datum/armament_entry/company_import/sol_defense/magazines/kineticballsbig
 	item_type = /obj/item/ammo_box/magazine/kineticballsbig/starts_empty
-	contraband = FALSE
 	restricted = FALSE
 
-/datum/armament_entry/company_import/sol_defense/magazines/sol_rifle_short
+/datum/armament_entry/company_import/sol_defense/magazines/cb/sol_rifle_short
 	item_type = /obj/item/ammo_box/magazine/c40sol_rifle/starts_empty
 	cost = PAYCHECK_CREW * 2
 
-/datum/armament_entry/company_import/sol_defense/magazines/sol_rifle_standard
+/datum/armament_entry/company_import/sol_defense/magazines/cb/sol_rifle_standard
 	item_type = /obj/item/ammo_box/magazine/c40sol_rifle/standard/starts_empty
 	cost = PAYCHECK_CREW * 3
 
-/datum/armament_entry/company_import/sol_defense/magazines/jager_shotgun_regular
+/datum/armament_entry/company_import/sol_defense/magazines/cb/jager_shotgun_regular
 	item_type = /obj/item/ammo_box/magazine/jager/empty
-	cost = PAYCHECK_COMMAND * 2
-
-/datum/armament_entry/company_import/sol_defense/magazines/jager_shotgun_Large
-	item_type = /obj/item/ammo_box/magazine/jager/large/empty
 	cost = PAYCHECK_COMMAND * 3
+
+/datum/armament_entry/company_import/sol_defense/magazines/cb/jager_shotgun_Large
+	item_type = /obj/item/ammo_box/magazine/jager/large/empty
+	cost = PAYCHECK_COMMAND * 5
 
 /datum/armament_entry/company_import/sol_defense/magazines/sol_grenade_standard
 	item_type = /obj/item/ammo_box/magazine/c980_grenade/starts_empty
