@@ -1,7 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - balance: "rebalanced some cargo imports again"
-  - balance: "added weapon permit req to purchase a silencer from imports"
-  - rscadd: "added NT and Sol guncases to cargo imports"
-  - rscadd: "added misc flags to cargo imports after 'tier2' hack(hacking implant/emag)"

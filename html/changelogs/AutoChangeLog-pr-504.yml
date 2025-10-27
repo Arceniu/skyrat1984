@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - admin: "Delay Round End now required +R_SERVER flag (Trial admins no longer can delay round end, however they still can start vote for restart)"

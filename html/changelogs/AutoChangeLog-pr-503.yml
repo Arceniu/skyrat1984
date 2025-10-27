@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - qol: "Duplicate hotkeys for swap hands is unbound by default now (they were binded to Q that is also drop, and E that is quick equip), you still can bind them manually if need. Does not affect your current saved keybinding preferences (will work only if you reset all keybindings or new player)."
