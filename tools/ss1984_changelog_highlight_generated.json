@@ -1,5 +1,23 @@
 [
   {
+    "date": "2025-10-27",
+    "author": "Arceniu",
+    "changes": [
+      "rebalanced some cargo imports again",
+      "added weapon permit req to purchase a silencer from imports",
+      "added NT and Sol guncases to cargo imports",
+      "added misc flags to cargo imports after 'tier2' hack(hacking implant/emag)"
+    ]
+  },
+  {
+    "date": "2025-10-27",
+    "author": "DenIS318",
+    "changes": [
+      "Duplicate hotkeys for swap hands is unbound by default now (they were binded to Q that is also drop, and E that is quick equip), you still can bind them manually if need. Does not affect your current saved keybinding preferences (will work only if you reset all keybindings or new player).",
+      "Delay Round End now required +R_SERVER flag (Trial admins no longer can delay round end, however they still can start vote for restart)"
+    ]
+  },
+  {
     "date": "2025-10-25",
     "author": "DenIS318",
     "changes": [
