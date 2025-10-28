@@ -10,18 +10,57 @@
 	item_type = /obj/item/sign/flag/nanotrasen
 	cost = PAYCHECK_LOWER
 
+/datum/armament_entry/company_import/nanotrasen_and_bolt/helmet
+	subcategory = "Helmets"
+	cost = PAYCHECK_CREW * 5
+	restricted = TRUE
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/helmet/sec
+	item_type = /obj/item/clothing/head/helmet/sec
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/helmet/bullet
+	item_type = /obj/item/clothing/head/helmet/alt
+	cost = PAYCHECK_CREW * 7
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/helmet/riot
+	item_type = /obj/item/clothing/head/helmet/toggleable/riot
+	cost = PAYCHECK_CREW * 7
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/helmet/swat
+	item_type = /obj/item/clothing/head/helmet/swat/nanotrasen
+	cost = PAYCHECK_CREW * 9
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/helmet/alarm
+	item_type = /obj/item/clothing/head/helmet/toggleable/justice
+	cost = PAYCHECK_CREW * 6
+	restricted = FALSE
+	contraband = TRUE
+
 /datum/armament_entry/company_import/nanotrasen_and_bolt/armor
-	subcategory = "Light Body Armor"
+	subcategory = "Body Armor"
 	cost = PAYCHECK_CREW * 6
 	restricted = TRUE
 
-/datum/armament_entry/company_import/nanotrasen_and_bolt/armor/slim_vest
+/datum/armament_entry/company_import/nanotrasen_and_bolt/armor/slim
 	name = "type I vest - slim"
 	item_type = /obj/item/clothing/suit/armor/vest
 
-/datum/armament_entry/company_import/nanotrasen_and_bolt/armor/normal_vest
+/datum/armament_entry/company_import/nanotrasen_and_bolt/armor/normal
 	name = "type I vest - normal"
 	item_type = /obj/item/clothing/suit/armor/vest/alt
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/armor/bullet
+	name = "type III vest - bulletproof"
+	item_type = /obj/item/clothing/suit/armor/bulletproof
+	cost = PAYCHECK_CREW * 7
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/armor/riot
+	item_type = /obj/item/clothing/suit/armor/riot
+	cost = PAYCHECK_CREW * 9
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/armor/swat
+	item_type = /obj/item/clothing/suit/armor/swat
+	cost = PAYCHECK_CREW * 12
 
 /datum/armament_entry/company_import/nanotrasen_and_bolt/nonlethal
 	subcategory = "Non-Lethal Weapons"
