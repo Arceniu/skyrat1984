@@ -1127,6 +1127,11 @@
   Adeheuer, vinylspiders:
   - rscadd: Adds some new erotic interactions
   - bugfix: Fixing vibrator.dm code
+  DenIS318:
+  - bugfix: Firefly hollow-point ammo is now visible (added missing sprite)
+  - qol: Cargo company import item's description is scrollable (If large enough)
+  - balance: c38 caliber damage&values is back to old TG values (they used primary
+      in detective revolver and BR38)
   OrbisAnima:
   - rscdel: Legion spawner variants (Portal / Tendril) no longer leave behind infested
       corpse mobs, reducing unnecessary corpse accumulation on Lavaland. This will
