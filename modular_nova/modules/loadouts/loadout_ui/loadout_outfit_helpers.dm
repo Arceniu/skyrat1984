@@ -27,6 +27,7 @@
 	datum/preferences/preference_source = GLOB.preference_entries_by_key[ckey],
 	visuals_only = FALSE,
 	datum/job/equipping_job,
+	allow_mechanical_loadout_items = TRUE,
 )
 	if (!preference_source)
 		equipOutfit(outfit, visuals_only) // no prefs for loadout items, but we should still equip the outfit.
@@ -56,25 +57,36 @@
 	if(override_preference == LOADOUT_OVERRIDE_CASE && !visuals_only)
 		briefcase = new(loc)
 		for(var/datum/loadout_item/item as anything in loadout_datums)
-			// SS1984 REMOVAL OF ERP EDIT START
-			if (!item.can_be_applied_to(src, preference_source, equipping_job))
+			// SS1984 REMOVAL START
+			// if (erp_enabled && item.erp_box == TRUE)
+			// 	if (isnull(erpbox))
+			// 		erpbox = new(loc)
+			// 	new item.item_path(erpbox)
+			// else
+			// SS1984 REMOVAL END
+			if (!item.can_be_applied_to(src, preference_source, equipping_job, allow_mechanical_loadout_items))
 				continue
 			new item.item_path(briefcase)
-			// SS1984 REMOVAL OF ERP EDIT END
 
 		briefcase.name = "[preference_source.read_preference(/datum/preference/name/real_name)]'s travel suitcase"
 		equipOutfit(equipped_outfit, visuals_only)
 		put_in_hands(briefcase)
 	else
 		for(var/datum/loadout_item/item as anything in loadout_datums)
-			// SS1984 REMOVAL OF ERP EDIT START
-			if (!item.can_be_applied_to(src, preference_source, equipping_job))
+			// SS1984 REMOVAL START
+			// if (erp_enabled && item.erp_box == TRUE)
+			// 	if (isnull(erpbox))
+			// 		erpbox = new(loc)
+			// 	new item.item_path(erpbox)
+			// else
+			// SS1984 REMOVAL END
+			if (!item.can_be_applied_to(src, preference_source, equipping_job, allow_mechanical_loadout_items))
 				continue
+
 			// Make sure the item is not overriding an important for life outfit item
 			var/datum/outfit/outfit_important_for_life = dna.species.outfit_important_for_life
 			if(!outfit_important_for_life || !item.pre_equip_item(equipped_outfit, outfit_important_for_life, src, visuals_only))
 				item.insert_path_into_outfit(equipped_outfit, src, visuals_only, override_preference)
-			// SS1984 REMOVAL OF ERP EDIT END
 		equipOutfit(equipped_outfit, visuals_only)
 
 	var/list/new_contents = isnull(briefcase) ? get_all_gear() : briefcase.get_all_contents()
@@ -95,9 +107,9 @@
 
 		item.on_equip_item(
 			equipped_item = equipped,
-			preference_source = preference_source,
-			preference_list = loadout_list,
+			item_details = loadout_list?[item.item_path] || list(),
 			equipper = src,
+			outfit = equipped_outfit,
 			visuals_only = visuals_only,
 		)
 
