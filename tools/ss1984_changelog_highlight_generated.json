@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-10-28",
+    "author": "DenIS318",
+    "changes": [
+      "Firefly hollow-point ammo is now visible (added missing sprite)",
+      "c38 caliber damage&values is back to old TG values (they used primary in detective revolver and BR38)",
+      "Cargo company import item's description is scrollable (If large enough)"
+    ]
+  },
+  {
     "date": "2025-10-27",
     "author": "Arceniu",
     "changes": [
