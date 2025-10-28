@@ -2,6 +2,14 @@
 	category = BOLT_NANOTRASEN_DEFENSE_NAME_1984
 	company_bitflag = CARGO_COMPANY_BOLT_NANOTRASEN_1984
 
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/misc
+	subcategory = "Miscellaneous Supplies"
+
+/datum/armament_entry/company_import/nanotrasen_and_bolt/misc/nt_flag
+	item_type = /obj/item/sign/flag/nanotrasen
+	cost = PAYCHECK_LOWER
+
 /datum/armament_entry/company_import/nanotrasen_and_bolt/armor
 	subcategory = "Light Body Armor"
 	cost = PAYCHECK_CREW * 6
@@ -36,7 +44,7 @@
 /datum/armament_entry/company_import/nanotrasen_and_bolt/lethal_sidearm/m1911
 	item_type = /obj/item/gun/ballistic/automatic/pistol/m1911
 	cost = PAYCHECK_COMMAND * 15
-	contraband = TRUE
+	high_contraband = TRUE
 
 /datum/armament_entry/company_import/nanotrasen_and_bolt/longarm
 	subcategory = "Longarms"
