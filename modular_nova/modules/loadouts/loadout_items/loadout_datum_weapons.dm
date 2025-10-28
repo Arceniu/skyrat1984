@@ -1,3 +1,4 @@
+/* SS1984 REMOVAL START
 /datum/loadout_category/weapons
 	category_name = "Weapons"
 	category_ui_icon = FA_ICON_GUN
@@ -83,3 +84,4 @@
 /datum/loadout_item/weapons/forgeweapons/staff
 	name = /obj/item/forging/reagent_weapon/staff::name
 	item_path = /obj/item/forging/reagent_weapon/staff
+SS1984 REMOVAL END */
