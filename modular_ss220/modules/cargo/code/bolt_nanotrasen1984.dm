@@ -71,6 +71,7 @@
 
 /datum/armament_entry/company_import/nanotrasen_and_bolt/lethal_sidearm
 	subcategory = "Lethal Sidearms"
+	restricted = TRUE
 
 /datum/armament_entry/company_import/nanotrasen_and_bolt/lethal_sidearm/detective_revolver
 	item_type = /obj/item/gun/ballistic/revolver/c38/detective
@@ -113,6 +114,7 @@
 /datum/armament_entry/company_import/nanotrasen_and_bolt/magazines/pepper
 	item_type = /obj/item/ammo_box/magazine/pepperball
 	cost = PAYCHECK_CREW * 2
+	restricted = FALSE
 
 /datum/armament_entry/company_import/nanotrasen_and_bolt/magazines/em1911_l
 	item_type = /obj/item/ammo_box/magazine/recharge/m1911
