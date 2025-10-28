@@ -32481,7 +32481,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 4
 	},
-/obj/machinery/defibrillator_mount/mobile{
+/obj/machinery/defibrillator_mount/mobile/loaded{
 	anchored = 1
 	},
 /obj/effect/turf_decal/trimline/blue/filled/mid_joiner{
@@ -65631,7 +65631,7 @@
 /obj/machinery/stasis{
 	dir = 4
 	},
-/obj/machinery/defibrillator_mount/directional/west,
+/obj/machinery/defibrillator_mount/loaded/directional/west,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
 	},
