@@ -1,6 +1,6 @@
 /datum/armament_entry/company_import/nri_surplus
-	category = NRI_SURPLUS_COMPANY_NAME
-	company_bitflag = CARGO_COMPANY_NRI_SURPLUS
+	category = NRI_SURPLUS_COMPANY_NAME_1984
+	company_bitflag = CARGO_COMPANY_NRI_SURPLUS_1984
 
 // Various NRI clothing items
 
@@ -148,13 +148,13 @@
 	cost = PAYCHECK_COMMAND * 12
 	restricted = TRUE
 
-/datum/armament_entry/company_import/nri_surplus/sidearm/cb
-	contraband = TRUE
-
 /datum/armament_entry/company_import/nri_surplus/sidearm/crank_taser
 	item_type = /obj/item/gun/energy/taser/crank
 	cost = PAYCHECK_COMMAND * 10
 	restricted = FALSE
+
+/datum/armament_entry/company_import/nri_surplus/sidearm/cb //contraband start, must be below non contraband items to display correctly
+	contraband = TRUE
 
 /datum/armament_entry/company_import/nri_surplus/sidearm/cb/shotgun_revolver
 	item_type = /obj/item/gun/ballistic/revolver/shotgun_revolver

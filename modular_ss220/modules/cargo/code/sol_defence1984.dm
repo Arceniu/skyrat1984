@@ -1,6 +1,6 @@
 /datum/armament_entry/company_import/sol_defense
-	category = SOL_DEFENSE_DEFENSE_NAME
-	company_bitflag = CARGO_COMPANY_SOL_DEFENSE
+	category = SOL_DEFENSE_NAME_1984
+	company_bitflag = CARGO_COMPANY_SOL_DEFENSE_1984
 
 // Beautiful SolFed clothing
 
@@ -46,10 +46,6 @@
 	subcategory = "Ballistic Armor"
 	cost = PAYCHECK_CREW * 6
 	restricted = TRUE
-
-/datum/armament_entry/company_import/sol_defense/armor/slim_vest
-	name = "type I vest - slim"
-	item_type = /obj/item/clothing/suit/armor/vest
 
 /datum/armament_entry/company_import/sol_defense/armor/ballistic_helmet
 	item_type = /obj/item/clothing/head/helmet/sf_peacekeeper/debranded
@@ -155,8 +151,13 @@
 	cost = PAYCHECK_CREW * 2
 	restricted = TRUE
 
-/datum/armament_entry/company_import/sol_defense/magazines/cb
-	contraband = TRUE
+/datum/armament_entry/company_import/sol_defense/magazines/kineticballs
+	item_type = /obj/item/ammo_box/magazine/kineticballs/starts_empty
+	restricted = FALSE
+
+/datum/armament_entry/company_import/sol_defense/magazines/kineticballsbig
+	item_type = /obj/item/ammo_box/magazine/kineticballsbig/starts_empty
+	restricted = FALSE
 
 /datum/armament_entry/company_import/sol_defense/magazines/c35_mag
 	item_type = /obj/item/ammo_box/magazine/c35sol_pistol/starts_empty
@@ -166,21 +167,12 @@
 	item_type = /obj/item/ammo_box/magazine/c35sol_pistol/stendo/starts_empty
 	cost = PAYCHECK_CREW * 4
 
+/datum/armament_entry/company_import/sol_defense/magazines/cb //contraband start, must be below non contraband items to display correctly
+	contraband = TRUE
+
 /datum/armament_entry/company_import/sol_defense/magazines/cb/c585_mag
 	item_type = /obj/item/ammo_box/magazine/c585trappiste_pistol/spawns_empty
 	cost = PAYCHECK_CREW * 5
-
-/datum/armament_entry/company_import/sol_defense/magazines/cb/br38 //nt gun, add later nt imports?
-	item_type = /obj/item/ammo_box/magazine/m38/empty
-	cost = PAYCHECK_CREW * 6
-
-/datum/armament_entry/company_import/sol_defense/magazines/kineticballs
-	item_type = /obj/item/ammo_box/magazine/kineticballs/starts_empty
-	restricted = FALSE
-
-/datum/armament_entry/company_import/sol_defense/magazines/kineticballsbig
-	item_type = /obj/item/ammo_box/magazine/kineticballsbig/starts_empty
-	restricted = FALSE
 
 /datum/armament_entry/company_import/sol_defense/magazines/cb/sol_rifle_short
 	item_type = /obj/item/ammo_box/magazine/c40sol_rifle/starts_empty
@@ -205,4 +197,3 @@
 /datum/armament_entry/company_import/sol_defense/magazines/sol_grenade_drum
 	item_type = /obj/item/ammo_box/magazine/c980_grenade/drum/starts_empty
 	cost = PAYCHECK_CREW * 6
-
