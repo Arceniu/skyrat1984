@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Firefly hollow-point ammo is now visible (added missing sprite)"
