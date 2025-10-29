@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-10-29",
+    "author": "DenIS318",
+    "changes": [
+      "Clown Operatives is now can be spawned by dynamic",
+      "Cortical Borers temporaly disabled from dynamic, until they will be fixed (so you possibly can get other rulesets instead)",
+      "Revert \"Round ID now shows in the top byond window text\""
+    ]
+  },
+  {
     "date": "2025-10-28",
     "author": "DenIS318",
     "changes": [
