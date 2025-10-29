@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - rscdel: "Revert \"Round ID now shows in the top byond window text\""

@@ -1163,3 +1163,9 @@
   - rscadd: Thief gloves can quietly steal accessories through the strip menu
   vinylspiders:
   - qol: Round ID now shows in the top byond window text
+2025-10-29:
+  DenIS318:
+  - config: Clown Operatives is now can be spawned by dynamic
+  - config: Cortical Borers temporaly disabled from dynamic, until they will be fixed
+      (so you possibly can get other rulesets instead)
+  - rscdel: Revert "Round ID now shows in the top byond window text"

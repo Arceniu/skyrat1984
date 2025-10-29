@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - config: "Clown Operatives is now can be spawned by dynamic"
-  - config: "Cortical Borers temporaly disabled from dynamic, until they will be fixed (so you possibly can get other rulesets instead)"
