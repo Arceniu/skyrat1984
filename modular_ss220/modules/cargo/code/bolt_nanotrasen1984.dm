@@ -104,7 +104,7 @@
 
 /datum/armament_entry/company_import/nanotrasen_and_bolt/longarm/br38
 	item_type = /obj/item/gun/ballistic/automatic/battle_rifle
-	cost = PAYCHECK_COMMAND * 100
+	cost = PAYCHECK_COMMAND * 40
 
 /datum/armament_entry/company_import/nanotrasen_and_bolt/magazines
 	subcategory = "Magazines"
