@@ -1169,3 +1169,25 @@
   - config: Cortical Borers temporaly disabled from dynamic, until they will be fixed
       (so you possibly can get other rulesets instead)
   - rscdel: Revert "Round ID now shows in the top byond window text"
+2025-10-31:
+  Arceniu:
+  - rscadd: Added nanotrasen&bolt import to cargo (basic and heavy armour, bolt guns,
+      wt550, ammo for some other NT guns)
+  - rscdel: Removed nt rifle magasine, basic armour vest from sol
+  - balance: NT BR-38 Crate price decreased 20000 -> 12000
+  DenIS318:
+  - balance: Max stamina damage 162 -> 120 (as in TG)
+  - balance: Borers scale 0.5 => 1.0
+  - qol: Borers objectives are also shown in TGUI now
+  - bugfix: Borers spawn from dynamic event fixed (they still legacy antag and not
+      100% tested now)
+  - config: Borers enabled to be spawned again in dynamic (weight 3, min pop = 5,
+      does not require security). Borers are some kind "RP" antag for now, as they
+      cannot directly control host (and cannot inhabit monkey)
+  - qol: 'Those species can have gender now: plasmaman, monkey, zombie, ghost, golem,
+      skeleton (pun-pun is no longer "they")'
+  - balance: Drone dispenser (station) now produces 3 => 1 in-active shells
+  - balance: Drone dispenser (station) cooldown 3 minutes => 5 minutes
+  - balance: NT BR-38 shots before degradation 30 -> 10 (as in TG)
+  - balance: NT BR-38 degradation probability 5 -> 10 (as in TG)
+  - rscadd: Sharpeners (2) added to Plasteel Chef's Dinnerware Vendor to premium products

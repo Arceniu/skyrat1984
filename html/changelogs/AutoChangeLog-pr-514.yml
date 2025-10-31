@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "NT BR-38 shots before degradation 30 -> 10 (as in TG)"
-  - balance: "NT BR-38 degradation probability 5 -> 10 (as in TG)"

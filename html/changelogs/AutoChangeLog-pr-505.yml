@@ -1,6 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscadd: "Added nanotrasen&bolt import to cargo (basic and heavy armour, bolt guns, wt550, ammo for some other NT guns)"
-  - rscdel: "Removed nt rifle magasine, basic armour vest from sol"
-  - balance: "NT BR-38 Crate price decreased 20000 -> 12000"

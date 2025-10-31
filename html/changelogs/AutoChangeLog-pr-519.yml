@@ -1,7 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "Borers scale 0.5 => 1.0"
-  - qol: "Borers objectives are also shown in TGUI now"
-  - bugfix: "Borers spawn from dynamic event fixed (they still legacy antag and not 100% tested now)"
-  - config: "Borers enabled to be spawned again in dynamic (weight 3, min pop = 5, does not require security). Borers are some kind \"RP\" antag for now, as they cannot directly control host (and cannot inhabit monkey)"
