@@ -1,6 +1,6 @@
 /datum/armament_entry/company_import/nakamura_modsuits
-	category = NAKAMURA_ENGINEERING_MODSUITS_NAME
-	company_bitflag = CARGO_COMPANY_NAKAMURA_MODSUITS
+	category = NAKAMURA_ENGINEERING_MODSUITS_NAME_1984
+	company_bitflag = CARGO_COMPANY_NAKAMURA_MODSUITS_1984
 
 /datum/armament_entry/company_import/nakamura_modsuits/mod
 	subcategory = "MOD Suits"

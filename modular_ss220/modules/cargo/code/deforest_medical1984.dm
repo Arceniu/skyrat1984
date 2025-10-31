@@ -1,6 +1,6 @@
 /datum/armament_entry/company_import/deforest
-	category = DEFOREST_MEDICAL_NAME
-	company_bitflag = CARGO_COMPANY_DEFOREST
+	category = DEFOREST_MEDICAL_NAME_1984
+	company_bitflag = CARGO_COMPANY_DEFOREST_1984
 
 // Precompiled first aid kits, ready to go if you don't want to bother getting individual items
 

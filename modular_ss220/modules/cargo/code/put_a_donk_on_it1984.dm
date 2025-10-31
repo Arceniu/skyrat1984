@@ -1,6 +1,6 @@
 /datum/armament_entry/company_import/donk
-	category = DONK_CO_NAME
-	company_bitflag = CARGO_COMPANY_DONK
+	category = DONK_CO_NAME_1984
+	company_bitflag = CARGO_COMPANY_DONK_1984
 
 // Donk Co foods, like donk pockets and ready donk
 
@@ -113,9 +113,6 @@
 /datum/armament_entry/company_import/donk/foamforce
 	subcategory = "Foam Force (TM) Blasters"
 
-/datum/armament_entry/company_import/donk/foamforce/cb
-	contraband = TRUE
-
 /datum/armament_entry/company_import/donk/foamforce/foam_shotgun
 	item_type = /obj/item/gun/ballistic/shotgun/toy
 	cost = PAYCHECK_LOWER * 5
@@ -127,6 +124,9 @@
 /datum/armament_entry/company_import/donk/foamforce/foam_pistol
 	item_type = /obj/item/gun/ballistic/automatic/pistol/toy
 	cost = PAYCHECK_COMMAND * 4
+
+/datum/armament_entry/company_import/donk/foamforce/cb //contraband start, must be below non contraband items to display correctly
+	contraband = TRUE
 
 /datum/armament_entry/company_import/donk/foamforce/cb/foam_smg
 	item_type = /obj/item/gun/ballistic/automatic/toy
