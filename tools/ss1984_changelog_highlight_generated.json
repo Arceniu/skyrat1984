@@ -1,5 +1,31 @@
 [
   {
+    "date": "2025-10-31",
+    "author": "Arceniu",
+    "changes": [
+      "Added nanotrasen&bolt import to cargo (basic and heavy armour, bolt guns, wt550, ammo for some other NT guns)",
+      "Removed nt rifle magasine, basic armour vest from sol",
+      "NT BR-38 Crate price decreased 20000 -> 12000"
+    ]
+  },
+  {
+    "date": "2025-10-31",
+    "author": "DenIS318",
+    "changes": [
+      "NT BR-38 shots before degradation 30 -> 10 (as in TG)",
+      "NT BR-38 degradation probability 5 -> 10 (as in TG)",
+      "Those species can have gender now: plasmaman, monkey, zombie, ghost, golem, skeleton (pun-pun is no longer \"they\")",
+      "Max stamina damage 162 -> 120 (as in TG)",
+      "Sharpeners (2) added to Plasteel Chef's Dinnerware Vendor to premium products",
+      "Borers scale 0.5 => 1.0",
+      "Borers objectives are also shown in TGUI now",
+      "Borers spawn from dynamic event fixed (they still legacy antag and not 100% tested now)",
+      "Borers enabled to be spawned again in dynamic (weight 3, min pop = 5, does not require security). Borers are some kind \"RP\" antag for now, as they cannot directly control host (and cannot inhabit monkey)",
+      "Drone dispenser (station) now produces 3 => 1 in-active shells",
+      "Drone dispenser (station) cooldown 3 minutes => 5 minutes"
+    ]
+  },
+  {
     "date": "2025-10-29",
     "author": "DenIS318",
     "changes": [
