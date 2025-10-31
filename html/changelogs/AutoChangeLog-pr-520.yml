@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Drone dispenser (station) now produces 3 => 1 in-active shells"
+  - balance: "Drone dispenser (station) cooldown 3 minutes => 5 minutes"
