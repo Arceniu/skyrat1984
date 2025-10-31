@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Max stamina damage 162 -> 120 (as in TG)"
