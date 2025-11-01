@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - rscadd: "Language Conversion is added at telecomms. It disabled by default and should be manually enabled in telecomms. It translates all speech from all languages to selected language."
+  - rscadd: "Languages supported to automatic translate: calcic, sol common, draconic, encoded audio language (machine), mothic, nekomimetic, slime, spinwarder, galactic uncommon, voltaic, canilunzt, plutonian, pan-slavic, silk'tajr, skrelluq, vox, xerxian, yangyu, schechi"
