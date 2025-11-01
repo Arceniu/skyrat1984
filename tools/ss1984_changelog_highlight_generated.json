@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-11-01",
+    "author": "DenIS318",
+    "changes": [
+      "Language Conversion is added at telecomms. It disabled by default and should be manually enabled in telecomms. It translates all speech from all languages to selected language.",
+      "Languages supported to automatic translate: calcic, sol common, draconic, encoded audio language (machine), mothic, nekomimetic, slime, spinwarder, galactic uncommon, voltaic, canilunzt, plutonian, pan-slavic, silk'tajr, skrelluq, vox, xerxian, yangyu, schechi"
+    ]
+  },
+  {
     "date": "2025-10-31",
     "author": "Arceniu",
     "changes": [
