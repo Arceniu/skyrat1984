@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - qol: "Examining cell charger now shows grid's charging availability description. So if cell charger won't charge cells, it will display info related to that."
