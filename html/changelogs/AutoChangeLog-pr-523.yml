@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - rscdel: "Revert \"Allstar Lasers has updated a good chunk of their crew-attainable energy firearms with shiny new casings, as to unify their design philosophies or something.\""
-  - balance: "Revert \"The X-01 multiphase energy gun (HoS egun) now has matching capacities for laser and disabler (25 shots, up from 12 for laser, 20 from disabler) and a slight increase in ion mode capacity (5 shots, up from 4).\""
