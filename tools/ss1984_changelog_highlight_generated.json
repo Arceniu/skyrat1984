@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-11-02",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Allstar Lasers has updated a good chunk of their crew-attainable energy firearms with shiny new casings, as to unify their design philosophies or something.\"",
+      "Revert \"The X-01 multiphase energy gun (HoS egun) now has matching capacities for laser and disabler (25 shots, up from 12 for laser, 20 from disabler) and a slight increase in ion mode capacity (5 shots, up from 4).\"",
+      "Examining cell charger now shows grid's charging availability description. So if cell charger won't charge cells, it will display info related to that."
+    ]
+  },
+  {
     "date": "2025-11-01",
     "author": "DenIS318",
     "changes": [
