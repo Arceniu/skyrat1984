@@ -953,7 +953,9 @@
 /obj/item/clothing/head/utility/hardhat/welding,
 /obj/item/clothing/gloves/tinkerer,
 /obj/item/clothing/gloves/atmos,
-/obj/item/skillchip/job/engineer,
+/obj/item/skillchip/job/engineer{
+	desc = "Endorsed by Nanotrasen Navy Chief Engineer."
+	},
 /turf/open/floor/plating,
 /area/ruin/space/ancientstation/beta/supermatter)
 "ed" = (
@@ -4457,6 +4459,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /obj/effect/decal/remains/human,
+/obj/item/skillchip/job/engineer{
+	name = "Prototype Engineering C1-RCU-1T skillchip";
+	skill_name = "Engineering Circuitry Beta";
+	desc = "Endorsed by Nanotrasen Navy Chief Engineer."
+	},
 /turf/open/floor/engine/airless,
 /area/ruin/space/ancientstation/beta/supermatter)
 "wo" = (
