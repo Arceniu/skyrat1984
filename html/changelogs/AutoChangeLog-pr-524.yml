@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "Mech movement speed reduced accordingly to decreased carbon speed (~16% slower or +0.3 movedelay)"
