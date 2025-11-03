@@ -3,6 +3,9 @@
     "date": "2025-11-03",
     "author": "DenIS318",
     "changes": [
+      "Mech movement speed reduced accordingly to decreased carbon speed (~16% slower or +0.3 movedelay)",
+      "Ghost-roles engineering based roles now have engineering skillchip to see wires (DS2, Tarkon, Charlie Station)",
+      "Can use headset when restrained now",
       "Trim Access is properly shown at ID computer again"
     ]
   },
