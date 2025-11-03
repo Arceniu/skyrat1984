@@ -17,3 +17,6 @@
       a slight increase in ion mode capacity (5 shots, up from 4)."
   - qol: Examining cell charger now shows grid's charging availability description.
       So if cell charger won't charge cells, it will display info related to that.
+2025-11-03:
+  DenIS318:
+  - bugfix: Trim Access is properly shown at ID computer again
