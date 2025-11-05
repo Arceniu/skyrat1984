@@ -25,3 +25,9 @@
       see wires (DS2, Tarkon, Charlie Station)
   - balance: Mech movement speed reduced accordingly to decreased carbon speed (~16%
       slower or +0.3 movedelay)
+2025-11-05:
+  DenIS318:
+  - balance: non-handgun holsters now also can hold taser
+  - balance: Detective's holster now can properly hold some extra things (magazines,
+      glock, banana), it's mostly fix
+  - bugfix: Plasma inflation price fixed after selling

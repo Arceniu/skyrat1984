@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "non-handgun holsters now also can hold taser"
-  - balance: "Detective's holster now can properly hold some extra things (magazines, glock, banana), it's mostly fix"
