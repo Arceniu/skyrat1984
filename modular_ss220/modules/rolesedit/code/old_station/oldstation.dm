@@ -438,13 +438,34 @@
 
 //blueprints
 
+#define LEGEND_VIEWING_LIST "watching_list"
+///The blueprints are on the main page.
+#define LEGEND_OFF "off"
+
 /obj/item/blueprints/oldstation
 	name = "A.B.C.D stations blueprints"
 	desc = "Blueprints of the complex of stations. There is a \"Nanotrasen Navy - Classified\" stamp and some old coffee stains on it."
+	fluffnotice = "Property of Nanotrasen Navy. For heads of staff or engineering personnel only. Store in high-secure storage."
 
+/obj/item/blueprints/oldstation/ui_static_data(mob/user)
+	var/list/data = list()
+	data["legend_viewing_list"] = LEGEND_VIEWING_LIST
+	data["legend_off"] = LEGEND_OFF
+	data["fluff_notice"] = fluffnotice
+	data["station_name"] = "Nanotrasen Station Complex - Alpha, Beta, Charlie, Delta."
+	data["wire_devices"] = list()
+	for(var/wireset in GLOB.wire_color_directory)
+		data["wire_devices"] += list(list(
+			"name" = GLOB.wire_name_directory[wireset],
+			"ref" = wireset,
+		))
+	return data
 
 /obj/item/blueprints/oldstation/eng
 	name = "Crude copy of A.B.C.D stations blueprints"
-	desc = "Small crude copy of stations complex blueprints. It contain information about some wires, that are likely to help in the maintenance of the airlock and other electronic devices."
+	desc = "Small crude copy of stations complex blueprints. It contain information about some wires, that are likely to help in the maintenance of the airlocks and other electronic devices."
 	icon_state = "shuttle_blueprints_crude1"
 	w_class = WEIGHT_CLASS_SMALL
+
+#undef LEGEND_VIEWING_LIST
+#undef LEGEND_OFF
