@@ -300,6 +300,7 @@
 	gloves = /obj/item/clothing/gloves/color/fyellow/old
 	shoes = /obj/item/clothing/shoes/workboots
 	l_pocket = /obj/item/tank/internals/emergency_oxygen
+	r_pocket = /obj/item/blueprints/oldstation/eng
 
 /datum/outfit/oldsci
 	name = "Ancient Scientist"
@@ -415,3 +416,35 @@
 /obj/structure/showcase/machinery/oldpod/used
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper-open"
+
+//skillchips
+
+/obj/item/skillchip/job/oldstation
+	name = "Prototype skillchip"
+	desc = "Endorsed by the Nanotrasen Navy."
+	complexity = 2
+
+
+/obj/item/skillchip/job/oldstation/engineering
+	name = "Prototype Engineering C0-RCU-1T-N11H5M2R1 skillchip"
+	desc = "Endorsed by the Chief Engineer of the Nanotrasen Navy and the Head Janitor himself."
+	auto_traits = list(TRAIT_KNOW_ENGI_WIRES, TRAIT_LIGHTBULB_REMOVER)
+	skill_name = "Combined Engineering Circuitry / Lightbulb Removing skills Beta"
+	skill_description = "Recognise airlock and APC wire layouts and understand their functionality at a glance and also stop failing taking out lightbulbs, even without gloves!"
+	skill_icon = "sitemap"
+	activate_message = span_notice("You suddenly comprehend the secrets behind airlock and APC circuitry and your pain recentors in hands seems less sensetive to hot objects.")
+	deactivate_message = span_notice("Airlock and APC circuitry stops making sense as images of coloured wires fade from your mind... And you feel like hot objects could stop you again...")
+
+
+//blueprints
+
+/obj/item/blueprints/oldstation
+	name = "A.B.C.D stations blueprints"
+	desc = "Blueprints of the complex of stations. There is a \"Nanotrasen Navy - Classified\" stamp and some old coffee stains on it."
+
+
+/obj/item/blueprints/oldstation/eng
+	name = "Crude copy of A.B.C.D stations blueprints"
+	desc = "Small crude copy of stations complex blueprints. It contain information about some wires, that are likely to help in the maintenance of the airlock and other electronic devices."
+	icon_state = "shuttle_blueprints_crude1"
+	w_class = WEIGHT_CLASS_SMALL
