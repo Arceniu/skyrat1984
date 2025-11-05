@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-11-05",
+    "author": "DenIS318",
+    "changes": [
+      "Plasma inflation price fixed after selling",
+      "non-handgun holsters now also can hold taser",
+      "Detective's holster now can properly hold some extra things (magazines, glock, banana), it's mostly fix"
+    ]
+  },
+  {
     "date": "2025-11-03",
     "author": "DenIS318",
     "changes": [
