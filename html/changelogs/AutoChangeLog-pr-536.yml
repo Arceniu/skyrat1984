@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Voltaic heart's overdrive effect is now heals until hardcrit (instead of softcrit)"
