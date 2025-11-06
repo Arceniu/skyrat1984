@@ -433,6 +433,29 @@
 	activate_message = span_notice("You suddenly comprehend the secrets behind airlock and APC circuitry and your pain recentors in hands seems less sensetive to hot objects.")
 	deactivate_message = span_notice("Airlock and APC circuitry stops making sense as images of coloured wires fade from your mind... And you feel like hot objects could stop you again...")
 
+/obj/item/skillchip/job/oldstation/medical
+	name = "Prototype Medical SRX-4H912T skillchip"
+	desc = "A skillchip containing 'new' Nanotrasen medical training protocols, boosting overall medical efficiency. Endorsed by the Nanotrasen Navy Security and Medical ERTs."
+	auto_traits = list(TRAIT_MADNESS_IMMUNE, TRAIT_ENTRAILS_READER, TRAIT_SELF_SURGERY)
+	skill_name = "Medic++"
+	skill_description = "Become a real field doctor in an instant!"
+	skill_icon = FA_ICON_USER_DOCTOR
+	activate_message = span_notice("You realize that your surgical skills have become noticeably better and also there's nothing stopping you from performing surgery on yourself.")
+	deactivate_message = span_notice("You suddenly feel like your medical skills are fading.")
+
+/obj/item/skillchip/job/oldstation/medical/on_activate(mob/living/carbon/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_LIVING_INITIATE_SURGERY_STEP, PROC_REF(apply_surgery_buff))
+
+/obj/item/skillchip/job/oldstation/medical/on_deactivate(mob/living/carbon/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_LIVING_INITIATE_SURGERY_STEP)
+
+/obj/item/skillchip/job/oldstation/medical/proc/apply_surgery_buff(mob/living/carbon/_source, mob/living/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, datum/surgery_step/step, list/modifiers)
+	SIGNAL_HANDLER
+	if(user != target)
+		modifiers[FAIL_PROB_INDEX] -= 10
+		modifiers[SPEED_MOD_INDEX] *= 0.9
 
 //blueprints
 #define LEGEND_VIEWING_LIST "watching_list"

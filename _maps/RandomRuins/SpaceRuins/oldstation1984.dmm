@@ -8138,7 +8138,7 @@
 "Up" = (
 /obj/structure/closet/crate/medical,
 /obj/item/circuitboard/machine/sleeper,
-/obj/item/skillchip/job/psychology,
+/obj/item/skillchip/job/oldstation/medical,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/medbay)
 "Uq" = (
