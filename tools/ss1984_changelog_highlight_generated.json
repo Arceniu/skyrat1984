@@ -1,5 +1,15 @@
 [
   {
+    "date": "2025-11-06",
+    "author": "DenIS318",
+    "changes": [
+      "Everything that gives TRAIT_NOSOFTCRIT (such as luxury medipens at mining, hulk mutation and all others sources) now makes you ignore random stun probability from being in soft crit",
+      "Hulk mutation is losed on going hardcrit, instead of when going softcrit",
+      "Hulk is now properly removed on death (in case it get one-shot somehow bypassing hardcrit)",
+      "Voltaic heart's overdrive effect is now heals until hardcrit (instead of softcrit)"
+    ]
+  },
+  {
     "date": "2025-11-05",
     "author": "DenIS318",
     "changes": [
