@@ -418,12 +418,10 @@
 	icon_state = "sleeper-open"
 
 //skillchips
-
 /obj/item/skillchip/job/oldstation
 	name = "Prototype skillchip"
 	desc = "Endorsed by the Nanotrasen Navy."
 	complexity = 2
-
 
 /obj/item/skillchip/job/oldstation/engineering
 	name = "Prototype Engineering C0-RCU-1T-N11H5M2R1 skillchip"
@@ -437,7 +435,6 @@
 
 
 //blueprints
-
 #define LEGEND_VIEWING_LIST "watching_list"
 ///The blueprints are on the main page.
 #define LEGEND_OFF "off"

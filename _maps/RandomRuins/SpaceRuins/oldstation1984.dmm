@@ -5403,6 +5403,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/safe/floor/charlie_captain,
+/obj/item/blueprints/oldstation,
 /obj/item/card/id/away/old/captains_spare,
 /obj/item/clothing/suit/space/nasavoid/captain,
 /obj/item/clothing/head/helmet/space/nasavoid/captain,
