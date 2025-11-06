@@ -31,3 +31,13 @@
   - balance: Detective's holster now can properly hold some extra things (magazines,
       glock, banana), it's mostly fix
   - bugfix: Plasma inflation price fixed after selling
+2025-11-06:
+  DenIS318:
+  - balance: Everything that gives TRAIT_NOSOFTCRIT (such as luxury medipens at mining,
+      hulk mutation and all others sources) now makes you ignore random stun probability
+      from being in soft crit
+  - balance: Hulk mutation is losed on going hardcrit, instead of when going softcrit
+  - balance: Voltaic heart's overdrive effect is now heals until hardcrit (instead
+      of softcrit)
+  - bugfix: Hulk is now properly removed on death (in case it get one-shot somehow
+      bypassing hardcrit)

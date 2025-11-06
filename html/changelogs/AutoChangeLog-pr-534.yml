@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "Everything that gives TRAIT_NOSOFTCRIT (such as luxury medipens at mining, hulk mutation and all others sources) now makes you ignore random stun probability from being in soft crit"
-  - balance: "Hulk mutation is losed on going hardcrit, instead of when going softcrit"
