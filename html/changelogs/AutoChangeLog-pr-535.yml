@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Hulk is now properly removed on death (in case it get one-shot somehow bypassing hardcrit)"
