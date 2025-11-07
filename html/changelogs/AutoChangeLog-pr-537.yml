@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - qol: "Throw-mode keybinding by default is R now (applies only when you don't have overrides for it)"
