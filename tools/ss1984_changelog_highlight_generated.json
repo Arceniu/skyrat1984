@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-11-07",
+    "author": "DenIS318",
+    "changes": [
+      "Throw-mode keybinding by default is R now (applies only when you don't have overrides for it)",
+      "Returned stunbaton's color chang based on cell (blue on bluespace cell and so on)"
+    ]
+  },
+  {
     "date": "2025-11-06",
     "author": "DenIS318",
     "changes": [
