@@ -1,8 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscdel: "Removed eng skillchip from oldstation eng"
-  - rscadd: "Added small blueprints to oldstation engineer"
-  - map: "Added blueprints to bridge safe"
-  - map: "Replaced eng skillchip in oldstation eng storage with both light bulb removing/ know wires prototype"
-  - map: "Replaced psychologist chip in oldstation med crate with custom combined chip (maddness immune, coroner organs examine, speed buff while operating other, ability to do operations on yourself-without buff)"
