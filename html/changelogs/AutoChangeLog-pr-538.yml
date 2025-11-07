@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - rscadd: "Returned stunbaton's color chang based on cell (blue on bluespace cell and so on)"
