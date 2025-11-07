@@ -422,6 +422,7 @@
 	name = "Prototype skillchip"
 	desc = "Endorsed by the Nanotrasen Navy."
 	complexity = 2
+	abstract_parent_type = /obj/item/skillchip/job/oldstation
 
 /obj/item/skillchip/job/oldstation/engineering
 	name = "Prototype Engineering C0-RCU-1T-N11H5M2R1 skillchip"
@@ -442,6 +443,7 @@
 	skill_icon = FA_ICON_USER_DOCTOR
 	activate_message = span_notice("You realize that your surgical skills have become noticeably better and also there's nothing stopping you from performing surgery on yourself.")
 	deactivate_message = span_notice("You suddenly feel like your medical skills are fading.")
+	slot_use = 3
 
 /obj/item/skillchip/job/oldstation/medical/on_activate(mob/living/carbon/user, silent)
 	. = ..()
