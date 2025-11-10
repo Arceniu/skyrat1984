@@ -1,4 +1,12 @@
 2025-11-01:
+  DenIS318:
+  - rscadd: Language Conversion is added at telecomms. It disabled by default and
+      should be manually enabled in telecomms. It translates all speech from all languages
+      to selected language.
+  - rscadd: 'Languages supported to automatic translate: calcic, sol common, draconic,
+      encoded audio language (machine), mothic, nekomimetic, slime, spinwarder, galactic
+      uncommon, voltaic, canilunzt, plutonian, pan-slavic, silk''tajr, skrelluq, vox,
+      xerxian, yangyu, schechi'
   Hatterhat:
   - balance: Street boxing's knockdowns on critical hits are much shorter now, and
       deals less stamina damage, because crits tend to chain together.
@@ -17,14 +25,6 @@
   vinylspiders:
   - bugfix: fixes footstep sounds pref not applying in some rare cases
   - bugfix: fixes hemophages sometimes being able to get more than one drain action
-  DenIS318:
-  - rscadd: Language Conversion is added at telecomms. It disabled by default and
-      should be manually enabled in telecomms. It translates all speech from all languages
-      to selected language.
-  - rscadd: 'Languages supported to automatic translate: calcic, sol common, draconic,
-      encoded audio language (machine), mothic, nekomimetic, slime, spinwarder, galactic
-      uncommon, voltaic, canilunzt, plutonian, pan-slavic, silk''tajr, skrelluq, vox,
-      xerxian, yangyu, schechi'
 2025-11-02:
   Aliceee2ch:
   - spellcheck: Adds missing space in gullion description.
@@ -191,9 +191,6 @@
       now display the correct icons
   - bugfix: fixed hemophage tongue augments not receiving a drain ability
 2025-11-03:
-  vinylspiders:
-  - bugfix: stops space vine spawning algorithm from crashing the server (hopefully)
-  - bugfix: Lunchbox quirk no longer shows up on medical scan
   DenIS318:
   - bugfix: Trim Access is properly shown at ID computer again
   - balance: Can use headset when restrained now
@@ -201,6 +198,9 @@
       see wires (DS2, Tarkon, Charlie Station)
   - balance: Mech movement speed reduced accordingly to decreased carbon speed (~16%
       slower or +0.3 movedelay)
+  vinylspiders:
+  - bugfix: stops space vine spawning algorithm from crashing the server (hopefully)
+  - bugfix: Lunchbox quirk no longer shows up on medical scan
 2025-11-04:
   FlufflesTheDog:
   - rscadd: Golems and Dullahans are now playable, vet-locked species. Both are subject
@@ -219,6 +219,11 @@
       to down by roughly around 35%, evening out to around 3-4s to down, instead of
       2-2.5s
 2025-11-05:
+  DenIS318:
+  - balance: non-handgun holsters now also can hold taser
+  - balance: Detective's holster now can properly hold some extra things (magazines,
+      glock, banana), it's mostly fix
+  - bugfix: Plasma inflation price fixed after selling
   Happyowl93:
   - bugfix: Eyes return to their original color after DemonEye reagent leaves the
       mob
@@ -233,21 +238,7 @@
   - qol: Added Teshari meals to the lunchbox quirk
   - qol: Added Lizard meals to the lunchbox quirk
   - image: Added new lunchbox designs for the lunchbox user quirk
-  DenIS318:
-  - balance: non-handgun holsters now also can hold taser
-  - balance: Detective's holster now can properly hold some extra things (magazines,
-      glock, banana), it's mostly fix
-  - bugfix: Plasma inflation price fixed after selling
 2025-11-06:
-  Melbert:
-  - bugfix: Felinids will randomize their ear type properly
-  Melbert, vinylspiders:
-  - bugfix: Felinids will randomize their ear type properly
-  - bugfix: Silverscales will now have all their external bodyparts (tails, snouts,
-      frills, etc) colored silver like they are supposed to
-  vinylspiders:
-  - bugfix: fixes an issue where shibari ropes literally tie up game resources and
-      prevent them from being released
   DenIS318:
   - balance: Everything that gives TRAIT_NOSOFTCRIT (such as luxury medipens at mining,
       hulk mutation and all others sources) now makes you ignore random stun probability
@@ -257,6 +248,15 @@
       of softcrit)
   - bugfix: Hulk is now properly removed on death (in case it get one-shot somehow
       bypassing hardcrit)
+  Melbert:
+  - bugfix: Felinids will randomize their ear type properly
+  Melbert, vinylspiders:
+  - bugfix: Felinids will randomize their ear type properly
+  - bugfix: Silverscales will now have all their external bodyparts (tails, snouts,
+      frills, etc) colored silver like they are supposed to
+  vinylspiders:
+  - bugfix: fixes an issue where shibari ropes literally tie up game resources and
+      prevent them from being released
 2025-11-07:
   Arceniu:
   - rscdel: Removed eng skillchip from oldstation eng
@@ -345,6 +345,11 @@
       Internet Sound request actually do what they say, instead of the opposite.
   - bugfix: Extreme Medicine Allergy quirk will no longer lead to you being allergic
       to nothing
+  DenIS318:
+  - balance: Revert "a heavy duty rebalance of most station ballistics, raising their
+      time to down by roughly around 35%, evening out to around 3-4s to down, instead
+      of 2-2.5s"
+  - balance: Revert "Low pressure damage has been doubled"
   FalloutFalcon:
   - bugfix: stuff like carpet and wood tiles dont use the 2x2 tiled sprite
   - bugfix: similarly, floors that dont use the tiled sprite now can have permafrost
