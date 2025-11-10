@@ -99,7 +99,6 @@
 		title_screen_is_ready = TRUE
 		return
 
-
 /mob/dead/new_player/Login()
 	. = ..()
 	// SS1984 ADDITION START
