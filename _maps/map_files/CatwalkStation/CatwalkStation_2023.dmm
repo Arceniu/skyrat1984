@@ -23830,7 +23830,7 @@
 	network = list("minisat")
 	},
 /turf/open/floor/iron/white/textured_large,
-/area/station/ai_monitored/turret_protected/aisat/foyer)
+/area/station/ai/satellite/chamber/foyer)
 "gFU" = (
 /obj/machinery/airalarm/directional/west,
 /obj/effect/turf_decal/trimline/blue/filled/line,

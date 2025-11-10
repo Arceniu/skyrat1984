@@ -226,6 +226,12 @@ SUBSYSTEM_DEF(cameras)
 		available_cameras_data += list(list(
 			name = camera.c_tag,
 			ref = REF(camera),
+			// SS1984 ADDITION START
+			x = camera.x,
+			y = camera.y,
+			z = camera.z,
+			status = camera.camera_enabled,
+			// SS1984 ADDITION END
 		))
 
 	return available_cameras_data

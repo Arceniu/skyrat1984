@@ -30053,11 +30053,6 @@
 	},
 /turf/open/floor/stone,
 /area/station/service/bar/atrium)
-"iuS" = (
-/obj/machinery/airalarm/directional/north,
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/open/floor/glass/reinforced,
-/area/station/ai_monitored/security/armory/upper)
 "ivi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/yellow,
@@ -49722,17 +49717,18 @@
 /turf/open/floor/iron,
 /area/mine/laborcamp)
 "nZG" = (
-/obj/machinery/door/airlock/security/glass{
-	name = "Security EVA"
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 1;
+	id = "rnd";
+	name = "Research Lab Shutters"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/security/brig,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/red_alert_access,
-/turf/open/floor/iron/smooth,
-/area/station/security/processing)
+/obj/machinery/autolathe,
+/obj/machinery/door/window/right/directional/north{
+	name = "Research Autolathe";
+	req_access = list("science")
+	},
+/turf/open/floor/plating,
+/area/station/hallway/primary/starboard)
 "nZH" = (
 /obj/structure/lattice/catwalk,
 /turf/open/openspace,
@@ -58165,18 +58161,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "qnU" = (
-/obj/structure/rack,
-/obj/item/gun/energy/ionrifle,
-/obj/item/gun/ballistic/automatic/sol_smg{
-	pixel_y = 3
-	},
-/obj/item/gun/energy/temperature/security,
-/obj/item/clothing/suit/hooded/ablative,
-/obj/effect/turf_decal/tile/red/half/contrasted{
-	dir = 8
-	},
-/turf/open/floor/iron/dark/textured,
-/area/station/ai_monitored/security/armory)
+)
 "qnV" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/emergency{
@@ -264179,7 +264164,7 @@ eKl
 pxL
 lso
 hDb
-vzA
+qnU
 xZA
 dVt
 gHY
@@ -264436,7 +264421,7 @@ mNi
 yeB
 uuC
 hDb
-qWn
+nZG
 gav
 ljF
 ljF

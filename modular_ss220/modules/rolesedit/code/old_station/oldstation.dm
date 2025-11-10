@@ -244,7 +244,7 @@
 	allowed = list(
 		/obj/item/flashlight,
 		/obj/item/tank/internals,
-		/obj/item/tank/jetpack/oxygen/captain,
+		/obj/item/tank/jetpack/captain,
 		/obj/item/flashlight,
 		/obj/item/gun/energy,
 		/obj/item/gun/ballistic,
