@@ -8,11 +8,12 @@
 	wound_bonus = 0
 	exposed_wound_bonus = 15
 
-/obj/item/ammo_casing/shotgun/milspec
-	damage = 25
+/obj/projectile/bullet/shotgun_slug/milspec
+	damage = 50
 	armour_penetration = 30
 	wound_bonus = 0
 	exposed_wound_bonus = 15
+	speed = 1.25
 
 /obj/item/ammo_casing/shotgun/buckshot
 	pellets = 12
@@ -21,11 +22,13 @@
 	damage = 5
 	wound_bonus = 5
 	exposed_wound_bonus = 5
+	speed = 1.1
+	wound_falloff_tile = -0.5 //We would very much like this to cause wounds despite the low damage, so the drop off is relatively slow
+	sharpness = SHARP_EDGED
+	weak_against_armour = FALSE
 
-/obj/item/ammo_casing/shotgun/buckshot/milspec
+/obj/projectile/bullet/pellet/shotgun_buckshot/milspec
 	damage = 7.5
-	wound_bonus = 5
-	exposed_wound_bonus = 5
 
 /obj/item/ammo_casing/shotgun/flechette/donk
 	pellets = 6
