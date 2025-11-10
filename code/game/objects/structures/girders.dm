@@ -138,7 +138,7 @@
 			qdel(src)
 		return
 
-	if(istype(stack, /obj/item/stack/sheet/iron))
+	else if(istype(stack, /obj/item/stack/sheet/iron))
 		var/amount = construction_cost[/obj/item/stack/sheet/iron]
 		if(state == GIRDER_DISPLACED)
 			if(stack.get_amount() < amount)
@@ -187,7 +187,7 @@
 				qdel(src)
 			return
 
-	if(istype(stack, /obj/item/stack/sheet/titaniumglass) && state == GIRDER_TRAM)
+	else if(istype(stack, /obj/item/stack/sheet/titaniumglass) && state == GIRDER_TRAM)
 		var/amount = construction_cost[/obj/item/stack/sheet/titaniumglass]
 		if(stack.get_amount() < amount)
 			balloon_alert(user, "need [amount] sheets!")
@@ -203,7 +203,7 @@
 			qdel(src)
 		return
 
-	if(istype(stack, /obj/item/stack/sheet/plasteel))
+	else if(istype(stack, /obj/item/stack/sheet/plasteel))
 		var/amount = construction_cost[/obj/item/stack/sheet/plasteel]
 		if(state == GIRDER_DISPLACED)
 			if(stack.get_amount() < amount)
@@ -249,7 +249,7 @@
 				qdel(src)
 			return
 
-	if(istype(stack, /obj/item/stack/sheet/mineral/plastitanium))
+	else if(istype(stack, /obj/item/stack/sheet/mineral/plastitanium))
 		if(state == GIRDER_REINF)
 			if(stack.get_amount() < 1)
 				return
@@ -265,7 +265,7 @@
 			return
 		// No return here because generic material construction handles making normal plastitanium walls
 
-	if(!stack.has_unique_girder && stack.material_type)
+	else if(!stack.has_unique_girder && stack.material_type)
 		if(istype(src, /obj/structure/girder/reinforced))
 			balloon_alert(user, "need plasteel or plastitanium!")
 			return
