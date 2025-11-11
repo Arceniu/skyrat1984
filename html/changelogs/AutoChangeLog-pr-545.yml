@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Goliath hide plates no longer have error (purple) icon when worn, instead have invisible overlay"
