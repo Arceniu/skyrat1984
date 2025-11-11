@@ -596,3 +596,5 @@
       overlay when placed on suit storage (instead they are invisible)
   - bugfix: Dynamic should probably check for alive players now, as it does for progressive
       dynamic
+  - balance: Hemophage heal ability healing brute AND burn per second 1.8 => 0.5
+  - balance: Hemophage heal ability blood consumption 0.9 => 1.0
