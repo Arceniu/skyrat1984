@@ -1,5 +1,16 @@
 [
   {
+    "date": "2025-11-11",
+    "author": "DenIS318",
+    "changes": [
+      "Deathsquad now start with nuclear pinpointer",
+      "Deathsquad leader spawn with nuclear disk",
+      "Deathsquad all start with memory of nuclear code to station self-destruct terminal",
+      "Nuclear disk, energy sword, energy shield is no longer have purple error overlay when placed on suit storage (instead they are invisible)",
+      "Dynamic should probably check for alive players now, as it does for progressive dynamic"
+    ]
+  },
+  {
     "date": "2025-11-10",
     "author": "DenIS318",
     "changes": [
