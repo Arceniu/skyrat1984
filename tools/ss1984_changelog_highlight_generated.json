@@ -3,6 +3,9 @@
     "date": "2025-11-11",
     "author": "DenIS318",
     "changes": [
+      "Goliath hide plates no longer have error (purple) icon when worn, instead have invisible overlay",
+      "runechat with languages is no longer shows ('')",
+      "cryo now shows Unassigned for those who not in records instead of [NO DATA]",
       "Hemophage heal ability healing brute AND burn per second 1.8 => 0.5",
       "Hemophage heal ability blood consumption 0.9 => 1.0",
       "Deathsquad now start with nuclear pinpointer",
