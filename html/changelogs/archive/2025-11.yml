@@ -586,3 +586,13 @@
       remove a trait to/from every living mob.
   - bugfix: fixes an oversight where the wardrobe system tries to delete modsuit parts
       when stashing the modsuit
+2025-11-11:
+  DenIS318:
+  - rscadd: Deathsquad now start with nuclear pinpointer
+  - rscadd: Deathsquad leader spawn with nuclear disk
+  - qol: Deathsquad all start with memory of nuclear code to station self-destruct
+      terminal
+  - bugfix: Nuclear disk, energy sword, energy shield is no longer have purple error
+      overlay when placed on suit storage (instead they are invisible)
+  - bugfix: Dynamic should probably check for alive players now, as it does for progressive
+      dynamic
