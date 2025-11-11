@@ -1,0 +1,7 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - rscadd: "Deathsquad now start with nuclear pinpointer"
+  - rscadd: "Deathsquad leader spawn with nuclear disk"
+  - qol: "Deathsquad all start with memory of nuclear code to station self-destruct terminal"
+  - bugfix: "Nuclear disk, energy sword, energy shield is no longer have purple error overlay when placed on suit storage (instead they are invisible)"
