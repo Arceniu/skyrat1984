@@ -598,3 +598,8 @@
       dynamic
   - balance: Hemophage heal ability healing brute AND burn per second 1.8 => 0.5
   - balance: Hemophage heal ability blood consumption 0.9 => 1.0
+  - bugfix: runechat with languages is no longer shows ('')
+  - bugfix: Goliath hide plates no longer have error (purple) icon when worn, instead
+      have invisible overlay
+  - bugfix: cryo now shows Unassigned for those who not in records instead of [NO
+      DATA]
