@@ -3,6 +3,8 @@
     "date": "2025-11-11",
     "author": "DenIS318",
     "changes": [
+      "Hemophage heal ability healing brute AND burn per second 1.8 => 0.5",
+      "Hemophage heal ability blood consumption 0.9 => 1.0",
       "Deathsquad now start with nuclear pinpointer",
       "Deathsquad leader spawn with nuclear disk",
       "Deathsquad all start with memory of nuclear code to station self-destruct terminal",
