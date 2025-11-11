@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Dynamic should probably check for alive players now, as it does for progressive dynamic"
