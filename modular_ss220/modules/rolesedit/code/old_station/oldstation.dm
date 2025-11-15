@@ -360,39 +360,29 @@
 
 //spawner override
 
-/obj/effect/mob_spawn/ghost_role/human/oldeng
+/obj/effect/mob_spawn/ghost_role/human/oldstation
+	random_appearance = FALSE
 	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
 
-/obj/effect/mob_spawn/ghost_role/human/oldsci
+/obj/effect/mob_spawn/ghost_role/human/oldstation/eng
 	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
 
-/obj/effect/mob_spawn/ghost_role/human/oldsec
+/obj/effect/mob_spawn/ghost_role/human/oldstation/sci
 	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
 
+/obj/effect/mob_spawn/ghost_role/human/oldstation/sec
+	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
 
 
 //medic spawner
-
-/obj/effect/mob_spawn/ghost_role/human/oldmed
-	name = "old cryogenics pod"
+/obj/effect/mob_spawn/ghost_role/human/oldstation/med
 	desc = "A humming cryo pod. You can barely recognise an medical uniform underneath the built up ice. The machine is attempting to wake up its occupant."
 	prompt_name = "a medical doctor"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	mob_species = /datum/species/human
 	you_are_text = "You are a medical doctor working for Nanotrasen, stationed onboard a state of the art research station."
-	flavour_text = "You vaguely recall rushing into a cryogenics pod due to an oncoming radiation storm. The last thing \
-	you remember is the station's Artificial Program telling you that you would only be asleep for eight hours. As you open \
-	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
-	important_text = "Work as a team with your fellow survivors and do not abandon them."
 	outfit = /datum/outfit/oldmed
-	spawner_job_path = /datum/job/ancient_crew
-	random_appearance = FALSE
 	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
-
-/obj/effect/mob_spawn/ghost_role/human/oldmed/Destroy()
-	new/obj/structure/showcase/machinery/oldpod/used(drop_location())
-	return ..()
 
 // medic closet(for beta station)
 
