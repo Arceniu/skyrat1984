@@ -1,0 +1,6 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - rscadd: "Sleeper Heretic light midround. Requires 3 min enemies of tier 1 dynamic, or 2 in tier2+. Starts from 10 population."
+  - rscadd: "Sleeper Changeling light midround. Requires 3 min enemies of tier 1 dynamic, or 2 in tier2+. Starts from 15 population."
+  - rscadd: "Mass Heretics heavy midround. Requires 3 min enemies. Starts from 25 population and spawns 2-4 heretics."
