@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - config: "Mass Traitors min_enemies 0 => 2"
+  - config: "Mass Changelings min_enemies 0 => 3, restricted synthetic species"
