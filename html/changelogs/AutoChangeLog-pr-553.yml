@@ -1,4 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - bugfix: "oldstation spawners now have proper description in spawn menu and notify ghosts"

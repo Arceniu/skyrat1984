@@ -645,3 +645,17 @@
 2025-11-13:
   DenIS318:
   - qol: Adminwho now shows developers, mentors, moderators as well
+2025-11-16:
+  Arceniu:
+  - bugfix: oldstation spawners now have proper description in spawn menu and notify
+      ghosts
+  DenIS318:
+  - rscadd: Sleeper Heretic light midround. Requires 3 min enemies of tier 1 dynamic,
+      or 2 in tier2+. Starts from 10 population.
+  - rscadd: Sleeper Changeling light midround. Requires 3 min enemies of tier 1 dynamic,
+      or 2 in tier2+. Starts from 15 population.
+  - rscadd: Mass Heretics heavy midround. Requires 3 min enemies. Starts from 25 population
+      and spawns 2-4 heretics.
+  - config: Mass Traitors min_enemies 0 => 2
+  - config: Mass Changelings min_enemies 0 => 3, restricted synthetic species
+  - qol: Heretic TGUI info is now scrollable
