@@ -660,5 +660,9 @@
   - config: Mass Changelings min_enemies 0 => 3, restricted synthetic species
   - qol: Heretic TGUI info is now scrollable
 2025-11-19:
+  Arceniu:
+  - rscadd: Added new quirk - unholy (more debuffs from holy water. debuff in church,
+      buff from unholy/hell water)
+  - balance: rebalanced fundamentally evil reaction to unholy water
   DenIS318:
   - bugfix: Spent ammo is now correctly shown as spent when reloaded with ammo box

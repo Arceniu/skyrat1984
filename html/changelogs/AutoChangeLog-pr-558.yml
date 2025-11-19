@@ -1,5 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscadd: "Added new quirk - unholy (more debuffs from holy water. debuff in church, buff from unholy/hell water)"
-  - balance: "rebalanced fundamentally evil reaction to unholy water"
