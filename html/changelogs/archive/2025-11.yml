@@ -666,3 +666,4 @@
   - balance: rebalanced fundamentally evil reaction to unholy water
   DenIS318:
   - bugfix: Spent ammo is now correctly shown as spent when reloaded with ammo box
+  - bugfix: Airlock access circuit no longer TGUI NTOS from invalid accesses
