@@ -1,6 +1,14 @@
 [
   {
     "date": "2025-11-19",
+    "author": "Arceniu",
+    "changes": [
+      "Added new quirk - unholy (more debuffs from holy water. debuff in church, buff from unholy/hell water)",
+      "rebalanced fundamentally evil reaction to unholy water"
+    ]
+  },
+  {
+    "date": "2025-11-19",
     "author": "DenIS318",
     "changes": [
       "Spent ammo is now correctly shown as spent when reloaded with ammo box"
