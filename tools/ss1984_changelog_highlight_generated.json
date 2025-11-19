@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-11-19",
+    "author": "DenIS318",
+    "changes": [
+      "Spent ammo is now correctly shown as spent when reloaded with ammo box"
+    ]
+  },
+  {
     "date": "2025-11-16",
     "author": "Arceniu",
     "changes": [
