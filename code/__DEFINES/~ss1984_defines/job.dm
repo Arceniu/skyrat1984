@@ -5,4 +5,4 @@
 
 
 //quirks
-#define CHAPLAIN_RESTRICTED_QUIRKS "unholy" = TRUE
+#define CHAPLAIN_RESTRICTED_QUIRKS "Unholy" = TRUE
