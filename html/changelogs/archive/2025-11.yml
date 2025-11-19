@@ -659,3 +659,6 @@
   - config: Mass Traitors min_enemies 0 => 2
   - config: Mass Changelings min_enemies 0 => 3, restricted synthetic species
   - qol: Heretic TGUI info is now scrollable
+2025-11-19:
+  DenIS318:
+  - bugfix: Spent ammo is now correctly shown as spent when reloaded with ammo box

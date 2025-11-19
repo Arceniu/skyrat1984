@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Spent ammo is now correctly shown as spent when reloaded with ammo box"
