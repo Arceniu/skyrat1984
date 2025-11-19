@@ -86,11 +86,17 @@
 	/// Amount of stamina loss applied per tick
 	var/stanmloss_amt = 2.5
 	// Phrases said to the holder when entering the chapel
-	var/phrases_enter = list("The darkness around you has begun to dissipate. Divine punishment is trying to punish you for your sins!")
+	var/phrases_enter = list(\
+	"The darkness around you has begun to dissipate. Divine punishment is trying to punish you for your sins!"\,
+	)
 	// Phrases said to the holder when exiting the chapel
-	var/phrases_exit = list("The darkness has enveloped you again. Divine punishment ceases to expel your sins.")
+	var/phrases_exit = list(\
+	"The darkness has enveloped you again. Divine punishment ceases to expel your sins."\,
+	)
 	// Phrases said to the holder when ignited by the chapel
-	var/phrases_ignite = list("You feel like the dark forces are no longer hiding you from the righteous gaze. You are catching fire with sacred fire!")
+	var/phrases_ignite = list(\
+	"You feel like the dark forces are no longer hiding you from the righteous gaze. You are catching fire with sacred fire!"\,
+	)
 
 // Status effect alert
 /atom/movable/screen/alert/status_effect/chapel_weakness_profane
@@ -146,7 +152,7 @@
 	name = "Unholy"
 	desc = "There is an unholy burden on your soul. Avoid coming into contact with Holy Water or church, but hell or unholy water even good.."
 	value = 0
-	gain_text = span_notice("AThe unholy power begins to accumulate in your soul.")
+	gain_text = span_notice("The unholy power begins to accumulate in your soul.")
 	lose_text = span_notice("You feel the weight of the unholy power in your soul finally gone.")
 	medical_record_text = "Patient suffers from an unknown type of aversion to holy reagents. Keep them away from chaplains or church."
 	mob_trait = TRAIT_UNHOLY
