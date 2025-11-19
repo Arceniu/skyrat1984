@@ -367,7 +367,7 @@
 				affected_mob.Unconscious(12 SECONDS)
 				to_chat(affected_mob, span_cult_large("[pick("Your blood is your bond - you are nothing without it", "Do not forget your place", \
 					"All that power, and you still fail?", "If you cannot scour this poison, I shall scour your meager life!")]."))
-		else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY) && (HAS_TRAIT(affected_mob, TRAIT_EVIL)) && SPT_PROB(40, seconds_per_tick)) //ss1984 add
+		else if((HAS_TRAIT(affected_mob, TRAIT_UNHOLY) && HAS_TRAIT(affected_mob, TRAIT_EVIL)) && SPT_PROB(40, seconds_per_tick)) //ss1984 add
 			if(!IS_CULTIST(affected_mob))
 				affected_mob.adjust_fire_stacks(2)
 				affected_mob.ignite_mob()
