@@ -487,7 +487,7 @@
 	. = ..()
 
 	var/need_mob_update = FALSE
-	if(IS_CULTIST(affected_mob) || (HAS_TRAIT(affected_mob, TRAIT_UNHOLY) && HAS_TRAIT(affected_mob, TRAIT_EVIL))) // ss1984 edit original: if(IS_CULTIST(affected_mob))
+	if(IS_CULTIST(affected_mob))
 		affected_mob.adjust_drowsiness(-10 SECONDS * REM * seconds_per_tick)
 		affected_mob.AdjustAllImmobility(-40 * REM * seconds_per_tick)
 		need_mob_update += affected_mob.adjustStaminaLoss(-10 * REM * seconds_per_tick, updating_stamina = FALSE)
@@ -507,20 +507,27 @@
 
 			if(bloodiest_wound)
 				bloodiest_wound.adjust_blood_flow(-2 * REM * seconds_per_tick)
-	else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY)) //ss1984 edit add
+	else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY) && HAS_TRAIT(affected_mob, TRAIT_EVIL)) //ss1984 edit add
 		need_mob_update += affected_mob.adjustStaminaLoss(-5 * REM * seconds_per_tick, updating_stamina = FALSE)
 		need_mob_update += affected_mob.adjustToxLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update += affected_mob.adjustOxyLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update += affected_mob.adjustBruteLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update += affected_mob.adjustFireLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update = TRUE
-	else if(HAS_TRAIT(affected_mob, TRAIT_EVIL))
+	else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY))
 		need_mob_update += affected_mob.adjustStaminaLoss(-2 * REM * seconds_per_tick, updating_stamina = FALSE)
 		need_mob_update += affected_mob.adjustToxLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update += affected_mob.adjustOxyLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update += affected_mob.adjustBruteLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update += affected_mob.adjustFireLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update = TRUE //ss1984 edit end
+		need_mob_update = TRUE
+	else if(HAS_TRAIT(affected_mob, TRAIT_EVIL))//ss1984 edit end
+		need_mob_update += affected_mob.adjustStaminaLoss(-1 * REM * seconds_per_tick, updating_stamina = FALSE)
+		need_mob_update += affected_mob.adjustToxLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjustOxyLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjustBruteLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjustFireLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update = TRUE
 
 	else  // Will deal about 90 damage when 50 units are thrown
 		need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3 * REM * seconds_per_tick, 150)
