@@ -85,18 +85,12 @@
 	var/disgust_amt = 3
 	/// Amount of stamina loss applied per tick
 	var/stanmloss_amt = 2.5
-	// Phrases said to the holder when entering the chapel
-	var/phrases_enter = list(\
-	"The darkness around you has begun to dissipate. Divine punishment is trying to punish you for your sins!"\,
-	)
-	// Phrases said to the holder when exiting the chapel
-	var/phrases_exit = list(\
-	"The darkness has enveloped you again. Divine punishment ceases to expel your sins."\,
-	)
-	// Phrases said to the holder when ignited by the chapel
-	var/phrases_ignite = list(\
-	"You feel like the dark forces are no longer hiding you from the righteous gaze. You are catching fire with sacred fire!"\,
-	)
+	// Phrase said to the holder when entering the chapel
+	var/phrase_enter = "The darkness around you has begun to dissipate. Divine punishment is trying to punish you for your sins!"
+	// Phrase said to the holder when exiting the chapel
+	var/phrase_exit = "The darkness has enveloped you again. Divine punishment ceases to expel your sins."
+	// Phrase said to the holder when ignited by the chapel
+	var/phrase_ignite = "You feel like the dark forces are no longer hiding you from the righteous gaze. You are catching fire with sacred fire!"
 
 // Status effect alert
 /atom/movable/screen/alert/status_effect/chapel_weakness_profane
@@ -110,14 +104,14 @@
 	. = ..()
 
 	// Warn user
-	to_chat(owner, span_cult(phrases_enter))
+	to_chat(owner, span_cult(phrase_enter))
 
 // Called when removing this status effect
 /datum/status_effect/chapel_weakness/on_remove()
 	. = ..()
 
 	// Alert user
-	to_chat(owner, span_cult(phrases_exit))
+	to_chat(owner, span_cult(phrase_exit))
 
 // Processing for status effect
 /datum/status_effect/chapel_weakness/tick(seconds_between_ticks)
@@ -137,7 +131,7 @@
 		// Check if alive
 		if(owner_alive)
 			// Warn user
-			to_chat(owner, span_cult_bold(pick(phrases_ignite)))
+			to_chat(owner, span_cult_bold(phrase_ignite))
 
 		// Ignite mob
 		owner.adjust_fire_stacks(firestacks_amt)
