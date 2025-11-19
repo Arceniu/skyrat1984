@@ -191,4 +191,4 @@
 /datum/reagent/water/holywater/on_mob_add(mob/living/affected_mob, amount)
 	. = ..()
 	if((HAS_TRAIT(affected_mob, TRAIT_EVIL)) || (HAS_TRAIT(affected_mob, TRAIT_UNHOLY)))
-		to_chat(affected_mob, span_userdanger("A searing agony rips through your black soul as the holy water burns you from within. You hear your own soul's distant screams as the light tears at the darkness you carry!"))
+		to_chat(affected_mob, span_cult("A searing agony pierces your black soul as the holy power begins to burn you from within. You hear the distant screams of your own soul as the light begin to tear through the darkness you carry!"))
