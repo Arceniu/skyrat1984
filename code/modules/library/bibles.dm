@@ -76,6 +76,8 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	force_string = "holy"
 	unique = TRUE
 	carved_storage_type = /datum/storage/carved_book/bible
+	/// if bible cursed by fundamentally evil(1 curse point) or unholy/cultist(2 curse points) quirk user. ss1984 add
+	var/cursed_lvl = 0 //ss1984 add
 
 	/// Deity this bible is related to
 	var/deity_name = "Space Jesus"
@@ -111,6 +113,8 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	if(deity_name)
 		. += span_notice("This bible has been approved by [deity_name].")
 	if(user.mind?.holy_role)
+		if(cursed_lvl > 0) //ss1984 add start
+			. += span_notice("[src] seems to be cursed with unholy power, use other bible to remove the curse.") //ss1984 add end
 		if(GLOB.chaplain_altars.len)
 			. += span_notice("[src] has an expansion pack to replace any broken Altar.")
 		else
@@ -149,8 +153,22 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	return TRUE
 
 /obj/item/book/bible/attack_self(mob/living/carbon/human/user)
+	if(can_set_bible_skin(user) && cursed_lvl >= 1) //ss1984 add start
+		return FALSE //ss1984 add end
 	if(!can_set_bible_skin(user))
-		return FALSE
+		var/unholy_power = check_curse(user) //ss1984 add start
+		if((unholy_power == 0) || (cursed_lvl >= unholy_power)) //ss1984 add end
+			return FALSE
+		else if(do_after(user, 12 SECONDS)) //ss1984 add start
+			name = "unholy tome"
+			force_string = "unholy"
+			if(unholy_power >= 3)
+				icon_state = "burning"
+			else
+				icon_state = "tome"
+			deity_name = null
+			cursed_lvl = unholy_power
+		return //ss1984 add end
 
 	var/list/skins = list()
 	for(var/i in 1 to GLOB.biblestates.len)
@@ -246,6 +264,36 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		user.Unconscious(40 SECONDS)
 		return
 
+	var/user_curse = check_curse(user) //ss1984 add start
+	if((cursed_lvl >= 1) && (target_mob.stat != DEAD))
+		if(user_curse == 0)
+			if(cursed_lvl == 1)
+				to_chat(user, span_danger("The book doesn't work in your hands."))
+				return
+			else
+				to_chat(user, span_danger("The book sizzles in your hands."))
+				user.take_bodypart_damage(burn = 10)
+				return
+		if(user == target_mob)
+			balloon_alert(user, "can't heal yourself!")
+			return
+		if(!prob(60))
+			var/result = unholy_bless(target_mob, user)
+			if(result != BLESSING_FAILED)
+				SEND_SIGNAL(target_mob, COMSIG_LIVING_BLESSED, user, src, result)
+				return
+
+		if(iscarbon(target_mob))
+			var/mob/living/carbon/carbon_target = target_mob
+			if(!istype(carbon_target.head, /obj/item/clothing/head/helmet))
+				carbon_target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5, 60)
+				carbon_target.balloon_alert(carbon_target, "you feel dumber!")
+		target_mob.visible_message(span_danger("[user] beats [target_mob] over the head with [src]!"), \
+				span_userdanger("[user] beats [target_mob] over the head with [src]!"))
+		playsound(target_mob, SFX_PUNCH, 25, TRUE, -1)
+		log_combat(user, target_mob, "attacked", src)
+		return //ss1984 add end
+
 	if(!user.mind?.holy_role)
 		to_chat(user, span_danger("The book sizzles in your hands."))
 		user.take_bodypart_damage(burn = 10)
@@ -285,6 +333,25 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	log_combat(user, target_mob, "attacked", src)
 
 /obj/item/book/bible/interact_with_atom(atom/bible_smacked, mob/living/user, list/modifiers)
+	var/user_curse = check_curse(user) //ss1984 add start
+	if((user_curse >= 2) && (cursed_lvl >= 2))
+		if(bible_smacked.reagents?.has_reagent(/datum/reagent/water)) // curses all the water in the holder
+			bible_smacked.balloon_alert(user, "cursed")
+			var/water2hell = bible_smacked.reagents.get_reagent_amount(/datum/reagent/water)
+			bible_smacked.reagents.del_reagent(/datum/reagent/water)
+			bible_smacked.reagents.add_reagent(/datum/reagent/hellwater,water2hell/2)
+			return ITEM_INTERACT_SUCCESS
+		if(bible_smacked.reagents?.has_reagent(/datum/reagent/water/holywater))
+			bible_smacked.balloon_alert(user, "polluted")
+			var/holy2unholy = bible_smacked.reagents.get_reagent_amount(/datum/reagent/water/holywater)
+			bible_smacked.reagents.del_reagent(/datum/reagent/water/holywater)
+			if(cursed_lvl >=3)
+				bible_smacked.reagents.add_reagent(/datum/reagent/fuel/unholywater,holy2unholy/2)
+			else
+				bible_smacked.reagents.add_reagent(/datum/reagent/fuel/unholywater,holy2unholy/3)
+			return ITEM_INTERACT_SUCCESS
+	if((cursed_lvl>=1) || (user_curse >= 2))
+		return NONE //ss1984 add end
 	if(!user.mind?.holy_role)
 		return
 	if(SEND_SIGNAL(bible_smacked, COMSIG_BIBLE_SMACKED, user) & COMSIG_END_BIBLE_CHAIN)
@@ -312,6 +379,21 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		bible_smacked.reagents.add_reagent(/datum/reagent/water/holywater,unholy2holy)
 		return ITEM_INTERACT_SUCCESS
 	if(istype(bible_smacked, /obj/item/book/bible) && !istype(bible_smacked, /obj/item/book/bible/syndicate))
+		var/obj/item/book/bible/cursed_bible = bible_smacked //ss1984 add start
+		if(cursed_bible.cursed_lvl > 0)
+			cursed_bible.balloon_alert(user, "purifying...")
+			playsound(src,'sound/effects/hallucinations/veryfar_noise.ogg',40,TRUE)
+			if(do_after(user, 12 SECONDS, target = cursed_bible))
+				if(cursed_bible.cursed_lvl > 1)
+					to_chat(user, span_danger("Remnants of the dark force harm you, leaving the book."))
+					user.take_bodypart_damage(burn = 10)
+				cursed_bible.cursed_lvl = 0
+				cursed_bible.name = name
+				cursed_bible.icon_state = icon_state
+				cursed_bible.inhand_icon_state = inhand_icon_state
+				cursed_bible.deity_name = deity_name
+				return ITEM_INTERACT_SUCCESS
+			return ITEM_INTERACT_BLOCKING //ss1984 add end
 		bible_smacked.balloon_alert(user, "converted")
 		var/obj/item/book/bible/other_bible = bible_smacked
 		other_bible.name = name
@@ -336,6 +418,42 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 			return ITEM_INTERACT_SUCCESS
 		return ITEM_INTERACT_BLOCKING
 	return NONE
+
+/obj/item/book/bible/proc/check_curse(mob/living/user) //ss1984 add start
+	var/unholy_power = 0
+	if(HAS_TRAIT(user, TRAIT_EVIL))
+		unholy_power += 1
+	if(HAS_TRAIT(user, TRAIT_UNHOLY) || IS_CULTIST(user))
+		unholy_power += 2
+	return unholy_power
+
+/obj/item/book/bible/proc/unholy_bless(mob/living/blessed, mob/living/user)
+	var/user_curse = check_curse(user)
+	var/blessed_curse = check_curse(blessed)
+
+	if(!ishuman(blessed))
+		return BLESSING_FAILED
+
+	if((blessed_curse < 1) || (user_curse < 1))
+		return BLESSING_FAILED
+
+	var/mob/living/carbon/human/built_in_his_image = blessed
+	for(var/obj/item/bodypart/bodypart as anything in built_in_his_image.bodyparts)
+
+	var/heal_amt = 10
+	var/list/hurt_limbs = built_in_his_image.get_damaged_bodyparts(1, 1)
+	if(!length(hurt_limbs))
+		return BLESSING_IGNORED
+
+	for(var/obj/item/bodypart/affecting as anything in hurt_limbs)
+		if(affecting.heal_damage(heal_amt, heal_amt))
+			built_in_his_image.update_damage_overlays()
+
+	built_in_his_image.visible_message(span_notice("[user] heals [built_in_his_image] with the unholy power!"))
+	to_chat(built_in_his_image, span_boldnotice("May the unholy power compel you to be healed!"))
+	playsound(built_in_his_image, SFX_PUNCH, 25, TRUE, -1)
+	built_in_his_image.add_mood_event("blessing", /datum/mood_event/blessing)
+	return BLESSING_SUCCESS //ss1984 add end
 
 /obj/item/book/bible/booze
 	desc = "To be applied to the head repeatedly."
