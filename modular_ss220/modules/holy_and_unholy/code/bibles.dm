@@ -102,8 +102,6 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		return BLESSING_FAILED
 
 	var/mob/living/carbon/human/unholy_blessed = blessed
-	for(var/obj/item/bodypart/bodypart in unholy_blessed.bodyparts)
-
 	var/list/curse_hurt_limbs = unholy_blessed.get_damaged_bodyparts(1, 1, NONE)
 	if(!length(curse_hurt_limbs))
 		return BLESSING_IGNORED
