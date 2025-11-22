@@ -667,3 +667,7 @@
   DenIS318:
   - bugfix: Spent ammo is now correctly shown as spent when reloaded with ammo box
   - bugfix: Airlock access circuit no longer TGUI NTOS from invalid accesses
+2025-11-22:
+  DenIS318:
+  - bugfix: xeno tails is no longer spawn on random mobs
+  - bugfix: real xenomorph tails (such as Xeno Queen) no longer available on roundstart
