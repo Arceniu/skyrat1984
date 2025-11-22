@@ -77,7 +77,8 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	unique = TRUE
 	carved_storage_type = /datum/storage/carved_book/bible
 	/// if bible cursed by fundamentally evil(1 curse point) or unholy/cultist(2 curse points) quirk user. ss1984 add
-	var/cursed_lvl = 0 //ss1984 add
+	var/cursed_lvl = 0
+	var/curse_heal_amt = 10 //ss1984 add end
 
 	/// Deity this bible is related to
 	var/deity_name = "Space Jesus"
@@ -103,7 +104,6 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	var/mob/living/carbon/human/unholy_blessed = blessed
 	for(var/obj/item/bodypart/bodypart as anything in unholy_blessed.bodyparts)
 
-	var/curse_heal_amt = 10
 	var/list/curse_hurt_limbs = unholy_blessed.get_damaged_bodyparts(1, 1)
 	if(!length(curse_hurt_limbs))
 		return BLESSING_IGNORED
