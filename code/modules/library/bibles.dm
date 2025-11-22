@@ -266,12 +266,12 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	var/mob/living/carbon/human/built_in_his_image = blessed
 	for(var/obj/item/bodypart/bodypart as anything in built_in_his_image.bodyparts)
 
-	var/heal_amt = 10
 	var/list/hurt_limbs = built_in_his_image.get_damaged_bodyparts(1, 1)
 	if(!length(hurt_limbs))
 		return BLESSING_IGNORED
 
 	for(var/obj/item/bodypart/affecting as anything in hurt_limbs)
+		var/heal_amt = 10
 		if(affecting.heal_damage(heal_amt, heal_amt))
 			built_in_his_image.update_damage_overlays()
 
