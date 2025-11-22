@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-11-22",
+    "author": "DenIS318",
+    "changes": [
+      "xeno tails is no longer spawn on random mobs",
+      "real xenomorph tails (such as Xeno Queen) no longer available on roundstart"
+    ]
+  },
+  {
     "date": "2025-11-19",
     "author": "DenIS318",
     "changes": [
