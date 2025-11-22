@@ -276,7 +276,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 			unholy_blessed.update_damage_overlays()
 
 	unholy_blessed.visible_message(span_notice("[user] heals [unholy_blessed] with the unholy power!"))
-	to_chat(bunholy_blessed, span_boldnotice("May the unholy power compel you to be healed!"))
+	to_chat(unholy_blessed, span_boldnotice("May the unholy power compel you to be healed!"))
 	playsound(unholy_blessed, SFX_PUNCH, 25, TRUE, -1)
 	unholy_blessed.add_mood_event("blessing", /datum/mood_event/blessing)
 	return BLESSING_SUCCESS //ss1984 add end
