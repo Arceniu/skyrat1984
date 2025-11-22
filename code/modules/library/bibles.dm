@@ -159,9 +159,15 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		var/unholy_power = check_curse(user) //ss1984 add start
 		if((unholy_power == 0) || (cursed_lvl >= unholy_power)) //ss1984 add end
 			return FALSE
-		else if(do_after(user, 12 SECONDS)) //ss1984 add start
+		else if(do_after(user, 22 SECONDS)) //ss1984 add start
+			user.take_bodypart_damage(burn = 35)
+			user.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15, 60)
+			user.balloon_alert(user, "you feel like divine power is trying to disperse your darkness!")
 			name = "unholy tome"
 			force_string = "unholy"
+			var/datum/component = GetComponent(/datum/component/anti_magic)
+			if(component)
+				qdel(component)
 			if(unholy_power >= 3)
 				icon_state = "burning"
 			else
@@ -271,7 +277,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	if(!length(curse_hurt_limbs))
 		return BLESSING_IGNORED
 
-	for(var/obj/item/bodypart/affected as anything in curse_hurt_limbs)
+	for(var/obj/item/bodypart/affected in curse_hurt_limbs)
 		if(affected.heal_damage(curse_heal_amt, curse_heal_amt))
 			unholy_blessed.update_damage_overlays()
 
@@ -293,7 +299,9 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		return
 
 	var/user_curse = check_curse(user) //ss1984 add start
-	if((cursed_lvl >= 1) && (target_mob.stat != DEAD))
+	if((cursed_lvl >= 1))
+		if(target_mob.stat != DEAD)
+			return
 		if(user_curse == 0)
 			if(cursed_lvl == 1)
 				to_chat(user, span_danger("The book doesn't work in your hands."))
@@ -420,6 +428,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 				cursed_bible.icon_state = icon_state
 				cursed_bible.inhand_icon_state = inhand_icon_state
 				cursed_bible.deity_name = deity_name
+				cursed_bible.AddComponent(/datum/component/anti_magic, MAGIC_RESISTANCE_HOLY)
 				return ITEM_INTERACT_SUCCESS
 			return ITEM_INTERACT_BLOCKING //ss1984 add end
 		bible_smacked.balloon_alert(user, "converted")
