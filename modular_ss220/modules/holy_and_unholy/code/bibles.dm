@@ -104,12 +104,12 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	var/mob/living/carbon/human/unholy_blessed = blessed
 	for(var/obj/item/bodypart/bodypart as anything in unholy_blessed.bodyparts)
 
-	var/list/curse_hurt_limbs = unholy_blessed.get_damaged_bodyparts(1, 1)
+	var/list/curse_hurt_limbs = unholy_blessed.get_damaged_bodyparts(1, 1, NONE)
 	if(!length(curse_hurt_limbs))
 		return BLESSING_IGNORED
 
 	for(var/obj/item/bodypart/affected in curse_hurt_limbs)
-		if(affected.heal_damage(curse_heal_amt, curse_heal_amt))
+		if(affected.heal_damage(curse_heal_amt, curse_heal_amt, NONE))
 			unholy_blessed.update_damage_overlays()
 
 	unholy_blessed.visible_message(span_notice("[user] heals [unholy_blessed] with the unholy power!"))
