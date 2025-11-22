@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "xeno tails is no longer spawn on random mobs"
+  - bugfix: "real xenomorph tails (such as Xeno Queen) no longer available on roundstart"
