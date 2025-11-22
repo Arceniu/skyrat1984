@@ -253,6 +253,34 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	built_in_his_image.add_mood_event("blessing", /datum/mood_event/blessing)
 	return BLESSING_SUCCESS
 
+/obj/item/book/bible/proc/unholy_bless(mob/living/blessed, mob/living/user) //ss1984 edit add
+	var/user_curse = check_curse(user)
+	var/blessed_curse = check_curse(blessed)
+
+	if(!ishuman(blessed))
+		return BLESSING_FAILED
+
+	if((blessed_curse < 1) || (user_curse < 1))
+		return BLESSING_FAILED
+
+	var/mob/living/carbon/human/built_in_his_image = blessed
+	for(var/obj/item/bodypart/bodypart as anything in built_in_his_image.bodyparts)
+
+	var/heal_amt = 10
+	var/list/hurt_limbs = built_in_his_image.get_damaged_bodyparts(1, 1)
+	if(!length(hurt_limbs))
+		return BLESSING_IGNORED
+
+	for(var/obj/item/bodypart/affecting as anything in hurt_limbs)
+		if(affecting.heal_damage(heal_amt, heal_amt))
+			built_in_his_image.update_damage_overlays()
+
+	built_in_his_image.visible_message(span_notice("[user] heals [built_in_his_image] with the unholy power!"))
+	to_chat(built_in_his_image, span_boldnotice("May the unholy power compel you to be healed!"))
+	playsound(built_in_his_image, SFX_PUNCH, 25, TRUE, -1)
+	built_in_his_image.add_mood_event("blessing", /datum/mood_event/blessing)
+	return BLESSING_SUCCESS //ss1984 add end
+
 /obj/item/book/bible/attack(mob/living/target_mob, mob/living/carbon/human/user, list/modifiers, list/attack_modifiers, heal_mode = TRUE)
 	if(!ISADVANCEDTOOLUSER(user))
 		balloon_alert(user, "not dextrous enough!")
@@ -425,35 +453,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		unholy_power += 1
 	if(HAS_TRAIT(user, TRAIT_UNHOLY) || IS_CULTIST(user))
 		unholy_power += 2
-	return unholy_power
-
-/obj/item/book/bible/proc/unholy_bless(mob/living/blessed, mob/living/user)
-	var/user_curse = check_curse(user)
-	var/blessed_curse = check_curse(blessed)
-
-	if(!ishuman(blessed))
-		return BLESSING_FAILED
-
-	if((blessed_curse < 1) || (user_curse < 1))
-		return BLESSING_FAILED
-
-	var/mob/living/carbon/human/built_in_his_image = blessed
-	for(var/obj/item/bodypart/bodypart as anything in built_in_his_image.bodyparts)
-
-	var/heal_amt = 10
-	var/list/hurt_limbs = built_in_his_image.get_damaged_bodyparts(1, 1)
-	if(!length(hurt_limbs))
-		return BLESSING_IGNORED
-
-	for(var/obj/item/bodypart/affecting as anything in hurt_limbs)
-		if(affecting.heal_damage(heal_amt, heal_amt))
-			built_in_his_image.update_damage_overlays()
-
-	built_in_his_image.visible_message(span_notice("[user] heals [built_in_his_image] with the unholy power!"))
-	to_chat(built_in_his_image, span_boldnotice("May the unholy power compel you to be healed!"))
-	playsound(built_in_his_image, SFX_PUNCH, 25, TRUE, -1)
-	built_in_his_image.add_mood_event("blessing", /datum/mood_event/blessing)
-	return BLESSING_SUCCESS //ss1984 add end
+	return unholy_power //ss1984 edit end
 
 /obj/item/book/bible/booze
 	desc = "To be applied to the head repeatedly."
