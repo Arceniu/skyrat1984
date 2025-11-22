@@ -263,22 +263,22 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	if((blessed_curse < 1) || (user_curse < 1))
 		return BLESSING_FAILED
 
-	var/mob/living/carbon/human/built_in_his_image = blessed
-	for(var/obj/item/bodypart/bodypart as anything in built_in_his_image.bodyparts)
+	var/mob/living/carbon/human/unholy_blessed = blessed
+	for(var/obj/item/bodypart/bodypart as anything in unholy_blessed.bodyparts)
 
-	var/list/hurt_limbs = built_in_his_image.get_damaged_bodyparts(1, 1)
-	if(!length(hurt_limbs))
+	var/curse_heal_amt = 10
+	var/list/curse_hurt_limbs = unholy_blessed.get_damaged_bodyparts(1, 1)
+	if(!length(curse_hurt_limbs))
 		return BLESSING_IGNORED
 
-	for(var/obj/item/bodypart/affecting as anything in hurt_limbs)
-		var/heal_amt = 10
-		if(affecting.heal_damage(heal_amt, heal_amt))
-			built_in_his_image.update_damage_overlays()
+	for(var/obj/item/bodypart/affected as anything in curse_hurt_limbs)
+		if(affected.heal_damage(curse_heal_amt, curse_heal_amt))
+			unholy_blessed.update_damage_overlays()
 
-	built_in_his_image.visible_message(span_notice("[user] heals [built_in_his_image] with the unholy power!"))
-	to_chat(built_in_his_image, span_boldnotice("May the unholy power compel you to be healed!"))
-	playsound(built_in_his_image, SFX_PUNCH, 25, TRUE, -1)
-	built_in_his_image.add_mood_event("blessing", /datum/mood_event/blessing)
+	unholy_blessed.visible_message(span_notice("[user] heals [unholy_blessed] with the unholy power!"))
+	to_chat(bunholy_blessed, span_boldnotice("May the unholy power compel you to be healed!"))
+	playsound(unholy_blessed, SFX_PUNCH, 25, TRUE, -1)
+	unholy_blessed.add_mood_event("blessing", /datum/mood_event/blessing)
 	return BLESSING_SUCCESS //ss1984 add end
 
 /obj/item/book/bible/attack(mob/living/target_mob, mob/living/carbon/human/user, list/modifiers, list/attack_modifiers, heal_mode = TRUE)
