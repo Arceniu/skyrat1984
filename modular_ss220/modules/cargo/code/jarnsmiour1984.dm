@@ -1,126 +1,114 @@
-/datum/armament_entry/company_import/blacksteel
-	category = BLACKSTEEL_FOUNDATION_NAME_1984
-	company_bitflag = CARGO_COMPANY_BLACKSTEEL_1984
+/datum/supply_pack/companies/blacksteel
+	group = BLACKSTEEL_FOUNDATION_NAME_1984
 
 // A collection of melee weapons fitting the company's more exotic feeling weapon selection
 
-/datum/armament_entry/company_import/blacksteel/blade
-	subcategory = "Bladed Weapons"
-
-/datum/armament_entry/company_import/blacksteel/blade/hunting_knife
-	item_type = /obj/item/knife/hunting
+/datum/supply_pack/companies/blacksteel/blade/hunting_knife
+	contains = list(/obj/item/knife/hunting)
 	cost = PAYCHECK_CREW * 4
 
-/datum/armament_entry/company_import/blacksteel/blade/survival_knife
-	item_type = /obj/item/knife/combat/survival
+/datum/supply_pack/companies/blacksteel/blade/survival_knife
+	contains = list(/obj/item/knife/combat/survival)
 	cost = PAYCHECK_CREW * 6
 
-/datum/armament_entry/company_import/blacksteel/blade/switchblade
-	item_type = /obj/item/switchblade
+/datum/supply_pack/companies/blacksteel/blade/switchblade
+	contains = list(/obj/item/switchblade)
 	cost = PAYCHECK_COMMAND * 13
 
-/datum/armament_entry/company_import/blacksteel/blade/bowie_knife
-	item_type = /obj/item/storage/belt/bowie_sheath
+/datum/supply_pack/companies/blacksteel/blade/bowie_knife
+	contains = list(/obj/item/storage/belt/bowie_sheath)
 	cost = PAYCHECK_COMMAND * 12
-	restricted = TRUE
+	access = ACCESS_WEAPONS
+	access_view = ACCESS_WEAPONS
 	contraband = TRUE
 
-/datum/armament_entry/company_import/blacksteel/blade/throwing_knife
-	item_type = /obj/item/knife/combat/throwing
+/datum/supply_pack/companies/blacksteel/blade/throwing_knife
+	contains = list(/obj/item/knife/combat/throwing)
 	cost = PAYCHECK_COMMAND * 14
-	restricted = TRUE
+	access = ACCESS_WEAPONS
+	access_view = ACCESS_WEAPONS
 	contraband = TRUE
 
-/datum/armament_entry/company_import/blacksteel/blade/combat_knife
-	item_type = /obj/item/knife/combat
+/datum/supply_pack/companies/blacksteel/blade/combat_knife
+	contains = list(/obj/item/knife/combat)
 	cost = PAYCHECK_COMMAND * 20
-	restricted = TRUE
+	access = ACCESS_WEAPONS
+	access_view = ACCESS_WEAPONS
 	contraband = TRUE
 
-/datum/armament_entry/company_import/blacksteel/blade/tomahawk
-	item_type = /obj/item/melee/tomahawk
+/datum/supply_pack/companies/blacksteel/blade/tomahawk
+	contains = list(/obj/item/melee/tomahawk)
 	cost = PAYCHECK_COMMAND * 25
-	restricted = TRUE
+	access = ACCESS_WEAPONS
+	access_view = ACCESS_WEAPONS
 	contraband = TRUE
 
-/datum/armament_entry/company_import/blacksteel/blade/shamshir_sabre
-	item_type = /obj/item/storage/belt/sheath/sabre/cargo
+/datum/supply_pack/companies/blacksteel/blade/shamshir_sabre
+	contains = list(/obj/item/storage/belt/sheath/sabre/cargo)
 	cost = PAYCHECK_COMMAND * 18
-	restricted = TRUE
+	access = ACCESS_WEAPONS
+	access_view = ACCESS_WEAPONS
 
 // Shields.
 
-/datum/armament_entry/company_import/blacksteel/shield
-	subcategory = "Shields"
+/datum/supply_pack/companies/blacksteel/shield
 	cost = PAYCHECK_COMMAND * 5
 
-/datum/armament_entry/company_import/blacksteel/shield/buckler
-	item_type = /obj/item/shield/buckler
+/datum/supply_pack/companies/blacksteel/shield/buckler
+	contains = list(/obj/item/shield/buckler)
 
-/datum/armament_entry/company_import/blacksteel/shield/kite
-	item_type = /obj/item/shield/kite
+/datum/supply_pack/companies/blacksteel/shield/kite
+	contains = list(/obj/item/shield/kite)
 
 // Medieval Equipment
 
-/datum/armament_entry/company_import/blacksteel/equipment
-	subcategory = "Medieval Equipment"
+/datum/supply_pack/companies/blacksteel/equipment
 	cost = PAYCHECK_COMMAND * 3
 
-/datum/armament_entry/company_import/blacksteel/equipment/belt
-	item_type = /obj/item/storage/belt/crusader
+/datum/supply_pack/companies/blacksteel/equipment/belt
+	contains = list(/obj/item/storage/belt/crusader)
 	cost = PAYCHECK_COMMAND * 8
 
-/datum/armament_entry/company_import/blacksteel/equipment/cuirass
-	item_type = /obj/item/clothing/suit/armor/vest/cuirass
+/datum/supply_pack/companies/blacksteel/equipment/cuirass
+	contains = list(/obj/item/clothing/suit/armor/vest/cuirass)
 
-/datum/armament_entry/company_import/blacksteel/equipment/quiver
-	item_type = /obj/item/storage/bag/quiver/full
-	restricted = TRUE
+/datum/supply_pack/companies/blacksteel/equipment/quiver
+	contains = list(/obj/item/storage/bag/quiver/full)
 	cost = PAYCHECK_COMMAND * 6
 
 // Ranged Weaponry
 
-/datum/armament_entry/company_import/blacksteel/ranged
-	subcategory = "Ranged Weaponry"
-
-/datum/armament_entry/company_import/blacksteel/ranged/longbow
-	item_type = /obj/item/gun/ballistic/bow/longbow
-	description = "Holds arrows for your bow. Good, because while pocketing arrows is possible, it surely can't be pleasant. Comes with 10 arrows!"
+/datum/supply_pack/companies/blacksteel/ranged/longbow
+	contains = list(/obj/item/gun/ballistic/bow/longbow)
 	cost = PAYCHECK_COMMAND * 8
 
 // Forging tools, blacksteel company sells the tools and materials they use as well!
 
-/datum/armament_entry/company_import/blacksteel/forging_tools
-	subcategory = "Premium Forging Equipment"
+/datum/supply_pack/companies/blacksteel/forging_tools
 	cost = PAYCHECK_LOWER
 
-/datum/armament_entry/company_import/blacksteel/forging_tools/billows
-	item_type = /obj/item/forging/billow
+/datum/supply_pack/companies/blacksteel/forging_tools/billows
+	contains = list(/obj/item/forging/billow)
 
-/datum/armament_entry/company_import/blacksteel/forging_tools/hammer
-	item_type = /obj/item/forging/hammer
+/datum/supply_pack/companies/blacksteel/forging_tools/hammer
+	contains = list(/obj/item/forging/hammer)
 
-/datum/armament_entry/company_import/blacksteel/forging_tools/tongs
-	item_type = /obj/item/forging/tongs
+/datum/supply_pack/companies/blacksteel/forging_tools/tongs
+	contains = list(/obj/item/forging/tongs)
 
 // Fancy sounding and looking bars of metal that most definitely aren't just common metals with a fancy sounding name
 
-/datum/armament_entry/company_import/blacksteel/forging_metals
-	subcategory = "Premium Metal Supplies"
+/datum/supply_pack/companies/blacksteel/forging_metals
 	cost = PAYCHECK_CREW
 
-/datum/armament_entry/company_import/blacksteel/forging_metals/fake_cobalt
-	item_type = /obj/item/stack/sheet/cobolterium/three
-	description = "A three-pack of our finest cobolterium alloy, with an unmatched regal blue color for creating the strongest metalworks from."
+/datum/supply_pack/companies/blacksteel/forging_metals/fake_cobalt
+	contains = list(/obj/item/stack/sheet/cobolterium/three)
 
-/datum/armament_entry/company_import/blacksteel/forging_metals/fake_copper
-	item_type = /obj/item/stack/sheet/copporcitite/three
-	description = "A three-pack of our finest copporcitite alloy, with a powerful, fiery orange color for creating the strongest metalworks from."
+/datum/supply_pack/companies/blacksteel/forging_metals/fake_copper
+	contains = list(/obj/item/stack/sheet/copporcitite/three)
 
-/datum/armament_entry/company_import/blacksteel/forging_metals/fake_really_blue_aluminum
-	item_type = /obj/item/stack/sheet/tinumium/three
-	description = "A three-pack of our finest tinumium alloy, with a mystical faded blue color for creating the strongest metalworks from."
+/datum/supply_pack/companies/blacksteel/forging_metals/fake_really_blue_aluminum
+	contains = list(/obj/item/stack/sheet/tinumium/three)
 
-/datum/armament_entry/company_import/blacksteel/forging_metals/fake_brass
-	item_type = /obj/item/stack/sheet/brussite/three
-	description = "A three-pack of our finest brussite alloy, with a robust yellow color for creating the strongest metalworks from."
+/datum/supply_pack/companies/blacksteel/forging_metals/fake_brass
+	contains = list(/obj/item/stack/sheet/brussite/three)

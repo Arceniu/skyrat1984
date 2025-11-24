@@ -6818,7 +6818,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
-/obj/structure/cable,
 /obj/machinery/light/directional/west,
 /obj/machinery/autolathe/hacked,
 /turf/open/floor/iron/dark,
@@ -37119,9 +37118,7 @@
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/structure/cable,
 /obj/machinery/light_switch/directional/west,
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/item/stack/sheet/iron/ten,
 /obj/item/stack/sheet/glass{
 	amount = 10
@@ -44753,6 +44750,8 @@
 "pti" = (
 /obj/structure/closet/secure_closet/security/sec,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted,
+/obj/machinery/power/apc/auto_name/directional/west,
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/security/lockers)
 "pts" = (
