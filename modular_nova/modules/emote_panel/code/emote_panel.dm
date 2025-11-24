@@ -38,6 +38,7 @@
 		/mob/living/proc/emote_laugh,
 		/mob/living/proc/emote_look,
 		/mob/living/proc/emote_nod,
+		/mob/living/proc/emote_nodnod,
 		/mob/living/proc/emote_point,
 		/mob/living/proc/emote_pout,
 		/mob/living/proc/emote_scream,
@@ -399,6 +400,11 @@
 	set name = "~ Кивать" // SS1984 EDIT
 	set category = "Emotes"
 	usr.emote("nod", intentional = TRUE)
+
+/mob/living/proc/emote_nodnod()
+	set name = "~ Nodnod"
+	set category = "Emotes"
+	usr.emote("nod2", intentional = TRUE)
 
 /mob/living/proc/emote_point()
 	set name = "~ Указывать" // SS1984 EDIT

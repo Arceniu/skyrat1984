@@ -25,5 +25,5 @@
 		if (!show_stat)
 			return .
 		// SS1984 ADDITION END
-		. += SSstatpanels.get_job_estimation()
+		. += SSstatpanels.get_job_estimation(src)
 
