@@ -9620,6 +9620,7 @@
 #include "modular_ss220\modules\balance-1984\old_ballistics_damage\rifle.dm"
 #include "modular_ss220\modules\balance-1984\old_ballistics_damage\shotgun.dm"
 #include "modular_ss220\modules\balance-1984\old_ballistics_damage\submachinegun.dm"
+#include "modular_ss220\modules\balance-1984\holster_holdables\sec_clothing_overrides.dm"
 #include "modular_ss220\modules\sol_pistol_incapacitator\magazines.dm"
 #include "modular_ss220\modules\sol_pistol_incapacitator\pistol.dm"
 #include "modular_ss220\modules\security_vouchers\code\closets\secure\security.dm"
