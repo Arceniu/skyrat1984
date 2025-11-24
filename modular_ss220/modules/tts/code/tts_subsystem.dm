@@ -389,7 +389,7 @@ SUBSYSTEM_DEF(ttsSilero)
 				cb.InvokeAsync()
 			tts_effects_queue -= voice
 
-	var/turf/turf_source = get_turf(speaker)
+	// SS1984 REMOVAL var/turf/turf_source = get_turf(speaker)
 
 	var/volume
 	var/channel
