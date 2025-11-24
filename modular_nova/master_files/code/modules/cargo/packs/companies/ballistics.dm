@@ -9,7 +9,7 @@
 // NT Weapons
 
 /datum/supply_pack/companies/ballistics/nt
-	console_flag = CARGO_CONSOLE_NT | CARGO_CONSOLE_PDA // This is mostly for flavor, as NT ghost companies had been given a lot of absurdly powerful unique stuff and can still access to the station to get these. 
+	console_flag = CARGO_CONSOLE_NT | CARGO_CONSOLE_PDA // This is mostly for flavor, as NT ghost companies had been given a lot of absurdly powerful unique stuff and can still access to the station to get these.
 
 /datum/supply_pack/companies/ballistics/nt/mars_single
 	name = "Colt Detective Special Single-Pack"
@@ -34,19 +34,21 @@
 	contains = list(/obj/item/gun/ballistic/shotgun/doublebarrel)
 
 /datum/supply_pack/companies/ballistics/nt/shotgun_automatic
-	cost = CARGO_CRATE_VALUE * 5 
+	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/gun/ballistic/shotgun/automatic/combat)
 
-/datum/supply_pack/companies/ballistics/nt/c38_super_kit
-	name = "NT/E \"Laevateinn\" Revolver Conversion Kit"
-	desc = "A set of parts for converting a .38 revolver into Nanotrasen's latest foray into magnetically-accelerated sidearms."
-	cost = CARGO_CRATE_VALUE * 1.5 // 300 cr at time of writing, 800 cr total
-	contains = list(/obj/item/crafting_conversion_kit/c38_super)
-	auto_name = FALSE
-	access = FALSE
-	access_view = FALSE
-	express_lock = FALSE
-	departamental_goody = TRUE
+// SS1984 REMOVAL START
+// /datum/supply_pack/companies/ballistics/nt/c38_super_kit
+// 	name = "NT/E \"Laevateinn\" Revolver Conversion Kit"
+// 	desc = "A set of parts for converting a .38 revolver into Nanotrasen's latest foray into magnetically-accelerated sidearms."
+// 	cost = CARGO_CRATE_VALUE * 1.5 // 300 cr at time of writing, 800 cr total
+// 	contains = list(/obj/item/crafting_conversion_kit/c38_super)
+// 	auto_name = FALSE
+// 	access = FALSE
+// 	access_view = FALSE
+// 	express_lock = FALSE
+// 	departamental_goody = TRUE
+// SS1984 REMOVAL END
 
 // Sol Fed Weapons
 /datum/supply_pack/companies/ballistics/sol_fed
