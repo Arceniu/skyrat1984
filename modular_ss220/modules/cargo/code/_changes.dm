@@ -202,3 +202,10 @@
 	crate_name = "centcom id card crate"
 	crate_type = /obj/structure/closet/crate/secure/centcom
 	access_any = list(ACCESS_HOP, ACCESS_HOS, ACCESS_CAPTAIN, ACCESS_CENT_GENERAL)
+
+//nova disable
+/datum/supply_pack/companies
+	special = TRUE
+	special_enabled = FALSE
+	dangerous = TRUE
+//nova disable end
