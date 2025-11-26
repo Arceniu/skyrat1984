@@ -145,18 +145,27 @@
 
 /datum/supply_pack/security/ammo
 	special = FALSE
+	express_lock = FALSE
 
 /datum/supply_pack/security/securityclothes
 	special = FALSE
+	express_lock = FALSE
 
 /datum/supply_pack/security/armory/ballistic
 	special = FALSE
+	express_lock = FALSE
 
 /datum/supply_pack/security/armory/thermal
 	special = FALSE
+	express_lock = FALSE
 
 /datum/supply_pack/imports/russian
 	special = FALSE
+	express_lock = FALSE
+
+/datum/supply_pack/service/survivalknives
+	special = FALSE
+	express_lock = FALSE
 
 /datum/supply_pack/security/armory/short_mod_laser
 	special = TRUE
@@ -208,4 +217,26 @@
 	special = TRUE
 	special_enabled = FALSE
 	dangerous = TRUE
+	group = "Outsourced"
+
+/datum/supply_pack/companies/tools_weapons
+	group = "Outsourced"
+/datum/supply_pack/companies/modsuits
+	group = "Outsourced"
+/datum/supply_pack/companies/medical
+	group = "Outsourced"
+/datum/supply_pack/companies/machines
+	group = "Outsourced"
+/datum/supply_pack/companies/general
+	group = "Outsourced"
+/datum/supply_pack/companies/energy
+	group = "Outsourced"
+/datum/supply_pack/companies/ballistics
+	group = "Outsourced"
+/datum/supply_pack/companies/armor
+	group = "Outsourced"
+/datum/supply_pack/companies/apparel
+	group = "Outsourced"
+/datum/supply_pack/companies/mags_and_ammo
+	group = "Outsourced"
 //nova disable end
