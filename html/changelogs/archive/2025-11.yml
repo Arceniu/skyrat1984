@@ -643,13 +643,13 @@
   - bugfix: reskin icons will no longer show as error in the loadout reskin selection
       menu
 2025-11-13:
-  DenIS318:
-  - qol: Adminwho now shows developers, mentors, moderators as well
   Archemagus:
   - bugfix: Cryo pod will report borgs job instead of [NO DATA]
   - bugfix: Cryo pod SHOULD stop reporting crew members by ghost role titles... No
       guaranties though.
   - qol: Cryo pod will announce punched out crew jobs correctly.
+  DenIS318:
+  - qol: Adminwho now shows developers, mentors, moderators as well
   OrbisAnima:
   - balance: the BRM now only works in station areas.
   RealWinterFrost:
@@ -715,8 +715,6 @@
   - rscadd: Adds 'cargo shelves' which let you store crates on them, for the obvious
       uses.
 2025-11-16:
-  Stalkeros *nod2:
-  - rscadd: Adds nodnod emote. *nod2
   Arceniu:
   - bugfix: oldstation spawners now have proper description in spawn menu and notify
       ghosts
@@ -730,9 +728,9 @@
   - config: Mass Traitors min_enemies 0 => 2
   - config: Mass Changelings min_enemies 0 => 3, restricted synthetic species
   - qol: Heretic TGUI info is now scrollable
+  Stalkeros *nod2:
+  - rscadd: Adds nodnod emote. *nod2
 2025-11-19:
-  intense-skies:
-  - spellcheck: Improved the grammar on the nod2 emote
   Arceniu:
   - rscadd: Added new quirk - unholy (more debuffs from holy water. debuff in church,
       buff from unholy/hell water)
@@ -740,6 +738,8 @@
   DenIS318:
   - bugfix: Spent ammo is now correctly shown as spent when reloaded with ammo box
   - bugfix: Airlock access circuit no longer TGUI NTOS from invalid accesses
+  intense-skies:
+  - spellcheck: Improved the grammar on the nod2 emote
 2025-11-20:
   BasilTamaya:
   - balance: Nanotrasen's Research and Development efforts now gives our mining silicon
@@ -797,6 +797,9 @@
   - spellcheck: unfathomable curio "take 5 hits" && grammar
   - balance: viscerators get PASSMACHINE && PASSFLAP
   - bugfix: viscerators respect the PASSMOB flag
+  DenIS318:
+  - bugfix: xeno tails is no longer spawn on random mobs
+  - bugfix: real xenomorph tails (such as Xeno Queen) no longer available on roundstart
   FalloutFalcon:
   - bugfix: deer now eat* real grass
   Fghj240:
@@ -923,9 +926,6 @@
   trazodont:
   - map: adds visitation shutter control button to icebox perma
   - map: moved metastation security locker room apc
-  DenIS318:
-  - bugfix: xeno tails is no longer spawn on random mobs
-  - bugfix: real xenomorph tails (such as Xeno Queen) no longer available on roundstart
 2025-11-23:
   Hardly:
   - image: Resprites Duster
@@ -1176,3 +1176,50 @@
   - bugfix: xenobio console potions work again
   vinylspiders, Wallemations:
   - image: space heaters got a model replacement, from stick heaters to box heaters
+2025-11-26:
+  A.C.M.O.:
+  - admin: Added the Upload Character Preferences command for admins.
+  - admin: Added the Toggle Admin Stasis command for admins.
+  Aliceee2ch:
+  - image: Various beakers now have own inhands sprites.
+  Fghj240:
+  - rscadd: Netpods can now scan their occupants to create more accurate bit avatars
+  Hardly:
+  - image: Added Monster Mouth 2 as a head marking
+  Hatterhat:
+  - bugfix: The blood-drunk miner's corpse now properly appears and fades away again.
+  Kocma-san:
+  - bugfix: fixed that M44A underbarrel grenade launchers and shotguns cannot be reloaded
+  - code_imp: smol improvement to the marines gear code
+  Melbert:
+  - admin: Adds "roleplay reminder" button to player panel
+  - bugfix: Pirates will no longer randomly spawn as human
+  - bugfix: Servant Golems have numbered names again
+  - refactor: Refactored ghost spawns (like spider eggs or pirate spawners), report
+      any oddities
+  OrbisAnima:
+  - bugfix: Due to incompatibilities with  intergalactic trade [we had bugs], Cargo
+      imports will no longer be able to be ordered directly from the cargo budget,
+      unless the express consoles are used, as it was previously stipulated with other
+      Goody types imports. [Lots of bugs, and avoiding future bugs, we tried.]
+  RatFromTheJungle:
+  - code_imp: The round-end report no longer auto- opens magically! Click the button
+      that appears in the top left instead to open it.
+  Thunder12345:
+  - bugfix: The captain suit costume (green suit) no longer has the same armour as
+      real captain outfits.
+  alien3301:
+  - balance: The warden starts with a bandolier in their locker
+  lelandkemble:
+  - map: Catwalk Abandoned Kitchen APC powered by default
+  - bugfix: cyborg RTD works again
+  - admin: Admins get powertool belts in their special outfits.
+  san7890:
+  - refactor: The Cult of Nar'Sie realized that they were installing the mirrors on
+      their mirror shields the wrong way around, thus altering the makeup of their
+      mirror clones health, damage, and re-replicability.
+  - refactor: In response to the recent updates in clone magic, Nanotrasen's Stealth
+      Reactive Armor should now generate more convincing clones.
+  vinylspiders:
+  - bugfix: fixes a bug that caused you to need to wear shoes in order to gain any
+      defensive benefit from the sleeping carp martial art style
