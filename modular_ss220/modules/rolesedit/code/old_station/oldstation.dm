@@ -361,7 +361,7 @@
 //spawner override
 
 /obj/effect/mob_spawn/ghost_role/human/oldstation
-	random_appearance = FALSE
+	allow_custom_character = GHOSTROLE_TAKE_PREFS_APPEARANCE
 	restricted_species = list(/datum/species/human, /datum/species/human/felinid, /datum/species/synthetic)
 
 /obj/effect/mob_spawn/ghost_role/human/oldstation/eng

@@ -624,7 +624,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/cryopod/prison, 18)
 	/// For figuring out where the local cryopod computer is. Must be set for cryo computer announcements.
 	var/area/computer_area
 
-/obj/effect/mob_spawn/ghost_role/proc/after_create_nova(mob/living/spawned_mob, apply_prefs) // SS1984 EDIT, original: /obj/effect/mob_spawn/ghost_role/create(mob/mob_possessor, newname, apply_prefs)
+/obj/effect/mob_spawn/ghost_role/proc/after_create_nova(mob/living/spawned_mob) // SS1984 EDIT, original: /obj/effect/mob_spawn/ghost_role/create(mob/mob_possessor, newname, apply_prefs)
 	var/obj/machinery/computer/cryopod/control_computer = find_control_computer()
 
 	var/alt_name = get_spawner_outfit_name()
