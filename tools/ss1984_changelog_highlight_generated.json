@@ -1,6 +1,28 @@
 [
   {
     "date": "2025-11-27",
+    "author": "Arceniu",
+    "changes": [
+      "Added combitool to med imports advanced(tier 2) combination of - bonesetter/bloodfilter",
+      "Added telescopic shield to imports"
+    ]
+  },
+  {
+    "date": "2025-11-27",
+    "author": "Arceniu",
+    "changes": [
+      "disabled cult construct event random spawn, decreased max syndicate portal storm random event to 1"
+    ]
+  },
+  {
+    "date": "2025-11-27",
+    "author": "DenIS318",
+    "changes": [
+      "Now cyborg is prompted to change name on spawn if it doesn't have set it in preferences"
+    ]
+  },
+  {
+    "date": "2025-11-27",
     "author": "DenIS318",
     "changes": [
       "Revert \"Shotgun shells have been adjusted, with the most drastic change being on shotgun slugs, going from 30 damage 10 AP to 35 damage 30 AP, giving them more of an anti-armor niche. Some other shotguns may have been touched, see PR 6371 for details as they come along.\"",
