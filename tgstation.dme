@@ -9517,6 +9517,7 @@
 #include "modular_ss220\modules\rolesedit\code\jobs\chief_engineer.dm"
 #include "modular_ss220\modules\rolesedit\code\jobs\command.dm"
 #include "modular_ss220\modules\rolesedit\code\jobs\engineering.dm"
+#include "modular_ss220\modules\rolesedit\code\jobs\medical.dm"
 #include "modular_ss220\modules\rolesedit\code\jobs\misc.dm"
 #include "modular_ss220\modules\rolesedit\code\jobs\ntr.dm"
 #include "modular_ss220\modules\rolesedit\code\jobs\prisoner.dm"
