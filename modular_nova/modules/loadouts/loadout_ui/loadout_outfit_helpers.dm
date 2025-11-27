@@ -58,7 +58,7 @@
 		briefcase = new(loc)
 		for(var/datum/loadout_item/item as anything in loadout_datums)
 			// SS1984 REMOVAL START
-			// if (erp_enabled && item.erp_box == TRUE)
+			// if (erp_enabled && item.erp_box)
 			// 	if (isnull(erpbox))
 			// 		erpbox = new(loc)
 			// 	new item.item_path(erpbox)
@@ -70,11 +70,11 @@
 
 		briefcase.name = "[preference_source.read_preference(/datum/preference/name/real_name)]'s travel suitcase"
 		equipOutfit(equipped_outfit, visuals_only)
-		put_in_hands(briefcase)
+		INVOKE_ASYNC(src, PROC_REF(put_in_hands), briefcase)
 	else
 		for(var/datum/loadout_item/item as anything in loadout_datums)
 			// SS1984 REMOVAL START
-			// if (erp_enabled && item.erp_box == TRUE)
+			// if (erp_enabled && item.erp_box)
 			// 	if (isnull(erpbox))
 			// 		erpbox = new(loc)
 			// 	new item.item_path(erpbox)
@@ -95,12 +95,13 @@
 		if(item.restricted_roles && equipping_job && !(equipping_job.title in item.restricted_roles))
 			continue
 
-		var/obj/item/equipped = locate(item.item_path) in new_contents
-		// SS1984 REMOVAL OF ERP START, END
-		for(var/atom/equipped_item in new_contents)
-			if(equipped_item.type == item.item_path)
-				equipped = equipped_item
-				break
+		var/obj/item/equipped = locate(item.item_path) in new_contents // SS1984 EDIT, original: var/obj/item/equipped
+		// SS1984 REMOVAL START
+		// if(erpbox && item.erp_box)
+		// 	equipped = locate(item.item_path) in erpbox
+		// else
+		// 	equipped = locate(item.item_path) in new_contents
+		// SS1984 REMOVAL END
 
 		if(isnull(equipped))
 			continue

@@ -86,7 +86,7 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	gets_cropped_on_taurs = FALSE
 
-/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt
+/obj/item/clothing/under/costume/head_of_personnel/skirt
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	gets_cropped_on_taurs = FALSE
 
@@ -188,7 +188,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS
 	gets_cropped_on_taurs = FALSE
 
-/obj/item/clothing/under/rank/captain/suit/skirt
+/obj/item/clothing/under/costume/captain/skirt
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	gets_cropped_on_taurs = FALSE
 
