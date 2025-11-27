@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - qol: "Now cyborg is prompted to change name on spawn if it doesn't have set it in preferences"

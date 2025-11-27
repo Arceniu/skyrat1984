@@ -1224,6 +1224,11 @@
   - bugfix: fixes a bug that caused you to need to wear shoes in order to gain any
       defensive benefit from the sleeping carp martial art style
 2025-11-27:
+  Arceniu:
+  - balance: disabled cult construct event random spawn, decreased max syndicate portal
+      storm random event to 1
+  - rscadd: Added combitool to med imports advanced(tier 2) combination of - bonesetter/bloodfilter
+  - rscadd: Added telescopic shield to imports
   DenIS318:
   - balance: Revert "The Sakhno SKS's damage multiplier was moved to 0.8x, up from
       0.5x."
@@ -1232,3 +1237,5 @@
       them more of an anti-armor niche. Some other shotguns may have been touched,
       see PR 6371 for details as they come along."
   - balance: Revert "Cmo no longer starts with a advanced health analyzer."
+  - qol: Now cyborg is prompted to change name on spawn if it doesn't have set it
+      in preferences
