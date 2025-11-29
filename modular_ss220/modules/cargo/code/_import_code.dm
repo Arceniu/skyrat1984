@@ -161,7 +161,7 @@
 /datum/component/armament/company_imports/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "CargoImportConsole")
+		ui = new(user, src, "CargoCompanyImport")
 		ui.open()
 
 /datum/component/armament/company_imports/ui_status(mob/user, datum/ui_state/state)

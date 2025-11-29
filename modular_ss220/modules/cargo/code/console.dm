@@ -4,13 +4,13 @@
 		return
 
 	switch(action)
-		if("company_import_window")
+		if("company imports")
 			var/datum/component/armament/company_imports/company_import_component = GetComponent(/datum/component/armament/company_imports)
 			company_import_component.ui_interact(usr)
 			. = TRUE
 	if(.)
 		post_signal(cargo_shuttle)
-
+//tset
 /obj/machinery/computer/cargo/Initialize(mapload)
 
 

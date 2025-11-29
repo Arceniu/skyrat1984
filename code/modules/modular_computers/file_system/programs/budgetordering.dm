@@ -339,13 +339,14 @@
 			self_paid = !self_paid
 			. = TRUE
 		//SS1984 EDIT START
-		if("company_import_window")
+		if("company imports")
 			var/datum/component/armament/company_imports/gun_comp = computer.GetComponent(/datum/component/armament/company_imports)
 			if(!gun_comp)
 				computer.AddComponent(/datum/component/armament/company_imports, subtypesof(/datum/armament_entry/company_import), 0)
-			gun_comp = computer.GetComponent(/datum/component/armament/company_imports)
-			gun_comp.parent_prog ||= src
-			gun_comp.ui_interact(usr)
+			if(gun_comp)
+				gun_comp = computer.GetComponent(/datum/component/armament/company_imports)
+				gun_comp.parent_prog ||= src
+				gun_comp.ui_interact(usr)
 			. = TRUE
 		//SS1984 EDIT END
 	if(.)

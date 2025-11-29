@@ -10,13 +10,14 @@ import { CargoHelp } from './CargoHelp';
 import { CargoRequests } from './CargoRequests';
 import { CargoStatus } from './CargoStatus';
 import type { CargoData } from './types';
+import { CargoImport } from '../CargoCompanyImport'; // SS1984 EDIT ADD
 
 enum TAB {
   Catalog = 'catalog',
   Requests = 'active requests',
   Cart = 'cart',
   Help = 'help',
-  CompanyImports = 'company_import_window', // SS1984 EDIT ADD
+  CompanyImports = 'company imports', // SS1984 EDIT ADD
 }
 
 export function Cargo(props) {
@@ -72,6 +73,15 @@ export function CargoContent(props) {
             >
               Catalog
             </Tabs.Tab>
+	            {/* SS1984 EDIT ADD START */}
+            <Tabs.Tab
+              icon="clipboard-list"
+              selected={tab === TAB.CompanyImports}
+              onClick={() => setTab(TAB.CompanyImports)}
+            >
+              Company Imports
+            </Tabs.Tab>
+            {/* SS1984 EDIT ADD END */}
             <Tabs.Tab
               icon="envelope"
               textColor={
@@ -82,15 +92,6 @@ export function CargoContent(props) {
             >
               Requests ({requests.length})
             </Tabs.Tab>
-	            {/* SS1984 EDIT ADD START */}
-            <Tabs.Tab
-              icon="clipboard-list"
-              selected={tab === TAB.CompanyImports}
-              onClick={() => act('company_import_window')}
-            >
-              Company Imports
-            </Tabs.Tab>
-            {/* SS1984 EDIT ADD END */}
             {!requestonly && (
               <>
                 <Tabs.Tab
@@ -115,6 +116,7 @@ export function CargoContent(props) {
       </Stack.Item>
       <Stack.Item grow mt={-1}>
         {tab === TAB.Catalog && <CargoCatalog />}
+        {tab === TAB.CompanyImports && <CargoImport />}
         {tab === TAB.Requests && <CargoRequests />}
         {tab === TAB.Cart && <CargoCart />}
         {tab === TAB.Help && <CargoHelp />}
