@@ -266,7 +266,7 @@
 	var/mob/living/stabbed = target
 	if(istype(stabbed, /mob/living/basic/illusion))
 		return
-	if(stabbed.stat <= SOFT_CRIT && prob(50))
+	if(stabbed.stat == CONSCIOUS && prob(50))
 		var/mob/living/basic/illusion/fake_clone = new(user.loc)
 		fake_clone.full_setup(user, target_mob = stabbed, faction = user.faction, life = 10 SECONDS, hp = user.health / 2.5, damage = 12, replicate = 30)
 

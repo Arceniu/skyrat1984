@@ -96,7 +96,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/security/telescreen/entertai
 		return UI_CLOSE
 	if(!isliving(user))
 		return isAdminGhostAI(user) ? UI_INTERACTIVE : UI_UPDATE
-	if(user.stat >= UNCONSCIOUS)
+	if(user.stat >= SOFT_CRIT)
 		return UI_UPDATE
 
 	var/can_range = FALSE

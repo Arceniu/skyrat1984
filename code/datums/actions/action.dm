@@ -196,7 +196,7 @@
 			if (feedback)
 				owner.balloon_alert(owner, "must stand up!")
 			return FALSE
-	if((check_flags & AB_CHECK_CONSCIOUS) && owner.stat > SOFT_CRIT)
+	if((check_flags & AB_CHECK_CONSCIOUS) && owner.stat != CONSCIOUS)
 		if (feedback)
 			owner.balloon_alert(owner, "unconscious!")
 		return FALSE
