@@ -66,8 +66,7 @@
 		if(CONSCIOUS)
 			return TRUE
 		if(SOFT_CRIT)
-			return TRUE // SS1984 ADDITION
-			// SS1984 REMOVAL to_chat(src, span_warning("You can't commit suicide while in a critical condition!"))
+			to_chat(src, span_warning("You can't commit suicide while in a critical condition!"))
 		if(UNCONSCIOUS, HARD_CRIT)
 			to_chat(src, span_warning("You need to be conscious to commit suicide!"))
 		if(DEAD)

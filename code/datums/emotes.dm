@@ -47,7 +47,7 @@
 	/// Trait that is required to use this emote.
 	var/trait_required
 	/// In which state can you use this emote? (Check stat.dm for a full list of them)
-	var/stat_allowed = SOFT_CRIT
+	var/stat_allowed = CONSCIOUS
 	/// Sound to play when emote is called.
 	var/sound
 	/// Does this emote vary in pitch?
@@ -447,7 +447,7 @@
 	return TRUE
 
 /mob/manual_emote(text, log_emote = null)
-	if (stat > SOFT_CRIT)
+	if (stat != CONSCIOUS)
 		return FALSE
 	if (isnull(log_emote))
 		log_emote = !isnull(client)

@@ -450,7 +450,7 @@
 	)
 
 /datum/brain_trauma/special/ptsd/on_life(seconds_per_tick, times_fired)
-	if(owner.stat > SOFT_CRIT)
+	if(owner.stat != CONSCIOUS)
 		return
 
 	if(!COOLDOWN_FINISHED(src, ptsd_hallucinations))
