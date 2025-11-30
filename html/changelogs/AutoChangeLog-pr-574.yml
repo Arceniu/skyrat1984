@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - config: "Movement Delay 1.8 -> 1.5 (TG)"
-  - balance: "Mech movement delay 1.8 -> 1.5 (TG). Both can be changed back at 21.12.2025 (read PR or discord for more, needs Skyrat role)"

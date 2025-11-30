@@ -1239,3 +1239,11 @@
   - balance: Revert "Cmo no longer starts with a advanced health analyzer."
   - qol: Now cyborg is prompted to change name on spawn if it doesn't have set it
       in preferences
+2025-11-30:
+  Arceniu:
+  - rscadd: Returned old crit
+  - rscdel: Removed "RP" crit
+  DenIS318:
+  - config: Movement Delay 1.8 -> 1.5 (TG)
+  - balance: Mech movement delay 1.8 -> 1.5 (TG). Both can be changed back at 21.12.2025
+      (read PR or discord for more, needs Skyrat role)
