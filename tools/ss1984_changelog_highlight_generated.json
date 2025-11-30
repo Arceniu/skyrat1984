@@ -1,5 +1,21 @@
 [
   {
+    "date": "2025-11-30",
+    "author": "DenIS318",
+    "changes": [
+      "Movement Delay 1.8 -> 1.5 (TG)",
+      "Mech movement delay 1.8 -> 1.5 (TG). Both can be changed back at 21.12.2025 (read PR or discord for more, needs Skyrat role)"
+    ]
+  },
+  {
+    "date": "2025-11-30",
+    "author": "Arceniu",
+    "changes": [
+      "Returned old crit",
+      "Removed \"RP\" crit"
+    ]
+  },
+  {
     "date": "2025-11-27",
     "author": "Arceniu",
     "changes": [
