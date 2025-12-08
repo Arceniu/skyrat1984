@@ -3,6 +3,15 @@
 	var/alert_cooldown = 3 SECONDS
 	var/alert_cooldown_time
 
+/mob/living/simple_animal/hostile/blackmesa/AIShouldSleep(list/possible_targets)// no more sleeping blackmesa
+	if(possible_targets)
+		FindTarget(possible_targets)
+		toggle_ai(AI_ON)
+		return FALSE
+	else
+		toggle_ai(AI_IDLE)
+		return TRUE
+
 /mob/living/simple_animal/hostile/blackmesa/xen
 	faction = list(FACTION_XEN)
 	atmos_requirements = null

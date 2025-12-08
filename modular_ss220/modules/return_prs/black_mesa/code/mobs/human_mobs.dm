@@ -20,6 +20,7 @@
 	robust_searching = 1
 	maxHealth = 150
 	health = 150
+	gender = MALE
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
@@ -82,6 +83,7 @@
 	turns_per_move = 5
 	speed = 0
 	stat_attack = HARD_CRIT
+	gender = MALE
 	robust_searching = 1
 	maxHealth = 100
 	health = 100
