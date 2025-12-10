@@ -31,6 +31,8 @@ SUBSYSTEM_DEF(id_access)
 	var/list/station_pda_templates = list()
 	/// Helper list containing all station regions.
 	var/list/station_regions = list()
+	/// Helper list containing all centcom regions. // SS1984 ADD START
+	var/list/centcom_regions = list() // SS1984 ADD END
 
 	/// The roundstart generated code for the spare ID safe. This is given to the Captain on shift start. If there's no Captain, it's given to the HoP. If there's no HoP
 	var/spare_id_safe_code = ""
@@ -99,6 +101,12 @@ SUBSYSTEM_DEF(id_access)
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_SPECIAL]"])
 		flags_by_access |= list("[access]" = ACCESS_FLAG_SPECIAL)
 
+	//SS1984 ADD START
+	accesses_by_flag["[ACCESS_FLAG_CENTCOM]"] = REGION_ACCESS_ALL_CENTCOM
+	for(var/access in accesses_by_flag["[ACCESS_FLAG_CENTCOM]"])
+		flags_by_access |= list("[access]" = ACCESS_FLAG_CENTCOM)
+	//SS1984 ADD END
+
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMON]"] = ACCESS_FLAG_COMMON_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMAND]"] = ACCESS_FLAG_COMMAND_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_PRV_COMMAND]"] = ACCESS_FLAG_PRV_COMMAND_NAME
@@ -120,8 +128,15 @@ SUBSYSTEM_DEF(id_access)
 	accesses_by_region[REGION_SUPPLY] = REGION_ACCESS_SUPPLY
 	accesses_by_region[REGION_COMMAND] = REGION_ACCESS_COMMAND
 	accesses_by_region[REGION_CENTCOM] = REGION_ACCESS_CENTCOM
-	accesses_by_region[REGION_NTR] = REGION_ACCESS_NTR
+	//SS1984 ADD START
+	accesses_by_region[REGION_CENTCOM_NTR] = REGION_ACCESS_CENTCOM_NTR
+	accesses_by_region[REGION_CENTCOM_NAVAL] = REGION_ACCESS_CENTCOM_NAVAL
+	accesses_by_region[REGION_CENTCOM_CAPTAIN] = REGION_ACCESS_CENTCOM_CAPTAIN
+	accesses_by_region[REGION_CENTCOM_SPECOPS] = REGION_ACCESS_CENTCOM_SPECOPS
+	accesses_by_region[REGION_ALL_CENTCOM] = REGION_ACCESS_ALL_CENTCOM
 
+	centcom_regions = REGION_AREA_CENTCOM
+	//SS1984 ADD END
 	station_regions = REGION_AREA_STATION
 
 /// Instantiate trim singletons and add them to a list.
@@ -194,20 +209,38 @@ SUBSYSTEM_DEF(id_access)
 			"templates" = list(),
 			"pdas" = list(),
 		),
-						// SS1984 ADDITION
-		"[ACCESS_CENT_LIVING]" = list(
-			"regions" = list(REGION_NTR),
-			"head" = JOB_NT_REP,
-			"templates" = list(),
-			"pdas" = list(),
-		),
-		"[ACCESS_CENT_CAPTAIN]" = list(
-			"regions" = list(REGION_CENTCOM),
+						// SS1984 ADD START
+		"[ACCESS_CENT_ADMIRAL]" = list(
+			"regions" = list(REGION_CENTCOM_NAVAL),
 			"head" = JOB_NAVAL_FLEET_ADMIRAL,
 			"templates" = list(),
 			"pdas" = list(),
 		),
-						// SS1984 ADDITION
+		"[ACCESS_CENT_CAPTAIN]" = list(
+			"regions" = list(REGION_CENTCOM_CAPTAIN),
+			"head" = JOB_NAVAL_CAPTAIN,
+			"templates" = list(),
+			"pdas" = list(),
+		),
+		"[ACCESS_CENT_OFFICER]" = list(
+			"regions" = list(REGION_CENTCOM),
+			"head" = JOB_CENTCOM_COMMANDER,
+			"templates" = list(),
+			"pdas" = list(),
+		),
+		"[ACCESS_CENT_SPECOPS_OFFICER]" = list(
+			"regions" = list(REGION_CENTCOM_SPECOPS),
+			"head" = JOB_CENTCOM_SPECIAL_OFFICER,
+			"templates" = list(),
+			"pdas" = list(),
+		),
+		"[ACCESS_CENT_OFFICIAL]" = list(
+			"regions" = list(REGION_CENTCOM_NTR),
+			"head" = JOB_NT_REP,
+			"templates" = list(),
+			"pdas" = list(),
+		),
+						// SS1984 ADD END
 	)
 
 	var/list/station_job_trims = subtypesof(/datum/id_trim/job)
@@ -215,8 +248,8 @@ SUBSYSTEM_DEF(id_access)
 		var/datum/id_trim/job/trim = trim_singletons_by_path[trim_path]
 		if(!length(trim.template_access))
 			continue
-		if (trim.hide_in_templates > TRIM_HIDE_NONE) // SS1984 ADDITION
-			continue // SS1984 ADDITION
+		if (trim.hide_in_templates > TRIM_HIDE_NONE) // SS1984 ADD START
+			continue // SS1984 ADD END
 
 		station_job_templates[trim_path] = trim.assignment
 		for(var/access in trim.template_access)
@@ -231,12 +264,12 @@ SUBSYSTEM_DEF(id_access)
 	var/list/centcom_job_trims = typesof(/datum/id_trim/centcom) - typesof(/datum/id_trim/centcom/corpse) + (/datum/id_trim/job/nanotrasen_consultant)	// SS1984 EDIT ORIGINAL var/list/centcom_job_trims = typesof(/datum/id_trim/centcom) - typesof(/datum/id_trim/centcom/corpse)
 	for(var/trim_path in centcom_job_trims)
 		var/datum/id_trim/trim = trim_singletons_by_path[trim_path]
-		// SS1984 ADDITION START
+		// SS1984 ADD START
 		if (istype(trim, /datum/id_trim/job))
 			var/datum/id_trim/job/trim_job = trim
 			if (trim_job.hide_in_templates > TRIM_HIDE_STATION)
 				continue
-		// SS1984 ADDITION END
+		// SS1984 ADD END
 		centcom_job_templates[trim_path] = trim.assignment
 
 	var/list/all_pda_paths = typesof(/obj/item/modular_computer/pda)
@@ -355,6 +388,14 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_CENT_OFFICER]"] = "CentCom Officer"
 	desc_by_access["[ACCESS_BIT_DEN]"] = "Bitrunner Den"
 	desc_by_access["[ACCESS_BARBER]"] = "Barber" // NOVA EDIT ADDITION - BARBER UPDATE
+	desc_by_access["[ACCESS_CENT_SECURITY]"] = "CentCom Security" // SS1984 ADD END
+	desc_by_access["[ACCESS_CENT_OFFICIAL]"] = "CentCom Official"
+	desc_by_access["[ACCESS_CENT_SUPPLY]"] = "CentCom Supply"
+	desc_by_access["[ACCESS_CENT_BLACKOPS]"] = "CentCom Asset Protection"
+	desc_by_access["[ACCESS_CENT_SPECOPS_LEADER]"] = "CentCom SpecOps Leader"
+	desc_by_access["[ACCESS_CENT_SPECOPS_OFFICER]"] = "CentCom SpecOps Officer"
+	desc_by_access["[ACCESS_CENT_ADMIRAL]"] = "CentCom Admiral"
+	desc_by_access["[ACCESS_CENT_FLEET_ADMIRAL]"] = "CentCom Fleet Admiral" // SS1984 ADD END
 
 /**
  * Returns the access bitflags associated with any given access level.
