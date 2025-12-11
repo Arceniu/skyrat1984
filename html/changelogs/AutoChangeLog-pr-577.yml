@@ -1,4 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - bugfix: "ID upgrade machine(ghost role/event computer) no longer work while broken/not powered"
