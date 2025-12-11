@@ -62,9 +62,3 @@
 	desc = "Bound by the shackles of a sinister force. He does not want to hurt you."
 	icon_state = "vortigaunt_slave"
 	faction = list(FACTION_XEN)
-
-/mob/living/simple_animal/hostile/blackmesa/xen/vortigaunt/slave/Initialize(mapload)//quick fix, replace later with faction check
-	. = ..()
-	var/component_to_delete = GetComponent(/datum/component/follow)
-	if(component_to_delete)
-		qdel(component_to_delete)
