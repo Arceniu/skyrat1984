@@ -31,8 +31,6 @@ SUBSYSTEM_DEF(id_access)
 	var/list/station_pda_templates = list()
 	/// Helper list containing all station regions.
 	var/list/station_regions = list()
-	/// Helper list containing all centcom regions. // SS1984 ADD START
-	var/list/centcom_regions = list() // SS1984 ADD END
 
 	/// The roundstart generated code for the spare ID safe. This is given to the Captain on shift start. If there's no Captain, it's given to the HoP. If there's no HoP
 	var/spare_id_safe_code = ""
@@ -248,8 +246,8 @@ SUBSYSTEM_DEF(id_access)
 		var/datum/id_trim/job/trim = trim_singletons_by_path[trim_path]
 		if(!length(trim.template_access))
 			continue
-		if (trim.hide_in_templates > TRIM_HIDE_NONE) // SS1984 ADD START
-			continue // SS1984 ADD END
+		if (trim.hide_in_templates > TRIM_HIDE_NONE) // SS1984 ADDITION
+			continue // SS1984 ADDITION
 
 		station_job_templates[trim_path] = trim.assignment
 		for(var/access in trim.template_access)
@@ -264,12 +262,12 @@ SUBSYSTEM_DEF(id_access)
 	var/list/centcom_job_trims = typesof(/datum/id_trim/centcom) - typesof(/datum/id_trim/centcom/corpse) + (/datum/id_trim/job/nanotrasen_consultant)	// SS1984 EDIT ORIGINAL var/list/centcom_job_trims = typesof(/datum/id_trim/centcom) - typesof(/datum/id_trim/centcom/corpse)
 	for(var/trim_path in centcom_job_trims)
 		var/datum/id_trim/trim = trim_singletons_by_path[trim_path]
-		// SS1984 ADD START
+		// SS1984 ADDITION START
 		if (istype(trim, /datum/id_trim/job))
 			var/datum/id_trim/job/trim_job = trim
 			if (trim_job.hide_in_templates > TRIM_HIDE_STATION)
 				continue
-		// SS1984 ADD END
+		// SS1984 ADDITION END
 		centcom_job_templates[trim_path] = trim.assignment
 
 	var/list/all_pda_paths = typesof(/obj/item/modular_computer/pda)

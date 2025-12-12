@@ -26,7 +26,9 @@
 	/// Which departments this program has access to. See region defines.
 	var/target_dept
 	/// if used by someone with centcom living access	// SS1984 ADD START
-	var/centcom_basic = FALSE							// SS1984 ADD END
+	var/centcom_basic = FALSE
+	/// if used by someone with full centcom access
+	var/centcom_full = FALSE							// SS1984 ADD END
 
 /datum/computer_file/program/card_mod/on_install(datum/computer_file/source, obj/item/modular_computer/computer_installing)
 	. = ..()
@@ -64,12 +66,14 @@
 	//	valid_access = is_centcom ? SSid_access.get_region_access_list(list(REGION_CENTCOM)) : SSid_access.get_region_access_list(list(REGION_ALL_STATION))	// SS1984 REMOVAL END
 
 		if(is_centcom) // SS1984 ADD START
-			centcom_basic = TRUE
+			centcom_basic = FALSE
+			centcom_full = TRUE
 			job_templates = SSid_access.centcom_job_templates.Copy()
 			valid_access = SSid_access.get_region_access_list(list(REGION_ALL_CENTCOM))
 			valid_access += SSid_access.get_region_access_list(list(REGION_CENTCOM_NTR))
 		else
 			centcom_basic = FALSE
+			centcom_full = FALSE
 			job_templates = SSid_access.station_job_templates.Copy()
 			valid_access = SSid_access.get_region_access_list(list(REGION_ALL_STATION))
 			if(ACCESS_CENT_OFFICIAL in auth_card.access)
@@ -93,10 +97,11 @@
 
 	if(length(region_access))
 		minor = TRUE
-		if(ACCESS_CENT_OFFICIAL in auth_card.access)//SS1984 ADD START
+		centcom_full = FALSE		//SS1984 ADD START
+		if(ACCESS_CENT_OFFICIAL in auth_card.access)
 			centcom_basic = TRUE
 		else
-			centcom_basic = FALSE //SS1984 ADD END
+			centcom_basic = FALSE	//SS1984 ADD END
 		valid_access |= SSid_access.get_region_access_list(region_access)
 		authenticated_card = "[auth_card.name] \[LIMITED ACCESS\]"
 		computer.update_static_data_for_all_viewers()
@@ -313,12 +318,17 @@
 
 	if(is_centcom)
 		//regions += tgui_region_data[REGION_CENTCOM] //SS1984 Disable
-		for(var/region in SSid_access.centcom_regions) // SS1984 EDIT START
-			if(!(region in region_access))
-				continue
-			regions += tgui_region_data[region]
-		if(centcom_basic)
+		if(centcom_full)
+			for(var/region in SSid_access.centcom_regions) // SS1984 EDIT START
+				regions += tgui_region_data[region]
 			regions += tgui_region_data[REGION_CENTCOM_NTR]
+		else
+			for(var/region in SSid_access.centcom_regions)
+				if(!(region in region_access))
+					continue
+				regions += tgui_region_data[region]
+			if(centcom_basic)
+				regions += tgui_region_data[REGION_CENTCOM_NTR]
 	else
 		for(var/region in SSid_access.station_regions)
 			if((minor || target_dept) && !(region in region_access))
