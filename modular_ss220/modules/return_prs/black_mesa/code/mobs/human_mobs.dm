@@ -148,8 +148,7 @@
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/security_guard/imstickinghere04.ogg',
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/security_guard/imstickinghere05.ogg',
 	)
-	var/follow_speed = 2
-	var/follow_distance = 2
+	follow_speed = 2
 
 /mob/living/simple_animal/hostile/blackmesa/sec/Initialize(mapload)
 	. = ..()

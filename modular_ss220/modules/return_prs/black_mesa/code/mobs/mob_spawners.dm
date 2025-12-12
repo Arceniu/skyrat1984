@@ -2,14 +2,17 @@
 	var/list/alert_sounds
 	var/alert_cooldown = 3 SECONDS
 	var/alert_cooldown_time
+	var/follow_speed = 2
+	var/follow_distance = 2
 
 /mob/living/simple_animal/hostile/blackmesa/AIShouldSleep(list/possible_targets)// no more sleeping blackmesa
-	if(possible_targets)
-		FindTarget(possible_targets)
+	if(possible_targets && (AIStatus != AI_OFF))
 		toggle_ai(AI_ON)
+		FindTarget(possible_targets)
 		return FALSE
 	else
-		toggle_ai(AI_IDLE)
+		if(AIStatus != AI_OFF)
+			toggle_ai(AI_IDLE)
 		return TRUE
 
 /mob/living/simple_animal/hostile/blackmesa/xen
