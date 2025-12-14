@@ -1482,7 +1482,7 @@
 	name = "Bathroom"
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
-/obj/effect/mapping_helpers/airlock/access/all/admin/captain,
+/obj/effect/mapping_helpers/airlock/access/all/admin/officer,
 /turf/open/floor/iron/white,
 /area/centcom/central_command_areas/admin)
 "fO" = (
@@ -1822,7 +1822,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/access/all/admin/storage,
+/obj/effect/mapping_helpers/airlock/access/all/admin/supply,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supply)
 "he" = (
@@ -2521,12 +2521,12 @@
 /area/centcom/central_command_areas/security)
 "jL" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Shuttle Control Office"
+	name = "CentCom Supplypod Bay 4"
 	},
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/access/all/admin/captain,
-/turf/open/floor/iron,
-/area/centcom/central_command_areas/supply)
+/obj/effect/mapping_helpers/airlock/access/all/admin/officer,
+/obj/effect/mapping_helpers/airlock/access/all/admin/supply,
+/turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/supplypod)
 "jM" = (
 /obj/structure/table/wood,
 /obj/item/radio/intercom/syndicate,
@@ -2605,8 +2605,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/access/all/admin/storage,
 /obj/machinery/light/floor,
+/obj/effect/mapping_helpers/airlock/access/all/admin/supply,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supply)
 "ka" = (
@@ -2819,7 +2819,8 @@
 /obj/machinery/door/poddoor/shutters/indestructible{
 	id = "CCSadminstore"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/admin/captain,
+/obj/effect/mapping_helpers/airlock/access/all/admin/officer,
+/obj/effect/mapping_helpers/airlock/access/all/admin/storage,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/admin/storage)
 "kW" = (
@@ -3549,8 +3550,6 @@
 	dir = 8
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/storage,
-/obj/effect/mapping_helpers/airlock/access/any/admin/security,
-/obj/effect/mapping_helpers/airlock/access/any/admin/specops,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/ferry)
 "nU" = (
@@ -5940,6 +5939,14 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/supply)
+"xy" = (
+/obj/machinery/door/airlock/centcom{
+	name = "CentCom Supplypod Bay 3"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/admin/officer,
+/obj/effect/mapping_helpers/airlock/access/all/admin/supply,
+/turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/supplypod)
 "xz" = (
 /obj/item/cardboard_cutout{
 	starting_cutout = "Private Security Officer"
@@ -6207,7 +6214,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/any/admin/living,
+/obj/effect/mapping_helpers/airlock/access/all/admin/living,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/admin)
 "yu" = (
@@ -7643,6 +7650,7 @@
 	name = "CentCom Warehouse"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/supply,
+/obj/effect/mapping_helpers/airlock/access/all/admin/storage,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/supply)
 "Eh" = (
@@ -7832,9 +7840,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/access/any/admin/living,
-/obj/effect/mapping_helpers/airlock/access/any/admin/specops,
 /obj/effect/mapping_helpers/airlock/access/any/admin/captain,
+/obj/effect/mapping_helpers/airlock/access/any/admin/official,
+/obj/effect/mapping_helpers/airlock/access/any/admin/officer,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/control)
 "Fh" = (
@@ -8586,6 +8594,14 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/ferry)
+"Ie" = (
+/obj/machinery/door/airlock/centcom{
+	name = "CentCom Supplypod Bay 2"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/admin/officer,
+/obj/effect/mapping_helpers/airlock/access/all/admin/supply,
+/turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/supplypod)
 "If" = (
 /obj/structure/table/reinforced,
 /obj/item/toy/figure/dsquad{
@@ -11600,8 +11616,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/access/all/admin/storage,
 /obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/access/all/admin/supply,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supply)
 "UA" = (
@@ -12193,6 +12209,14 @@
 /obj/structure/flora/bush/pale/style_random,
 /turf/open/misc/asteroid,
 /area/centcom/tdome/administration)
+"Xm" = (
+/obj/machinery/door/airlock/centcom{
+	name = "CentCom Supplypod Bay 1"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/admin/officer,
+/obj/effect/mapping_helpers/airlock/access/all/admin/supply,
+/turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/supplypod)
 "Xn" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
@@ -12523,8 +12547,6 @@
 	name = "CentCom Supplypod Loading"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/officer,
-/obj/effect/mapping_helpers/airlock/access/any/admin/storage,
-/obj/effect/mapping_helpers/airlock/access/any/admin/supply,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/supplypod)
 "YQ" = (
@@ -54149,7 +54171,7 @@ gP
 Wo
 Wo
 Wo
-jL
+ED
 Wo
 ng
 Wz
@@ -56948,10 +56970,10 @@ QJ
 QJ
 JW
 ao
-YP
+Xm
 Dj
 Dj
-YP
+xy
 hY
 oN
 hY
@@ -57205,10 +57227,10 @@ JW
 JW
 JW
 ao
-YP
+Xm
 OH
 OH
-YP
+xy
 hY
 oN
 hY
@@ -58747,10 +58769,10 @@ YT
 xX
 YT
 hz
-YP
+Ie
 Dj
 Dj
-YP
+jL
 hM
 hM
 ZO
@@ -59004,10 +59026,10 @@ YT
 xX
 YT
 hz
-YP
+Ie
 OH
 OH
-YP
+jL
 hM
 hM
 ZO
