@@ -393,7 +393,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access[ACCESS_CENT_SPECOPS_LEADER] = "CentCom SpecOps Leader"
 	desc_by_access[ACCESS_CENT_SPECOPS_OFFICER] = "CentCom SpecOps Officer"
 	desc_by_access[ACCESS_CENT_ADMIRAL] = "CentCom Admiral"
-  desc_by_access[ACCESS_CENT_FLEET_ADMIRAL] = "CentCom Fleet Admiral" // SS1984 ADD END
+	desc_by_access[ACCESS_CENT_FLEET_ADMIRAL] = "CentCom Fleet Admiral" // SS1984 ADD END
 
 /**
  * Returns the access bitflags associated with any given access level.
