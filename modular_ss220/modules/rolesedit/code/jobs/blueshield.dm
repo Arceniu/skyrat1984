@@ -208,7 +208,7 @@
 	title = JOB_BLUESHIELD
 	description = "Protect heads of staff, get your fancy gun stolen, cry as the captain touches the supermatter."
 	supervisors = "Central Command and the Nanotrasen Consultant"
-	department_head = list(JOB_NT_REP)
+	supervisors = JOB_NT_REP
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	faction = FACTION_STATION
 	total_positions = 1

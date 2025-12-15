@@ -64,7 +64,7 @@
 			// 	new item.item_path(erpbox)
 			// else
 			// SS1984 REMOVAL END
-			if (!item.can_be_applied_to(src, preference_source, equipping_job, allow_mechanical_loadout_items))
+			if (!item.can_be_applied_to(src, preference_source, equipping_job, allow_mechanical_loadout_items, visuals_only))
 				continue
 			new item.item_path(briefcase)
 
@@ -80,7 +80,7 @@
 			// 	new item.item_path(erpbox)
 			// else
 			// SS1984 REMOVAL END
-			if (!item.can_be_applied_to(src, preference_source, equipping_job, allow_mechanical_loadout_items))
+			if (!item.can_be_applied_to(src, preference_source, equipping_job, allow_mechanical_loadout_items, visuals_only))
 				continue
 
 			// Make sure the item is not overriding an important for life outfit item
@@ -142,7 +142,7 @@
 	var/list/loadout_entries = preference_source.read_preference(/datum/preference/loadout)
 	var/list/loadout_datums = loadout_list_to_datums(loadout_entries[preference_source.read_preference(/datum/preference/loadout_index)])
 	for (var/datum/loadout_item/head/item in loadout_datums)
-		if (!item.can_be_applied_to(src, preference_source, equipping_job))
+		if (!item.can_be_applied_to(src, preference_source, equipping_job, visuals_only))
 			continue
 		place_on_head(new item.item_path)
 		break
