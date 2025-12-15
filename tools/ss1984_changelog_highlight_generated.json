@@ -1,5 +1,15 @@
 [
   {
+    "date": "2025-12-15",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Removes Mining ID's and Mining Headset Keys from the Conscript Kit. Makes the kit requires no access so you can be a yanky miner as you always dreamed! Replaces the Explorer suit with a Seva suit, better fitted for civilians trying to be a miner than real monster hunter miners.\"",
+      "Remove non-actual policy text for primitive catgirl ghostrole (ice-dwellers)",
+      "Revert \"Stamina Diode no longer restores SM integrity.\"",
+      "Revert \"You can no longer print soup pots\""
+    ]
+  },
+  {
     "date": "2025-12-11",
     "author": "Arceniu",
     "changes": [
