@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "Revert \"Stamina Diode no longer restores SM integrity.\""

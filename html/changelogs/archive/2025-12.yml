@@ -334,6 +334,8 @@
   vinylspiders:
   - bugfix: plant tanks should now make air again
 2025-12-10:
+  Arceniu:
+  - bugfix: fixed a icebox broken turf
   FlufflesTheDog:
   - bugfix: Fixed some roundstart active turfs on ice box
   muratendmo:
@@ -342,9 +344,10 @@
   - rscadd: Medical Records Computer Board to the Science departmental imprinter.
   sqnztb:
   - bugfix: nova-specific maps should all have proper captain's spare safes now.
-  Arceniu:
-  - bugfix: fixed a icebox broken turf
 2025-12-11:
+  Arceniu:
+  - bugfix: ID upgrade machine(ghost role/event computer) no longer work while broken/not
+      powered
   Geoengi:
   - bugfix: Communications console options should no longer be cut off by default.
   - spellcheck: Adds a space after enable/disable in the engineering emergency override
@@ -367,9 +370,6 @@
       way less awkward and weird.
   dee-dubya:
   - image: Modified the Guepe, Sindano, and all Sol short magazines.
-  Arceniu:
-  - bugfix: ID upgrade machine(ghost role/event computer) no longer work while broken/not
-      powered
 2025-12-14:
   A.C.M.O.:
   - qol: Added Vocal Bark / Blooper options to the Voice Actor quirk.
@@ -402,3 +402,12 @@
   - bugfix: crew monitors should now have the qol from TG that they're supposed to.
   - refactor: blueshield crew monitors have had their code simplified, report any
       issues to github
+2025-12-15:
+  DenIS318:
+  - balance: Revert "Stamina Diode no longer restores SM integrity."
+  - rscdel: Remove non-actual policy text for primitive catgirl ghostrole (ice-dwellers)
+  - balance: Revert "Removes Mining ID's and Mining Headset Keys from the Conscript
+      Kit. Makes the kit requires no access so you can be a yanky miner as you always
+      dreamed! Replaces the Explorer suit with a Seva suit, better fitted for civilians
+      trying to be a miner than real monster hunter miners."
+  - balance: Revert "You can no longer print soup pots"
