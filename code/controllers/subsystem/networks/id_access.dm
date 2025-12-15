@@ -386,14 +386,14 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_CENT_OFFICER]"] = "CentCom Officer"
 	desc_by_access["[ACCESS_BIT_DEN]"] = "Bitrunner Den"
 	desc_by_access["[ACCESS_BARBER]"] = "Barber" // NOVA EDIT ADDITION - BARBER UPDATE
-	desc_by_access["[ACCESS_CENT_SECURITY]"] = "CentCom Security" // SS1984 ADD START
-	desc_by_access["[ACCESS_CENT_OFFICIAL]"] = "CentCom Official"
-	desc_by_access["[ACCESS_CENT_SUPPLY]"] = "CentCom Supply"
-	desc_by_access["[ACCESS_CENT_BLACKOPS]"] = "CentCom Asset Protection"
-	desc_by_access["[ACCESS_CENT_SPECOPS_LEADER]"] = "CentCom SpecOps Leader"
-	desc_by_access["[ACCESS_CENT_SPECOPS_OFFICER]"] = "CentCom SpecOps Officer"
-	desc_by_access["[ACCESS_CENT_ADMIRAL]"] = "CentCom Admiral"
-	desc_by_access["[ACCESS_CENT_FLEET_ADMIRAL]"] = "CentCom Fleet Admiral" // SS1984 ADD END
+	desc_by_access[ACCESS_CENT_SECURITY] = "CentCom Security" // SS1984 ADD START
+	desc_by_access[ACCESS_CENT_OFFICIAL] = "CentCom Official"
+	desc_by_access[ACCESS_CENT_SUPPLY] = "CentCom Supply"
+	desc_by_access[ACCESS_CENT_BLACKOPS] = "CentCom Asset Protection"
+	desc_by_access[ACCESS_CENT_SPECOPS_LEADER] = "CentCom SpecOps Leader"
+	desc_by_access[ACCESS_CENT_SPECOPS_OFFICER] = "CentCom SpecOps Officer"
+	desc_by_access[ACCESS_CENT_ADMIRAL] = "CentCom Admiral"
+	desc_by_access[ACCESS_CENT_FLEET_ADMIRAL] = "CentCom Fleet Admiral" // SS1984 ADD END
 
 /**
  * Returns the access bitflags associated with any given access level.
