@@ -381,14 +381,14 @@
 				affected_mob.ignite_mob()
 				affected_mob.adjust_disgust(2.5)
 				affected_mob.emote("scream")
-				need_mob_update += affected_mob.adjustFireLoss(4 * REM * seconds_per_tick, updating_health = FALSE)
+				need_mob_update += affected_mob.adjust_fire_loss(4 * REM * seconds_per_tick, updating_health = FALSE)
 		else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY) && SPT_PROB(35, seconds_per_tick))
 			if(!IS_CULTIST(affected_mob))
 				affected_mob.adjust_fire_stacks(1)
 				affected_mob.ignite_mob()
 				affected_mob.adjust_disgust(1)
 				affected_mob.emote("scream")
-				need_mob_update += affected_mob.adjustFireLoss(3.5 * REM * seconds_per_tick, updating_health = FALSE) //ss1984 edit end
+				need_mob_update += affected_mob.adjust_fire_loss(3.5 * REM * seconds_per_tick, updating_health = FALSE) //ss1984 edit end
 		else if(HAS_TRAIT(affected_mob, TRAIT_EVIL) && SPT_PROB(25, seconds_per_tick)) //Congratulations, your committment to evil has now made holy water a deadly poison to you!
 			if(!IS_CULTIST(affected_mob) || affected_mob.mind?.holy_role != HOLY_ROLE_PRIEST)
 				affected_mob.emote("scream")
@@ -400,10 +400,10 @@
 			affected_mob.Unconscious(10 SECONDS)
 		else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY) && HAS_TRAIT(affected_mob, TRAIT_EVIL)) //ss1984 edit start
 			if(!IS_CULTIST(affected_mob))
-				need_mob_update += affected_mob.adjustFireLoss(15 * REM * seconds_per_tick, updating_health = FALSE)
+				need_mob_update += affected_mob.adjust_fire_loss(15 * REM * seconds_per_tick, updating_health = FALSE)
 		else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY))
 			if(!IS_CULTIST(affected_mob))
-				need_mob_update += affected_mob.adjustFireLoss(12.5 * REM * seconds_per_tick, updating_health = FALSE) //ss1984 edit end
+				need_mob_update += affected_mob.adjust_fire_loss(12.5 * REM * seconds_per_tick, updating_health = FALSE) //ss1984 edit end
 		else if(HAS_TRAIT(affected_mob, TRAIT_EVIL)) //At this much holy water, you're probably going to fucking melt. good luck
 			if(!IS_CULTIST(affected_mob) || affected_mob.mind?.holy_role != HOLY_ROLE_PRIEST)
 				need_mob_update += affected_mob.adjust_fire_loss(10 * REM * seconds_per_tick, updating_health = FALSE)
@@ -516,25 +516,25 @@
 			if(bloodiest_wound)
 				bloodiest_wound.adjust_blood_flow(-2 * REM * seconds_per_tick)
 	else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY) && HAS_TRAIT(affected_mob, TRAIT_EVIL)) //ss1984 edit add
-		need_mob_update += affected_mob.adjustStaminaLoss(-5 * REM * seconds_per_tick, updating_stamina = FALSE)
-		need_mob_update += affected_mob.adjustToxLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustOxyLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustBruteLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustFireLoss(-1 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_stamina_loss(-5 * REM * seconds_per_tick, updating_stamina = FALSE)
+		need_mob_update += affected_mob.adjust_tox_loss(-1 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_oxy_loss(-1 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_brute_loss(-1 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_fire_loss(-1 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update = TRUE
 	else if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY))
-		need_mob_update += affected_mob.adjustStaminaLoss(-2 * REM * seconds_per_tick, updating_stamina = FALSE)
-		need_mob_update += affected_mob.adjustToxLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustOxyLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustBruteLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustFireLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_stamina_loss(-2 * REM * seconds_per_tick, updating_stamina = FALSE)
+		need_mob_update += affected_mob.adjust_tox_loss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_oxy_loss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.5 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update = TRUE
 	else if(HAS_TRAIT(affected_mob, TRAIT_EVIL))//ss1984 edit end
-		need_mob_update += affected_mob.adjustStaminaLoss(-1 * REM * seconds_per_tick, updating_stamina = FALSE)
-		need_mob_update += affected_mob.adjustToxLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustOxyLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustBruteLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustFireLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_stamina_loss(-1 * REM * seconds_per_tick, updating_stamina = FALSE)
+		need_mob_update += affected_mob.adjust_tox_loss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_oxy_loss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.25 * REM * seconds_per_tick, updating_health = FALSE)
 		need_mob_update = TRUE
 
 	else  // Will deal about 90 damage when 50 units are thrown
