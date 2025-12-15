@@ -16,6 +16,9 @@
 /obj/machinery/computer/id_upgrader/attackby(obj/item/I, mob/user, params)
 	if(I.GetID())
 		var/obj/item/card/id/D = I.GetID()
+		if((machine_stat & (NOPOWER|BROKEN|MAINT)))
+			to_chat(user, "<span class='notice'>This machine appears to be not operational.</span>")
+			return
 		if(!access_to_give.len)
 			to_chat(user, "<span class='notice'>This machine appears to be configured incorrectly.</span>")
 			return

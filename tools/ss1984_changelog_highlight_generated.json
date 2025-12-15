@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-12-11",
+    "author": "Arceniu",
+    "changes": [
+      "ID upgrade machine(ghost role/event computer) no longer work while broken/not powered"
+    ]
+  },
+  {
+    "date": "2025-12-10",
+    "author": "Arceniu",
+    "changes": [
+      "fixed a icebox broken turf"
+    ]
+  },
+  {
     "date": "2025-11-30",
     "author": "DenIS318",
     "changes": [

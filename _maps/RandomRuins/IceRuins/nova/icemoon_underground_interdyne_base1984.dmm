@@ -1968,7 +1968,7 @@
 /obj/machinery/iv_drip,
 /obj/machinery/defibrillator_mount/loaded{
 	pixel_x = 28;
-	req_one_access = null
+    req_one_access = list()
 	},
 /turf/open/floor/iron/white/textured_large,
 /area/ruin/interdyne_planetary_base/med)
