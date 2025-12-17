@@ -1,0 +1,10 @@
+author: "Arceniu"
+delete-after: True
+changes:
+  - rscadd: "Changed CentCom access system, centcom jobs now have separated access to match ranks"
+  - balance: "CentCom Official region now bound to cent_official access, so CentCom interns no longer can use centcom Access console(until they get access from officer)"
+  - bugfix: "TG modular fix - Head CentCom interns now have Head CentCom intern access(was basic intern access)"
+  - qol: "NTR can now add his region access, like office doors access to blueshield(if he lost access somehow)"
+  - code_imp: "Changed CentCom access system, centcom jobs now have separated access to match ranks"
+  - rscadd: "CentCom now separated from debug/start area"
+  - map: "CentCom become sligtly edited, expanded cargo area, added security room"
