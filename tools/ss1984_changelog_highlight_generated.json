@@ -1,5 +1,25 @@
 [
   {
+    "date": "2025-12-17",
+    "author": "Arceniu",
+    "changes": [
+      "Changed CentCom access system, centcom jobs now have separated access to match ranks",
+      "CentCom Official region now bound to cent_official access, so CentCom interns no longer can use centcom Access console(until they get access from officer)",
+      "TG modular fix - Head CentCom interns now have Head CentCom intern access(was basic intern access)",
+      "NTR can now add his region access, like office doors access to blueshield(if he lost access somehow)",
+      "Changed CentCom access system, centcom jobs now have separated access to match ranks",
+      "CentCom now separated from debug/start area",
+      "CentCom become sligtly edited, expanded cargo area, added security room"
+    ]
+  },
+  {
+    "date": "2025-12-17",
+    "author": "DenIS318",
+    "changes": [
+      "\"Compact defib is printable at protolathe again\""
+    ]
+  },
+  {
     "date": "2025-12-15",
     "author": "DenIS318",
     "changes": [
