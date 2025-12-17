@@ -28,12 +28,6 @@
 /// Used to seed the accesses_by_region list in SSid_access. A list of all CENTCOM_NAVAL_ACCESS regional accesses.
 #define REGION_ACCESS_CENTCOM_NAVAL CENTCOM_NAVAL_ACCESS
 
-//nri
-#define ACCESS_NRI "nri"
-#define ACCESS_NRI_POLICE "nri_police"
-
-//SS1984 ADD START
-
 //nrt access and region
 #define NTR_ACCESS list( \
 	ACCESS_CENT_GENERAL, \
@@ -45,7 +39,6 @@
 #define REGION_CENTCOM_NTR "Nanotrasen Official"
 /// Used to seed the accesses_by_region list in SSid_access.
 #define REGION_ACCESS_CENTCOM_NTR NTR_ACCESS
-
 
 //centcom captain access and region
 #define CENTCOM_CAPTAIN_ACCESS list( \
@@ -80,4 +73,7 @@
 	REGION_CENTCOM_CAPTAIN, \
 	REGION_CENTCOM_NAVAL, \
 )
-//SS1984 ADD END
+
+//nri
+#define ACCESS_NRI "nri"
+#define ACCESS_NRI_POLICE "nri_police"
