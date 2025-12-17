@@ -378,17 +378,18 @@
 	ACCESS_CAPTAIN, \
 )
 /// Centcom area stuff. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_CENTCOM)
+//SS1984 EDIT - Added ACCESS_CENT_SUPPLY, ACCESS_CENT_SECURITY, ACCESS_CENT_OFFICIAL, Removed - ACCESS_CENT_CAPTAIN, ACCESS_CENT_OFFICER, ACCESS_CENT_SPECOPS
 #define CENTCOM_ACCESS list( \
 	ACCESS_CENT_BAR, \
-	ACCESS_CENT_CAPTAIN, \
 	ACCESS_CENT_GENERAL, \
 	ACCESS_CENT_LIVING, \
 	ACCESS_CENT_MEDICAL, \
-	ACCESS_CENT_SPECOPS, \
+	ACCESS_CENT_OFFICIAL, \
+	ACCESS_CENT_SECURITY, \
+	ACCESS_CENT_SUPPLY, \
 	ACCESS_CENT_STORAGE, \
 	ACCESS_CENT_TELEPORTER, \
 	ACCESS_CENT_THUNDER, \
-	ACCESS_CENT_OFFICER, \
 )
 
 /// Syndicate areas off station. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_SYNDICATE)
@@ -421,7 +422,8 @@
 /// Name for the Global region.
 #define REGION_ALL_GLOBAL "All"
 /// Used to seed the accesses_by_region list in SSid_access. A list of every single access in the game.
-#define REGION_ACCESS_ALL_GLOBAL REGION_ACCESS_ALL_STATION + CENTCOM_ACCESS + SYNDICATE_ACCESS + AWAY_ACCESS + CULT_ACCESS
+#define REGION_ACCESS_ALL_GLOBAL REGION_ACCESS_ALL_STATION + REGION_ACCESS_ALL_CENTCOM + SYNDICATE_ACCESS + AWAY_ACCESS + CULT_ACCESS
+//SS1984 EDIT original #define REGION_ACCESS_ALL_GLOBAL REGION_ACCESS_ALL_STATION + CENTCOM_ACCESS + SYNDICATE_ACCESS + AWAY_ACCESS + CULT_ACCESS
 /// Name for the Station All Access region.
 #define REGION_ALL_STATION "Station"
 /// Used to seed the accesses_by_region list in SSid_access. A list of all station accesses.
@@ -542,16 +544,6 @@
 /// Used to seed the accesses_by_region list in SSid_access. A list of all CENTCOM_ACCESS regional accesses.
 #define REGION_ACCESS_CENTCOM CENTCOM_ACCESS
 
-//ss1984 edit add
-///name for nanotrasen consultant "region".
-#define REGION_NTR "Nanotrasen Official"
-/// Used to seed the accesses_by_region list in SSid_access.
-#define REGION_ACCESS_NTR list( \
-	ACCESS_CENT_GENERAL, \
-	ACCESS_COMMAND, \
-	ACCESS_VAULT, \
-)
-//ss1984 edit end
 
 /**
  * A list of PDA paths that can be painted as well as the regional heads which should be able to paint them.

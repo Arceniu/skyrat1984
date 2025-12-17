@@ -260,7 +260,7 @@
 	extra_access = list(
 		ACCESS_CHANGE_IDS,
 		ACCESS_COURT,
-
+		ACCESS_CENT_LIVING,
 	)
 	minimal_access = list(
 		ACCESS_ALL_PERSONAL_LOCKERS,

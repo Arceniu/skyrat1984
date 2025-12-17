@@ -65,6 +65,7 @@
 	minimal_access = list(
 		ACCESS_CENT_GENERAL,
 		ACCESS_CENT_LIVING,
+		ACCESS_CENT_OFFICIAL,
 		ACCESS_CHANGE_IDS,
 		ACCESS_COMMAND,
 		ACCESS_AI_UPLOAD,
@@ -200,7 +201,7 @@
 	desc = "Remotely controls airlocks. This remote has specific access. Despite that, holding it makes you feel insecure for some reason."
 	icon = 'modular_ss220/modules/rolesedit/icons/jobs/remote.dmi'
 	department = "ntr"
-	region_access = REGION_NTR
+	region_access = REGION_CENTCOM_NTR
 	our_domain = list( /area/station/ )
 
 /obj/item/card/id/departmental_budget/com
@@ -211,6 +212,9 @@
 	budget_name = "Command Budget"
 	departament_access = ACCESS_CENT_GENERAL
 	radio_channel = RADIO_CHANNEL_CENTCOM
+
+/obj/structure/closet/secure_closet/nanotrasen_consultant
+	req_access = list(ACCESS_CAPTAIN, ACCESS_CENT_LIVING)//blueshield now can access cc rep locker obly in lowpop
 
 /obj/structure/closet/secure_closet/nanotrasen_consultant/PopulateContents()
 	new /obj/item/storage/backpack/satchel/leather(src)
