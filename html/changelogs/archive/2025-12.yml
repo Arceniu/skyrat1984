@@ -411,3 +411,20 @@
       dreamed! Replaces the Explorer suit with a Seva suit, better fitted for civilians
       trying to be a miner than real monster hunter miners."
   - balance: Revert "You can no longer print soup pots"
+2025-12-17:
+  Arceniu:
+  - rscadd: Changed CentCom access system, centcom jobs now have separated access
+      to match ranks
+  - balance: CentCom Official region now bound to cent_official access, so CentCom
+      interns no longer can use centcom Access console(until they get access from
+      officer)
+  - bugfix: TG modular fix - Head CentCom interns now have Head CentCom intern access(was
+      basic intern access)
+  - qol: NTR can now add his region access, like office doors access to blueshield(if
+      he lost access somehow)
+  - code_imp: Changed CentCom access system, centcom jobs now have separated access
+      to match ranks
+  - rscadd: CentCom now separated from debug/start area
+  - map: CentCom become sligtly edited, expanded cargo area, added security room
+  DenIS318:
+  - rscadd: '"Compact defib is printable at protolathe again"'
