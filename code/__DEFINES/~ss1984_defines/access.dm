@@ -31,3 +31,53 @@
 //nri
 #define ACCESS_NRI "nri"
 #define ACCESS_NRI_POLICE "nri_police"
+
+//SS1984 ADD START
+
+//nrt access and region
+#define NTR_ACCESS list( \
+	ACCESS_CENT_GENERAL, \
+	ACCESS_CENT_LIVING, \
+	ACCESS_COMMAND, \
+	ACCESS_VAULT, \
+)
+///name for nanotrasen consultant "region".
+#define REGION_CENTCOM_NTR "Nanotrasen Official"
+/// Used to seed the accesses_by_region list in SSid_access.
+#define REGION_ACCESS_CENTCOM_NTR NTR_ACCESS
+
+
+//centcom captain access and region
+#define CENTCOM_CAPTAIN_ACCESS list( \
+	ACCESS_CENT_CAPTAIN, \
+	ACCESS_CENT_SPECOPS_OFFICER, \
+	ACCESS_CENT_OFFICER, \
+)
+/// Name for the CentCom Captain region.
+#define REGION_CENTCOM_CAPTAIN "Centcom Officer"
+/// Used to seed the accesses_by_region list in SSid_access. A list of all CENTCOM_CAPTAIN_ACCESS regional accesses.
+#define REGION_ACCESS_CENTCOM_CAPTAIN CENTCOM_CAPTAIN_ACCESS
+
+//specops officer access and region
+#define CENTCOM_SPECOPS_ACCESS list( \
+	ACCESS_CENT_BLACKOPS, \
+	ACCESS_CENT_SPECOPS_LEADER, \
+	ACCESS_CENT_SPECOPS, \
+)
+/// Name for the NanoTrasen SPEC ops region.
+#define REGION_CENTCOM_SPECOPS "Nanotrasen Specialops"
+/// Used to seed the accesses_by_region list in SSid_access. A list of all CENTCOM_SPECOPS_ACCESS regional accesses.
+#define REGION_ACCESS_CENTCOM_SPECOPS CENTCOM_SPECOPS_ACCESS
+
+//all centcom access
+#define REGION_ALL_CENTCOM "Centcom"
+/// Used to seed the accesses_by_region list in SSid_access. A list of all centcom accesses.
+#define REGION_ACCESS_ALL_CENTCOM CENTCOM_ACCESS + CENTCOM_SPECOPS_ACCESS + CENTCOM_CAPTAIN_ACCESS + CENTCOM_NAVAL_ACCESS
+
+#define REGION_AREA_CENTCOM list( \
+	REGION_CENTCOM, \
+	REGION_CENTCOM_SPECOPS, \
+	REGION_CENTCOM_CAPTAIN, \
+	REGION_CENTCOM_NAVAL, \
+)
+//SS1984 ADD END
