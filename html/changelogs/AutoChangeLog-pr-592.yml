@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Paper UI two whitespaces no longer translated to {'  \"} on writing"
