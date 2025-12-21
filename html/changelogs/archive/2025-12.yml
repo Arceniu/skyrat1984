@@ -428,3 +428,8 @@
   - map: CentCom become sligtly edited, expanded cargo area, added security room
   DenIS318:
   - rscadd: '"Compact defib is printable at protolathe again"'
+2025-12-21:
+  DenIS318:
+  - bugfix: Returned some missing items on interdyne (cryopod, cargo express circuit
+      boards)
+  - bugfix: Paper UI two whitespaces no longer translated to {'  "} on writing

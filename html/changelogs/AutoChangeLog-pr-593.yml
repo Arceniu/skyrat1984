@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Returned some missing items on interdyne (cryopod, cargo express circuit boards)"
