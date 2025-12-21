@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-12-21",
+    "author": "DenIS318",
+    "changes": [
+      "Paper UI two whitespaces no longer translated to {' \"} on writing",
+      "Returned some missing items on interdyne (cryopod, cargo express circuit boards)"
+    ]
+  },
+  {
     "date": "2025-12-17",
     "author": "Arceniu",
     "changes": [
