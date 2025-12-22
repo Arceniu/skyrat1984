@@ -7118,9 +7118,10 @@
 	dir = 8;
 	dwidth = 8;
 	height = 11;
-	shuttle_id = "ferry_ntf";
+	shuttle_id = "ferry_away";
 	json_key = null;
 	name = "CentCom Station Ferry Dock";
+	roundstart_template = /datum/map_template/shuttle/ferry;
 	width = 20
 	},
 /turf/open/space,
@@ -7893,6 +7894,7 @@
 	dir = 4;
 	dwidth = 25;
 	height = 50;
+	json_key = "emergency";
 	name = "CentCom Emergency Shuttle Dock";
 	shuttle_id = "emergency_away";
 	width = 50
