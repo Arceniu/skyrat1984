@@ -1,5 +1,21 @@
 [
   {
+    "date": "2025-12-22",
+    "author": "Arceniu",
+    "changes": [
+      "fixed missing centcom ferry",
+      "fixed a not working main shuttle",
+      "changed interlink map(no longer contain shuttle dock)"
+    ]
+  },
+  {
+    "date": "2025-12-22",
+    "author": "DenIS318",
+    "changes": [
+      "Nanomaps are also shown for Centcom and Interlink"
+    ]
+  },
+  {
     "date": "2025-12-21",
     "author": "DenIS318",
     "changes": [
