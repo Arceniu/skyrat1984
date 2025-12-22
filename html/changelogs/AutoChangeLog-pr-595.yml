@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - rscadd: "Nanomaps are also shown for Centcom and Interlink"
