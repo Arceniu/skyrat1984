@@ -2,13 +2,22 @@
 
 /datum/controller/subsystem/mapping/loadWorld()
 	. = ..()
-	var/list/FailedZsRat1984 = list()
-	LoadGroup(FailedZsRat1984, "Fore CentCom Dock", "map_files/generic", "CentCom_1984.dmm", default_traits = ZTRAITS_CENTCOM)
-	if(LAZYLEN(FailedZsRat1984))
-		var/msg = "RED ALERT! The following map files failed to load: [FailedZsRat1984[1]]"
-		if(FailedZsRat1984.len > 1)
-			for(var/I in 2 to FailedZsRat1984.len)
-				msg += ", [FailedZsRat1984[I]]"
+	var/list/FailedZsRat1984_interlink = list()
+	LoadGroup(FailedZsRat1984_interlink, "The Interlink", "map_files/generic", "CentCom_interlink_1984.dmm", default_traits = ZTRAITS_CENTCOM)
+	if(LAZYLEN(FailedZsRat1984_interlink))
+		var/msg = "RED ALERT! The following map files failed to load: [FailedZsRat1984_interlink[1]]"
+		if(FailedZsRat1984_interlink.len > 1)
+			for(var/I in 2 to FailedZsRat1984_interlink.len)
+				msg += ", [FailedZsRat1984_interlink[I]]"
+		msg += ". Yell at your server host!"
+		INIT_ANNOUNCE(msg)
+	var/list/FailedZsRat1984_centcom = list()
+	LoadGroup(FailedZsRat1984_centcom, "Fore CentCom Dock", "map_files/generic", "CentCom_1984.dmm", default_traits = ZTRAITS_CENTCOM)
+	if(LAZYLEN(FailedZsRat1984_centcom))
+		var/msg = "RED ALERT! The following map files failed to load: [FailedZsRat1984_centcom[1]]"
+		if(FailedZsRat1984_centcom.len > 1)
+			for(var/I in 2 to FailedZsRat1984_centcom.len)
+				msg += ", [FailedZsRat1984_centcom[I]]"
 		msg += ". Yell at your server host!"
 		INIT_ANNOUNCE(msg)
 
