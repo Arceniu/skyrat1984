@@ -1,0 +1,6 @@
+author: "Arceniu"
+delete-after: True
+changes:
+  - bugfix: "fixed missing centcom ferry"
+  - bugfix: "fixed a not working main shuttle"
+  - map: "changed interlink map(no longer contain shuttle dock)"
