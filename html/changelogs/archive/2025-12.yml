@@ -433,3 +433,10 @@
   - bugfix: Returned some missing items on interdyne (cryopod, cargo express circuit
       boards)
   - bugfix: Paper UI two whitespaces no longer translated to {'  "} on writing
+2025-12-22:
+  Arceniu:
+  - bugfix: fixed missing centcom ferry
+  - bugfix: fixed a not working main shuttle
+  - map: changed interlink map(no longer contain shuttle dock)
+  DenIS318:
+  - rscadd: Nanomaps are also shown for Centcom and Interlink
