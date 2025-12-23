@@ -1,0 +1,6 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - config: "Holidays are back. Merry XMAS!"
+  - qol: "Holidays no longer changes station name"
+  - rscdel: "Pride Week holiday disabled"
