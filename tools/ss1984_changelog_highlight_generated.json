@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-12-23",
+    "author": "DenIS318",
+    "changes": [
+      "Holidays are back. Merry XMAS!",
+      "Holidays no longer changes station name",
+      "Pride Week holiday disabled"
+    ]
+  },
+  {
     "date": "2025-12-22",
     "author": "Arceniu",
     "changes": [
