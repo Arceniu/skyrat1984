@@ -440,3 +440,8 @@
   - map: changed interlink map(no longer contain shuttle dock)
   DenIS318:
   - rscadd: Nanomaps are also shown for Centcom and Interlink
+2025-12-23:
+  DenIS318:
+  - config: Holidays are back. Merry XMAS!
+  - qol: Holidays no longer changes station name
+  - rscdel: Pride Week holiday disabled
