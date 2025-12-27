@@ -445,3 +445,7 @@
   - config: Holidays are back. Merry XMAS!
   - qol: Holidays no longer changes station name
   - rscdel: Pride Week holiday disabled
+2025-12-27:
+  DenIS318:
+  - config: Restart vote is enabled
+  - config: Restart vote is available to players only with < 5 online
