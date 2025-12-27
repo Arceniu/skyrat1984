@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-12-27",
+    "author": "DenIS318",
+    "changes": [
+      "Restart vote is enabled",
+      "Restart vote is available to players only with < 5 online"
+    ]
+  },
+  {
     "date": "2025-12-23",
     "author": "DenIS318",
     "changes": [
