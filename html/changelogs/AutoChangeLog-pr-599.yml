@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - config: "Restart vote is enabled"
+  - config: "Restart vote is available to players only with < 5 online"
