@@ -449,3 +449,6 @@
   DenIS318:
   - config: Restart vote is enabled
   - config: Restart vote is available to players only with < 5 online
+2025-12-29:
+  DenIS318:
+  - bugfix: Missing cargo plates at DS2 added back
