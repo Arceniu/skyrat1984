@@ -143,7 +143,14 @@ ADMIN_VERB(secrets, R_NONE, "Secrets", "Abuse harder than you ever have before w
 
 			var/datum/map_template/thunderdome_template = SSmapping.map_templates[THUNDERDOME_TEMPLATE_FILE]
 			thunderdome_template.should_place_on_top = FALSE
-			var/turf/thunderdome_corner = locate(thunderdome.x - 3, thunderdome.y - 1, 5) // SS1984 ADD, centcom on 5 lvl, debug area on lvl 1
+			var/thunder_z = null // SS1984 ADD START
+			if ((SSmapping.z_list[5]).name == "CentCom Station")
+				thunder_z = 5
+			else if ((SSmapping.z_list[6]).name == "CentCom Station")
+				thunder_z = 6
+			else if ((SSmapping.z_list[5]).name == "CentCom Station")
+				thunder_z = 7
+			var/turf/thunderdome_corner = locate(thunderdome.x - 3, thunderdome.y - 1, (thunder_z)) // SS1984 ADD END, centcom on other lvl, debug area on lvl 1
 //			var/turf/thunderdome_corner = locate(thunderdome.x - 3, thunderdome.y - 1, 1) // have to do a little bit of coord manipulation to get it in the right spot //SS1984 REMOVAL
 			thunderdome_template.load(thunderdome_corner)
 

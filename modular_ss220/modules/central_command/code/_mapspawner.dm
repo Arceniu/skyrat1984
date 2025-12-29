@@ -12,7 +12,7 @@
 		msg += ". Yell at your server host!"
 		INIT_ANNOUNCE(msg)
 	var/list/FailedZsRat1984_centcom = list()
-	LoadGroup(FailedZsRat1984_centcom, "Fore CentCom Dock", "map_files/generic", "CentCom_1984.dmm", default_traits = ZTRAITS_CENTCOM)
+	LoadGroup(FailedZsRat1984_centcom, "CentCom Station", "map_files/generic", "CentCom_1984.dmm", default_traits = ZTRAITS_CENTCOM)
 	if(LAZYLEN(FailedZsRat1984_centcom))
 		var/msg = "RED ALERT! The following map files failed to load: [FailedZsRat1984_centcom[1]]"
 		if(FailedZsRat1984_centcom.len > 1)
