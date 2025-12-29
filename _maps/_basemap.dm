@@ -7,7 +7,7 @@
 
 #ifndef ABSOLUTE_MINIMUM
 //#include "map_files\generic\CentCom.dmm" //SS1984 REMOVAL
-#include "map_files\generic\CentCom_code_1984.dmm"	//SS1984 ADD
+#include "map_files\generic\CentCom_1984.dmm"	//SS1984 ADD
 #else
 #include "map_files\generic\CentCom_minimal.dmm"
 #endif
