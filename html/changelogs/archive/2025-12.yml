@@ -452,3 +452,10 @@
 2025-12-29:
   DenIS318:
   - bugfix: Missing cargo plates at DS2 added back
+2025-12-30:
+  DenIS318:
+  - spellcheck: Translates default bible names and it's related stuff, applies only
+      for new characters (for now)
+  - spellcheck: Translates religion names, applies only for new characters (for now)
+  - spellcheck: 'Localizes anxiety and speech trauma words such as: "Uhm", "Erm",
+      "Um".'

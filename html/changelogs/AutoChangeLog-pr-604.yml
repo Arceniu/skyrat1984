@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - spellcheck: "Translates default bible names and it's related stuff, applies only for new characters (for now)"
-  - spellcheck: "Translates religion names, applies only for new characters (for now)"
