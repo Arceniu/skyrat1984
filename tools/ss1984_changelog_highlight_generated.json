@@ -1,5 +1,14 @@
 [
   {
+    "date": "2025-12-30",
+    "author": "DenIS318",
+    "changes": [
+      "Translates default bible names and it's related stuff, applies only for new characters (for now)",
+      "Translates religion names, applies only for new characters (for now)",
+      "Localizes anxiety and speech trauma words such as: \"Uhm\", \"Erm\", \"Um\"."
+    ]
+  },
+  {
     "date": "2025-12-29",
     "author": "DenIS318",
     "changes": [
