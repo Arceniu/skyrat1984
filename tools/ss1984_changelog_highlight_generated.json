@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-12-31",
+    "author": "DenIS318",
+    "changes": [
+      "Transfer vote (in vote panel) now working as it's tooltip says"
+    ]
+  },
+  {
+    "date": "2025-12-31",
     "author": "Arceniu",
     "changes": [
       "Added Press badge to loadout(awailable to Curator, HOP, Captain, NT Rep)",
