@@ -463,3 +463,5 @@
   Arceniu:
   - rscadd: Added Press badge to loadout(awailable to Curator, HOP, Captain, NT Rep)
   - rscdel: Removed rainbow western pin from loadout, now restricted by config
+  DenIS318:
+  - bugfix: Transfer vote (in vote panel) now working as it's tooltip says
