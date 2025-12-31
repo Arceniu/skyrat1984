@@ -35,5 +35,3 @@
 /obj/docking_port/stationary/centcom/podbay_elevator/podbay
 	shuttle_id = "centcom_supplypod_podbay"
 	name = "CentCom PodBay"
-
-
