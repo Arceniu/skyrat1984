@@ -459,3 +459,7 @@
   - spellcheck: Translates religion names, applies only for new characters (for now)
   - spellcheck: 'Localizes anxiety and speech trauma words such as: "Uhm", "Erm",
       "Um".'
+2025-12-31:
+  Arceniu:
+  - rscadd: Added Press badge to loadout(awailable to Curator, HOP, Captain, NT Rep)
+  - rscdel: Removed rainbow western pin from loadout, now restricted by config

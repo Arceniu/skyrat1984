@@ -1,5 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscadd: "Added Press badge to loadout(awailable to Curator, HOP, Captain, NT Rep)"
-  - rscdel: "Removed rainbow western pin from loadout, now restricted by config"
