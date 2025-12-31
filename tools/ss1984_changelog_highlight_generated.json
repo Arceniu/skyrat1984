@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-12-31",
+    "author": "Arceniu",
+    "changes": [
+      "Added Press badge to loadout(awailable to Curator, HOP, Captain, NT Rep)",
+      "Removed rainbow western pin from loadout, now restricted by config"
+    ]
+  },
+  {
     "date": "2025-12-30",
     "author": "DenIS318",
     "changes": [
