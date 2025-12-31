@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Transfer vote (in vote panel) now working as it's tooltip says"
