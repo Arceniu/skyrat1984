@@ -1,0 +1,5 @@
+2026-01-02:
+  Arceniu:
+  - map: replaces closets with cargo crates at centcom cargo, changed centcom locations
+      - armory, cargo pods
+  - bugfix: fixed some centcom doors access
