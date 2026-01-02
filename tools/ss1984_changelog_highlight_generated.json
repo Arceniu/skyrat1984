@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-01-02",
+    "author": "Arceniu",
+    "changes": [
+      "replaces closets with cargo crates at centcom cargo, changed centcom locations - armory, cargo pods",
+      "fixed some centcom doors access"
+    ]
+  },
+  {
     "date": "2025-12-31",
     "author": "DenIS318",
     "changes": [
