@@ -59,7 +59,3 @@
 /area/centcom/central_command_areas/security
 	name = "Centcom Security"
 	icon_state = "centcom_holding"
-
-/area/centcom/central_command_areas/supplypod/loading/reserve
-	name = "Reserve Bay #1"
-	loading_id = "101"

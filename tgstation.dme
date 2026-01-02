@@ -9417,6 +9417,7 @@
 #include "modular_ss220\modules\central_command\code\_landmarks.dm"
 #include "modular_ss220\modules\central_command\code\_mapspawner.dm"
 #include "modular_ss220\modules\central_command\code\id_painter.dm"
+#include "modular_ss220\modules\central_command\code\shuttle.dm"
 #include "modular_ss220\modules\custom_bank_machine\code\machine.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\client_procs.dm"
 #include "modular_ss220\modules\cyrillic_key_fixes\code\communication.dm"
