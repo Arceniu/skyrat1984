@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "ghostpads (such as DS-2, Interdyne, Tarkon) selling is work again"
