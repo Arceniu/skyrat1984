@@ -3,3 +3,6 @@
   - map: replaces closets with cargo crates at centcom cargo, changed centcom locations
       - armory, cargo pods
   - bugfix: fixed some centcom doors access
+2026-01-03:
+  DenIS318:
+  - bugfix: ghostpads (such as DS-2, Interdyne, Tarkon) selling is work again
