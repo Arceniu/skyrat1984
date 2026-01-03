@@ -122,13 +122,3 @@
 					return 1
 	LoseTarget()
 	return 0
-
-//mesa override
-/mob/living/simple_animal/hostile/blackmesa/LoseTarget()
-	if(!following)
-		GiveTarget(null)
-		approaching_target = FALSE
-		in_melee = FALSE
-		GLOB.move_manager.stop_looping(src)
-		LoseAggro()
-		SEND_SIGNAL(src, COMSIG_HOSTILE_MOB_LOST_TARGET)
