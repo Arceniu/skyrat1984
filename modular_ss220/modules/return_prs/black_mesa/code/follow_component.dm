@@ -7,10 +7,6 @@
  * @author Gandalf2k15
  */
 
-/mob/living/simple_animal/hostile
-	///does our mob following someone?
-	var/following = FALSE
-
 /datum/component/follow
 	/// Sounds we play when the mob starts following.
 	var/list/follow_sounds
@@ -50,7 +46,6 @@
 /datum/component/follow/proc/lost_target()
 	SIGNAL_HANDLER
 	following = FALSE
-	parent_mob.following = following
 
 /datum/component/follow/proc/toggle_follow(datum/source, mob/living/living_user)
 	SIGNAL_HANDLER
@@ -59,7 +54,6 @@
 	if(!parent_mob.faction_check_atom(living_user, FALSE))
 		return //no more following enemy
 	following = !following
-	parent_mob.following = following
 	if(following)
 		if(follow_sounds)
 			playsound(parent_mob, pick(follow_sounds), 100)
@@ -73,52 +67,3 @@
 
 /datum/component/follow/proc/on_examine(datum/source, mob/examiner, list/examine_text)
 	examine_text += "Alt-click to make them follow you!"
-
-//mob proc override
-/mob/living/simple_animal/hostile/MoveToTarget(list/possible_targets)
-	stop_automated_movement = 1
-	if((!target || !CanAttack(target)) && !following)
-		LoseTarget()
-		return 0
-	var/atom/target_from = GET_TARGETS_FROM(src)
-	if(target in possible_targets)
-		var/turf/T = get_turf(src)
-		if(target.z != T.z)
-			LoseTarget()
-			return 0
-		var/target_distance = get_dist(target_from,target)
-		if(ranged)
-			if(!target.Adjacent(target_from) && ranged_cooldown <= world.time)
-				OpenFire(target)
-		if(!Process_Spacemove(0))
-			GLOB.move_manager.stop_looping(src)
-			return 1
-		if(retreat_distance != null)
-			if(target_distance <= retreat_distance)
-				GLOB.move_manager.move_away(src, target, retreat_distance, move_to_delay, flags = MOVEMENT_LOOP_IGNORE_GLIDE)
-			else
-				Goto(target,move_to_delay,minimum_distance)
-		else
-			Goto(target,move_to_delay,minimum_distance)
-		if(target)
-			if(isturf(target_from.loc) && target.Adjacent(target_from))
-				MeleeAction()
-			else
-				if(rapid_melee > 1 && target_distance <= melee_queue_distance)
-					MeleeAction(FALSE)
-				in_melee = FALSE
-			return 1
-		return 0
-	if(environment_smash)
-		if(target.loc != null && get_dist(target_from, target.loc) <= vision_range)
-			if(ranged_ignores_vision && ranged_cooldown <= world.time)
-				OpenFire(target)
-			if(environment_smash >= ENVIRONMENT_SMASH_WALLS)
-				Goto(target,move_to_delay,minimum_distance)
-				FindHidden()
-				return 1
-			else
-				if(FindHidden())
-					return 1
-	LoseTarget()
-	return 0
