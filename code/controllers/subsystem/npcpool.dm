@@ -5,6 +5,7 @@ SUBSYSTEM_DEF(npcpool)
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
 	var/list/currentrun = list()
+	var/list/idlerun = list()	//SS1984 ADD
 
 /datum/controller/subsystem/npcpool/stat_entry(msg)
 	var/list/activelist = GLOB.simple_animals[AI_ON]
@@ -15,10 +16,13 @@ SUBSYSTEM_DEF(npcpool)
 
 	if (!resumed)
 		var/list/activelist = GLOB.simple_animals[AI_ON]
+		var/list/idlelist = GLOB.simple_animals[AI_IDLE]	//SS1984 ADD
 		src.currentrun = activelist.Copy()
+		src.idlerun = idlelist.Copy()	//SS1984 ADD
 
 	//cache for sanic speed (lists are references anyways)
 	var/list/currentrun = src.currentrun
+	var/list/idlerun = src.idlerun	//SS1984 ADD
 
 	while(currentrun.len)
 		var/mob/living/simple_animal/SA = currentrun[currentrun.len]
@@ -38,3 +42,21 @@ SUBSYSTEM_DEF(npcpool)
 				SA.handle_automated_speech()
 		if (MC_TICK_CHECK)
 			return
+	//SS1984 ADD START
+	while(idlerun.len)
+		var/mob/living/simple_animal/ISA = idlerun[idlerun.len]
+		--idlerun.len
+
+		if (QDELETED(ISA))
+			GLOB.simple_animals[AI_IDLE] -= ISA
+			stack_trace("Found a null in simple_animals idle list [ISA.type]!")
+			continue
+
+		if(!ISA.ckey && !HAS_TRAIT(ISA, TRAIT_NO_TRANSFORM))
+			if(ISA.stat != DEAD)
+				ISA.handle_automated_action()
+			if(ISA.stat != DEAD)
+				ISA.handle_automated_speech()
+		if (MC_TICK_CHECK)
+			return
+	//SS1984 ADD END
