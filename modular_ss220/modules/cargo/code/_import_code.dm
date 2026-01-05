@@ -283,7 +283,7 @@
 	if(buyer != SSeconomy.get_dep_account(ACCOUNT_CAR))
 		created_order = new(created_pack, name, rank, ckey, paying_account = buyer, reason = reason, can_be_cancelled = TRUE)
 	else
-		created_pack.goody = FALSE // Cargo ordered stuff should just show up in a box I think
+		created_pack.order_flags &= ~ORDER_GOODY // Cargo ordered stuff should just show up in a box I think
 		created_order = new(created_pack, name, rank, ckey, reason = reason, can_be_cancelled = TRUE)
 	created_order.selected_entry = armament_entry
 	created_order.used_component = src
@@ -352,7 +352,7 @@
 #define CARGO_CUT 0.05
 
 /datum/supply_pack/armament
-	goody = TRUE
+	order_flags = ORDER_GOODY
 	crate_type = /obj/structure/closet/crate/large/import
 
 /datum/supply_pack/armament/generate(atom/A, datum/bank_account/paying_account)

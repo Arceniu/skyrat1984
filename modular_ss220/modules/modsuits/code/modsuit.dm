@@ -189,7 +189,7 @@
 	charge_drain = DEFAULT_CHARGE_DRAIN
 	complexity_max = DEFAULT_MAX_COMPLEXITY - 5
 	slowdown_deployed = 0.25
-	inbuilt_modules = list(/obj/item/mod/module/hearing_protection)
+	hearing_protection = EAR_PROTECTION_NORMAL
 	allowed_suit_storage = list(
 		/obj/item/assembly/flash,
 		/obj/item/melee/baton,
