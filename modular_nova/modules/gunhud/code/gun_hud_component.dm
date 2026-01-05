@@ -11,6 +11,10 @@
 		RegisterSignals(target, list(COMSIG_UPDATE_AMMO_HUD, COMSIG_GUN_CHAMBER_PROCESSED), PROC_REF(update_ballistic))
 	else if(istype(target, /obj/item/gun/energy))
 		RegisterSignals(target, list(COMSIG_UPDATE_AMMO_HUD, COMSIG_GUN_CHAMBER_PROCESSED), PROC_REF(update_energy))
+	// SS1984 ADDITION START
+	else if(istype(target, /obj/item/gun/microfusion))
+		RegisterSignals(target, list(COMSIG_UPDATE_AMMO_HUD, COMSIG_GUN_CHAMBER_PROCESSED), PROC_REF(update_microfusion))
+	// SS1984 ADDITION END
 	else // non guns don't need the chamber_processed signal registered
 		RegisterSignal(target, COMSIG_UPDATE_AMMO_HUD, PROC_REF(update_welder))
 
@@ -40,6 +44,10 @@
 			update_ballistic(source)
 		else if(istype(source, /obj/item/gun/energy))
 			update_energy(source)
+		// SS1984 ADDITION START
+		else if(istype(source, /obj/item/gun/microfusion))
+			update_microfusion(source)
+		// SS1984 ADDITION END
 		else
 			update_welder(source)
 
@@ -213,45 +221,6 @@
 /obj/item/gun/ballistic/bow/get_accurate_ammo_count()
 	return get_ammo(countchambered = FALSE)
 
-// ss1984 edit start
-	else if(istype(parent, /obj/item/gun/microfusion))
-		var/obj/item/gun/microfusion/parent_gun = parent
-		if(!parent_gun.phase_emitter)
-			hud.icon_state = "microfusion_counter_no_emitter"
-			hud.maptext = null
-			return
-		if(parent_gun.phase_emitter.damaged)
-			hud.icon_state = "microfusion_counter_damaged"
-			hud.maptext = null
-			return
-		if(!parent_gun.cell)
-			hud.icon_state = "microfusion_counter_no_emitter"
-			hud.maptext = null
-			return
-		var/obj/item/ammo_casing/energy/shot = parent_gun.microfusion_lens
-		var/battery_percent = FLOOR(clamp(parent_gun.cell.charge / parent_gun.cell.maxcharge, 0, 1) * 100, 1)
-		var/shot_cost_percent = FLOOR(clamp(shot.e_cost / parent_gun.cell.maxcharge, 0, 1) * 100, 1)
-		var/phase_emitter_state = parent_gun.phase_emitter.get_heat_icon_state()
-		if(!parent_gun.cell.charge)
-			hud.icon_state = "microfusion_counter_[phase_emitter_state]"
-			hud.maptext = span_maptext("<div align='center' valign='middle' style='position:relative'><font color='[COLOR_YELLOW]'>[battery_percent]%</font><br><font color='[COLOR_RED]'>[shot_cost_percent]%</font></div>")
-			return
-		hud.icon_state = "microfusion_counter_[phase_emitter_state]"
-		hud.cut_overlays()
-		hud.maptext_x = -12
-		if(battery_percent > 99 || shot_cost_percent > 99)
-			hud.maptext_x = -12
-		else
-			hud.maptext_x = -8
-		if(!parent_gun.can_shoot())
-			hud.icon_state = "microfusion_counter_[phase_emitter_state]"
-			hud.maptext = span_maptext("<div align='center' valign='middle' style='position:relative'><font color='[COLOR_YELLOW]'>[battery_percent]%</font><br><font color='[COLOR_RED]'>[shot_cost_percent]%</font></div>")
-			return
-		if(battery_percent <= 25)
-			hud.maptext = span_maptext("<div align='center' valign='middle' style='position:relative'><font color='[COLOR_YELLOW]'>[battery_percent]%</font><br><font color='[COLOR_CYAN]'>[shot_cost_percent]%</font></div>")
-			return
-		hud.maptext = span_maptext("<div align='center' valign='middle' style='position:relative'><font color='[COLOR_VIBRANT_LIME]'>[battery_percent]%</font><br><font color='[COLOR_CYAN]'>[shot_cost_percent]%</font></div>")
-// ss1984 edit end
 /obj/item/gun/ballistic/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/ammo_hud)

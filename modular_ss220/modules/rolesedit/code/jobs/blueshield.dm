@@ -83,7 +83,8 @@
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	siemens_coefficient = 0
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 3
-	inbuilt_modules = list(/obj/item/mod/module/shove_blocker/locked, /obj/item/mod/module/hearing_protection)
+	inbuilt_modules = list(/obj/item/mod/module/shove_blocker/locked)
+	hearing_protection = EAR_PROTECTION_NORMAL
 
 /obj/item/mod/control/pre_equipped/blueshield
 	req_access = list(ACCESS_CENT_GENERAL)

@@ -1,7 +1,7 @@
-/datum/component/remote_materials
+/datum/remote_materials
 	var/allow_link_from_mining = TRUE
 
-/datum/component/remote_materials/check_z_level(obj/silo_to_check = silo)
+/datum/remote_materials/check_z_level(obj/silo_to_check = silo)
 	. = ..()
 	if (!.)
 		if (!allow_link_from_mining) // vanila way
