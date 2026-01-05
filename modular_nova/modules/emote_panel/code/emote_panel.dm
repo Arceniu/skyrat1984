@@ -38,7 +38,7 @@
 		/mob/living/proc/emote_laugh,
 		/mob/living/proc/emote_look,
 		/mob/living/proc/emote_nod,
-		/mob/living/proc/emote_nodnod,
+		// SS1984 REMOVAL /mob/living/proc/emote_nodnod,
 		/mob/living/proc/emote_point,
 		/mob/living/proc/emote_pout,
 		/mob/living/proc/emote_scream,
@@ -114,6 +114,8 @@
 	// 	/mob/living/proc/emote_merp,
 	// 	/mob/living/proc/emote_bark,
 	// 	/mob/living/proc/emote_squish,
+		// /mob/living/proc/emote_bubble,
+		// /mob/living/proc/emote_pop,
 	// 	/mob/living/proc/emote_meow,
 	// 	/mob/living/proc/emote_hiss1,
 	// 	/mob/living/proc/emote_chitter,
@@ -162,7 +164,11 @@
 		// /mob/living/proc/emote_dgrowl,
 		// /mob/living/proc/emote_aggrobark,
 		// /mob/living/proc/emote_dcomplain,
-		// /mob/living/proc/emote_meowdeep
+		// /mob/living/proc/emote_meowdeep,
+		// /mob/living/proc/emote_teshchirp,
+		// /mob/living/proc/emote_teshsqueak,
+		// /mob/living/proc/emote_teshtrill,
+		// /mob/living/proc/emote_gecker,
 	// )
 	// all_emotes += nova_living_emotes
 	// SS1984 REMOVAL END
@@ -413,10 +419,12 @@
 	set category = "Emotes"
 	usr.emote("nod", intentional = TRUE)
 
-/mob/living/proc/emote_nodnod()
-	set name = "~ Nodnod"
-	set category = "Emotes"
-	usr.emote("nod2", intentional = TRUE)
+// SS1984 REMOVAL START
+// /mob/living/proc/emote_nodnod()
+// 	set name = "~ Nodnod"
+// 	set category = "Emotes"
+// 	usr.emote("nod2", intentional = TRUE)
+// SS1984 REMOVAL END
 
 /mob/living/proc/emote_point()
 	set name = "~ Указывать" // SS1984 EDIT
@@ -690,6 +698,11 @@
 	set category = "Emotes+"
 	usr.emote("yip", intentional = TRUE)
 
+/mob/living/proc/emote_gecker()
+	set name = "> Gecker"
+	set category = "Emotes+"
+	usr.emote("gecker", intentional = TRUE)
+
 /mob/living/proc/emote_fwhine()
 	set name = "> Fox Whine"
 	set category = "Emotes+"
@@ -729,6 +742,16 @@
 	set name = "> Squish"
 	set category = "Emotes+"
 	usr.emote("squish", intentional = TRUE)
+
+/mob/living/proc/emote_bubble()
+	set name = "> Bubble"
+	set category = "Emotes+"
+	usr.emote("bubble", intentional = TRUE)
+
+/mob/living/proc/emote_pop()
+	set name = "> Pop"
+	set category = "Emotes+"
+	usr.emote("pop", intentional = TRUE)
 
 /mob/living/proc/emote_meow()
 	set name = "> Meow"
@@ -963,6 +986,21 @@
 	set name = "> Meow Deeply"
 	set category = "Emotes+"
 	usr.emote("meowdeep", intentional = TRUE)
+
+/mob/living/proc/emote_teshchirp()
+	set name = "> Tesh Chirp"
+	set category = "Emotes+"
+	usr.emote("teshchirp", intentional = TRUE)
+
+/mob/living/proc/emote_teshsqueak()
+	set name = "> Tesh Squeak"
+	set category = "Emotes+"
+	usr.emote("teshsqueak", intentional = TRUE)
+
+/mob/living/proc/emote_teshtrill()
+	set name = "> Tesh Trill"
+	set category = "Emotes+"
+	usr.emote("teshtrill", intentional = TRUE)
 
 SS1984 REMOVAL END */
 

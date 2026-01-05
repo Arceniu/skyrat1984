@@ -11,6 +11,8 @@
 	sound_vary = TRUE
 	unique_reskin_changes_base_icon_state = TRUE
 
+	min_recoil = 0.1
+
 	///sound when inserting magazine
 	var/load_sound = 'sound/items/weapons/gun/general/magazine_insert_full.ogg'
 	///sound when inserting an empty magazine
@@ -563,7 +565,7 @@
 	if (chambered && !chambered.loaded_projectile)
 		chambered.forceMove(drop_location())
 		chambered.update_appearance() // SS1984 ADDITION
-		if(magazine && magazine.stored_ammo.len > 0 && chambered != magazine.stored_ammo[1]) // SS1984 EDIT, original: if(chambered != magazine?.stored_ammo[1])
+		if(magazine && magazine.stored_ammo.len > 0 && chambered != magazine.stored_ammo[1]) // SS1984 EDIT, original: if(length(magazine?.stored_ammo) && chambered != magazine.stored_ammo[1])
 			magazine.stored_ammo -= chambered
 		set_chambered(null) // SS1984 EDIT, original: chambered = null
 
