@@ -9,7 +9,7 @@
 		hud.icon_state = "microfusion_counter_no_emitter"
 		hud.maptext = null
 		return
-	if(!to_update.phase_emitter.damaged)
+	if(to_update.phase_emitter.damaged)
 		hud.icon_state = "microfusion_counter_damaged"
 		hud.maptext = null
 		return
