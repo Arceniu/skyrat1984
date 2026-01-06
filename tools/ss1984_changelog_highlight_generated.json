@@ -1,5 +1,78 @@
 [
   {
+    "date": "2026-01-06",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Removed the recipe for the Hulk and Ork Gene\"",
+      "World name (such as displayed at top of game window) is now consistent and no longer uses station name",
+      "Shuttle call time on green & blue codes 15 -> 10 minutes",
+      "Shuttle call time starting on red code 15 -> 5 minutes"
+    ]
+  },
+  {
+    "date": "2026-01-03",
+    "author": "DenIS318",
+    "changes": [
+      "ghostpads (such as DS-2, Interdyne, Tarkon) selling is work again"
+    ]
+  },
+  {
+    "date": "2026-01-02",
+    "author": "Arceniu",
+    "changes": [
+      "replaces closets with cargo crates at centcom cargo, changed centcom locations - armory, cargo pods",
+      "fixed some centcom doors access"
+    ]
+  },
+  {
+    "date": "2025-12-31",
+    "author": "DenIS318",
+    "changes": [
+      "Transfer vote (in vote panel) now working as it's tooltip says"
+    ]
+  },
+  {
+    "date": "2025-12-31",
+    "author": "Arceniu",
+    "changes": [
+      "Added Press badge to loadout(awailable to Curator, HOP, Captain, NT Rep)",
+      "Removed rainbow western pin from loadout, now restricted by config"
+    ]
+  },
+  {
+    "date": "2025-12-30",
+    "author": "DenIS318",
+    "changes": [
+      "Translates default bible names and it's related stuff, applies only for new characters (for now)",
+      "Translates religion names, applies only for new characters (for now)",
+      "Localizes anxiety and speech trauma words such as: \"Uhm\", \"Erm\", \"Um\"."
+    ]
+  },
+  {
+    "date": "2025-12-29",
+    "author": "DenIS318",
+    "changes": [
+      "Missing cargo plates at DS2 added back"
+    ]
+  },
+  {
+    "date": "2025-12-27",
+    "author": "DenIS318",
+    "changes": [
+      "Restart vote is enabled",
+      "Restart vote is available to players only with < 5 online"
+    ]
+  },
+  {
+    "date": "2025-12-23",
+    "author": "DenIS318",
+    "changes": [
+      "Holidays are back. Merry XMAS!",
+      "Holidays no longer changes station name",
+      "Pride Week holiday disabled"
+    ]
+  },
+  {
     "date": "2025-12-22",
     "author": "Arceniu",
     "changes": [

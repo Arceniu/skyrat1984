@@ -4366,10 +4366,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
 	},
-/obj/structure/sign/departments/cargo{
-	pixel_y = 32;
-	dir = 1
-	},
+/obj/structure/sign/departments/cargo/directional/north,
 /obj/effect/turf_decal/trimline/neutral/filled/warning{
 	dir = 1
 	},
@@ -14924,6 +14921,7 @@
 	},
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/item/radio/intercom/directional/south,
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science)
 "eaq" = (
@@ -18309,6 +18307,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "fnZ" = (
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science)
 "fof" = (
@@ -19492,10 +19491,7 @@
 	anchored = 1
 	},
 /obj/effect/turf_decal/bot,
-/obj/structure/sign/warning/vacuum/external{
-	pixel_y = 32;
-	dir = 1
-	},
+/obj/structure/sign/warning/vacuum/external/directional/north,
 /turf/open/floor/plating,
 /area/station/ai/satellite/foyer)
 "fLE" = (
@@ -20109,10 +20105,7 @@
 /turf/open/floor/wood/large,
 /area/station/service/barber)
 "fXf" = (
-/obj/structure/sign/warning/vacuum/external{
-	pixel_y = 32
-	},
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/sign/warning/vacuum/external/directional/west,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/entry)
 "fXl" = (
@@ -20703,10 +20696,7 @@
 /obj/effect/turf_decal/trimline/neutral/corner{
 	dir = 1
 	},
-/obj/structure/sign/departments/cargo{
-	pixel_y = 32;
-	dir = 1
-	},
+/obj/structure/sign/departments/cargo/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/primary/tram/right)
 "giT" = (
@@ -36845,10 +36835,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/miningdock)
 "lJu" = (
-/obj/structure/sign/warning/vacuum/external{
-	pixel_x = -32;
-	dir = 8
-	},
+/obj/structure/sign/warning/vacuum/external/directional/west,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 9
 	},
@@ -49646,6 +49633,7 @@
 "qsm" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/structure/sign/poster/official/safety_report/directional/south,
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science)
 "qsJ" = (
@@ -51430,9 +51418,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Escape Airlock"
 	},
-/obj/structure/sign/warning/vacuum/external{
-	pixel_y = 32
-	},
+/obj/structure/sign/warning/vacuum/external/directional/north,
 /turf/open/floor/plating,
 /area/station/hallway/secondary/exit/departure_lounge)
 "qYV" = (
@@ -54024,10 +54010,7 @@
 /turf/open/floor/iron/white,
 /area/station/commons/vacant_room)
 "rTm" = (
-/obj/structure/sign/warning/vacuum/external{
-	pixel_x = 32;
-	dir = 4
-	},
+/obj/structure/sign/warning/vacuum/external/directional/east,
 /obj/machinery/computer/security/labor,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
@@ -71598,6 +71581,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science)
 "ybZ" = (
@@ -145631,7 +145615,7 @@ tPE
 qnv
 tld
 nmY
-fXf
+nmY
 nmY
 pMW
 pMW
@@ -145888,7 +145872,7 @@ tPE
 rhF
 jEu
 mlu
-tCT
+fXf
 kHa
 pMW
 pMW
@@ -147687,7 +147671,7 @@ iyc
 hfy
 jEu
 mlu
-tCT
+fXf
 kHa
 pMW
 pMW
@@ -147944,7 +147928,7 @@ jde
 kIZ
 aVT
 nmY
-fXf
+nmY
 nmY
 pMW
 pMW
