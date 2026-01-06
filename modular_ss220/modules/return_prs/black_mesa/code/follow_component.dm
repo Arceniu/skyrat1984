@@ -6,7 +6,6 @@
  *
  * @author Gandalf2k15
  */
-
 /datum/component/follow
 	/// Sounds we play when the mob starts following.
 	var/list/follow_sounds
