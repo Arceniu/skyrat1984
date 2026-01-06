@@ -2923,6 +2923,12 @@
 /obj/item/flashlight/lamp,
 /obj/machinery/status_display/evac/directional/south,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/button/door/indestructible{
+	id = "CCSadminstore";
+	name = "Administrative Storage Shutters";
+	req_access = list("cent_captain");
+	pixel_x = -27
+	},
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/admin)
 "lD" = (
@@ -5216,9 +5222,10 @@
 /obj/item/kirbyplants/organic/plant21,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/button/door/indestructible{
-	id = "CCsec3";
+	id = "XCCertstore";
 	name = "CentCom Armory";
-	pixel_y = -28
+	pixel_y = -28;
+	req_access = list("cent_specops_officer")
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/briefing)
