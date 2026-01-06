@@ -27,7 +27,7 @@
 		return
 
 	var/need_mob_update = FALSE
-	need_mob_update += owner.adjustStaminaLoss(stamina_per_second * seconds_between_ticks, updating_stamina = FALSE)
+	need_mob_update += owner.adjust_stamina_loss(stamina_per_second * seconds_between_ticks, updating_stamina = FALSE)
 	need_mob_update += owner.apply_damage(damage_per_second * seconds_between_ticks, damage_type)
 	if (need_mob_update)
 		owner.updatehealth()

@@ -11,20 +11,20 @@
 
 # CENTRAL COMMAND MAP TEMPLATES
 # CC Ferry Dock - Admin Shuttle
-[templates.centcom_ferry_dock]
-map_files = ["centcom_ferry_dock.dmm"]
-directory = "_maps/nova/automapper/templates/centcom/"
-required_map = "builtin"
-coordinates = [128, 79, 1]
-trait_name = "CentCom"
+# [templates.centcom_ferry_dock] //SS1984 REMOVAL START
+# map_files = ["centcom_ferry_dock.dmm"]
+# directory = "_maps/nova/automapper/templates/centcom/"
+# required_map = "builtin"
+# coordinates = [128, 79, 1]
+# trait_name = "CentCom" //SS1984 REMOVAL END
 
 # CC Evac Docking Port Removal
-[templates.centcom_shuttle_dock]
-map_files = ["centcom_shuttle_dock.dmm"]
-directory = "_maps/nova/automapper/templates/centcom/"
-required_map = "builtin"
-coordinates = [206, 85, 1]
-trait_name = "CentCom"
+# [templates.centcom_shuttle_dock] //SS1984 REMOVAL START
+# map_files = ["centcom_shuttle_dock.dmm"]
+# directory = "_maps/nova/automapper/templates/centcom/"
+# required_map = "builtin"
+# coordinates = [206, 85, 1]
+# trait_name = "CentCom" //SS1984 REMOVAL END
 
 # METASTATION MAP TEMPLATES
 # Metastation Arrivals
@@ -437,7 +437,7 @@ trait_name = "Station"
 map_files = ["catwalkstation_supermatter.dmm"]
 directory = "_maps/nova/automapper/templates/catwalkstation/"
 required_map = "CatwalkStation_2023.dmm"
-coordinates = [172, 163, 1]
+coordinates = [173, 163, 1]
 trait_name = "Station"
 
 #Catwalkstation NTRep Office
@@ -445,7 +445,15 @@ trait_name = "Station"
 map_files = ["catwalkstation_ntrep_office.dmm"]
 directory = "_maps/nova/automapper/templates/catwalkstation/"
 required_map = "CatwalkStation_2023.dmm"
-coordinates = [114, 150, 1]
+coordinates = [115, 123, 1]
+trait_name = "Station"
+
+#Catwalkstation NTRep Office Upper
+[templates.catwalkstation_ntrep_office_upper]
+map_files = ["catwalkstation_ntrep_office_upper.dmm"]
+directory = "_maps/nova/automapper/templates/catwalkstation/"
+required_map = "CatwalkStation_2023.dmm"
+coordinates = [115, 123, 2]
 trait_name = "Station"
 
 #Catwalkstation Arrivals
@@ -461,7 +469,7 @@ trait_name = "Station"
 map_files = ["catwalkstation_cryo.dmm"]
 directory = "_maps/nova/automapper/templates/catwalkstation/"
 required_map = "CatwalkStation_2023.dmm"
-coordinates = [132, 149, 1]
+coordinates = [129, 151, 1]
 trait_name = "Station"
 
 #Catwalkstation Armory
@@ -469,7 +477,7 @@ trait_name = "Station"
 map_files = ["catwalkstation_armory.dmm"]
 directory = "_maps/nova/automapper/templates/catwalkstation/"
 required_map = "CatwalkStation_2023.dmm"
-coordinates = [68, 129, 2]
+coordinates = [68, 130, 2]
 trait_name = "Station"
 
 #Catwalkstation Barber

@@ -1,5 +1,162 @@
 [
   {
+    "date": "2026-01-06",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Removed the recipe for the Hulk and Ork Gene\"",
+      "World name (such as displayed at top of game window) is now consistent and no longer uses station name",
+      "Shuttle call time on green & blue codes 15 -> 10 minutes",
+      "Shuttle call time starting on red code 15 -> 5 minutes"
+    ]
+  },
+  {
+    "date": "2026-01-03",
+    "author": "DenIS318",
+    "changes": [
+      "ghostpads (such as DS-2, Interdyne, Tarkon) selling is work again"
+    ]
+  },
+  {
+    "date": "2026-01-02",
+    "author": "Arceniu",
+    "changes": [
+      "replaces closets with cargo crates at centcom cargo, changed centcom locations - armory, cargo pods",
+      "fixed some centcom doors access"
+    ]
+  },
+  {
+    "date": "2025-12-31",
+    "author": "DenIS318",
+    "changes": [
+      "Transfer vote (in vote panel) now working as it's tooltip says"
+    ]
+  },
+  {
+    "date": "2025-12-31",
+    "author": "Arceniu",
+    "changes": [
+      "Added Press badge to loadout(awailable to Curator, HOP, Captain, NT Rep)",
+      "Removed rainbow western pin from loadout, now restricted by config"
+    ]
+  },
+  {
+    "date": "2025-12-30",
+    "author": "DenIS318",
+    "changes": [
+      "Translates default bible names and it's related stuff, applies only for new characters (for now)",
+      "Translates religion names, applies only for new characters (for now)",
+      "Localizes anxiety and speech trauma words such as: \"Uhm\", \"Erm\", \"Um\"."
+    ]
+  },
+  {
+    "date": "2025-12-29",
+    "author": "DenIS318",
+    "changes": [
+      "Missing cargo plates at DS2 added back"
+    ]
+  },
+  {
+    "date": "2025-12-27",
+    "author": "DenIS318",
+    "changes": [
+      "Restart vote is enabled",
+      "Restart vote is available to players only with < 5 online"
+    ]
+  },
+  {
+    "date": "2025-12-23",
+    "author": "DenIS318",
+    "changes": [
+      "Holidays are back. Merry XMAS!",
+      "Holidays no longer changes station name",
+      "Pride Week holiday disabled"
+    ]
+  },
+  {
+    "date": "2025-12-22",
+    "author": "Arceniu",
+    "changes": [
+      "fixed missing centcom ferry",
+      "fixed a not working main shuttle",
+      "changed interlink map(no longer contain shuttle dock)"
+    ]
+  },
+  {
+    "date": "2025-12-22",
+    "author": "DenIS318",
+    "changes": [
+      "Nanomaps are also shown for Centcom and Interlink"
+    ]
+  },
+  {
+    "date": "2025-12-21",
+    "author": "DenIS318",
+    "changes": [
+      "Paper UI two whitespaces no longer translated to {' \"} on writing",
+      "Returned some missing items on interdyne (cryopod, cargo express circuit boards)"
+    ]
+  },
+  {
+    "date": "2025-12-17",
+    "author": "Arceniu",
+    "changes": [
+      "Changed CentCom access system, centcom jobs now have separated access to match ranks",
+      "CentCom Official region now bound to cent_official access, so CentCom interns no longer can use centcom Access console(until they get access from officer)",
+      "TG modular fix - Head CentCom interns now have Head CentCom intern access(was basic intern access)",
+      "NTR can now add his region access, like office doors access to blueshield(if he lost access somehow)",
+      "Changed CentCom access system, centcom jobs now have separated access to match ranks",
+      "CentCom now separated from debug/start area",
+      "CentCom become sligtly edited, expanded cargo area, added security room"
+    ]
+  },
+  {
+    "date": "2025-12-17",
+    "author": "DenIS318",
+    "changes": [
+      "\"Compact defib is printable at protolathe again\""
+    ]
+  },
+  {
+    "date": "2025-12-15",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Removes Mining ID's and Mining Headset Keys from the Conscript Kit. Makes the kit requires no access so you can be a yanky miner as you always dreamed! Replaces the Explorer suit with a Seva suit, better fitted for civilians trying to be a miner than real monster hunter miners.\"",
+      "Remove non-actual policy text for primitive catgirl ghostrole (ice-dwellers)",
+      "Revert \"Stamina Diode no longer restores SM integrity.\"",
+      "Revert \"You can no longer print soup pots\""
+    ]
+  },
+  {
+    "date": "2025-12-11",
+    "author": "Arceniu",
+    "changes": [
+      "ID upgrade machine(ghost role/event computer) no longer work while broken/not powered"
+    ]
+  },
+  {
+    "date": "2025-12-10",
+    "author": "Arceniu",
+    "changes": [
+      "fixed a icebox broken turf"
+    ]
+  },
+  {
+    "date": "2025-11-30",
+    "author": "DenIS318",
+    "changes": [
+      "Movement Delay 1.8 -> 1.5 (TG)",
+      "Mech movement delay 1.8 -> 1.5 (TG). Both can be changed back at 21.12.2025 (read PR or discord for more, needs Skyrat role)"
+    ]
+  },
+  {
+    "date": "2025-11-30",
+    "author": "Arceniu",
+    "changes": [
+      "Returned old crit",
+      "Removed \"RP\" crit"
+    ]
+  },
+  {
     "date": "2025-11-27",
     "author": "Arceniu",
     "changes": [

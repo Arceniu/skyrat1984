@@ -146,13 +146,13 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	var/say_radio_or_mode = saymode || message_mods[RADIO_EXTENSION]
 	if(say_radio_or_mode)
 		var/mob_stat_limit = GLOB.message_modes_stat_limits[say_radio_or_mode]
-		if(stat > (isnull(mob_stat_limit) ? SOFT_CRIT : mob_stat_limit)) // SS1984 EDIT, original: if(stat > (isnull(mob_stat_limit) ? CONSCIOUS : mob_stat_limit))
+		if(stat > (isnull(mob_stat_limit) ? CONSCIOUS : mob_stat_limit))
 			saymode = null
 			message_mods -= RADIO_EXTENSION
 
 	switch(stat)
-		//if(SOFT_CRIT) SS1984 EDIT
-		//	message_mods[WHISPER_MODE] = MODE_WHISPER
+		if(SOFT_CRIT)
+			message_mods[WHISPER_MODE] = MODE_WHISPER
 		if(UNCONSCIOUS)
 			return
 		if(HARD_CRIT)

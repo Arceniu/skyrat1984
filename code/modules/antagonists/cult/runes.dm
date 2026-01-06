@@ -158,7 +158,7 @@ structure_check() searches for nearby cultist structures required for the invoca
 				continue
 			if(!cultist.can_speak(allow_mimes = TRUE))
 				continue
-			if(cultist.stat > SOFT_CRIT)
+			if(cultist.stat != CONSCIOUS)
 				continue
 			invokers += cultist
 
@@ -290,11 +290,11 @@ structure_check() searches for nearby cultist structures required for the invoca
 			to_chat(invoker, span_warning("Something is shielding [convertee]'s mind!"))
 		return FALSE
 
-	var/brutedamage = convertee.getBruteLoss()
-	var/burndamage = convertee.getFireLoss()
+	var/brutedamage = convertee.get_brute_loss()
+	var/burndamage = convertee.get_fire_loss()
 	if(brutedamage || burndamage)
-		convertee.adjustBruteLoss(-(brutedamage * 0.75))
-		convertee.adjustFireLoss(-(burndamage * 0.75))
+		convertee.adjust_brute_loss(-(brutedamage * 0.75))
+		convertee.adjust_fire_loss(-(burndamage * 0.75))
 
 	convertee.visible_message(
 		span_warning("[convertee] writhes in pain [(brutedamage || burndamage) \
@@ -1043,7 +1043,7 @@ GLOBAL_VAR_INIT(narsie_summon_count, 0)
 		to_chat(new_human, span_cult_italic("<b>You are a servant of the Geometer. You have been made semi-corporeal by the cult of Nar'Sie, and you are to serve them at all costs.</b>"))
 
 		while(!QDELETED(src) && !QDELETED(user) && !QDELETED(new_human) && (user in T))
-			if(user.stat > SOFT_CRIT || HAS_TRAIT(new_human, TRAIT_CRITICAL_CONDITION))
+			if(user.stat != CONSCIOUS || HAS_TRAIT(new_human, TRAIT_CRITICAL_CONDITION))
 				break
 			user.apply_damage(0.1, BRUTE)
 			sleep(0.1 SECONDS)

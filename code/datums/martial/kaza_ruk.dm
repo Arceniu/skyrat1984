@@ -122,7 +122,7 @@
 	return FALSE
 
 /datum/martial_art/kaza_ruk/proc/low_sweep(mob/living/attacker, mob/living/defender)
-	if(defender.stat > SOFT_CRIT || defender.IsParalyzed())
+	if(defender.stat != CONSCIOUS || defender.IsParalyzed())
 		return MARTIAL_ATTACK_INVALID
 	if(HAS_TRAIT(attacker, TRAIT_PACIFISM))
 		return MARTIAL_ATTACK_INVALID // Does 5 damage, so we can't let pacifists leg sweep.
@@ -167,7 +167,7 @@
 	playsound(attacker, 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
 	if(defender.losebreath <= 10)
 		defender.losebreath = clamp(defender.losebreath + 5, 0, 10)
-	defender.adjustOxyLoss(10)
+	defender.adjust_oxy_loss(10)
 	log_combat(attacker, defender, "quickchoked")
 	return MARTIAL_ATTACK_SUCCESS
 

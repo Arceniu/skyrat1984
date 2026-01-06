@@ -70,7 +70,7 @@
 	if (flashed.stat == DEAD || issilicon(flashed) || isdrone(flashed))
 		return
 
-	if (flashed.stat > SOFT_CRIT)
+	if (flashed.stat != CONSCIOUS)
 		flashed.balloon_alert(source, "unconscious!")
 		return
 

@@ -124,7 +124,7 @@
 		owner.adjust_disgust(disgust_amt)
 
 		// Inflict stamina damage
-		owner.adjustStaminaLoss(stanmloss_amt)
+		owner.adjust_stamina_loss(stanmloss_amt)
 
 	// Chance to spontaneously combust
 	if(prob(ignite_chance))
@@ -170,16 +170,16 @@
 /datum/reagent/hellwater/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	if(HAS_TRAIT(affected_mob, TRAIT_UNHOLY))
 		var/need_mob_update
-		need_mob_update = affected_mob.adjustToxLoss(-0.25*seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustBruteLoss(-0.25*seconds_per_tick, updating_health = FALSE)
-		need_mob_update += affected_mob.adjustFireLoss(-0.25*seconds_per_tick, updating_health = FALSE)
+		need_mob_update = affected_mob.adjust_tox_loss(-0.25*seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_brute_loss(-0.25*seconds_per_tick, updating_health = FALSE)
+		need_mob_update += affected_mob.adjust_fire_loss(-0.25*seconds_per_tick, updating_health = FALSE)
 		need_mob_update += affected_mob.adjust_disgust(-2)
 		need_mob_update += affected_mob.adjust_nutrition(0.5)
-		need_mob_update += affected_mob.adjustStaminaLoss(-0.5)
-		affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, -0.5*seconds_per_tick, required_organ_flag = affected_organ_flags)
+		need_mob_update += affected_mob.adjust_stamina_loss(-0.5)
+		affected_mob.adjust_organ_loss(ORGAN_SLOT_BRAIN, -0.5*seconds_per_tick, required_organ_flag = affected_organ_flags)
 		if(HAS_TRAIT(affected_mob, TRAIT_EVIL)) //bonus heal for someone who also evil
-			need_mob_update += affected_mob.adjustBruteLoss(-0.25*seconds_per_tick, updating_health = FALSE)
-			need_mob_update += affected_mob.adjustFireLoss(-0.25*seconds_per_tick, updating_health = FALSE)
+			need_mob_update += affected_mob.adjust_brute_loss(-0.25*seconds_per_tick, updating_health = FALSE)
+			need_mob_update += affected_mob.adjust_fire_loss(-0.25*seconds_per_tick, updating_health = FALSE)
 		if(holder)
 			holder.remove_reagent(type, 0.5 * seconds_per_tick)
 		if(need_mob_update)

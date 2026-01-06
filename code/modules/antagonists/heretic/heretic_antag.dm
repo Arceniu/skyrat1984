@@ -771,7 +771,7 @@
  */
 /datum/antagonist/heretic/proc/passive_influence_gain()
 	adjust_knowledge_points(1)
-	if(owner?.current?.stat <= UNCONSCIOUS)
+	if(owner?.current?.stat <= SOFT_CRIT)
 		to_chat(owner.current, "[span_hear("You hear a whisper...")] [span_hypnophrase(pick_list(HERETIC_INFLUENCE_FILE, "drain_message"))]")
 	addtimer(CALLBACK(src, PROC_REF(passive_influence_gain)), passive_gain_timer)
 
@@ -1180,6 +1180,6 @@
 /datum/outfit/heretic
 	name = "Heretic (Preview only)"
 
-	suit = /obj/item/clothing/suit/hooded/cultrobes/eldritch
-	head = /obj/item/clothing/head/hooded/cult_hoodie/eldritch
+	suit = /obj/item/clothing/suit/hooded/cultrobes/eldritch/rust
+	head = /obj/item/clothing/head/hooded/cult_hoodie/eldritch/rust
 	r_hand = /obj/item/melee/touch_attack/mansus_fist
