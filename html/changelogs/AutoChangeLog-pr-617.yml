@@ -1,0 +1,5 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Shuttle call time on green & blue codes 15 -> 10 minutes"
+  - balance: "Shuttle call time starting on red code 15 -> 5 minutes"
