@@ -9475,7 +9475,6 @@
 #include "modular_ss220\modules\return_prs\black_mesa\code\armor.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\bump_teleporter.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\drops.dm"
-#include "modular_ss220\modules\return_prs\black_mesa\code\factions.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\flag.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\fluff.dm"
 #include "modular_ss220\modules\return_prs\black_mesa\code\follow_component.dm"
