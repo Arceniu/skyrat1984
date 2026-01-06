@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - server: "World name (such as displayed at top of game window) is now consistent and no longer uses station name"
