@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-01-06",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Removed the recipe for the Hulk and Ork Gene\"",
+      "World name (such as displayed at top of game window) is now consistent and no longer uses station name",
+      "Shuttle call time on green & blue codes 15 -> 10 minutes",
+      "Shuttle call time starting on red code 15 -> 5 minutes"
+    ]
+  },
+  {
     "date": "2026-01-03",
     "author": "DenIS318",
     "changes": [
