@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-01-07",
+    "author": "Arceniu",
+    "changes": [
+      "houndeye charge attack fixed",
+      "enemy vortigaunts no longer follow players",
+      "fixed lost gender on human npcs in mesa(sec, hecu, freeman zombie)",
+      "blackmesa turrets no longer attack sec guard npc",
+      "fixed centcom high ups access",
+      "fixed centcom armory button, added cent admin storage to captain office"
+    ]
+  },
+  {
+    "date": "2026-01-07",
+    "author": "DenIS318",
+    "changes": [
+      "Outfits now comes with traits. You can add traits to outfit in outfit manager (or code). Once outfit is equipped, all other outfit traits are removed and movement type is reset to initial.",
+      "Handgun shoulder holster no longer can be attached more than 1 per uniform",
+      "Handgun holster now plays sound on holster/unholster",
+      "Holster module also uses new holster/unholster sound"
+    ]
+  },
+  {
     "date": "2026-01-06",
     "author": "DenIS318",
     "changes": [
