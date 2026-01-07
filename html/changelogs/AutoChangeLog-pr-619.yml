@@ -1,5 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - bugfix: "fixed centcom high ups access"
-  - map: "fixed centcom armory button, added cent admin storage to captain office"

@@ -1,7 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - bugfix: "houndeye charge attack fixed"
-  - bugfix: "enemy vortigaunts no longer follow players"
-  - bugfix: "fixed lost gender on human npcs in mesa(sec, hecu, freeman zombie)"
-  - bugfix: "blackmesa turrets no longer attack sec guard npc"

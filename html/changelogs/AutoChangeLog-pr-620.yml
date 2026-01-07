@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - admin: "Outfits now comes with traits. You can add traits to outfit in outfit manager (or code). Once outfit is equipped, all other outfit traits are removed and movement type is reset to initial."

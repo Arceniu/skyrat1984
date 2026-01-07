@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - rscadd: "Handgun holster now plays sound on holster/unholster"
-  - rscadd: "Holster module also uses new holster/unholster sound"

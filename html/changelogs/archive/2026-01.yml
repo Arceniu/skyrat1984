@@ -182,3 +182,18 @@
   - rscadd: Revert "Removed the recipe for the Hulk and Ork Gene"
   - balance: Shuttle call time on green & blue codes 15 -> 10 minutes
   - balance: Shuttle call time starting on red code 15 -> 5 minutes
+2026-01-07:
+  Arceniu:
+  - bugfix: houndeye charge attack fixed
+  - bugfix: enemy vortigaunts no longer follow players
+  - bugfix: fixed lost gender on human npcs in mesa(sec, hecu, freeman zombie)
+  - bugfix: blackmesa turrets no longer attack sec guard npc
+  - bugfix: fixed centcom high ups access
+  - map: fixed centcom armory button, added cent admin storage to captain office
+  DenIS318:
+  - rscadd: Handgun holster now plays sound on holster/unholster
+  - rscadd: Holster module also uses new holster/unholster sound
+  - admin: Outfits now comes with traits. You can add traits to outfit in outfit manager
+      (or code). Once outfit is equipped, all other outfit traits are removed and
+      movement type is reset to initial.
+  - bugfix: Handgun shoulder holster no longer can be attached more than 1 per uniform
