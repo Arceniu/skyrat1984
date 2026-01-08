@@ -197,3 +197,7 @@
       (or code). Once outfit is equipped, all other outfit traits are removed and
       movement type is reset to initial.
   - bugfix: Handgun shoulder holster no longer can be attached more than 1 per uniform
+2026-01-08:
+  DenIS318:
+  - spellcheck: Default deity and bible names translated in savefiles (for both new
+      and already existing characters), also religion name if it's have translation.

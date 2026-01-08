@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - spellcheck: "Default deity and bible names translated in savefiles (for both new and already existing characters), also religion name if it's have translation."
