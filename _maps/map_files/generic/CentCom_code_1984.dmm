@@ -4,7 +4,7 @@
 /area/space)
 "al" = (
 /turf/open/floor/engine/insulation,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "ao" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
@@ -52,13 +52,13 @@
 	},
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/iron,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "fG" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
 /turf/open/floor/iron/dark,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "fJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Supplypod Bay 3"
@@ -119,6 +119,9 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/four)
+"ju" = (
+/turf/closed/indestructible/riveted,
+/area/centcom/central_command_areas/supply/pod)
 "jA" = (
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/holofloor/hyperspace,
@@ -127,6 +130,12 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/holofloor/hyperspace,
 /area/centcom/central_command_areas/supplypod/supplypod_temp_holding)
+"mE" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/supply/pod)
 "op" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
@@ -160,11 +169,11 @@
 	},
 /obj/structure/sign/warning/directional/southeast,
 /turf/open/floor/iron,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "rl" = (
 /obj/docking_port/stationary/centcom/podbay_elevator/podbay,
 /turf/open/floor/engine/insulation,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "rA" = (
 /obj/effect/landmark/start/new_player,
 /turf/cordon,
@@ -195,7 +204,7 @@
 /obj/effect/mapping_helpers/airlock/access/all/admin/officer,
 /obj/effect/mapping_helpers/airlock/access/all/admin/supply,
 /turf/open/floor/iron/dark,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "uM" = (
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/pod_storage)
@@ -222,7 +231,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/officer,
 /turf/open/floor/iron/dark,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "yt" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/light_emitter/podbay,
@@ -318,7 +327,7 @@
 	},
 /obj/structure/sign/warning/directional/northeast,
 /turf/open/floor/iron,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "HL" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/light_emitter/podbay,
@@ -332,7 +341,7 @@
 	dir = 6
 	},
 /turf/open/floor/iron/dark,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
 "Kb" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/light_emitter/podbay,
@@ -392,7 +401,13 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/centcom/central_command_areas/supplypod)
+/area/centcom/central_command_areas/supply/pod)
+"UN" = (
+/obj/effect/turf_decal/tile/brown/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/centcom/central_command_areas/supply/pod)
 "VM" = (
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted,
 /turf/open/floor/iron,
@@ -53034,13 +53049,13 @@ aa
 aa
 aa
 aa
-zQ
+ju
 eT
 fG
-sj
+mE
 HX
 eT
-zQ
+ju
 aa
 aa
 aa
@@ -53291,13 +53306,13 @@ aa
 aa
 aa
 aa
-zQ
-ao
+ju
+UN
 Hv
-ao
+UN
 qR
 TX
-zQ
+ju
 aa
 aa
 aa
@@ -53547,15 +53562,15 @@ aa
 aa
 aa
 aa
-zQ
-zQ
-zQ
+ju
+ju
+ju
 tR
 tR
 tR
-zQ
-zQ
-zQ
+ju
+ju
+ju
 aa
 aa
 aa
@@ -53804,7 +53819,7 @@ aa
 aa
 aa
 aa
-zQ
+ju
 al
 al
 al
@@ -53812,7 +53827,7 @@ rl
 al
 al
 al
-zQ
+ju
 aa
 aa
 aa
@@ -54061,7 +54076,7 @@ aa
 aa
 aa
 aa
-zQ
+ju
 al
 al
 al
@@ -54069,7 +54084,7 @@ al
 al
 al
 al
-zQ
+ju
 aa
 aa
 aa
@@ -54318,7 +54333,7 @@ aa
 aa
 aa
 aa
-zQ
+ju
 al
 al
 al
@@ -54326,7 +54341,7 @@ al
 al
 al
 al
-zQ
+ju
 aa
 aa
 aa
@@ -54575,7 +54590,7 @@ aa
 aa
 aa
 aa
-zQ
+ju
 al
 al
 al
@@ -54583,7 +54598,7 @@ al
 al
 al
 al
-zQ
+ju
 aa
 aa
 aa
@@ -54832,7 +54847,7 @@ aa
 aa
 aa
 aa
-zQ
+ju
 al
 al
 al
@@ -54840,7 +54855,7 @@ al
 al
 al
 al
-zQ
+ju
 aa
 aa
 aa
@@ -55089,7 +55104,7 @@ aa
 aa
 aa
 aa
-zQ
+ju
 al
 al
 al
@@ -55097,7 +55112,7 @@ al
 al
 al
 al
-zQ
+ju
 aa
 aa
 aa
@@ -55346,7 +55361,7 @@ aa
 aa
 aa
 aa
-zQ
+ju
 al
 al
 al
@@ -55354,7 +55369,7 @@ al
 al
 al
 al
-zQ
+ju
 aa
 aa
 aa
@@ -55603,15 +55618,15 @@ aa
 aa
 aa
 aa
-zQ
-zQ
-zQ
-zQ
-zQ
-zQ
-zQ
-zQ
-zQ
+ju
+ju
+ju
+ju
+ju
+ju
+ju
+ju
+ju
 aa
 aa
 aa
