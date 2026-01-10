@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - bugfix: "Experimentally fixed paper TGUI (no more flickering images while not editing text + can easily copy text)"

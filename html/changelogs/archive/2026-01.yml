@@ -201,3 +201,12 @@
   DenIS318:
   - spellcheck: Default deity and bible names translated in savefiles (for both new
       and already existing characters), also religion name if it's have translation.
+2026-01-10:
+  DenIS318:
+  - bugfix: Experimentally fixed paper TGUI (no more flickering images while not editing
+      text + can easily copy text)
+  - rscadd: Now tags [ntlogo] and [syndicatelogo] could be used in paper to show images
+      of NT or syndicate
+  - admin: Admins now can reply to incoming fax by using button appearing on receiving
+      fax (opens fax panel with selected destination fax)
+  - admin: Admins now can use templates for fax-panel
