@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-01-10",
+    "author": "DenIS318",
+    "changes": [
+      "Now tags [ntlogo] and [syndicatelogo] could be used in paper to show images of NT or syndicate",
+      "Admins now can reply to incoming fax by using button appearing on receiving fax (opens fax panel with selected destination fax)",
+      "Admins now can use templates for fax-panel",
+      "Experimentally fixed paper TGUI (no more flickering images while not editing text + can easily copy text)"
+    ]
+  },
+  {
     "date": "2026-01-08",
     "author": "DenIS318",
     "changes": [
