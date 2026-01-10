@@ -1,0 +1,6 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - rscadd: "Now tags [ntlogo] and [syndicatelogo] could be used in paper to show images of NT or syndicate"
+  - admin: "Admins now can reply to incoming fax by using button appearing on receiving fax (opens fax panel with selected destination fax)"
+  - admin: "Admins now can use templates for fax-panel"
