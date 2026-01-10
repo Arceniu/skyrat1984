@@ -9,6 +9,9 @@ import { sanitizeText } from '../../sanitize';
 import { tokenizer, walkTokens } from './helpers';
 import { StampView } from './StampView';
 import { type FieldInput, InteractionType, type PaperContext } from './types';
+import { resolveAsset } from '../../assets'; // SS1984 ADDITION
+import nt_logo from 'tgui-core/assets/bg-nanotrasen.svg'; // SS1984 ADDITION
+import syndie_logo from 'tgui-core/assets/bg-syndicate.svg'; // SS1984 ADDITION
 
 type PreviewViewProps = {
   scrollableRef: RefObject<HTMLDivElement | null>;
@@ -514,6 +517,14 @@ export class PreviewView extends Component<PreviewViewProps> {
         dmTextPreviewData.newFieldCount,
       );
     }
+
+    // SS1984 ADDITION START
+    previewText = previewText
+      .replace("[syndicatelogo]", `<img src="syndicatelogo.png" width='200' height='123'/>`)
+      .replace("[ntlogo]", `<img src="ntlogo.png" width='200' height='123'/>`)
+      .replace("[keepwatching]", `<img src="keepwatching.png" width='380' height='180'/>`)
+    ;
+    // SS1984 ADDITION END
 
     const textHTML = {
       __html: `<span className='paper-text'>${previewText}</span>`,
