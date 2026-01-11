@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Security belts can hold 3 => 2 baton/gun (1 baton + 1 gun OR 2 guns OR 2 batons)"
