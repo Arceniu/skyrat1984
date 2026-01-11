@@ -17,6 +17,10 @@
 		"stamp-tarkon" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-tarkon.png',
 		"stamp-warden" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-warden.png',
 		// NOVA EDIT ADDITION: END
+		//SS1984 ADD START
+		"stamp-centcom-cpt" = 'modular_ss220/modules/faction_stamps/icons/large_stamp-centcom-cpt.png',
+		"stamp-tarkon-cmd" = 'modular_ss220/modules/faction_stamps/icons/large_stamp-tarkon-cmd.png',
+		//SS1984 ADD END
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
 		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
 		"stamp-ok" = 'icons/stamp_icons/large_stamp-ok.png',
