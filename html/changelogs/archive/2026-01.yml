@@ -210,3 +210,7 @@
   - admin: Admins now can reply to incoming fax by using button appearing on receiving
       fax (opens fax panel with selected destination fax)
   - admin: Admins now can use templates for fax-panel
+2026-01-11:
+  DenIS318:
+  - balance: Security belts can hold 3 => 2 baton/gun (1 baton + 1 gun OR 2 guns OR
+      2 batons)
