@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-01-11",
+    "author": "DenIS318",
+    "changes": [
+      "Security belts can hold 3 => 2 baton/gun (1 baton + 1 gun OR 2 guns OR 2 batons)"
+    ]
+  },
+  {
     "date": "2026-01-10",
     "author": "DenIS318",
     "changes": [
