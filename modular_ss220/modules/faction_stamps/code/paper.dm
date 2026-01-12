@@ -1,8 +1,10 @@
 /datum/asset/spritesheet/simple/paper
-	name = "paper"
 	assets = list(
-
-		// NOVA EDIT ADDITION: START - Donator stamp icons
+		//SS1984 ADD START
+		"stamp-centcom-cpt" = 'modular_ss220/modules/faction_stamps/icons/large_stamp-centcom-cpt.png',
+		"stamp-tarkon-cmd" = 'modular_ss220/modules/faction_stamps/icons/large_stamp-tarkon-cmd.png',
+		//SS1984 ADD END
+		//NOVA ADD START
 		"stamp-cat_blue" = 'modular_nova/master_files/icons/stamp_icons/cat_blue.png',
 		"stamp-paw_blue" = 'modular_nova/master_files/icons/stamp_icons/paw_blue.png',
 		"stamp-cat_red" = 'modular_nova/master_files/icons/stamp_icons/cat_red.png',
@@ -11,12 +13,11 @@
 		"stamp-paw_orange" = 'modular_nova/master_files/icons/stamp_icons/paw_orange.png',
 		"stamp-cat_green" = 'modular_nova/master_files/icons/stamp_icons/cat_green.png',
 		"stamp-paw_green" = 'modular_nova/master_files/icons/stamp_icons/paw_green.png',
-		// Other stamp icons
 		"stamp-nri" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-nri.png',
 		"stamp-solfed" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-solfed.png',
 		"stamp-tarkon" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-tarkon.png',
 		"stamp-warden" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-warden.png',
-		// NOVA EDIT ADDITION: END
+		//NOVA ADD END
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
 		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
 		"stamp-ok" = 'icons/stamp_icons/large_stamp-ok.png',
