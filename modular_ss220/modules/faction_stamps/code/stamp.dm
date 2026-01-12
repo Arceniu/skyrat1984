@@ -7,7 +7,6 @@
 	icon_state = "stamp-nri"
 	dye_color = DYE_CENTCOM
 
-
 //solfed
 /obj/item/stamp/solfed
 	icon = 'modular_ss220/modules/faction_stamps/icons/bureaucracy.dmi'
@@ -22,7 +21,6 @@
 	name = "Tarkon Corporate Command rubber stamp"
 	icon = 'modular_ss220/modules/faction_stamps/icons/bureaucracy.dmi'
 	icon_state = "stamp-tarkon-cmd"
-
 
 //nt station stamps
 /obj/item/stamp/warden
