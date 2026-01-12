@@ -1,37 +1,4 @@
-/datum/asset/spritesheet/simple/paper
-	assets = list(
-		//SS1984 ADD START
-		"stamp-centcom-cpt" = 'modular_ss220/modules/faction_stamps/icons/large_stamp-centcom-cpt.png',
-		"stamp-tarkon-cmd" = 'modular_ss220/modules/faction_stamps/icons/large_stamp-tarkon-cmd.png',
-		//SS1984 ADD END
-		//NOVA ADD START
-		"stamp-cat_blue" = 'modular_nova/master_files/icons/stamp_icons/cat_blue.png',
-		"stamp-paw_blue" = 'modular_nova/master_files/icons/stamp_icons/paw_blue.png',
-		"stamp-cat_red" = 'modular_nova/master_files/icons/stamp_icons/cat_red.png',
-		"stamp-paw_red" = 'modular_nova/master_files/icons/stamp_icons/paw_red.png',
-		"stamp-cat_orange" = 'modular_nova/master_files/icons/stamp_icons/cat_orange.png',
-		"stamp-paw_orange" = 'modular_nova/master_files/icons/stamp_icons/paw_orange.png',
-		"stamp-cat_green" = 'modular_nova/master_files/icons/stamp_icons/cat_green.png',
-		"stamp-paw_green" = 'modular_nova/master_files/icons/stamp_icons/paw_green.png',
-		"stamp-nri" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-nri.png',
-		"stamp-solfed" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-solfed.png',
-		"stamp-tarkon" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-tarkon.png',
-		"stamp-warden" = 'modular_nova/master_files/icons/stamp_icons/large_stamp-warden.png',
-		//NOVA ADD END
-		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
-		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
-		"stamp-ok" = 'icons/stamp_icons/large_stamp-ok.png',
-		"stamp-void" = 'icons/stamp_icons/large_stamp-void.png',
-		"stamp-hop" = 'icons/stamp_icons/large_stamp-hop.png',
-		"stamp-cmo" = 'icons/stamp_icons/large_stamp-cmo.png',
-		"stamp-ce" = 'icons/stamp_icons/large_stamp-ce.png',
-		"stamp-hos" = 'icons/stamp_icons/large_stamp-hos.png',
-		"stamp-rd" = 'icons/stamp_icons/large_stamp-rd.png',
-		"stamp-cap" = 'icons/stamp_icons/large_stamp-cap.png',
-		"stamp-qm" = 'icons/stamp_icons/large_stamp-qm.png',
-		"stamp-law" = 'icons/stamp_icons/large_stamp-law.png',
-		"stamp-chap" = 'icons/stamp_icons/large_stamp-chap.png',
-		"stamp-mime" = 'icons/stamp_icons/large_stamp-mime.png',
-		"stamp-centcom" = 'icons/stamp_icons/large_stamp-centcom.png',
-		"stamp-syndicate" = 'icons/stamp_icons/large_stamp-syndicate.png'
-	)
+/datum/asset/spritesheet/simple/paper/New()
+	assets["stamp-centcom-cpt"] = 'modular_ss220/modules/faction_stamps/icons/large_stamp-centcom-cpt.png'
+	assets["stamp-tarkon-cmd"] = 'modular_ss220/modules/faction_stamps/icons/large_stamp-tarkon-cmd.png'
+	. = ..() // it's important to call it at last for /asset
