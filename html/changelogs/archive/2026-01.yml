@@ -214,3 +214,9 @@
   DenIS318:
   - balance: Security belts can hold 3 => 2 baton/gun (1 baton + 1 gun OR 2 guns OR
       2 batons)
+2026-01-13:
+  Arceniu:
+  - rscadd: Added centcom captain stamp and tarkon command(centcom) stamp
+  - bugfix: fixed some missed stamps on paper
+  DenIS318:
+  - bugfix: Paper TGUI now show newly added stamps
