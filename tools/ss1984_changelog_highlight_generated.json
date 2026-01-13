@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-01-13",
+    "author": "Arceniu",
+    "changes": [
+      "Added centcom captain stamp and tarkon command(centcom) stamp",
+      "fixed some missed stamps on paper"
+    ]
+  },
+  {
+    "date": "2026-01-13",
+    "author": "DenIS318",
+    "changes": [
+      "Paper TGUI now show newly added stamps"
+    ]
+  },
+  {
     "date": "2026-01-11",
     "author": "DenIS318",
     "changes": [
