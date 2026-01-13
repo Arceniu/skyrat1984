@@ -1,0 +1,5 @@
+author: "Arceniu"
+delete-after: True
+changes:
+  - rscadd: "Added centcom captain stamp and tarkon command(centcom) stamp"
+  - bugfix: "fixed some missed stamps on paper"
