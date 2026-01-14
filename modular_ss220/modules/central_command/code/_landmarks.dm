@@ -113,13 +113,13 @@
 	name = "Central"
 	specific_transport_id = INTERLINK_1984_LINE_1
 	platform_code = INTERLINK_1984_CENTRAL
-	tgui_icons = list("Processing" = "cogs", "Xenobiology" = "paw")
+	tgui_icons = list("Shuttle" = "plane-departure", "Security" = "gavel")
 
 /obj/effect/landmark/transport/nav_beacon/tram/platform/interlink_tram_1984/right
 	name = "Starboard"
 	specific_transport_id = INTERLINK_1984_LINE_1
 	platform_code = INTERLINK_1984_STARBOARD
-	tgui_icons = list("Ordnance" = "bullseye", "Office" = "user", "Dormitories" = "bed")
+	tgui_icons = list("Medical" = "plus", "Engineering" = "wrench", "Dormitories" = "bed")
 
 /obj/machinery/transport/tram_controller/interlink_tram_1984
 	configured_transport_id = INTERLINK_1984_LINE_1
