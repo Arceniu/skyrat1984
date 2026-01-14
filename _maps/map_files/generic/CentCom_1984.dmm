@@ -245,13 +245,8 @@
 /turf/closed/indestructible/riveted,
 /area/centcom/central_command_areas/security)
 "bd" = (
-/obj/machinery/door/airlock/centcom{
-	name = "CentCom"
-	},
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/turf/open/floor/iron,
-/area/centcom/central_command_areas/fore)
+/turf/open/floor/engine/insulation,
+/area/centcom/central_command_areas/ferry)
 "be" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark/herringbone,
@@ -1602,9 +1597,6 @@
 	name = "CentCom"
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/fore)
 "gy" = (
@@ -2573,6 +2565,7 @@
 /obj/effect/mapping_helpers/airlock/access/any/admin/medical,
 /obj/effect/mapping_helpers/airlock/access/any/admin/living,
 /obj/effect/mapping_helpers/airlock/access/any/admin/specops,
+/obj/effect/mapping_helpers/airlock/access/any/admin/security,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/control)
 "kg" = (
@@ -2839,19 +2832,10 @@
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/control)
 "lo" = (
-/obj/machinery/door/airlock/centcom{
-	name = "CentCom Security"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/obj/effect/mapping_helpers/airlock/access/any/cent_com/rep_or_captain,
-/obj/effect/mapping_helpers/airlock/access/any/security/hos,
-/turf/open/floor/iron,
-/area/centcom/central_command_areas/security)
+/obj/machinery/door/poddoor,
+/obj/structure/fans/tiny,
+/turf/open/floor/engine/insulation,
+/area/centcom/central_command_areas/ferry)
 "lq" = (
 /obj/machinery/door/poddoor{
 	id = "thunderdomegen";
@@ -4803,10 +4787,12 @@
 "tH" = (
 /obj/structure/table/reinforced,
 /obj/item/book/manual/wiki/security_space_law,
-/obj/item/taperecorder,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/newscaster/directional/north,
+/obj/item/folder/red,
+/obj/item/clipboard,
+/obj/item/taperecorder,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/control)
 "tJ" = (
@@ -5525,7 +5511,6 @@
 	name = "CentCom Showers"
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/evacuation)
 "wn" = (
@@ -5749,7 +5734,7 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/any/admin/general,
 /turf/open/floor/iron,
-/area/centcom/central_command_areas/control)
+/area/centcom/central_command_areas/ferry)
 "xm" = (
 /obj/structure/bookcase/random,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -8902,7 +8887,6 @@
 	name = "CentCom Restroom"
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/evacuation)
 "Kt" = (
@@ -9991,6 +9975,10 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/evacuation)
+"OA" = (
+/obj/structure/sign/warning/secure_area,
+/turf/closed/indestructible/riveted,
+/area/centcom/central_command_areas/ferry)
 "OH" = (
 /obj/docking_port/stationary/centcom/podbay_elevator/warehouse,
 /turf/open/floor/engine/insulation,
@@ -10261,9 +10249,6 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/fore)
@@ -10585,16 +10570,13 @@
 /turf/open/floor/plating,
 /area/centcom/central_command_areas/evacuation/ship)
 "Rt" = (
-/obj/item/clipboard,
-/obj/item/folder/red,
-/obj/item/stamp/denied{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/stamp/granted,
-/obj/structure/table/reinforced,
 /obj/machinery/status_display/ai/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/computer/shuttle/centcom/interlink{
+	dir = 4;
+	pixel_x = -8;
+	density = 0
+	},
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/control)
 "Ru" = (
@@ -10797,9 +10779,6 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/any/cent_com/rep_or_captain,
 /obj/effect/mapping_helpers/airlock/access/any/security/hos,
@@ -11633,9 +11612,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/courtroom)
 "VT" = (
@@ -11732,6 +11708,18 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/centcom/central_command_areas/security)
+"Wj" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/item/stamp/granted,
+/obj/item/stamp/denied{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/open/floor/iron/dark,
+/area/centcom/central_command_areas/control)
 "Wl" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -12125,6 +12113,10 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/armory)
+"XZ" = (
+/obj/docking_port/stationary/centcom/interlink/home,
+/turf/open/floor/engine/insulation,
+/area/centcom/central_command_areas/ferry)
 "Yb" = (
 /obj/structure/table/wood,
 /turf/open/floor/iron/grimy,
@@ -52101,19 +52093,19 @@ zP
 Id
 tU
 CT
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+lo
 ra
 ra
 ra
@@ -52358,19 +52350,19 @@ zP
 CS
 tU
 CT
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+lo
 ra
 ra
 ra
@@ -52615,19 +52607,19 @@ zP
 Id
 hC
 CT
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+lo
 ra
 ra
 ra
@@ -52872,19 +52864,19 @@ zP
 Id
 tU
 CT
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+lo
 ra
 ra
 ra
@@ -53129,19 +53121,19 @@ zP
 cS
 tU
 CT
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+lo
 ra
 ra
 ra
@@ -53386,19 +53378,19 @@ kB
 ro
 ow
 CT
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
-ra
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+bd
+XZ
+bd
+bd
+bd
+lo
 ra
 ra
 ra
@@ -53643,19 +53635,19 @@ MI
 aU
 MI
 CT
-Cx
-BO
-Cx
-Cx
-Cx
-BO
-Cx
-Cx
+CT
+OA
+CT
+CT
+CT
+OA
+CT
+CT
 xk
-Cx
-Cx
-Cx
-ra
+CT
+CT
+CT
+CT
 ra
 ra
 ra
@@ -54935,7 +54927,7 @@ Cx
 cg
 Cx
 tH
-yD
+Wj
 Nk
 WD
 FZ
@@ -55945,7 +55937,7 @@ YF
 uf
 uf
 oX
-bd
+gx
 bR
 gx
 zA
@@ -60847,7 +60839,7 @@ KB
 KB
 bc
 bc
-lo
+nE
 bc
 WF
 ne
