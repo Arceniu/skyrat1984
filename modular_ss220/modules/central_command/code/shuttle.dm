@@ -46,7 +46,7 @@
 	dir = 8
 	height = 6
 	width = 12
-	dwidth = 1
+	dwidth = 3
 
 /obj/docking_port/stationary/centcom/interlink/home
 	shuttle_id = "centcom_interlink_home"

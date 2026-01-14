@@ -10960,6 +10960,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/centcom/holding/cafe)
+"lld" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/engine/insulation,
+/area/centcom/interlink)
 "llq" = (
 /obj/machinery/door/poddoor/ert,
 /obj/structure/fans/tiny,
@@ -29568,7 +29572,7 @@ aaa
 aaa
 aaa
 wTk
-sBg
+lld
 sBg
 sBg
 qCL
