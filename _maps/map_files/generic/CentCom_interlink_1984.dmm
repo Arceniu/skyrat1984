@@ -2633,7 +2633,7 @@
 	specific_transport_id = "intl1984_1";
 	pixel_x = -18
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "aHu" = (
 /obj/effect/turf_decal/stripes{
@@ -4531,10 +4531,6 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating,
 /area/centcom/interlink)
-"brY" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
-/area/centcom/interlink)
 "bsz" = (
 /obj/structure/dresser,
 /obj/effect/turf_decal/siding/wood{
@@ -5181,7 +5177,7 @@
 "ckJ" = (
 /obj/effect/mapping_helpers/broken_floor,
 /obj/structure/fluff/tram_rail/floor,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "ckY" = (
 /obj/structure/alien/weeds,
@@ -5252,7 +5248,7 @@
 	},
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "cpG" = (
 /obj/machinery/button/polarizer{
@@ -5769,11 +5765,11 @@
 /obj/machinery/computer/tram_controls/split/directional/south{
 	specific_transport_id = "intl1984_1"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "dgP" = (
 /obj/structure/marker_beacon/burgundy,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "dgV" = (
 /obj/structure/disposalpipe/segment{
@@ -6532,7 +6528,7 @@
 "eCY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/fluff/tram_rail/floor,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "eDj" = (
 /obj/effect/turf_decal/tile/blue/full,
@@ -6722,7 +6718,7 @@
 /obj/structure/tram/spoiler{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "eRf" = (
 /obj/structure/table/glass,
@@ -7059,7 +7055,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "ftj" = (
 /obj/structure/flora/grass/jungle,
@@ -7074,7 +7070,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram/alt/titanium,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "fua" = (
 /obj/effect/turf_decal/siding/dark{
@@ -7379,7 +7375,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram/alt/titanium,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "fQt" = (
 /mob/living/basic/crab{
@@ -7701,7 +7697,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "grr" = (
 /obj/structure/table,
@@ -7807,7 +7803,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "gwt" = (
 /obj/effect/turf_decal/tile/red/opposingcorners,
@@ -8673,7 +8669,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "hKI" = (
 /obj/structure/table,
@@ -8695,7 +8691,7 @@
 /obj/machinery/transport/tram_controller/interlink_tram_1984{
 	pixel_y = 32
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "hOy" = (
 /obj/effect/turf_decal/trimline/blue/filled/line,
@@ -8752,7 +8748,7 @@
 /area/centcom/holding/cafepark)
 "hRn" = (
 /obj/structure/fluff/tram_rail/floor,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "hRJ" = (
 /obj/structure/railing{
@@ -8795,11 +8791,11 @@
 /obj/machinery/door/airlock/tram{
 	transport_linked_id = "intl1984_1"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "hWX" = (
 /obj/machinery/light/directional/south,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "hWY" = (
 /obj/structure/railing,
@@ -9110,7 +9106,7 @@
 /obj/structure/tram/spoiler{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "isg" = (
 /obj/structure/fluff/tram_rail/floor{
@@ -9121,7 +9117,7 @@
 /obj/machinery/computer/tram_controls/split/directional/south{
 	specific_transport_id = "intl1984_1"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "itm" = (
 /obj/structure/flora/tree/jungle/style_2,
@@ -9699,7 +9695,7 @@
 /obj/effect/turf_decal/stripes/asteroid/line,
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "juv" = (
 /obj/effect/turf_decal/tile/green/opposingcorners,
@@ -11218,7 +11214,7 @@
 	},
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "lHD" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted,
@@ -11733,7 +11729,7 @@
 	specific_transport_id = "intl1984_1";
 	pixel_x = 17
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "mvL" = (
 /obj/machinery/light/directional/north,
@@ -12550,7 +12546,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram/alt/titanium,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "nsP" = (
 /obj/effect/turf_decal/trimline/white/filled/line{
@@ -12691,7 +12687,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "nFi" = (
 /obj/structure/curtain,
@@ -13120,7 +13116,7 @@
 /obj/structure/fluff/tram_rail/floor{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "orh" = (
 /obj/effect/turf_decal/tile/purple/anticorner/contrasted{
@@ -14417,7 +14413,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "pOH" = (
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -14447,7 +14443,7 @@
 /obj/structure/fluff/tram_rail/floor{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "pPA" = (
 /obj/structure/table/wood/fancy/royalblack,
@@ -15053,7 +15049,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/fluff/tram_rail/floor,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "qHT" = (
 /obj/effect/turf_decal/trimline/blue/filled/line,
@@ -15116,7 +15112,7 @@
 /obj/structure/fluff/tram_rail/floor{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "qLo" = (
 /obj/effect/turf_decal/trimline/white/filled/line,
@@ -15496,7 +15492,7 @@
 /obj/structure/fluff/tram_rail/floor{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "rmU" = (
 /obj/machinery/light/directional/west,
@@ -15739,7 +15735,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram/alt/titanium,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "rFO" = (
 /obj/structure/disposalpipe/junction/flip{
@@ -16311,7 +16307,7 @@
 "snW" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/marker_beacon/burgundy,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "sof" = (
 /obj/effect/turf_decal/tile/green/opposingcorners,
@@ -16347,7 +16343,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram/alt/titanium,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "srf" = (
 /obj/structure/disposalpipe/segment,
@@ -16638,7 +16634,7 @@
 /obj/structure/chair/sofa/bench/tram/left{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "sJJ" = (
 /obj/structure/chair/stool/directional/east,
@@ -16688,7 +16684,7 @@
 /obj/structure/fluff/tram_rail/floor,
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "sMF" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted,
@@ -16724,7 +16720,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram/alt/titanium,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "sOj" = (
 /obj/structure/table/reinforced/rglass,
@@ -16931,7 +16927,7 @@
 "tgp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/marker_beacon/burgundy,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "tgP" = (
 /obj/item/flashlight/flare/torch/everburning,
@@ -17440,7 +17436,7 @@
 /obj/structure/fluff/tram_rail/floor,
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "tTm" = (
 /obj/structure/closet/emcloset/anchored,
@@ -18325,7 +18321,7 @@
 /area/centcom/interlink)
 "vaP" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "vdA" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -18453,7 +18449,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/structure/tram/alt/titanium,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "vsW" = (
 /obj/structure/toilet{
@@ -18467,11 +18463,7 @@
 "vtm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/asteroid/line,
-/turf/open/floor/plating,
-/area/centcom/interlink)
-"vui" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "vuj" = (
 /turf/open/floor/carpet/red,
@@ -19025,7 +19017,7 @@
 /area/centcom/holding/cafe)
 "wfg" = (
 /obj/effect/turf_decal/stripes/asteroid/line,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "wfN" = (
 /obj/effect/light_emitter/interlink,
@@ -19563,7 +19555,7 @@
 /obj/structure/fluff/tram_rail/floor{
 	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "wZv" = (
 /obj/effect/turf_decal/tile/blue,
@@ -19623,7 +19615,7 @@
 /obj/structure/chair/sofa/bench/tram/right{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/centcom/interlink)
 "xec" = (
 /obj/structure/table/wood,
@@ -32210,14 +32202,14 @@ wTk
 wTk
 wTk
 fzV
-aqG
+gHn
 vtm
 hRn
 xbW
 dtL
 qKP
 hJV
-vui
+bIl
 fzV
 aaa
 aaa
@@ -32724,7 +32716,7 @@ bWM
 akv
 bWM
 fzV
-aqG
+gHn
 wfg
 hRn
 xbW
@@ -33245,7 +33237,7 @@ gJK
 nVN
 xdP
 fQl
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -34273,7 +34265,7 @@ gEG
 oQF
 lHo
 fQl
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -35301,7 +35293,7 @@ jKK
 tUz
 lHo
 fQl
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -36329,7 +36321,7 @@ gEG
 ycP
 lHo
 nEL
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -37357,7 +37349,7 @@ gGm
 luX
 lHo
 nEL
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -38378,14 +38370,14 @@ wTk
 wTk
 wTk
 izU
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -39406,14 +39398,14 @@ wTk
 dUS
 aTO
 uhM
-aqG
+gHn
 wfg
 eCY
 xbW
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -40434,14 +40426,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -41462,14 +41454,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -42490,14 +42482,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -43518,14 +43510,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -44546,14 +44538,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -45574,14 +45566,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -46602,14 +46594,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -47630,14 +47622,14 @@ aaa
 aaa
 aaa
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -48658,14 +48650,14 @@ vat
 qKK
 vat
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -48915,7 +48907,7 @@ vat
 dsH
 vat
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
@@ -49693,7 +49685,7 @@ pKy
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -50200,7 +50192,7 @@ iPs
 dfL
 dsH
 fzV
-aqG
+gHn
 wfg
 eCY
 xbW
@@ -50721,7 +50713,7 @@ xbW
 pTO
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -51228,7 +51220,7 @@ iPs
 bEI
 dsH
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
@@ -51749,7 +51741,7 @@ xbW
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -52513,7 +52505,7 @@ iPs
 dfL
 vat
 fzV
-aqG
+gHn
 wfg
 eCY
 pKy
@@ -52770,14 +52762,14 @@ iPs
 dfL
 vat
 fzV
-aqG
+gHn
 wfg
 eCY
 xbW
 dtL
 pPq
 gwk
-aqG
+gHn
 fzV
 aaa
 aaa
@@ -53542,12 +53534,12 @@ fzV
 fzV
 fzV
 dgP
-aqG
+gHn
 qHh
 wFM
 eHn
 wZi
-aqG
+gHn
 dgP
 fzV
 aaa
@@ -53798,14 +53790,14 @@ aXG
 sMg
 fzV
 fzV
-aqG
-aqG
+gHn
+gHn
 dsd
 dsd
 dsd
 dsd
-aqG
-brY
+gHn
+lnc
 fzV
 aaa
 aaa
