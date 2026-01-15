@@ -1077,9 +1077,9 @@
 	},
 /area/ruin/interdyne_planetary_base/med/morgue)
 "jo" = (
-/obj/structure/ore_box,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/cold/directional/south,
+/obj/effect/mob_spawn/ghost_role/robot/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "jp" = (
@@ -1919,6 +1919,7 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
+/obj/structure/ore_box,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "pT" = (
@@ -1929,7 +1930,7 @@
 /area/ruin/interdyne_planetary_base/eng)
 "pX" = (
 /obj/effect/turf_decal/delivery,
-/obj/structure/ore_box,
+/obj/effect/mob_spawn/ghost_role/robot/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "pZ" = (
@@ -4871,11 +4872,6 @@
 	},
 /turf/open/floor/engine/bz,
 /area/ruin/interdyne_planetary_base/science/xeno)
-"On" = (
-/obj/structure/ore_box,
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/iron/dark/textured_large,
-/area/ruin/interdyne_planetary_base/cargo)
 "Oo" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -5216,6 +5212,7 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
+/obj/structure/ore_box,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "Rw" = (
@@ -5424,6 +5421,8 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
+/obj/structure/ore_box,
+/obj/structure/ore_box,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "SR" = (
@@ -7854,7 +7853,7 @@ Wf
 Qd
 pR
 pn
-On
+pX
 Ih
 uQ
 ql
