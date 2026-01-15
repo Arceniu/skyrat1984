@@ -1098,6 +1098,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/light{
 	dir = 9
 	},
+/obj/machinery/health_station/directional/west,
 /turf/open/floor/iron/white/smooth_large,
 /area/centcom/interlink)
 "aqo" = (
@@ -1763,8 +1764,10 @@
 	},
 /area/centcom/holding/cafe)
 "ayn" = (
-/obj/machinery/vending/medical/infested_frigate{
-	all_products_free = 0
+/obj/structure/table/reinforced/rglass,
+/obj/item/paper{
+	default_raw_text = "Please do not touch untill you or someone other really need it";
+	name = "Important!"
 	},
 /turf/open/floor/iron/smooth_large,
 /area/centcom/interlink)
@@ -4856,7 +4859,7 @@
 /area/centcom/holding/cafepark)
 "bSK" = (
 /obj/structure/table/reinforced/rglass,
-/obj/item/storage/medkit/mechanical,
+/obj/item/food/grown/apple,
 /turf/open/floor/iron/smooth_large,
 /area/centcom/interlink)
 "bTg" = (
@@ -5583,7 +5586,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/centcom/interlink)
 "cUO" = (
-/obj/machinery/wall_healer/free/directional/west,
+/obj/machinery/health_station/directional/west,
 /turf/open/floor/iron/dark/smooth_large,
 /area/centcom/interlink)
 "cVm" = (
@@ -6297,6 +6300,13 @@
 	},
 /turf/open/floor/carpet/red,
 /area/centcom/holding/cafedorms)
+"ehS" = (
+/obj/effect/turf_decal/trimline/white/filled/line{
+	dir = 4
+	},
+/obj/machinery/light/directional/east,
+/turf/open/floor/iron/dark/smooth_large,
+/area/centcom/interlink)
 "ejQ" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "ghostcafecabin3";
@@ -6793,6 +6803,7 @@
 /obj/structure/railing{
 	invisibility = 100
 	},
+/obj/machinery/wall_healer/free/directional/east,
 /turf/open/floor/iron/freezer,
 /area/centcom/interlink)
 "eYw" = (
@@ -6884,6 +6895,7 @@
 /obj/structure/sign/directions/medical/directional/east{
 	pixel_y = 8
 	},
+/obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark/smooth_large,
 /area/centcom/interlink)
 "fdo" = (
@@ -7324,6 +7336,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/machinery/wall_healer/free/directional/east,
 /turf/open/floor/iron/freezer,
 /area/centcom/interlink)
 "fOr" = (
@@ -8507,6 +8520,7 @@
 "hsr" = (
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/table/reinforced/rglass,
+/obj/item/storage/medkit/emergency,
 /turf/open/floor/iron/freezer,
 /area/centcom/interlink)
 "hsW" = (
@@ -16560,9 +16574,8 @@
 /turf/open/misc/dirt/planet,
 /area/centcom/holding/cafepark)
 "sHO" = (
-/obj/machinery/vending/deforest_medvend{
-	all_products_free = 0
-	},
+/obj/structure/table/reinforced/rglass,
+/obj/item/storage/medkit/robotic_repair/stocked,
 /turf/open/floor/iron/smooth_large,
 /area/centcom/interlink)
 "sHR" = (
@@ -18199,6 +18212,7 @@
 "uTV" = (
 /obj/structure/table/reinforced/rglass,
 /obj/item/storage/medkit/emergency,
+/obj/structure/table/reinforced/rglass,
 /turf/open/floor/iron/smooth_large,
 /area/centcom/interlink)
 "uTW" = (
@@ -18724,6 +18738,11 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding/cafepark)
+"vMC" = (
+/obj/effect/turf_decal/trimline/white/filled/line,
+/obj/machinery/light/directional/south,
+/turf/open/floor/iron/dark/smooth_large,
+/area/centcom/interlink)
 "vNe" = (
 /obj/structure/fans/tiny/invisible,
 /obj/structure/railing/wooden_fencing{
@@ -18970,6 +18989,13 @@
 	icon_state = "cafeteria"
 	},
 /area/centcom/holding/cafe)
+"wcP" = (
+/obj/effect/turf_decal/trimline/white/filled/line{
+	dir = 1
+	},
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/dark/smooth_large,
+/area/centcom/interlink)
 "wdj" = (
 /obj/structure/chair/comfy/black{
 	dir = 1
@@ -19485,6 +19511,12 @@
 /obj/structure/flora/rock/pile/jungle/style_5,
 /obj/effect/light_emitter/interlink,
 /turf/open/floor/grass,
+/area/centcom/interlink)
+"wWc" = (
+/obj/machinery/vending/medical/infested_frigate{
+	all_products_free = 0
+	},
+/turf/open/floor/iron/showroomfloor,
 /area/centcom/interlink)
 "wWm" = (
 /obj/structure/chair/stool/bar/directional/south,
@@ -45764,7 +45796,7 @@ aaa
 aaa
 aaa
 wTk
-apj
+wcP
 aTO
 aTO
 aTO
@@ -46297,7 +46329,7 @@ aTO
 aTO
 aTO
 aTO
-fIY
+vMC
 wTk
 aaa
 aaa
@@ -46799,7 +46831,7 @@ qMb
 qMb
 qMb
 qMb
-qMb
+ehS
 qMb
 qMb
 qMb
@@ -56300,7 +56332,7 @@ wTk
 iZu
 jfR
 jfR
-jfR
+wWc
 wTk
 hsr
 gki
