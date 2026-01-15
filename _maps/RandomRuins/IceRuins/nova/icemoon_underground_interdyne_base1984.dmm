@@ -41,10 +41,8 @@
 /turf/closed/wall/r_wall/plastitanium/syndicate,
 /area/ruin/interdyne_planetary_base/cargo)
 "aj" = (
-/obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base/deck_officer/ice{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/suit_storage_unit/syndicate/chameleon,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "ak" = (
@@ -105,6 +103,7 @@
 	},
 /obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
 /obj/item/circuitboard/machine/techfab/ip,
+/obj/item/circuitboard/computer/id_upgrader/ip,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "aw" = (
@@ -151,6 +150,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/duct,
+/obj/machinery/computer/id_upgrader/ip{
+	dir = 1;
+	pixel_y = 3
+	},
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "aA" = (
@@ -220,6 +223,9 @@
 /obj/machinery/light_switch/directional/east,
 /obj/item/bedsheet/rd/double,
 /obj/structure/bed/double,
+/obj/effect/mob_spawn/ghost_role/human/interdyne_planetary_base/deck_officer/ice{
+	dir = 4
+	},
 /turf/open/floor/carpet/royalblue,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "aO" = (
@@ -820,6 +826,8 @@
 /area/ruin/interdyne_planetary_base/cargo)
 "cl" = (
 /obj/structure/railing,
+/obj/structure/ore_box,
+/obj/item/toy/figure/prisoner,
 /turf/open/floor/iron/diagonal,
 /area/ruin/interdyne_planetary_base/cargo)
 "cm" = (
@@ -1210,7 +1218,7 @@
 "dl" = (
 /obj/machinery/light/small/directional/east,
 /obj/effect/turf_decal/box/white,
-/obj/structure/ore_box,
+/obj/effect/mob_spawn/ghost_role/robot/interdyne,
 /obj/machinery/button/door/directional/north{
 	id = "interdynewarehosue";
 	name = "window security button";
@@ -1449,7 +1457,7 @@
 	},
 /area/ruin/interdyne_planetary_base/cargo/ware)
 "dT" = (
-/obj/structure/ore_box,
+/obj/effect/mob_spawn/ghost_role/robot/interdyne,
 /obj/effect/turf_decal/box/white,
 /turf/open/floor/iron/smooth_edge{
 	dir = 8
@@ -1553,8 +1561,7 @@
 /area/ruin/interdyne_planetary_base)
 "ek" = (
 /obj/effect/turf_decal/box/white,
-/obj/item/toy/figure/prisoner,
-/obj/structure/ore_box,
+/obj/effect/mob_spawn/ghost_role/robot/interdyne,
 /turf/open/floor/iron/smooth_edge{
 	dir = 8
 	},
@@ -2845,6 +2852,7 @@
 "hI" = (
 /obj/machinery/light/small/directional/east,
 /obj/machinery/suit_storage_unit/syndicate/chameleon,
+/obj/machinery/suit_storage_unit/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "hJ" = (
@@ -7390,6 +7398,10 @@
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},
 /area/icemoon/underground/explored)
+"Qq" = (
+/obj/structure/ore_box,
+/turf/open/floor/iron/diagonal,
+/area/ruin/interdyne_planetary_base/cargo)
 "QK" = (
 /obj/structure/railing{
 	dir = 10
@@ -7513,7 +7525,7 @@
 /turf/open/floor/iron/smooth_large,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "Wi" = (
-/obj/machinery/power/micro_reactor,
+/obj/machinery/power/micro_reactor/bapgm,
 /obj/structure/cable,
 /turf/open/floor/iron/submarine,
 /area/ruin/interdyne_planetary_base/eng)
@@ -7540,6 +7552,12 @@
 /obj/item/ammo_workbench_module/lethal_super/evil,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
+"WM" = (
+/obj/structure/ore_box,
+/turf/open/floor/plating/reinforced{
+	initial_gas_mix = "ICEMOON_ATMOS"
+	},
+/area/icemoon/underground/explored)
 "WQ" = (
 /obj/structure/shipping_container/donk_co{
 	pixel_x = 6
@@ -8881,8 +8899,8 @@ aR
 aG
 bh
 by
-bN
-bN
+Qq
+Qq
 cl
 cE
 cz
@@ -9824,7 +9842,7 @@ LM
 CW
 rF
 rF
-rF
+WM
 PJ
 rF
 GW
@@ -9940,7 +9958,7 @@ ab
 xc
 rF
 rF
-rF
+WM
 rF
 rF
 rF

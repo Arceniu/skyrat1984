@@ -1540,6 +1540,7 @@
 /obj/effect/turf_decal/trimline/dark_red/mid_joiner,
 /obj/machinery/light/cold/directional/south,
 /obj/machinery/light_switch/directional/south,
+/obj/effect/mob_spawn/ghost_role/robot/ds2,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/nova/des_two/bridge)
 "gI" = (
@@ -3329,6 +3330,7 @@
 /obj/effect/turf_decal/trimline/dark_red/mid_joiner,
 /obj/machinery/light/cold/directional/south,
 /obj/machinery/firealarm/directional/south,
+/obj/effect/mob_spawn/ghost_role/robot/ds2,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/nova/des_two/bridge)
 "og" = (
@@ -3634,7 +3636,7 @@
 /turf/open/floor/engine,
 /area/ruin/space/has_grav/nova/des_two/engineering)
 "ps" = (
-/obj/machinery/computer/cryopod/interdyne/directional/west,
+/obj/machinery/computer/cryopod/directional/west,
 /obj/structure/table,
 /obj/effect/turf_decal/trimline/dark_green/filled/line{
 	dir = 8
@@ -4852,6 +4854,10 @@
 /area/ruin/space/has_grav/nova/des_two/security)
 "vr" = (
 /obj/effect/mob_spawn/ghost_role/human/ds2/syndicate_command/masteratarms,
+/obj/machinery/suit_storage_unit/syndicate/deepspace{
+	density = 0;
+	pixel_y = 32
+	},
 /turf/open/floor/carpet/royalblack,
 /area/ruin/space/has_grav/nova/des_two/security)
 "vt" = (
@@ -4870,7 +4876,6 @@
 	pixel_y = -4
 	},
 /obj/item/ammo_workbench_module/lethal_super/evil,
-/obj/item/ammo_workbench_reboot,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security/armory)
 "vu" = (
@@ -5637,6 +5642,7 @@
 /obj/item/binoculars,
 /obj/item/wrench/bolter,
 /obj/item/storage/toolbox/syndicate,
+/obj/item/binoculars,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/nova/des_two/bridge/cl)
 "zl" = (
@@ -6259,6 +6265,7 @@
 /obj/item/circuitboard/computer/id_upgrader/ds,
 /obj/item/storage/toolbox/syndicate,
 /obj/item/circuitboard/machine/techfab/ds,
+/obj/item/binoculars,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/nova/des_two/bridge/admiral)
 "Ce" = (
@@ -7608,6 +7615,7 @@
 /obj/item/wrench/bolter,
 /obj/item/clothing/gloves/kaza_ruk/combatglovesplus/maa,
 /obj/item/storage/toolbox/syndicate,
+/obj/item/binoculars,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security)
 "If" = (
@@ -9024,7 +9032,7 @@
 	color = "#00ff00";
 	name = "green"
 	},
-/obj/machinery/computer/cryopod/interdyne/directional/east,
+/obj/machinery/computer/cryopod/directional/east,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/nova/des_two/security/prison)
 "OU" = (
@@ -9455,6 +9463,7 @@
 	dir = 1
 	},
 /obj/machinery/light/cold/directional/north,
+/obj/effect/mob_spawn/ghost_role/robot/ds2,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -9745,6 +9754,7 @@
 	network = list("ds2")
 	},
 /obj/structure/extinguisher_cabinet/directional/south,
+/obj/item/inducer/syndicate,
 /turf/open/floor/iron/dark/textured_half,
 /area/ruin/space/has_grav/nova/des_two/bridge)
 "Sg" = (

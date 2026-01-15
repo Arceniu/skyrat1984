@@ -86,3 +86,22 @@
 
 /datum/outfit/lavaland_syndicate/shaftminer/deckofficer
 	role_job = /datum/job/interdyne_planetary_base/command
+
+//qm console
+/obj/machinery/computer/id_upgrader/ip
+	name = "interdyne access upgrader laptop"
+	desc = "A compact console meant to allow modifications to IDs. This one made by interdyne pharmaceutics and add IP access."
+	icon = 'icons/obj/machines/computer.dmi'
+	density = FALSE
+	icon_state = "laptop"
+	icon_screen = "medlaptop"
+	icon_keyboard = "laptop_key"
+	pass_flags = PASSTABLE
+	projectiles_pass_chance = 100
+	circuit = /obj/item/circuitboard/computer/id_upgrader/ip
+	access_to_give = list(ACCESS_SYNDICATE_IP)
+
+/obj/item/circuitboard/computer/id_upgrader/ip
+	name = "interdyne access upgrader console circuit"
+	greyscale_colors = CIRCUIT_COLOR_SECURITY
+	build_path = /obj/machinery/computer/id_upgrader/ip

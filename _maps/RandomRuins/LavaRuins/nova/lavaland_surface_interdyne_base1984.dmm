@@ -1479,6 +1479,7 @@
 /area/ruin/interdyne_planetary_base/med)
 "ml" = (
 /obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
+/obj/item/circuitboard/computer/id_upgrader/ip,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "mm" = (
@@ -2597,7 +2598,7 @@
 	req_access = list("syndicate")
 	},
 /obj/effect/turf_decal/delivery/white,
-/obj/machinery/suit_storage_unit/interdyne/nerfed,
+/obj/machinery/suit_storage_unit/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "vO" = (
@@ -3541,6 +3542,11 @@
 	dir = 9
 	},
 /obj/structure/table/wood,
+/obj/item/kirbyplants{
+	icon_state = "plant-29";
+	pixel_y = 11;
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "Dx" = (
@@ -3836,7 +3842,7 @@
 /area/ruin/interdyne_planetary_base)
 "Fh" = (
 /obj/structure/cable,
-/obj/machinery/power/micro_reactor,
+/obj/machinery/power/micro_reactor/bapgm,
 /turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/eng)
 "Fj" = (
@@ -4618,6 +4624,7 @@
 	name = "Interdyne Vault Camera";
 	c_tag = "Interdyne Vault Camera"
 	},
+/obj/machinery/announcement_system,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/vault)
 "Ma" = (
@@ -5140,10 +5147,10 @@
 "Qw" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/wood,
-/obj/item/kirbyplants{
-	icon_state = "plant-29";
-	pixel_y = 11;
-	pixel_x = 6
+/obj/machinery/computer/id_upgrader/ip{
+	dir = 8;
+	pixel_x = -2;
+	pixel_y = 3
 	},
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
@@ -5742,16 +5749,19 @@
 /obj/structure/table/reinforced,
 /obj/item/folder/syndicate/red/secretformula,
 /obj/item/circuitboard/computer/ghostpad/interdyne{
-	pixel_x = 2;
+	pixel_x = -4;
 	pixel_y = 2
 	},
 /obj/item/circuitboard/machine/ghostpad/interdyne{
-	pixel_x = 4;
+	pixel_x = -2;
 	pixel_y = 4
 	},
 /obj/item/circuitboard/computer/cargo/express/ghost/interdyne{
-	pixel_x = 6;
 	pixel_y = 6
+	},
+/obj/item/circuitboard/machine/protolathe/offstation{
+	pixel_y = 8;
+	pixel_x = 2
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/vault)
