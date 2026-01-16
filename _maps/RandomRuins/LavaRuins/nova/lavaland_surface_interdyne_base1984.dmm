@@ -428,7 +428,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -440,6 +439,7 @@
 /obj/effect/turf_decal/siding/thinplating/end{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/eng)
 "dQ" = (
@@ -575,7 +575,8 @@
 /area/ruin/interdyne_planetary_base/eng)
 "fo" = (
 /obj/structure/closet/secure_closet/cytology{
-	req_access = list("syndicate")
+	req_access = null;
+	req_one_access = list("syndicate", "syndicate_interdyne" )
 	},
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 1
@@ -1077,9 +1078,9 @@
 	},
 /area/ruin/interdyne_planetary_base/med/morgue)
 "jo" = (
-/obj/structure/ore_box,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/cold/directional/south,
+/obj/effect/mob_spawn/ghost_role/robot/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "jp" = (
@@ -1087,10 +1088,11 @@
 	name = "Medical Storage"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/med/pharm)
 "js" = (
@@ -1337,12 +1339,13 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitory"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/checker,
 /area/ruin/interdyne_planetary_base/serv/bar)
 "lj" = (
@@ -1457,12 +1460,13 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitory"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 6
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "ma" = (
@@ -1479,6 +1483,7 @@
 /area/ruin/interdyne_planetary_base/med)
 "ml" = (
 /obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
+/obj/item/circuitboard/computer/id_upgrader/ip,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "mm" = (
@@ -1918,6 +1923,7 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
+/obj/structure/ore_box,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "pT" = (
@@ -1928,7 +1934,7 @@
 /area/ruin/interdyne_planetary_base/eng)
 "pX" = (
 /obj/effect/turf_decal/delivery,
-/obj/structure/ore_box,
+/obj/effect/mob_spawn/ghost_role/robot/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "pZ" = (
@@ -1991,7 +1997,6 @@
 /area/ruin/interdyne_planetary_base/med/pharm)
 "qp" = (
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2000,6 +2005,8 @@
 	name = "Virology"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/white/small,
 /area/ruin/interdyne_planetary_base/med/viro)
 "qq" = (
@@ -2130,13 +2137,15 @@
 /area/ruin/interdyne_planetary_base/eng)
 "rj" = (
 /obj/effect/mapping_helpers/airlock/locked,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/vault{
 	id_tag = "syndie_lavaland_vault";
 	name = "Interdyne Vault"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ds,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "rE" = (
@@ -2517,7 +2526,8 @@
 "uP" = (
 /obj/machinery/light/cold/directional/west,
 /obj/structure/closet/secure_closet/medical1{
-	req_access = list("syndicate")
+	req_access = null;
+	req_one_access = list("syndicate", "syndicate_interdyne" )
 	},
 /turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/med/pharm)
@@ -2597,7 +2607,7 @@
 	req_access = list("syndicate")
 	},
 /obj/effect/turf_decal/delivery/white,
-/obj/machinery/suit_storage_unit/interdyne/nerfed,
+/obj/machinery/suit_storage_unit/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/med)
 "vO" = (
@@ -2908,12 +2918,13 @@
 /area/ruin/interdyne_planetary_base/science/xeno)
 "yJ" = (
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/virology,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/interdyne_planetary_base/main)
 "yL" = (
@@ -3025,12 +3036,13 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitory"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/checker,
 /area/ruin/interdyne_planetary_base/serv/bar)
 "zR" = (
@@ -3093,7 +3105,8 @@
 /area/ruin/interdyne_planetary_base/serv/bar)
 "Ap" = (
 /obj/structure/closet/secure_closet/medical2{
-	req_access = list("syndicate")
+	req_access = null;
+	req_one_access = list("syndicate", "syndicate_interdyne" )
 	},
 /obj/effect/turf_decal/trimline/dark_green/filled/line{
 	dir = 1
@@ -3541,6 +3554,11 @@
 	dir = 9
 	},
 /obj/structure/table/wood,
+/obj/item/kirbyplants{
+	icon_state = "plant-29";
+	pixel_y = 11;
+	pixel_x = 6
+	},
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "Dx" = (
@@ -3836,7 +3854,7 @@
 /area/ruin/interdyne_planetary_base)
 "Fh" = (
 /obj/structure/cable,
-/obj/machinery/power/micro_reactor,
+/obj/machinery/power/micro_reactor/bapgm,
 /turf/open/floor/engine,
 /area/ruin/interdyne_planetary_base/eng)
 "Fj" = (
@@ -4098,12 +4116,13 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitory"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 10
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "Hi" = (
@@ -4370,7 +4389,6 @@
 /obj/machinery/door/airlock/virology{
 	name = "Surgery"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4378,6 +4396,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/med)
 "JV" = (
@@ -4618,6 +4638,7 @@
 	name = "Interdyne Vault Camera";
 	c_tag = "Interdyne Vault Camera"
 	},
+/obj/machinery/announcement_system,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/vault)
 "Ma" = (
@@ -4678,9 +4699,10 @@
 	name = "Medical Storage"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/duct,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/med)
 "MK" = (
@@ -4718,15 +4740,15 @@
 /obj/machinery/door/airlock/virology/glass,
 /obj/structure/sign/warning/no_smoking/circle/directional/south,
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/main)
 "Nd" = (
 /obj/effect/turf_decal/siding/thinplating/corner{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitory"
 	},
@@ -4736,6 +4758,8 @@
 	dir = 8
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "Nf" = (
@@ -4864,11 +4888,6 @@
 	},
 /turf/open/floor/engine/bz,
 /area/ruin/interdyne_planetary_base/science/xeno)
-"On" = (
-/obj/structure/ore_box,
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/iron/dark/textured_large,
-/area/ruin/interdyne_planetary_base/cargo)
 "Oo" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -5038,8 +5057,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/wood/parquet,
 /area/ruin/interdyne_planetary_base/main/dorms)
 "Px" = (
@@ -5140,10 +5160,10 @@
 "Qw" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/wood,
-/obj/item/kirbyplants{
-	icon_state = "plant-29";
-	pixel_y = 11;
-	pixel_x = 6
+/obj/machinery/computer/id_upgrader/ip{
+	dir = 8;
+	pixel_x = -2;
+	pixel_y = 3
 	},
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
@@ -5209,6 +5229,7 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
+/obj/structure/ore_box,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "Rw" = (
@@ -5326,12 +5347,13 @@
 	name = "Chemistry"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/med/pharm)
 "Ss" = (
@@ -5417,6 +5439,8 @@
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
 	},
+/obj/structure/ore_box,
+/obj/structure/ore_box,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/cargo)
 "SR" = (
@@ -5505,7 +5529,6 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitory"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/dark/corner{
 	dir = 4
@@ -5515,6 +5538,8 @@
 	},
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/duct,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron,
 /area/ruin/interdyne_planetary_base/serv/bar)
 "Tx" = (
@@ -5698,7 +5723,6 @@
 /obj/machinery/door/airlock/virology/glass,
 /obj/structure/sign/warning/no_smoking/circle/directional/north,
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5707,6 +5731,8 @@
 	dir = 4
 	},
 /obj/machinery/duct,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/white,
 /area/ruin/interdyne_planetary_base/main)
 "Un" = (
@@ -5742,16 +5768,19 @@
 /obj/structure/table/reinforced,
 /obj/item/folder/syndicate/red/secretformula,
 /obj/item/circuitboard/computer/ghostpad/interdyne{
-	pixel_x = 2;
+	pixel_x = -4;
 	pixel_y = 2
 	},
 /obj/item/circuitboard/machine/ghostpad/interdyne{
-	pixel_x = 4;
+	pixel_x = -2;
 	pixel_y = 4
 	},
 /obj/item/circuitboard/computer/cargo/express/ghost/interdyne{
-	pixel_x = 6;
 	pixel_y = 6
+	},
+/obj/item/circuitboard/machine/protolathe/offstation{
+	pixel_y = 8;
+	pixel_x = 2
 	},
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/vault)
@@ -5767,7 +5796,6 @@
 /area/ruin/interdyne_planetary_base/med)
 "UU" = (
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/machinery/door/airlock/virology{
 	name = "Science Lab"
@@ -5776,6 +5804,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/interdyne_planetary_base/science/xeno)
 "UW" = (
@@ -6076,11 +6106,12 @@
 /obj/machinery/door/airlock/grunge{
 	name = "Morgue"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /obj/effect/mapping_helpers/airlock/cutaiwire,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/interdyne_planetary_base/med/morgue)
 "WX" = (
@@ -7844,7 +7875,7 @@ Wf
 Qd
 pR
 pn
-On
+pX
 Ih
 uQ
 ql

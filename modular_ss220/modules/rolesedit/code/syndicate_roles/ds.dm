@@ -39,6 +39,7 @@
 	density = TRUE
 	circuit = /obj/item/circuitboard/computer/id_upgrader/ds
 	access_to_give = list(ACCESS_SYNDICATE_DS)
+	req_access = list(ACCESS_SYNDICATE)
 
 /obj/item/circuitboard/computer/id_upgrader/ds
 	name = "syndicate access upgrader console circuit"
@@ -127,3 +128,12 @@
 
 /datum/outfit/ds2/syndicate/brigoff
 	role_job = /datum/job/ds2/enforce
+
+/obj/structure/closet/secure_closet/des_two/sa_locker
+	req_access = list(ACCESS_SYNDICATE_DS, ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_LEADER)
+
+/obj/structure/closet/secure_closet/des_two/cl_locker
+	req_access = list(ACCESS_SYNDICATE_DS, ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_LEADER)
+
+/obj/structure/closet/secure_closet/des_two/maa_locker
+	req_access = list(ACCESS_SYNDICATE_DS, ACCESS_SYNDICATE_LEADER)
