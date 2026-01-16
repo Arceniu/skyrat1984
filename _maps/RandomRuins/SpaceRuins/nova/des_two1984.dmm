@@ -61,7 +61,6 @@
 /area/ruin/space/has_grav/nova/des_two/security/prison)
 "ak" = (
 /obj/effect/turf_decal/siding/wood,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
 	hackProof = 1;
@@ -73,6 +72,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/unres/delayed,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/ds,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/nova/des_two/bridge/cl)
 "at" = (
@@ -950,12 +952,14 @@
 	name = "Station Admiral"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/unres/delayed,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/ip,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/ds,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/nova/des_two/bridge/admiral)
 "dS" = (
@@ -1555,7 +1559,6 @@
 	id_tag = "smasteratarms";
 	name = "Master At Arms' Office"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1568,6 +1571,8 @@
 /obj/effect/mapping_helpers/airlock/unres/delayed{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/ds,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/space/has_grav/nova/des_two/security)
 "gK" = (

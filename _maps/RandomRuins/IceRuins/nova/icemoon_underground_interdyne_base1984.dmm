@@ -451,7 +451,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "bw" = (
@@ -817,7 +817,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "ck" = (
@@ -1055,7 +1055,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "cP" = (
@@ -1547,7 +1547,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/cargo)
 "eh" = (
@@ -6085,7 +6085,7 @@
 "pl" = (
 /obj/structure/closet/secure_closet/freezer/meat{
 	anchored = 1;
-	req_access = list("syndicate")
+	req_access = null
 	},
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
@@ -6497,7 +6497,7 @@
 /obj/machinery/light/directional/south,
 /obj/structure/closet/secure_closet/freezer/kitchen{
 	anchored = 1;
-	req_access = list("syndicate")
+	req_access = null
 	},
 /obj/item/reagent_containers/condiment/milk,
 /obj/item/reagent_containers/condiment/soymilk,
@@ -7329,9 +7329,7 @@
 /obj/machinery/door/airlock/security/glass{
 	name = " Observation Center"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/ds,
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/leader,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
 /turf/open/floor/iron/smooth_large,
 /area/ruin/interdyne_planetary_base/cargo/obs)
 "Lg" = (

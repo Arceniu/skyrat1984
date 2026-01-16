@@ -440,7 +440,6 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/any/syndicate/general,
-/obj/effect/mapping_helpers/airlock/access/any/syndicate/ip,
 /turf/open/floor/iron/herringbone,
 /area/ruin/interdyne_planetary_base/eng)
 "dQ" = (
@@ -576,7 +575,8 @@
 /area/ruin/interdyne_planetary_base/eng)
 "fo" = (
 /obj/structure/closet/secure_closet/cytology{
-	req_access = list("syndicate")
+	req_access = null;
+	req_one_access = list("syndicate", "syndicate_interdyne" )
 	},
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 1
@@ -2526,7 +2526,8 @@
 "uP" = (
 /obj/machinery/light/cold/directional/west,
 /obj/structure/closet/secure_closet/medical1{
-	req_access = list("syndicate")
+	req_access = null;
+	req_one_access = list("syndicate", "syndicate_interdyne" )
 	},
 /turf/open/floor/iron/dark/small,
 /area/ruin/interdyne_planetary_base/med/pharm)
@@ -3104,7 +3105,8 @@
 /area/ruin/interdyne_planetary_base/serv/bar)
 "Ap" = (
 /obj/structure/closet/secure_closet/medical2{
-	req_access = list("syndicate")
+	req_access = null;
+	req_one_access = list("syndicate", "syndicate_interdyne" )
 	},
 /obj/effect/turf_decal/trimline/dark_green/filled/line{
 	dir = 1

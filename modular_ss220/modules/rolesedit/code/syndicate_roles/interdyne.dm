@@ -106,3 +106,6 @@
 	name = "interdyne access upgrader console circuit"
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
 	build_path = /obj/machinery/computer/id_upgrader/ip
+
+/obj/structure/closet/secure_closet/interdynefob/deckofficer_locker
+	req_access = list(ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_IP)
