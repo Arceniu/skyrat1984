@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-01-16",
+    "author": "Arceniu",
+    "changes": [
+      "Added IP id upgrade machine",
+      "updated ds 2 and interdyne - replaced generators with less powerfull version, replaced chameleon mod on ice ip with interdyne mod. chameleon mod now in Deck Officer room. Added borg spawners"
+    ]
+  },
+  {
+    "date": "2026-01-16",
+    "author": "DenIS318",
+    "changes": [
+      "Talking to headset common channel now can be done both with: \"; text\" and \";text\"",
+      ".40 Sol bullets (and subtypes) damage against unarmored targets 10 => 0 and bonus to wounds 5 => 0, as it was before"
+    ]
+  },
+  {
     "date": "2026-01-13",
     "author": "Arceniu",
     "changes": [
