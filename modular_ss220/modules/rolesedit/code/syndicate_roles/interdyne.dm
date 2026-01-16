@@ -100,6 +100,7 @@
 	projectiles_pass_chance = 100
 	circuit = /obj/item/circuitboard/computer/id_upgrader/ip
 	access_to_give = list(ACCESS_SYNDICATE_IP)
+	req_access = list(ACCESS_SYNDICATE)
 
 /obj/item/circuitboard/computer/id_upgrader/ip
 	name = "interdyne access upgrader console circuit"

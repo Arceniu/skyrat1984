@@ -39,6 +39,7 @@
 	density = TRUE
 	circuit = /obj/item/circuitboard/computer/id_upgrader/ds
 	access_to_give = list(ACCESS_SYNDICATE_DS)
+	req_access = list(ACCESS_SYNDICATE)
 
 /obj/item/circuitboard/computer/id_upgrader/ds
 	name = "syndicate access upgrader console circuit"
