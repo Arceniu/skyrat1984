@@ -129,7 +129,7 @@
 /datum/outfit/ds2/syndicate/brigoff
 	role_job = /datum/job/ds2/enforce
 
-obj/structure/closet/secure_closet/des_two/sa_locker
+/obj/structure/closet/secure_closet/des_two/sa_locker
 	req_access = list(ACCESS_SYNDICATE_DS, ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_LEADER)
 
 /obj/structure/closet/secure_closet/des_two/cl_locker
