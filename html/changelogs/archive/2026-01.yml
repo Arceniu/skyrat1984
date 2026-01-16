@@ -220,3 +220,14 @@
   - bugfix: fixed some missed stamps on paper
   DenIS318:
   - bugfix: Paper TGUI now show newly added stamps
+2026-01-16:
+  Arceniu:
+  - rscadd: Added IP id upgrade machine
+  - map: updated ds 2 and interdyne - replaced generators with less powerfull version,
+      replaced chameleon mod on ice ip with interdyne mod. chameleon mod now in Deck
+      Officer room. Added borg spawners
+  DenIS318:
+  - qol: 'Talking to headset common channel now can be done both with: "; text" and
+      ";text"'
+  - balance: .40 Sol bullets (and subtypes) damage against unarmored targets 10 =>
+      0 and bonus to wounds 5 => 0, as it was before

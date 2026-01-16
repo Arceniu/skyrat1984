@@ -1,5 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - rscadd: "Added IP id upgrade machine"
-  - map: "updated ds 2 and interdyne - replaced generators with less powerfull version, replaced chameleon mod on ice ip with interdyne mod. chameleon mod now in Deck Officer room. Added borg spawners"

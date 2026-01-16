@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: ".40 Sol bullets (and subtypes) damage against unarmored targets 10 => 0 and bonus to wounds 5 => 0, as it was before"
