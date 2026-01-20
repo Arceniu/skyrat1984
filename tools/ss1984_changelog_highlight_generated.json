@@ -1,5 +1,22 @@
 [
   {
+    "date": "2026-01-20",
+    "author": "Arceniu",
+    "changes": [
+      "modified blackmarket trader area( weapons spawner replaced with mini vault, removet non rp nova shield)"
+    ]
+  },
+  {
+    "date": "2026-01-20",
+    "author": "DenIS318",
+    "changes": [
+      "Arrows are now weak against armor (armor is doubled when calculating damage, but it's done after armor penetration). Example: nuclear operative MOD received damage from arrow: 25 => 5, security officer with default loadout 36 => 22.",
+      "Revert \"balance: The SolFed Halo rifles now have regular damage multipliers (1x damage for the assault rifle, 1.1x damage for the battle rifle/DMR)\"",
+      "Revert \"Discovery that the foregrips and handguards on the Zaibas longarms are not decorative has led to a decrease in recoil of 50% (half)\"",
+      "Clown's car \"Thank the Clown Car Driver\" said words are localized"
+    ]
+  },
+  {
     "date": "2026-01-16",
     "author": "Arceniu",
     "changes": [
