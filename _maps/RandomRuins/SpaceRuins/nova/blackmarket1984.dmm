@@ -349,6 +349,14 @@
 /obj/structure/sign/warning/docking/directional/south,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/nova/blackmarket)
+"tU" = (
+/obj/machinery/button/door/directional/east{
+	id = "bmtvault";
+	name = "Vault Lock";
+	req_access = list("away_generic4")
+	},
+/turf/open/floor/iron/smooth_large,
+/area/ruin/space/has_grav/nova/blackmarket)
 "ua" = (
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/booze{
@@ -1531,7 +1539,7 @@ Wx
 nK
 HR
 CD
-CD
+tU
 CD
 nK
 Wx
