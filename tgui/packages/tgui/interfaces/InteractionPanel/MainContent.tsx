@@ -15,10 +15,12 @@ type Interaction = {
   erp_interaction: BooleanLike;
 }
 
-import {
-  InteractionsTab,
-  LewdItemsTab,
-} from './tabs';
+// SS1984 REMOVAL START
+// import {
+//   InteractionsTab,
+//   LewdItemsTab,
+// } from './tabs';
+// SS1984 REMOVAL END
 
 export const MainContent = () => {
   const [searchText, setSearchText] = useState('');
@@ -83,6 +85,7 @@ export const MainContent = () => {
             )}
           </Stack>
         </Stack.Item>
+        { /* SS1984 REMOVAL START
         <Stack.Item grow mb={-1.6}>
           <Section fill>
             {tabIndex === 1 ? (
@@ -95,6 +98,7 @@ export const MainContent = () => {
             )}
           </Section>
         </Stack.Item>
+        SS1984 REMOVAL END*/ }
       </Stack>
     </Section>
   );
