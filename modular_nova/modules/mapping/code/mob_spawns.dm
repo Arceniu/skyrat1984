@@ -49,7 +49,7 @@
 
 	. = ..()
 
-	var/obj/item/shuttle_remote/bmd/remote = shady.get_item_by_slot(ITEM_SLOT_LPOCKET)
+	var/obj/item/shuttle_remote/bmd/remote = shady.get_item_by_slot(ITEM_SLOT_RPOCKET) //SS1984 EDIT ORIGINAL 	var/obj/item/shuttle_remote/bmd/remote = shady.get_item_by_slot(ITEM_SLOT_LPOCKET)
 	if(!remote)
 		return
 	// we boldly assume only one Burst was spawned. Checking by Z-level defeats the purpose of this remote being used by latejoining BMD to retrieve stolen shuttle.
@@ -69,10 +69,10 @@
 	icon_state = "pistol"
 	loot = list(
 		/obj/item/gun/energy/laser/cybersun/black_market_trader = 80,
-		/obj/item/gun/energy/laser/retro = 50, // ss1984 edit no oldstation unique gun (replaces /obj/item/gun/energy/e_gun/old)
+		/obj/item/gun/energy/e_gun/old = 50,
 		/obj/item/gun/ballistic/shotgun/automatic/combat = 50,
 		/obj/item/gun/ballistic/automatic/pistol/contraband = 30,
-		/obj/item/gun/ballistic/automatic/sol_rifle/evil  = 10,
+		/obj/item/gun/ballistic/automatic/sol_rifle/evil  = 20,
 		/obj/item/gun/ballistic/automatic/sol_smg/evil = 20,
 		/obj/item/gun/ballistic/shotgun/bulldog/unrestricted,
 	)

@@ -230,7 +230,6 @@
 "oJ" = (
 /obj/machinery/light/dim/directional/west,
 /obj/structure/table,
-/obj/item/storage/box/nif_ghost_box/ghost_role,
 /turf/open/floor/iron/smooth_large,
 /area/ruin/space/has_grav/nova/blackmarket)
 "oN" = (
@@ -622,6 +621,17 @@
 /obj/effect/spawner/random/trash/moisture,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
+/area/ruin/space/has_grav/nova/blackmarket)
+"Dv" = (
+/obj/effect/turf_decal/siding/thinplating_new/dark{
+	dir = 4
+	},
+/obj/structure/closet/crate/freezer,
+/obj/item/storage/fish_case/blackmarket,
+/obj/item/storage/fish_case/blackmarket,
+/turf/open/floor/iron/smooth_edge{
+	dir = 8
+	},
 /area/ruin/space/has_grav/nova/blackmarket)
 "DA" = (
 /obj/structure/fans/tiny,
@@ -1078,6 +1088,7 @@
 /area/ruin/space/has_grav/nova/blackmarket)
 "WM" = (
 /obj/structure/table,
+/obj/item/storage/box/nif_ghost_box/ghost_role,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/space/has_grav/nova/blackmarket)
 "Xc" = (
@@ -1885,7 +1896,7 @@ at
 Xx
 Vs
 Vs
-Vs
+Dv
 uy
 yY
 fJ
