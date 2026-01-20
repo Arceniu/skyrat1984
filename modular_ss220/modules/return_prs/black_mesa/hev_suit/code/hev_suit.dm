@@ -761,25 +761,29 @@
 	visor_flags = null
 	slowdown = 0
 	has_flashlight = FALSE
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Basic" = list(
-			RESKIN_ICON_STATE = "hecu_helm",
-			RESKIN_WORN_ICON_STATE = "hecu_helm"
-		),
-		"Corpsman" = list(
-			RESKIN_ICON_STATE = "hecu_helm_medic",
-			RESKIN_WORN_ICON_STATE = "hecu_helm_medic"
-		),
-		"Basic Black" = list(
-			RESKIN_ICON_STATE = "hecu_helm_black",
-			RESKIN_WORN_ICON_STATE = "hecu_helm_black"
-		),
-		"Corpsman Black" = list(
-			RESKIN_ICON_STATE = "hecu_helm_medic_black",
-			RESKIN_WORN_ICON_STATE = "hecu_helm_medic_black"
-		),
-	)
+
+/datum/atom_skin/pcv_suit
+	abstract_type = /datum/atom_skin/pcv_suit
+
+/datum/atom_skin/pcv_suit/basic
+	preview_name = "Basic"
+	new_icon_state = "hecu_helm"
+
+/datum/atom_skin/pcv_suit/corpsman
+	preview_name = "Corpsman"
+	new_icon_state = "hecu_helm_medic"
+
+/datum/atom_skin/pcv_suit/basic_black
+	preview_name = "Basic Black"
+	new_icon_state = "hecu_helm_black"
+
+/datum/atom_skin/pcv_suit/corpsman_black
+	preview_name = "Corpsman Black"
+	new_icon_state = "hecu_helm_medic_black"
+
+/obj/item/clothing/head/helmet/space/hev_suit/pcv/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/reskinable_item, /datum/atom_skin/pcv_suit)
 
 /datum/armor/hev_suit_pcv
 	melee = 30
@@ -823,25 +827,6 @@
 	show_hud = FALSE
 	radio_key = /obj/item/encryptionkey/headset_faction
 	radio_channel = RADIO_CHANNEL_FACTION
-	uses_advanced_reskins = TRUE
-	unique_reskin = list(
-		"Basic" = list(
-			RESKIN_ICON_STATE = "hecu_vest",
-			RESKIN_WORN_ICON_STATE = "hecu_vest"
-		),
-		"Corpsman" = list(
-			RESKIN_ICON_STATE = "hecu_vest_medic",
-			RESKIN_WORN_ICON_STATE = "hecu_vest_medic"
-		),
-		"Basic Black" = list(
-			RESKIN_ICON_STATE = "hecu_vest_black",
-			RESKIN_WORN_ICON_STATE = "hecu_vest_black"
-		),
-		"Corpsman Black" = list(
-			RESKIN_ICON_STATE = "hecu_vest_medic_black",
-			RESKIN_WORN_ICON_STATE = "hecu_vest_medic_black"
-		),
-	)
 
 	activation_song = null // removal of song only standard suit will have the song
 
@@ -890,9 +875,28 @@
 	acid_static_cooldown = PCV_COOLDOWN_ACID
 	suit_name = "PCV MARK II"
 
-/obj/item/clothing/suit/space/hev_suit/pcv/click_alt(mob/living/user)
-	reskin_obj(user)
+/datum/atom_skin/hecu_suit
+	abstract_type = /datum/atom_skin/hecu_suit
+
+/datum/atom_skin/hecu_suit/basic
+	preview_name = "Basic"
+	new_icon_state = "hecu_vest"
+
+/datum/atom_skin/hecu_suit/corpsman
+	preview_name = "Corpsman"
+	new_icon_state = "hecu_vest_medic"
+
+/datum/atom_skin/hecu_suit/basic_black
+	preview_name = "Basic Black"
+	new_icon_state = "hecu_vest_black"
+
+/datum/atom_skin/hecu_suit/corpsman_black
+	preview_name = "Corpsman Black"
+	new_icon_state = "hecu_vest_medic_black"
+
+/obj/item/clothing/suit/space/hev_suit/pcv/Initialize(mapload)
 	. = ..()
+	AddComponent(/datum/component/reskinable_item, /datum/atom_skin/hecu_suit)
 
 #undef HEV_COLOR_GREEN
 #undef HEV_COLOR_RED

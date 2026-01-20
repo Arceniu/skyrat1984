@@ -124,10 +124,10 @@
 	data["self"] = self.name
 	data["block_interact"] = interact_next >= world.time
 	data["use_subtler"] = use_subtler
-	data["erp_interaction"] = self.client?.prefs?.read_preference(/datum/preference/toggle/erp)
+	data["erp_interaction"] = FALSE // SS1984 EDIT, original: data["erp_interaction"] = self.client?.prefs?.read_preference(/datum/preference/toggle/erp)
 	data["has_erp_interaction"] = has_erp_interaction
 
-	var/mob/living/carbon/human/human_user = user
+	// SS1984 REMOVAL var/mob/living/carbon/human/human_user = user
 
 	data["isTargetSelf"] = (user == self)
 
@@ -137,9 +137,11 @@
 	var/user_pain = 0
 
 	if(user)
-		user_pleasure = human_user.pleasure
-		user_arousal = human_user.arousal
-		user_pain = human_user.pain
+		// SS1984 REMOVAL START
+		// user_pleasure = human_user.pleasure
+		// user_arousal = human_user.arousal
+		// user_pain = human_user.pain
+		// SS1984 REMOVAL END
 
 		data["pleasure"] = user_pleasure
 		data["arousal"] = user_arousal
@@ -148,9 +150,9 @@
 
 	// self - the one who the interaction component belongs to, aka who it's opened on (confusing var name yep)
 	if(user != self)
-		data["theirPleasure"] = self.pleasure
-		data["theirArousal"] = self.arousal
-		data["theirPain"] = self.pain
+		data["theirPleasure"] = 0 // SS1984 EDIT, original: data["theirPleasure"] = self.pleasure
+		data["theirArousal"] = 0 // SS1984 EDIT, original: data["theirArousal"] = self.arousal
+		data["theirPain"] = 0 // SS1984 EDIT, original: data["theirPain"] = self.pain
 
 	// SS1984 REMOVAL START
 	// var/list/parts = list()

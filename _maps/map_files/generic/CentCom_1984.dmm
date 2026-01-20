@@ -10817,9 +10817,9 @@
 /area/centcom/central_command_areas/courtroom)
 "Sl" = (
 /obj/structure/table/reinforced,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
-/obj/item/computer_disk/quartermaster,
+/obj/item/disk/computer/quartermaster,
+/obj/item/disk/computer/quartermaster,
+/obj/item/disk/computer/quartermaster,
 /obj/item/gps/mining,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6

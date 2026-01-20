@@ -446,7 +446,7 @@
 							/obj/item/storage/medkit/surgery,
 							/obj/item/gun/medbeam,
 							/obj/item/gun/energy/cell_loaded/medigun/cmo,
-							/obj/item/storage/box/medicells,
+							/obj/item/storage/box/plastic/medicells,
 							/obj/item/beamout_tool,
 							/obj/item/crucifix,
 							/obj/item/reagent_containers/cup/glass/waterbottle/large/cryptobiolin)
