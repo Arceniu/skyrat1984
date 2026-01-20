@@ -176,12 +176,6 @@
   codyman765:
   - map: modified the ghost cafe to reflect current map assets and fix bugs
 2026-01-06:
-  DenIS318:
-  - server: World name (such as displayed at top of game window) is now consistent
-      and no longer uses station name
-  - rscadd: Revert "Removed the recipe for the Hulk and Ork Gene"
-  - balance: Shuttle call time on green & blue codes 15 -> 10 minutes
-  - balance: Shuttle call time starting on red code 15 -> 5 minutes
   Adeheuer:
   - rscadd: Added new features to the Interact panel, especially with certain settings
       enabled
@@ -191,6 +185,12 @@
   Ben10Omintrix:
   - bugfix: makes sure slimes and other animals immediately cease attacking their
       tamers
+  DenIS318:
+  - server: World name (such as displayed at top of game window) is now consistent
+      and no longer uses station name
+  - rscadd: Revert "Removed the recipe for the Hulk and Ork Gene"
+  - balance: Shuttle call time on green & blue codes 15 -> 10 minutes
+  - balance: Shuttle call time starting on red code 15 -> 5 minutes
   ElGitificador:
   - admin: siege weapons log in attack instead of attack and game.
   - balance: Reduced haunted eightball spawnrate on surplus and removed bee smoker
@@ -527,3 +527,23 @@
       is active, or if the item was thrown
   wivernshy:
   - rscadd: Adds wivernshy's donator item!
+2026-01-20:
+  Arceniu:
+  - map: modified blackmarket trader area( weapons spawner replaced with mini vault,
+      removet non rp nova shield)
+  DenIS318:
+  - balance: 'Arrows are now weak against armor (armor is doubled when calculating
+      damage, but it''s done after armor penetration). Example: nuclear operative
+      MOD received damage from arrow: 25 => 5, security officer with default loadout
+      36 => 22.'
+  - spellcheck: Clown's car "Thank the Clown Car Driver" said words are localized
+  - balance: 'Revert "balance: The SolFed Halo rifles now have regular damage multipliers
+      (1x damage for the assault rifle, 1.1x damage for the battle rifle/DMR)"'
+  - balance: Revert "Discovery that the foregrips and handguards on the Zaibas longarms
+      are not decorative has led to a decrease in recoil of 50% (half)"
+  splat1125:
+  - rscadd: Added a new undershirt, the cropped corset. recolorable!
+  - rscadd: Added a new under/uniform clothing item, wide legged pants, to loadouts
+      and station vendors. recolorable!
+  - bugfix: Security battle dress is no longer missing a single pixel at the crotch
+      when worn with the female bodytype
