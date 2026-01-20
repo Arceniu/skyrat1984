@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Arrows are now weak against armor (armor is doubled when calculating damage, but it's done after armor penetration). Example: nuclear operative MOD received damage from arrow: 25 => 5, security officer with default loadout 36 => 22."
