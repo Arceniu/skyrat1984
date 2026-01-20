@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Revert \"balance: The SolFed Halo rifles now have regular damage multipliers (1x damage for the assault rifle, 1.1x damage for the battle rifle/DMR)\""
