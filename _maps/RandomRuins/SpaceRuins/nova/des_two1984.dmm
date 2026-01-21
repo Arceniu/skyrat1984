@@ -3590,7 +3590,7 @@
 	desc = "A brick of stimulants meant for use by Tiger Cooperative agents. It seems this one's just a brittle block of heroin.";
 	name = "Tiger Coop stimulant brick"
 	},
-/obj/item/circuitboard/machine/rdserver/interdyne_ds2,
+/obj/item/circuitboard/machine/rdserver/deepspace,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/nova/des_two/bridge/vault)
 "pk" = (
@@ -3922,7 +3922,8 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
-/obj/machinery/rnd/server/interdyne_ds2,
+/obj/structure/frame/machine/secured,
+/obj/item/circuitboard/machine/rdserver/deepspace,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/nova/des_two/research)
 "qN" = (
@@ -5219,7 +5220,6 @@
 	ailock = 1;
 	control_area = "/area/ruin/space/has_grav/nova/des_two/bridge/vault";
 	dir = 1;
-	icon_state = "control_kill";
 	lethal = 1;
 	name = "DS2 turret controls";
 	pixel_x = -30;
@@ -7806,6 +7806,13 @@
 /obj/item/reagent_containers/cup/maunamug{
 	pixel_x = 4
 	},
+/obj/machinery/suit_storage_unit{
+	mask_type = /obj/item/clothing/mask/gas/syndicate;
+	mod_type = /obj/item/mod/control/pre_equipped/traitor_elite;
+	storage_type = /obj/item/tank/jetpack/harness;
+	density = 0;
+	pixel_x = 28
+	},
 /turf/open/floor/carpet/donk,
 /area/ruin/space/has_grav/nova/des_two/bridge/cl)
 "IQ" = (
@@ -7836,11 +7843,7 @@
 /obj/structure/window/reinforced/survival_pod{
 	dir = 10
 	},
-/obj/machinery/suit_storage_unit{
-	mask_type = /obj/item/clothing/mask/gas/syndicate;
-	mod_type = /obj/item/mod/control/pre_equipped/traitor_elite;
-	storage_type = /obj/item/tank/jetpack/harness
-	},
+/obj/machinery/suit_storage_unit/syndicate/deepspace_admiral,
 /turf/open/floor/iron/dark/smooth_large,
 /area/ruin/space/has_grav/nova/des_two/bridge/admiral)
 "Ja" = (

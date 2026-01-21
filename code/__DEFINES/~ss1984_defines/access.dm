@@ -77,3 +77,8 @@
 //nri
 #define ACCESS_NRI "nri"
 #define ACCESS_NRI_POLICE "nri_police"
+
+//syndicate
+#define ACCESS_SYNDICATE_DS "syndicate_deepspace"
+#define ACCESS_SYNDICATE_IP "syndicate_interdyne"
+#define ACCESS_SYNDICATE_OFFICER "syndicate_officer"
