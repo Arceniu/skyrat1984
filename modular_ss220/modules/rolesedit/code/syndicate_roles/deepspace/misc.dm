@@ -54,7 +54,9 @@
 
 /obj/item/mod/control/pre_equipped/deepspace
 	starting_frequency = MODLINK_FREQ_SYNDICATE
-	req_access = list(ACCESS_SYNDICATE)
+	locked = 1
+	req_access = null
+	req_one_access = list(ACCESS_SYNDICATE_IP, ACCESS_SYNDICATE_DS)
 	applied_cell = /obj/item/stock_parts/power_store/cell/hyper
 	applied_modules = list(
 		/obj/item/mod/module/storage/syndicate,
@@ -95,6 +97,7 @@
 /obj/item/mod/control/pre_equipped/deepspace_admiral
 	starting_frequency = MODLINK_FREQ_SYNDICATE
 	applied_cell = /obj/item/stock_parts/power_store/cell/bluespace
+	locked = 1
 	req_access = list(ACCESS_SYNDICATE_DS, ACCESS_SYNDICATE_LEADER)
 	applied_modules = list(
 		/obj/item/mod/module/storage/syndicate,

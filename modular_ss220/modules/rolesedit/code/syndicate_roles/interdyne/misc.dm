@@ -14,7 +14,7 @@
 	req_access = list(ACCESS_SYNDICATE)
 
 /obj/item/circuitboard/computer/id_upgrader/ip
-	name = "interdyne access upgrader console circuit"
+	name = "interdyne access upgrader laptop circuit"
 	greyscale_colors = CIRCUIT_COLOR_SECURITY
 	build_path = /obj/machinery/computer/id_upgrader/ip
 
