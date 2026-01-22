@@ -547,3 +547,6 @@
       and station vendors. recolorable!
   - bugfix: Security battle dress is no longer missing a single pixel at the crotch
       when worn with the female bodytype
+2026-01-22:
+  DenIS318:
+  - bugfix: sleep is now properly expiring for non-player mobs
