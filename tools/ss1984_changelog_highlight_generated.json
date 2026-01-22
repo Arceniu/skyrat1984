@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-01-22",
+    "author": "DenIS318",
+    "changes": [
+      "sleep is now properly expiring for non-player mobs"
+    ]
+  },
+  {
     "date": "2026-01-20",
     "author": "Arceniu",
     "changes": [
