@@ -1,4 +1,8 @@
-//job and outfit code
+//jobs
+/datum/job/interdyne_planetary_base/command
+	bounty_types = DYNE_JOB_COMMAND
+
+//outfits
 /datum/outfit/interdyne_planetary_base
 	role_job = /datum/job/interdyne_planetary_base
 
@@ -11,14 +15,8 @@
 /datum/outfit/interdyne_planetary_base/shaftminer/ice
 	role_job = /datum/job/interdyne_planetary_base_icebox/mining
 
-/datum/job/interdyne_planetary_base/command
-	bounty_types = DYNE_JOB_COMMAND
-
 /datum/outfit/interdyne_planetary_base/shaftminer/deckofficer
 	role_job = /datum/job/interdyne_planetary_base/command
-
-/datum/job/interdyne_planetary_base/command
-	bounty_types = DYNE_JOB_COMMAND
 
 /datum/outfit/lavaland_syndicate/shaftminer/deckofficer
 	role_job = /datum/job/interdyne_planetary_base/command

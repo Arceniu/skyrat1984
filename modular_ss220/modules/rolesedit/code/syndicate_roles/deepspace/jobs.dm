@@ -1,4 +1,17 @@
-//job and outfit code
+//jobs
+/datum/job/ds2/mining
+	bounty_types = DYNE_JOB_COMMAND
+	paycheck_department = ACCOUNT_DS2
+
+/datum/job/ds2/service
+	bounty_types = DS2_JOB_SERVICE
+	paycheck_department = ACCOUNT_DS2
+
+//spawners override
+/obj/effect/mob_spawn/ghost_role/human/ds2/syndicate/miner
+	spawner_job_path = /datum/job/ds2/mining
+
+//outfits
 /datum/outfit/ds2
 	role_job = /datum/job/ds2
 
@@ -8,19 +21,8 @@
 /datum/outfit/ds2/syndicate_command
 	role_job = /datum/job/ds2/command
 
-/datum/job/ds2/mining
-	bounty_types = DYNE_JOB_COMMAND
-	paycheck_department = ACCOUNT_DS2
-
 /datum/outfit/ds2/syndicate/miner
 	role_job = /datum/job/ds2/mining
-
-/obj/effect/mob_spawn/ghost_role/human/ds2/syndicate/miner
-	spawner_job_path = /datum/job/ds2/mining
-
-/datum/job/ds2/service
-	bounty_types = DS2_JOB_SERVICE
-	paycheck_department = ACCOUNT_DS2
 
 /datum/outfit/ds2/syndicate/service
 	role_job = /datum/job/ds2/service
