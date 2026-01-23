@@ -1,6 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - balance: "returned slightly buffed cybersun modsuits armour and modules to deepspace modsuits(security prisoner transport bags) and added access requirement(still can be hacked by cutting wires)"
-  - bugfix: "DS-2 leader's lockers now have syndicate leader+deepspace access req instead of basic syndicate access"
-  - map: "DS-2 Map now spawn at their own empty space sector"

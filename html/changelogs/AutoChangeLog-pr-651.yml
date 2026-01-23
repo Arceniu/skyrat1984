@@ -1,6 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - map: "replaced syndicate modsuits with cybersun ones at DS-2 armory"
-  - map: "DS-2 Admiral now get their own cybersun elite modsuit, while Liason get the basic elite modsuit"
-  - bugfix: "turret controllers icon at interdyne and DS-2 maps fixed"

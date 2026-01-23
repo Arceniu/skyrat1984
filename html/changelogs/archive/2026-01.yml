@@ -550,3 +550,18 @@
 2026-01-22:
   DenIS318:
   - bugfix: sleep is now properly expiring for non-player mobs
+2026-01-23:
+  Arceniu:
+  - map: replaced syndicate modsuits with cybersun ones at DS-2 armory
+  - map: DS-2 Admiral now get their own cybersun elite modsuit, while Liason get the
+      basic elite modsuit
+  - bugfix: turret controllers icon at interdyne and DS-2 maps fixed
+  - balance: returned slightly buffed cybersun modsuits armour and modules to deepspace
+      modsuits(security prisoner transport bags) and added access requirement(still
+      can be hacked by cutting wires)
+  - bugfix: DS-2 leader's lockers now have syndicate leader+deepspace access req instead
+      of basic syndicate access
+  - map: DS-2 Map now spawn at their own empty space sector
+  DenIS318:
+  - rscadd: DS-2 (and interdyne, as they use same techweb) now starts with "Illegal
+      Technology" node, which enables illegal researches.
