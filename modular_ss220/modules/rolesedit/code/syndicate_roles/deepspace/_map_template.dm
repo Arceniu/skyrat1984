@@ -5,5 +5,6 @@
 	name = "Space-Ruin DS-2 (ss1984 edit)"
 	description = "If DS-1 was so good... and DS-2 from offs..."
 	cost = 1000
-	always_place = FALSE
 	allow_duplicates = FALSE
+	always_place = FALSE
+	unpickable = TRUE
