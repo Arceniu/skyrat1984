@@ -9505,12 +9505,6 @@
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/nova/des_two)
-"QY" = (
-/obj/machinery/door/window/survival_pod/left/directional/north{
-	req_access = list("syndicate_deepspace")
-	},
-/turf/closed/wall/r_wall/plastitanium/syndicate/nodiagonal,
-/area/ruin/space/has_grav/nova/des_two/security)
 "Rb" = (
 /obj/machinery/chem_master/condimaster{
 	name = "BrewMaster 3000"
@@ -12573,7 +12567,7 @@ yu
 eb
 Xh
 Xh
-QY
+Xh
 Xh
 Xh
 Tt
