@@ -3919,8 +3919,7 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
-/obj/structure/frame/machine/secured,
-/obj/item/circuitboard/machine/rdserver/deepspace,
+/obj/machinery/rnd/server/deepspace,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/nova/des_two/research)
 "qN" = (
