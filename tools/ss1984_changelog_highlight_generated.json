@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-01-23",
+    "author": "Arceniu",
+    "changes": [
+      "returned slightly buffed cybersun modsuits armour and modules to deepspace modsuits(security prisoner transport bags) and added access requirement(still can be hacked by cutting wires)",
+      "DS-2 leader's lockers now have syndicate leader+deepspace access req instead of basic syndicate access",
+      "DS-2 Map now spawn at their own empty space sector",
+      "replaced syndicate modsuits with cybersun ones at DS-2 armory",
+      "DS-2 Admiral now get their own cybersun elite modsuit, while Liason get the basic elite modsuit",
+      "turret controllers icon at interdyne and DS-2 maps fixed"
+    ]
+  },
+  {
+    "date": "2026-01-23",
+    "author": "DenIS318",
+    "changes": [
+      "DS-2 (and interdyne, as they use same techweb) now starts with \"Illegal Technology\" node, which enables illegal researches."
+    ]
+  },
+  {
     "date": "2026-01-22",
     "author": "DenIS318",
     "changes": [
