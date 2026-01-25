@@ -40,6 +40,9 @@
 "cw" = (
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/three)
+"cy" = (
+/turf/open/floor/iron/dark,
+/area/centcom)
 "dy" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
@@ -197,6 +200,10 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/three)
+"tg" = (
+/obj/structure/sign/poster/contraband/syndicate_recruitment/directional/north,
+/turf/open/floor/iron/dark,
+/area/centcom)
 "tR" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Supplypod Elevator"
@@ -252,6 +259,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/admin/supply,
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/supplypod)
+"zC" = (
+/obj/structure/sign/poster/contraband/waffle_corp_rifles/directional/east,
+/turf/open/floor/iron/dark,
+/area/centcom)
 "zK" = (
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted{
 	dir = 8
@@ -271,6 +282,12 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/one)
+"AY" = (
+/obj/machinery/telecomms/allinone/nuclear,
+/obj/structure/sign/poster/contraband/syndicate_pistol/directional/north,
+/obj/structure/sign/poster/contraband/ultra/directional/east,
+/turf/open/floor/iron/dark,
+/area/centcom)
 "BQ" = (
 /obj/effect/light_emitter/podbay,
 /turf/open/floor/iron,
@@ -292,6 +309,10 @@
 "Di" = (
 /turf/closed/indestructible/riveted,
 /area/centcom/ai_multicam_room)
+"Eg" = (
+/obj/structure/sign/poster/contraband/syndicate_medical/directional/north,
+/turf/open/floor/iron/dark,
+/area/centcom)
 "ER" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
@@ -342,6 +363,9 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/supply/pod)
+"Jg" = (
+/turf/closed/indestructible/riveted,
+/area/centcom)
 "Kb" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/light_emitter/podbay,
@@ -36600,11 +36624,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+Jg
+Jg
+Jg
+Jg
+Jg
 aa
 aa
 aa
@@ -36857,11 +36881,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+Jg
+Eg
+cy
+cy
+Jg
 aa
 aa
 aa
@@ -37114,11 +37138,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+Jg
+tg
+cy
+cy
+Jg
 aa
 aa
 aa
@@ -37371,11 +37395,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+Jg
+AY
+zC
+cy
+Jg
 aa
 aa
 aa
@@ -37628,11 +37652,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+Jg
+Jg
+Jg
+Jg
+Jg
 aa
 aa
 aa
