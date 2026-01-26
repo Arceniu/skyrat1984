@@ -1,6 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - map: "fixed some centcom map bugs"
-  - map: "changed modular interlink, returned head of staff interlink room, separated interlink start area from other rooms"
-  - bugfix: "returned syndicate server to admin sector"

@@ -565,3 +565,9 @@
   DenIS318:
   - rscadd: DS-2 (and interdyne, as they use same techweb) now starts with "Illegal
       Technology" node, which enables illegal researches.
+2026-01-26:
+  Arceniu:
+  - map: fixed some centcom map bugs
+  - map: changed modular interlink, returned head of staff interlink room, separated
+      interlink start area from other rooms
+  - bugfix: returned syndicate server to admin sector
