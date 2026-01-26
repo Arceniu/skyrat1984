@@ -86,3 +86,40 @@
 	var/list/access_list = ..()
 	access_list += ACCESS_CENT_OFFICIAL
 	return access_list
+
+//interlink tram
+
+#define INTERLINK_1984_LINE_1 "intl1984_1"
+
+
+#define INTERLINK_1984_PORT 1
+#define INTERLINK_1984_CENTRAL 2
+#define INTERLINK_1984_STARBOARD 3
+
+/obj/effect/landmark/transport/transport_id/interlink_tram_1984
+	specific_transport_id = INTERLINK_1984_LINE_1
+
+/obj/effect/landmark/transport/nav_beacon/tram/nav/interlink_tram_1984
+	name = INTERLINK_1984_LINE_1
+	specific_transport_id = TRAM_NAV_BEACONS
+
+/obj/effect/landmark/transport/nav_beacon/tram/platform/interlink_tram_1984/left
+	name = "Port"
+	specific_transport_id = INTERLINK_1984_LINE_1
+	platform_code = INTERLINK_1984_PORT
+	tgui_icons = list("Reception" = "briefcase", "Botany" = "leaf", "Chemistry" = "flask")
+
+/obj/effect/landmark/transport/nav_beacon/tram/platform/interlink_tram_1984/middle
+	name = "Central"
+	specific_transport_id = INTERLINK_1984_LINE_1
+	platform_code = INTERLINK_1984_CENTRAL
+	tgui_icons = list("Shuttle" = "plane-departure", "Security" = "gavel")
+
+/obj/effect/landmark/transport/nav_beacon/tram/platform/interlink_tram_1984/right
+	name = "Starboard"
+	specific_transport_id = INTERLINK_1984_LINE_1
+	platform_code = INTERLINK_1984_STARBOARD
+	tgui_icons = list("Medical" = "plus", "Engineering" = "wrench", "Dormitories" = "bed")
+
+/obj/machinery/transport/tram_controller/interlink_tram_1984
+	configured_transport_id = INTERLINK_1984_LINE_1
