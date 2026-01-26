@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-01-26",
+    "author": "Arceniu",
+    "changes": [
+      "fixed some centcom map bugs",
+      "changed modular interlink, returned head of staff interlink room, separated interlink start area from other rooms",
+      "returned syndicate server to admin sector"
+    ]
+  },
+  {
     "date": "2026-01-23",
     "author": "Arceniu",
     "changes": [
