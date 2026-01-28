@@ -571,3 +571,7 @@
   - map: changed modular interlink, returned head of staff interlink room, separated
       interlink start area from other rooms
   - bugfix: returned syndicate server to admin sector
+2026-01-28:
+  DenIS318:
+  - bugfix: Fixed invisible cyborg model "skin_hat_offset"
+  - spellcheck: chav mutation message ending "mate" localized
