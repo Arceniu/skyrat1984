@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-01-28",
+    "author": "DenIS318",
+    "changes": [
+      "chav mutation message ending \"mate\" localized",
+      "Fixed invisible cyborg model \"skin_hat_offset\""
+    ]
+  },
+  {
     "date": "2026-01-26",
     "author": "Arceniu",
     "changes": [
