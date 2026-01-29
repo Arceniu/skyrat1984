@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-01-29",
+    "author": "DenIS318",
+    "changes": [
+      "Missing defibs added back to maps",
+      "Labor point claim console now displays tooltip for Move Shuttle button if points not earned.",
+      "Labor console move shuttle button now says hint if trying to move shuttle without prisoners (it's designed to not work that way)",
+      "Labor points checking console now says hint how to get back to station once quota reached"
+    ]
+  },
+  {
     "date": "2026-01-28",
     "author": "DenIS318",
     "changes": [
