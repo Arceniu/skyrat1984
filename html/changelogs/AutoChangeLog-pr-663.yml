@@ -1,0 +1,6 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - qol: "Labor point claim console now displays tooltip for Move Shuttle button if points not earned."
+  - qol: "Labor console move shuttle button now says hint if trying to move shuttle without prisoners (it's designed to not work that way)"
+  - qol: "Labor points checking console now says hint how to get back to station once quota reached"
