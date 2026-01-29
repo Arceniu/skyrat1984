@@ -1,3 +1,6 @@
+/datum/outfit/job/ce
+	id = /obj/item/card/id/advanced/silver/station
+
 /datum/outfit/job/ce/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents -= list(

@@ -28,6 +28,9 @@
 	)
 
 //detective
+/datum/outfit/job/detective
+	id = /obj/item/card/id/advanced/plainclothes/station
+
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
 	new /obj/item/clothing/accessory/holster(src)
@@ -40,6 +43,9 @@
 	)
 
 //head of security
+/datum/outfit/job/hos
+	id = /obj/item/card/id/advanced/silver/station
+
 /datum/outfit/job/hos/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents += list(
