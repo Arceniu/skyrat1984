@@ -82,3 +82,16 @@
 #define ACCESS_SYNDICATE_DS "syndicate_deepspace"
 #define ACCESS_SYNDICATE_IP "syndicate_interdyne"
 #define ACCESS_SYNDICATE_OFFICER "syndicate_officer"
+
+//wildcard
+#define WILDCARD_LIMIT_CHAMELEON_ID list( \
+	WILDCARD_NAME_COMMON = list(limit = 58, usage = list()), \
+	WILDCARD_NAME_COMMAND = list(limit = 12, usage = list()), \
+	WILDCARD_NAME_PRV_COMMAND = list(limit = 8, usage = list()), \
+	WILDCARD_NAME_CAPTAIN = list(limit = 1, usage = list()), \
+	WILDCARD_NAME_SYNDICATE = list(limit = 8, usage = list()) \
+)
+
+#define WILDCARD_LIMIT_CHAMELEON_ELITE_ID list( \
+	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()) \
+)
