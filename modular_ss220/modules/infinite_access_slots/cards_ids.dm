@@ -1,5 +1,5 @@
 /obj/item/card/id
-	var/expanded_wildcard = NULL
+	var/expanded_wildcard = null
 
 /obj/item/card/id/Initialize(mapload)
 	..()
