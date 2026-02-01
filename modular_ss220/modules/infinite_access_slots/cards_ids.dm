@@ -1,10 +1,11 @@
 /obj/item/card/id
-	var/expanded_wildcard = null // basically cards doesn't have expanded version due to upstreams and possible issues with new added cards
+	var/expanded_wildcard = null //basically cards doesn't have expanded version due to upstreams and possible issues with new added cards
 
 /obj/item/card/id/Initialize(mapload)
 	..()
 	if(CONFIG_GET(flag/infinite_access_slots) && expanded_wildcard)
 		wildcard_slots = expanded_wildcard
+		wildcard_expanded = null	//cleans after
 
 /obj/item/card/id/advanced/station	//crew
 	expanded_wildcard = WILDCARD_LIMIT_GOLD
