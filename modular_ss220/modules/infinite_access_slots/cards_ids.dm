@@ -15,7 +15,7 @@
 /obj/item/card/id/advanced/plainclothes/station	//detective
 	expanded_wildcard = WILDCARD_LIMIT_GOLD
 
-/obj/item/card/id/advanced/silver	//heads
+/obj/item/card/id/advanced/silver/station	//heads
 	expanded_wildcard = WILDCARD_LIMIT_GOLD
 
 /obj/item/card/id/advanced/platinum/station	//hop
