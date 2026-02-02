@@ -5,8 +5,8 @@
 
 /* //remove when merge
 /obj/item/card/id/advanced/chameleon
-	expanded_wildcard = WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED
+	wildcard_expanded = WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED
 
 /obj/item/card/id/advanced/chameleon/elite
-	expanded_wildcard = WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED
+	wildcard_expanded = WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED
 */
