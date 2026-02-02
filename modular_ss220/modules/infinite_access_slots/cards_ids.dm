@@ -3,8 +3,8 @@
 
 /obj/item/card/id/Initialize(mapload)
 	..()
-	if(CONFIG_GET(flag/infinite_access_slots) && expanded_wildcard)
-		wildcard_slots = expanded_wildcard
+	if(CONFIG_GET(flag/infinite_access_slots) && wildcard_expanded)
+		wildcard_slots = wildcard_expanded
 		wildcard_expanded = null	//cleans after
 
 /obj/item/card/id/advanced/station	//crew
