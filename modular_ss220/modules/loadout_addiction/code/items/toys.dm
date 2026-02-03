@@ -14,6 +14,7 @@
 	righthand_file = 'modular_ss220/modules/loadout_addiction/icons/toys/plushies_righthand.dmi'
 	inhand_icon_state = "brigadier_general"
 	COOLDOWN_DECLARE(speech_cooldown)
+	squeak_override = list('sound/items/weapons/thudswoosh.ogg'=1)
 
 /obj/item/toy/plush/brigadier_general/attack_self(mob/user)
 	. = ..()
