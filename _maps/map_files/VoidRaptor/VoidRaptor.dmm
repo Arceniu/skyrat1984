@@ -14886,7 +14886,7 @@
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/structure/curtain,
 /obj/machinery/light/cold/directional/west,
-/obj/machinery/defibrillator_mount/directional/west{
+/obj/machinery/defibrillator_mount/loaded/directional/west{
 	pixel_y = -6
 	},
 /turf/open/floor/iron/freezer,
@@ -58128,7 +58128,7 @@
 /obj/effect/turf_decal/tile/blue/fourcorners,
 /obj/effect/turf_decal/bot,
 /obj/machinery/iv_drip,
-/obj/machinery/defibrillator_mount/directional/east,
+/obj/machinery/defibrillator_mount/loaded/directional/east,
 /turf/open/floor/iron/freezer,
 /area/station/medical/treatment_center)
 "qgS" = (

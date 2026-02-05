@@ -3992,7 +3992,7 @@
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "bsA" = (
-/obj/structure/closet/secure_closet/security/engine,
+/obj/structure/closet/secure_closet/security/sec,
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/requests_console/directional/south{
 	department = "Security";
@@ -66001,7 +66001,7 @@
 /area/station/science/robotics/lab)
 "wsQ" = (
 /obj/structure/reagent_dispensers/wall/peppertank/directional/north,
-/obj/structure/closet/secure_closet/security,
+/obj/structure/closet/secure_closet/security/sec,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	dir = 4

@@ -1,5 +1,9 @@
 // im tired of fixing that. We don't have tts anyway now. So lets just comment it out completly, if there ever be tts again, then fix arguments passed to match same as in TG
 /*
+/atom/movable/proc/change_voice(mob/user)
+	var/selected_tts_seed = tgui_input_list(usr, "Select a TTS voice to change to", "[src.name] TTS voice selection", SSttsSilero.tts_seeds_names)
+	if(selected_tts_seed)
+		tts_seed = selected_tts_seed
 // might need change later once we will have TTS (if we will EVER have it)
 /mob/proc/Hear_tts(message, atom/movable/speaker, message_language, raw_message, radio_freq, list/spans, list/message_mods, message_range)
 	if(!SSttsSilero.is_enabled)
