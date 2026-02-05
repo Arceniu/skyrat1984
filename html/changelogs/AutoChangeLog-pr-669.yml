@@ -1,6 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "Revert \"Space Phase no longer grants space immunity\""
-  - balance: "Revert \"Ashen Passage cooldown doubled to 30 seconds, up from 15.\""
-  - balance: "Revert \"Feast of Owls is no longer a roundstart knowledge.\""
