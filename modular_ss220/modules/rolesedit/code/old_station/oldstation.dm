@@ -435,20 +435,6 @@
 	deactivate_message = span_notice("You suddenly feel like your medical skills are fading.")
 	slot_use = 3
 
-/obj/item/skillchip/job/oldstation/medical/on_activate(mob/living/carbon/user, silent)
-	. = ..()
-	RegisterSignal(user, COMSIG_LIVING_INITIATE_SURGERY_STEP, PROC_REF(apply_surgery_buff))
-
-/obj/item/skillchip/job/oldstation/medical/on_deactivate(mob/living/carbon/user, silent)
-	. = ..()
-	UnregisterSignal(user, COMSIG_LIVING_INITIATE_SURGERY_STEP)
-
-/obj/item/skillchip/job/oldstation/medical/proc/apply_surgery_buff(mob/living/carbon/_source, mob/living/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, datum/surgery_step/step, list/modifiers)
-	SIGNAL_HANDLER
-	if(user != target)
-		modifiers[FAIL_PROB_INDEX] -= 10
-		modifiers[SPEED_MOD_INDEX] *= 0.9
-
 //blueprints
 #define LEGEND_VIEWING_LIST "watching_list"
 ///The blueprints are on the main page.

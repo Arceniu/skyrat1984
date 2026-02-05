@@ -34,7 +34,7 @@
 
 	if(isliving(entered_atom))
 		var/mob/living/entering_mob = entered_atom
-		if(faction in entering_mob.faction)
+		if(entering_mob.has_faction(faction))
 			return
 		tesla_zap(src, shock_range, shock_power, shocked_targets = list(entering_mob))
 		playsound(src, 'sound/effects/magic/lightningbolt.ogg', 100, TRUE)

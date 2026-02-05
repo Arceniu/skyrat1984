@@ -44,9 +44,10 @@
 
 	nova_stars_only = FALSE //ss1984 edit original TRUE
 	job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS
-	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS, TRAIT_DESENSITIZED)
+	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)
 	liver_traits = list(TRAIT_ROYAL_METABOLISM)
 	voice_of_god_power = 1.4 //Command staff has authority
+	desensitized_base = DESENSITIZED_THRESHOLD
 
 /datum/job/nanotrasen_consultant/get_captaincy_announcement(mob/living/captain)
 	return "Due to staffing shortages, newly appointed Acting Captain [captain.real_name] on deck!"

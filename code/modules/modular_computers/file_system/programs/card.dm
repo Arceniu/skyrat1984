@@ -30,7 +30,7 @@
 	/// if used by someone with full centcom access
 	var/centcom_full = FALSE							// SS1984 ADD END
 
-/datum/computer_file/program/card_mod/on_install(datum/computer_file/source, obj/item/modular_computer/computer_installing)
+/datum/computer_file/program/card_mod/on_install(datum/computer_file/source, obj/item/modular_computer/computer_installing, mob/user)
 	. = ..()
 	ADD_TRAIT(computer_installing, TRAIT_MODPC_TWO_ID_SLOTS, REF(src))
 
