@@ -60226,39 +60226,14 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "uzK" = (
-/obj/structure/table,
-/obj/structure/disposalpipe/segment{
-	dir = 6
+/obj/machinery/button/door/directional/west{
+	id = SecureStorage;
+	name = "Engineering Secure Storage";
+	req_access = list("engine_equip");
+	pixel_x = 6
 	},
-/obj/structure/cable,
-/obj/item/pen/blue{
-	pixel_x = 4;
-	pixel_y = -3
-	},
-/obj/item/pen/fountain{
-	pixel_x = 10
-	},
-/obj/item/pen/red{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/stamp/denied{
-	pixel_y = -1
-	},
-/obj/item/stamp{
-	pixel_x = -9;
-	pixel_y = -1
-	},
-/obj/item/stack/sheet/glass/fifty{
-	pixel_x = -2;
-	pixel_y = 16
-	},
-/obj/item/stack/sheet/iron/fifty{
-	pixel_x = -8;
-	pixel_y = 16
-	},
-/turf/open/floor/catwalk_floor/iron,
-/area/station/cargo/storage)
+/turf/closed/wall/r_wall,
+/area/station/engineering/main)
 "uAg" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/atmospherics/pipe/smart/simple/supply/hidden,
@@ -62378,6 +62353,7 @@
 /obj/machinery/camera/directional/west{
 	c_tag = "Engineering - Entrance"
 	},
+/obj/machinery/autolathe,
 /turf/open/floor/iron,
 /area/station/engineering/break_room)
 "vkD" = (
@@ -111358,7 +111334,7 @@ mww
 kEs
 xsd
 uXd
-aMz
+uzK
 hnG
 hnG
 uXd
