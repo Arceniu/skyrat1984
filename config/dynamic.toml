@@ -329,7 +329,7 @@ min_enemies.2 = 2
 
 ["Midround Blood Worm"]
 weight = 2
-min_pop = 20
+min_pop = 10
 blacklisted_roles = []
 min_antag_cap = 1
 max_antag_cap = 2
@@ -695,6 +695,9 @@ min_enemies.2 = 2
 weight = 1
 min_pop = 10
 blacklisted_roles = []
+restricted_species = [
+    "/datum/species/synthetic",
+]
 min_antag_cap = 1
 max_antag_cap.denominator = 29
 repeatable_weight_decrease = 2
