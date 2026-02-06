@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-06",
+    "author": "DenIS318",
+    "changes": [
+      "Blood Worms (roundstart, midround) min_enemies => 1, min population => 7."
+    ]
+  },
+  {
     "date": "2026-02-05",
     "author": "DenIS318",
     "changes": [
