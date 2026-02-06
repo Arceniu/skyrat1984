@@ -285,3 +285,7 @@
       charge.
   - image: Blueshields who choose to use their hellfire gun get a blue one. Congratulations,
       blueshields."
+2026-02-06:
+  DenIS318:
+  - config: Blood Worms (roundstart, midround) min_enemies => 1, min population =>
+      7.
