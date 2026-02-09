@@ -117,7 +117,7 @@ These are basically advanced cells.
 		if(1) // Charge drain
 			charge = clamp(charge - MICROFUSION_CELL_DRAIN_FAILURE, 0, maxcharge)
 		if(2) // Explosion
-			explode()
+			try_explode(max_charge = TRUE)
 		if(3) // Emp pulse
 			empulse(get_turf(src), 2, 4, FALSE) // 2 Heavy, 4 Light
 		if(4) // Deathly radiation pulse

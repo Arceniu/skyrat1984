@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-02-06",
+    "author": "DenIS318",
+    "changes": [
+      "Blood Worms (roundstart, midround) min_enemies => 1, min population => 7."
+    ]
+  },
+  {
+    "date": "2026-02-05",
+    "author": "DenIS318",
+    "changes": [
+      "Revert \"Space Phase no longer grants space immunity\"",
+      "Revert \"Ashen Passage cooldown doubled to 30 seconds, up from 15.\"",
+      "Revert \"Feast of Owls is no longer a roundstart knowledge.\"",
+      "Revert \"Gives small energy arms, and the SC2 derivates, self recharging capabilities, 10% of their charge per 15 seconds. Gives large energy arms a crank based recharge, 8 seconds of cranking (which can be done moving or shooting!) for 25% of the charge, compared to a t1 recharger that takes 20 seconds to a full charge.\", for all laser-weaponry (except those, that have it on TG)",
+      "Revert \"Laser and disabler cell costs have been equalized for energy guns and mini energy guns, meaning they both fire the same amount of lasers or disablers.\"",
+      "Revert \"Laser guns now get 25 shots per charge. Energy guns get 20 shots per charge of either laser or disabler. Hellfires get 20 shots per charge. Mini energy guns get 15 shots per charge. Blueshield's hellfire gets 25 shots per charge.",
+      "Blueshields who choose to use their hellfire gun get a blue one. Congratulations, blueshields.\""
+    ]
+  },
+  {
+    "date": "2026-02-03",
+    "author": "Arceniu",
+    "changes": [
+      "Added SolFed Brigadier General Plush plus added to loadout"
+    ]
+  },
+  {
+    "date": "2026-02-02",
+    "author": "Artemchik542",
+    "changes": [
+      "сyrillic letters in crayons and spraycan"
+    ]
+  },
+  {
     "date": "2026-01-29",
     "author": "DenIS318",
     "changes": [
