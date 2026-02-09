@@ -12,6 +12,7 @@
 
 //correction officer
 /datum/outfit/job/corrections_officer
+	id = /obj/item/card/id/advanced/station
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 
 /datum/outfit/job/corrections_officer/pre_equip(mob/living/carbon/human/human, visualsOnly)
@@ -21,6 +22,9 @@
 	)
 
 //security officer
+/datum/outfit/job/security
+	id = /obj/item/card/id/advanced/station
+
 /datum/outfit/job/security/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents += list(
@@ -28,11 +32,17 @@
 	)
 
 //detective
+/datum/outfit/job/detective
+	id = /obj/item/card/id/advanced/plainclothes/station
+
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
 	new /obj/item/clothing/accessory/holster(src)
 
 //warden
+/datum/outfit/job/warden
+	id = /obj/item/card/id/advanced/station
+
 /datum/outfit/job/warden/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents += list(
@@ -40,6 +50,9 @@
 	)
 
 //head of security
+/datum/outfit/job/hos
+	id = /obj/item/card/id/advanced/silver/station
+
 /datum/outfit/job/hos/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents += list(
@@ -52,3 +65,7 @@
 
 /datum/storage/security_belt
 	max_limited_store = 1 // can have 1 gun and 1 baton/other gun in belt (nova's value = 2)
+
+//veteran
+/datum/outfit/job/veteran_advisor
+	id = /obj/item/card/id/advanced/station
