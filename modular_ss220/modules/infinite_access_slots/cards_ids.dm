@@ -8,5 +8,5 @@
 	wildcard_expanded = WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED
 
 /obj/item/card/id/advanced/chameleon/elite
-	wildcard_expanded = WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED
+	wildcard_expanded = WILDCARD_LIMIT_CHAMELEON_ELITE_ID_EXPANDED
 */
