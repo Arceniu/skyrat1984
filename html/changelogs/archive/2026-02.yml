@@ -289,3 +289,12 @@
   DenIS318:
   - config: Blood Worms (roundstart, midround) min_enemies => 1, min population =>
       7.
+2026-02-11:
+  DenIS318:
+  - spellcheck: Medieval mutation words and phrases changed to old russian/old slavic
+      phrases/words.
+  - balance: Obsessed ruleset now require 3 enemy roles (such as security) to be applyable
+      for security/NTR as candidates. Still require 1 enemy, if rolling for other
+      candidates.
+  - balance: Nanotrasen Consultant no longer considered as "enemy" for dynamic (not
+      treated same way as 1 security required for most rulesets)
