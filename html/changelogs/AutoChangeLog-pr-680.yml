@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Obsessed ruleset now require 3 enemy roles (such as security) to be applyable for security/NTR as candidates. Still require 1 enemy, if rolling for other candidates."
