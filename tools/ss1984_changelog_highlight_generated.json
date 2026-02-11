@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-02-11",
+    "author": "DenIS318",
+    "changes": [
+      "Nanotrasen Consultant no longer considered as \"enemy\" for dynamic (not treated same way as 1 security required for most rulesets)",
+      "Obsessed ruleset now require 3 enemy roles (such as security) to be applyable for security/NTR as candidates. Still require 1 enemy, if rolling for other candidates.",
+      "Medieval mutation words and phrases changed to old russian/old slavic phrases/words."
+    ]
+  },
+  {
     "date": "2026-02-06",
     "author": "DenIS318",
     "changes": [
