@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - balance: "Nanotrasen Consultant no longer considered as \"enemy\" for dynamic (not treated same way as 1 security required for most rulesets)"
