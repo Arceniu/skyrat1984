@@ -298,3 +298,7 @@
       candidates.
   - balance: Nanotrasen Consultant no longer considered as "enemy" for dynamic (not
       treated same way as 1 security required for most rulesets)
+2026-02-16:
+  Artemchik542:
+  - spellcheck: ru laws for AI on Interdyne and DS-2
+  - spellcheck: AI laws now translated more correctly
