@@ -7,20 +7,13 @@
 		wildcard_slots = wildcard_expanded
 		wildcard_expanded = null	//cleans after
 
-/obj/item/card/id/advanced/station	//crew
+/obj/item/card/id/advanced		//not ideal, because this is basic cars
 	wildcard_expanded = WILDCARD_LIMIT_GOLD
 
-/obj/item/card/id/advanced/rainbow/station	//clown
-	wildcard_expanded = WILDCARD_LIMIT_GOLD
+/obj/item/card/id/advanced/prisoner
+	wildcard_expanded = null
 
-/obj/item/card/id/advanced/plainclothes/station	//detective
-	wildcard_expanded = WILDCARD_LIMIT_GOLD
 
-/obj/item/card/id/advanced/silver/station	//heads
-	wildcard_expanded = WILDCARD_LIMIT_GOLD
-
-/obj/item/card/id/advanced/platinum/station	//hop
-	wildcard_expanded = WILDCARD_LIMIT_GOLD
 
 /obj/item/card/id/advanced/centcom/station	//decorative centcom like card, for bridge officer
 	wildcard_expanded = WILDCARD_LIMIT_GOLD
