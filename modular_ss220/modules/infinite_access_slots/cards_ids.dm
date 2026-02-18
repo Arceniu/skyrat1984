@@ -18,3 +18,9 @@ obj/item/card/id/advanced/centcom
 
 /obj/item/card/id/advanced/centcom/station	//decorative centcom like card, for bridge officer
 	wildcard_expanded = WILDCARD_LIMIT_GOLD
+
+/obj/item/card/id/advanced/debug
+	wildcard_expanded = null
+
+/obj/item/card/id/advanced/highlander
+	wildcard_expanded = null
