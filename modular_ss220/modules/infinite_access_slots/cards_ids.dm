@@ -13,7 +13,7 @@
 /obj/item/card/id/advanced/prisoner
 	wildcard_expanded = null
 
-obj/item/card/id/advanced/centcom
+/obj/item/card/id/advanced/centcom
 	wildcard_expanded = null
 
 /obj/item/card/id/advanced/centcom/station	//decorative centcom like card, for bridge officer
@@ -23,4 +23,10 @@ obj/item/card/id/advanced/centcom
 	wildcard_expanded = null
 
 /obj/item/card/id/advanced/highlander
+	wildcard_expanded = null
+
+/obj/item/card/id/advanced/factory
+	wildcard_expanded = null
+
+/obj/item/card/id/advanced/solfed
 	wildcard_expanded = null
