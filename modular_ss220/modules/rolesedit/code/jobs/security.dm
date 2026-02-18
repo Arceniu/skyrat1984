@@ -12,7 +12,7 @@
 
 //correction officer
 /datum/outfit/job/corrections_officer
-	id = /obj/item/card/id/advanced/station
+	id = /obj/item/card/id/advanced
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 
 /datum/outfit/job/corrections_officer/pre_equip(mob/living/carbon/human/human, visualsOnly)
@@ -23,7 +23,7 @@
 
 //security officer
 /datum/outfit/job/security
-	id = /obj/item/card/id/advanced/station
+	id = /obj/item/card/id/advanced
 
 /datum/outfit/job/security/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
@@ -33,7 +33,7 @@
 
 //detective
 /datum/outfit/job/detective
-	id = /obj/item/card/id/advanced/plainclothes/station
+	id = /obj/item/card/id/advanced/plainclothes
 
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
@@ -41,7 +41,7 @@
 
 //warden
 /datum/outfit/job/warden
-	id = /obj/item/card/id/advanced/station
+	id = /obj/item/card/id/advanced
 
 /datum/outfit/job/warden/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
@@ -51,7 +51,7 @@
 
 //head of security
 /datum/outfit/job/hos
-	id = /obj/item/card/id/advanced/silver/station
+	id = /obj/item/card/id/advanced/silver
 
 /datum/outfit/job/hos/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
@@ -68,4 +68,4 @@
 
 //veteran
 /datum/outfit/job/veteran_advisor
-	id = /obj/item/card/id/advanced/station
+	id = /obj/item/card/id/advanced
