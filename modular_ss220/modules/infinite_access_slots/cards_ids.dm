@@ -42,3 +42,12 @@
 
 /obj/item/card/id/advanced/black
 	wildcard_expanded = null
+
+/obj/item/card/id/advanced/visitor
+	wildcard_expanded = null
+
+/obj/item/card/id/advanced/simple_bot
+	wildcard_expanded = null
+
+id = /obj/item/card/id/advanced/chameleon/ghost_cafe
+	wildcard_expanded = null
