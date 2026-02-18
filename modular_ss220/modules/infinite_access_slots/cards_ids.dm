@@ -7,7 +7,7 @@
 		wildcard_slots = wildcard_expanded
 		wildcard_expanded = null	//cleans after
 
-/obj/item/card/id/advanced		//not ideal, because this is basic cars
+/obj/item/card/id/advanced		//not ideal, because this is basic card
 	wildcard_expanded = WILDCARD_LIMIT_GOLD
 
 /obj/item/card/id/advanced/prisoner
