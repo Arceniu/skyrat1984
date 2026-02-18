@@ -1,2 +1,2 @@
 /datum/outfit/job
-	id = /obj/item/card/id/advanced/station
+	id = /obj/item/card/id/advanced
