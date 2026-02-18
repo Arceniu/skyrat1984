@@ -1,6 +1,6 @@
 //chief medical officer
 /datum/outfit/job/cmo
-	id = /obj/item/card/id/advanced/silver/station
+	id = /obj/item/card/id/advanced/silver
 
 
 /obj/structure/closet/secure_closet/chief_medical/PopulateContents()
