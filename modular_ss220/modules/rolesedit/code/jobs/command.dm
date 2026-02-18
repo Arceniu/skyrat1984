@@ -3,7 +3,7 @@
 
 
 /datum/outfit/job/hop
-	id = /obj/item/card/id/advanced/platinum/station
+	id = /obj/item/card/id/advanced/platinum
 
 //bridge officer edit
 
