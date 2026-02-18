@@ -13,7 +13,8 @@
 /obj/item/card/id/advanced/prisoner
 	wildcard_expanded = null
 
-
+obj/item/card/id/advanced/centcom
+	wildcard_expanded = null
 
 /obj/item/card/id/advanced/centcom/station	//decorative centcom like card, for bridge officer
 	wildcard_expanded = WILDCARD_LIMIT_GOLD
