@@ -49,5 +49,5 @@
 /obj/item/card/id/advanced/simple_bot
 	wildcard_expanded = null
 
-id = /obj/item/card/id/advanced/chameleon/ghost_cafe
+/obj/item/card/id/advanced/chameleon/ghost_cafe
 	wildcard_expanded = null
