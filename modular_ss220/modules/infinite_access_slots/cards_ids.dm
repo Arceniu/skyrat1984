@@ -39,3 +39,6 @@
 
 /obj/item/card/id/advanced/tarkon
 	wildcard_expanded = null
+
+/obj/item/card/id/advanced/black
+	wildcard_expanded = null
