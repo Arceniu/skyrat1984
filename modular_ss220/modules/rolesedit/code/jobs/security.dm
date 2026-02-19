@@ -21,7 +21,6 @@
 	)
 
 //security officer
-
 /datum/outfit/job/security/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents += list(
@@ -29,13 +28,11 @@
 	)
 
 //detective
-
 /obj/structure/closet/secure_closet/detective/PopulateContents()
 	..()
 	new /obj/item/clothing/accessory/holster(src)
 
 //warden
-
 /datum/outfit/job/warden/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents += list(
@@ -43,7 +40,6 @@
 	)
 
 //head of security
-
 /datum/outfit/job/hos/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
 	backpack_contents += list(
