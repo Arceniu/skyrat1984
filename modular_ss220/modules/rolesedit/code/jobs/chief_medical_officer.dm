@@ -1,7 +1,5 @@
 
 //chief medical officer
-
-
 /obj/structure/closet/secure_closet/chief_medical/PopulateContents()
 	..()
 
