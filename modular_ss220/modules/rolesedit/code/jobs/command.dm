@@ -248,6 +248,7 @@
 
 	jobtype = /datum/job/bridge_assistant_1984
 	id_trim = /datum/id_trim/job/bridge_assistant_1984
+	id = /obj/item/card/id/advanced
 	uniform = /obj/item/clothing/under/trek/command/next
 	neck = /obj/item/clothing/neck/large_scarf/blue
 	belt = /obj/item/storage/belt/utility/full/inducer
