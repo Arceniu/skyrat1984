@@ -34,9 +34,6 @@
 /obj/item/card/id/advanced/armadyne
 	wildcard_expanded = null
 
-/obj/item/card/id/advanced/debug
-	wildcard_expanded = null
-
 /obj/item/card/id/advanced/tarkon
 	wildcard_expanded = null
 
