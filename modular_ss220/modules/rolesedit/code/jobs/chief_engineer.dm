@@ -1,5 +1,3 @@
-/datum/outfit/job/ce
-	id = /obj/item/card/id/advanced/silver
 
 /datum/outfit/job/ce/pre_equip(mob/living/carbon/human/human, visualsOnly)
 	. = ..()
