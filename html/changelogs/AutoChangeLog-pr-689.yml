@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Slimepeople no longer dupe items on revival with quirks (such as Lunchbox and so on)"
