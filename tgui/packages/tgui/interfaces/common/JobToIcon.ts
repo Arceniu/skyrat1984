@@ -73,6 +73,7 @@ const BASEICONS = {
   // SS1984 REMOVAL Orderly: 'shield-heart',
   // SS1984 REMOVAL 'Science Guard': 'shield-heart',
   'Security Medic': 'heart-pulse',
+  'Vanguard Operative': 'shield-heart',
   // NOVA EDIT END
 } as const;
 

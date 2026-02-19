@@ -5,6 +5,7 @@
 
 //station jobs
 #define SECHUD_SECURITY_MEDIC "hudsecuritymedic"
+#define SECHUD_VANGUARD_OPERATIVE "hudscienceguard"
 
 //event roles
 #define SECHUD_NRI_POLICE "hud_nri_police"

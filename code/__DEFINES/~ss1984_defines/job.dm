@@ -6,3 +6,10 @@
 
 //quirks
 #define CHAPLAIN_RESTRICTED_QUIRKS "Unholy" = TRUE
+
+//jobs
+#define JOB_VANGUARD_OPERATIVE "Vanguard Operative"
+
+//supervisors
+#define SUPERVISOR_NTR "The Nanotrasen Official"
+#define SUPERVISOR_HEADS "The Head Of Staff"
