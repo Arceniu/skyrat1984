@@ -5,7 +5,7 @@
 	..()
 	if(CONFIG_GET(flag/infinite_access_slots) && wildcard_expanded)
 		wildcard_slots = wildcard_expanded
-		wildcard_expanded = null	//cleans after
+	wildcard_expanded = null	//cleans after init
 
 /obj/item/card/id/advanced		//not ideal, because this is basic card
 	wildcard_expanded = WILDCARD_LIMIT_GOLD
