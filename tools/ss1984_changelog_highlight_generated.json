@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-02-19",
+    "author": "DenIS318",
+    "changes": [
+      "Slimepeople no longer dupe items on revival with quirks (such as Lunchbox and so on)"
+    ]
+  },
+  {
     "date": "2026-02-18",
     "author": "DenIS318",
     "changes": [
