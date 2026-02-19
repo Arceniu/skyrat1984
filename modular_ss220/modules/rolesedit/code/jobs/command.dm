@@ -1,7 +1,6 @@
 /obj/item/encryptionkey/heads/captain
 	channels = list(RADIO_CHANNEL_COMMAND = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_PRISON = 1, RADIO_CHANNEL_ENGINEERING = 0, RADIO_CHANNEL_SCIENCE = 0, RADIO_CHANNEL_MEDICAL = 0, RADIO_CHANNEL_SUPPLY = 0, RADIO_CHANNEL_SERVICE = 0)
 
-
 //bridge officer edit
 
 #ifndef CAN_ROLL_ALWAYS // includes from code\datums\station_traits\job_traits.dm
@@ -106,7 +105,7 @@
 	name = "Bridge Officer"
 	jobtype = /datum/job/bridge_assistant
 	id_trim = /datum/id_trim/job/bridge_assistant
-	id = /obj/item/card/id/advanced/centcom/station	//"fake" centcom id
+	id = /obj/item/card/id/advanced/silver
 	uniform = /obj/item/clothing/under/rank/bridge_officer
 	neck = /obj/item/clothing/neck/bowtie
 	suit = /obj/item/clothing/suit/armor/vest/alt
