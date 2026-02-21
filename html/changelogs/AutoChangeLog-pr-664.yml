@@ -1,0 +1,5 @@
+author: "Arceniu"
+delete-after: True
+changes:
+  - balance: "infinity wildcards now add special wildcard limit for some cards, also it now add only Captain wildcard instead of admin to station cards(the prisoner is exception from wildcards)"
+  - balance: "station cards no longer can have centcom wildcards (as they have different wildcard for centcom)"
