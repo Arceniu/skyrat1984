@@ -21,6 +21,8 @@
 				/obj/item/clothing/head/large_bow = 5,
 				/obj/item/clothing/head/large_bow/back_bow = 5,
 				/obj/item/clothing/head/large_bow/sweet_bow = 5,
+				/obj/item/clothing/head/costume/nova/papakha = 5,
+				/obj/item/clothing/head/costume/delinquent = 5,
 			),
 		),
 
@@ -43,6 +45,7 @@
 				/obj/item/clothing/neck/face_scarf = 5,
 				/obj/item/clothing/mask/neck_gaiter = 5,
 				/obj/item/clothing/gloves/bracer/wraps = 5,
+				/obj/item/clothing/glasses/fake_sunglasses/aviator = 5,
 			),
 		),
 
@@ -89,6 +92,7 @@
 				/obj/item/clothing/under/dress/nova/giant_scarf = 5,
 				/obj/item/clothing/under/pants/nova/shorted_overall = 5,
 				/obj/item/clothing/under/misc/nova/gear_harness = 5,
+				/obj/item/clothing/under/shorts/nova/shortershorts = 5,
 			),
 		),
 
@@ -151,7 +155,11 @@
 				/obj/item/clothing/under/greyscale/overalls/skirt = 5,
 				/obj/item/clothing/suit/apron/overalls_loneskirt = 5,
 				/obj/item/clothing/suit/nova/sweater = 5,
+				/obj/item/clothing/suit/nova/sweater/bow = 5,
 				/obj/item/clothing/suit/nova/overcoat = 5,
+				/obj/item/clothing/suit/koreacoat = 5,
+				/obj/item/clothing/suit/cossack = 5,
+				/obj/item/clothing/suit/toggle/jacket/nova/colorable_bomber = 5,
 			),
 		),
 
@@ -171,6 +179,8 @@
 				/obj/item/clothing/shoes/jackboots/knee/recolorable = 5,
 				/obj/item/clothing/shoes/jackboots/recolorable = 5,
 				/obj/item/clothing/shoes/jackboots/duckboots = 5,
+				/obj/item/clothing/shoes/high_heels = 5,
+				/obj/item/clothing/shoes/fancy_heels = 5,
 			),
 		),
 

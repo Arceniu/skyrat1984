@@ -245,9 +245,8 @@ GLOBAL_VAR(first_officer)
 // outfit code
 /datum/outfit/pirate/nri/post_equip(mob/living/carbon/human/equipped)
 	. = ..()
-	equipped.faction -= "pirate"
-	equipped.faction |= "nri"
-	equipped.faction |= "neutral"
+	equipped.remove_faction(FACTION_PIRATE)
+	equipped.add_faction(list(FACTION_NRI, FACTION_NEUTRAL))
 
 	var/obj/item/radio/outfit_radio = equipped.ears
 	if(outfit_radio)
@@ -320,7 +319,7 @@ GLOBAL_VAR(first_officer)
 /obj/effect/mob_spawn/ghost_role/human/pirate/nri_police/special(mob/living/carbon/human/spawned_mob, mob/mob_possessor)
 	SHOULD_CALL_PARENT(FALSE)
 	if(faction)
-		spawned_mob.faction = faction
+		spawned_mob.set_faction(faction) // i have no idea what it's doing here, but im just merging upstream so idc
 	if(ishuman(spawned_mob))
 		var/mob/living/carbon/human/spawned_human = spawned_mob
 		if(mob_species)

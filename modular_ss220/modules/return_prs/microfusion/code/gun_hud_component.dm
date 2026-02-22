@@ -1,7 +1,16 @@
-/datum/element/ammo_hud/proc/update_microfusion(obj/item/gun/microfusion/to_update)
+/datum/element/ammo_hud/update_hud(obj/item/source, atom/movable/screen/ammo_counter/hud)
+	if(istype(source, /obj/item/gun/microfusion))
+		return update_microfusion(source, hud)
+
+	return ..()
+
+/datum/element/ammo_hud/proc/update_microfusion(obj/item/gun/microfusion/to_update, atom/movable/screen/ammo_counter/hud)
 	SIGNAL_HANDLER
 
-	var/atom/movable/screen/ammo_counter/hud = get_hud(parent_item = to_update)
+	if(!should_update(to_update))
+		return
+
+	hud = hud || get_hud(parent_item = to_update)
 	if(isnull(hud))
 		return
 

@@ -33,7 +33,7 @@
 		id_card.update_label()
 		id_card.update_icon()
 	. = ..()
-	equipped_human.faction |= FACTION_BLACKMESA
+	equipped_human.add_faction(FACTION_BLACKMESA)
 
 /datum/id_trim/science_team
 	assignment = "Science Team Scientist"
@@ -78,7 +78,7 @@
 		id_card.update_label()
 		id_card.update_icon()
 	. = ..()
-	equipped_human.faction |= FACTION_BLACKMESA
+	equipped_human.add_faction(FACTION_BLACKMESA)
 
 /datum/id_trim/security_guard
 	assignment = "Security Guard"
@@ -184,7 +184,7 @@
 		id_card.update_label()
 		id_card.update_icon()
 	. = ..()
-	equipped_human.faction |= FACTION_HECU
+	equipped_human.add_faction(FACTION_HECU)
 
 /datum/id_trim/hecu
 	assignment = "HECU Marine"
@@ -242,7 +242,7 @@
 		id_card.update_label()
 		id_card.update_icon()
 	. = ..()
-	equipped_human.faction |= FACTION_HECU
+	equipped_human.add_faction(FACTION_HECU)
 
 /datum/id_trim/hecu_leader
 	assignment = "HECU Captain"

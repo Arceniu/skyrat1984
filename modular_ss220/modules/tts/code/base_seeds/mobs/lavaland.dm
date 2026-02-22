@@ -3,7 +3,7 @@
 /mob/living/simple_animal/hostile/megafauna
 	tts_seed = "Mannoroth"
 
-/mob/living/simple_animal/hostile/megafauna/blood_drunk_miner
+/mob/living/basic/boss/blood_drunk_miner
 	tts_seed = "Chen"
 
 /mob/living/basic/mining/basilisk

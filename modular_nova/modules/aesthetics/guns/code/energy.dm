@@ -12,6 +12,11 @@
 	shaded_charge = SHADED_CHARGE_MODE_LABELED
 	// also covers the hybrid taser, HoS gun, mini e-gun. necessitates overrides for all other e_gun subtypes
 
+/obj/item/gun/energy/e_gun/nuclear
+	inhand_icon_state = null //so the human update icon also uses the icon_state instead.
+	lefthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_lefthand.dmi'
+	righthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_righthand.dmi'
+
 /obj/item/gun/energy/e_gun/turret
 	shaded_charge = TRUE
 
@@ -60,13 +65,4 @@
 	icon = 'modular_nova/modules/aesthetics/guns/icons/energy.dmi'
 	shaded_charge = TRUE
 	// also covers disabler SMG.
-
-/obj/item/gun/energy/e_gun/nuclear
-	icon = 'modular_nova/modules/aesthetics/guns/icons/nucgun.dmi'
-	ammo_x_offset = 2
-	lefthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_lefthand.dmi'
-	righthand_file = 'modular_nova/modules/aesthetics/guns/icons/guns_righthand.dmi'
-	worn_icon_state = "gun"
-	worn_icon = null
-	shaded_charge = FALSE
 SS1984 REMOVAL END */

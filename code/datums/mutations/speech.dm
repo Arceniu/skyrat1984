@@ -10,7 +10,7 @@
 	quality = MINOR_NEGATIVE
 	text_gain_indication = span_danger("You feel nervous.")
 
-/datum/mutation/nervousness/on_life(seconds_per_tick, times_fired)
+/datum/mutation/nervousness/on_life(seconds_per_tick)
 	if(SPT_PROB(5, seconds_per_tick))
 		owner.set_stutter_if_lower(20 SECONDS)
 
@@ -39,7 +39,7 @@
 	speech_args[SPEECH_SPANS] |= SPAN_SANS
 
 /datum/mutation/heckacious
-	name = "heckacious larincks"
+	name = "Heckacious Larincks"
 	desc = "duge what is WISH your words man..........."
 	quality = MINOR_NEGATIVE
 	text_gain_indication = span_sans("aw SHIT man. your throat feels like FUCKASS.")
@@ -208,7 +208,7 @@
 	. = ..()
 	AddComponent(/datum/component/speechmod, replacements = strings("elvis_replacement.json", "elvis"))
 
-/datum/mutation/elvis/on_life(seconds_per_tick, times_fired)
+/datum/mutation/elvis/on_life(seconds_per_tick)
 	switch(pick(1,2))
 		if(1)
 			if(SPT_PROB(7.5, seconds_per_tick))
@@ -263,8 +263,8 @@
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message)
 		message = " [message] "
-		var/list/medieval_words = strings("medieval_replacement.json", "medieval")
-		var/list/startings = strings("medieval_replacement.json", "startings")
+		var/list/medieval_words = strings("medieval_replacement_ru.json", "medieval") // SS1984 EDIT, original: var/list/medieval_words = strings("medieval_replacement.json", "medieval")
+		var/list/startings = strings("medieval_replacement_ru.json", "startings") // SS1984 EDIT, original: var/list/startings = strings("medieval_replacement.json", "startings")
 		for(var/key in medieval_words)
 			var/value = medieval_words[key]
 			if(islist(value))
@@ -273,7 +273,8 @@
 				value = uppertext(value)
 			if(capitalize(key) == key)
 				value = capitalize(value)
-			message = replacetextEx(message,regex("\b[REGEX_QUOTE(key)]\b","ig"), value)
+			message = replacetextEx(message, regex(@"([^a-zA-Zа-яёА-ЯЁ])" + "[REGEX_QUOTE(key)]" + @"([^a-zA-Zа-яёА-ЯЁ])", "ig"), " [value] ") // SS1984 EDIT, original: message = replacetextEx(message,regex("\b[REGEX_QUOTE(key)]\b","ig"), value)
+			message = replacetext(message, "  ", " ") // SS1984 ADDITION, removes double-quotes produced by previous code
 		message = trim(message)
 		var/chosen_starting = pick(startings)
 		message = "[chosen_starting] [message]"

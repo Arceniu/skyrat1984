@@ -57,7 +57,7 @@
 	if(SStts.tts_enabled)
 		voice = pick(SStts.available_speakers)
 	GLOB.silicon_mobs += src
-	faction += FACTION_SILICON
+	add_faction(FACTION_SILICON)
 	if(ispath(radio))
 		radio = new radio(src)
 	var/datum/atom_hud/data/diagnostic/diag_hud = GLOB.huds[DATA_HUD_DIAGNOSTIC]
@@ -287,7 +287,7 @@
 	var/list/lawcache_hackedcheck = hackedcheck.Copy()
 	var/forced_log_message = "stating laws[force ? ", forced" : ""]"
 	//"radiomod" is inserted before a hardcoded message to change if and how it is handled by an internal radio.
-	say("[radiomod] Current Active Laws:", forced = forced_log_message)
+	say("[radiomod] Действующие законы:", forced = forced_log_message) // SS1984 EDIT, original: say("[radiomod] Current Active Laws:", forced = forced_log_message)
 	sleep(1 SECONDS)
 
 	if (lawcache_zeroth)
@@ -446,7 +446,7 @@
 /mob/living/silicon/get_inactive_held_item()
 	return FALSE
 
-/mob/living/silicon/handle_high_gravity(gravity, seconds_per_tick, times_fired)
+/mob/living/silicon/handle_high_gravity(gravity, seconds_per_tick)
 	return
 
 /mob/living/silicon/rust_heretic_act()
