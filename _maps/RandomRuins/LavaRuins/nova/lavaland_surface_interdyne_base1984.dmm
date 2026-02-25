@@ -1484,9 +1484,6 @@
 "ml" = (
 /obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
 /obj/item/circuitboard/computer/id_upgrader/ip,
-/obj/item/paper/paperslip/corporate/fluff/safe_code{
-	owner = "interdyne"
-	},
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "mm" = (
@@ -2304,7 +2301,7 @@
 /area/ruin/interdyne_planetary_base/med/morgue)
 "ta" = (
 /obj/structure/safe{
-	known_by = list("interdyne")
+	known_by = list("interdyne_vault")
 	},
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
 	desc = "It's a box, for storing things.";
