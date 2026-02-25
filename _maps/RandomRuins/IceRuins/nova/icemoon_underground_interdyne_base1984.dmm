@@ -104,6 +104,9 @@
 /obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
 /obj/item/circuitboard/machine/techfab/ip,
 /obj/item/circuitboard/computer/id_upgrader/ip,
+/obj/item/paper/paperslip/corporate/fluff/safe_code{
+	owner = "interdyne"
+	},
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "aw" = (
@@ -7617,7 +7620,8 @@
 /area/icemoon/underground/explored)
 "WT" = (
 /obj/structure/safe{
-	dir = 4
+	dir = 4;
+	known_by = list("interdyne")
 	},
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
 	name = "chameleon kit";
@@ -7626,6 +7630,7 @@
 /obj/item/suppressor,
 /obj/item/toy/redbutton,
 /obj/item/folder/syndicate/mining,
+/obj/item/book/granter/crafting_recipe/blood_worm_recipe_meat,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "WZ" = (

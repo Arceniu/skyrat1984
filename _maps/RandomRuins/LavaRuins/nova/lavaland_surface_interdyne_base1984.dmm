@@ -1484,6 +1484,9 @@
 "ml" = (
 /obj/structure/closet/secure_closet/interdynefob/deckofficer_locker,
 /obj/item/circuitboard/computer/id_upgrader/ip,
+/obj/item/paper/paperslip/corporate/fluff/safe_code{
+	owner = "interdyne"
+	},
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "mm" = (
@@ -2300,12 +2303,15 @@
 	},
 /area/ruin/interdyne_planetary_base/med/morgue)
 "ta" = (
-/obj/structure/safe,
+/obj/structure/safe{
+	known_by = list("interdyne")
+	},
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
 	desc = "It's a box, for storing things.";
 	name = "chameleon kit"
 	},
 /obj/item/gun/energy/cell_loaded/medigun/standard,
+/obj/item/book/granter/crafting_recipe/blood_worm_recipe_meat,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/ruin/interdyne_planetary_base/main/vault)
 "tl" = (
