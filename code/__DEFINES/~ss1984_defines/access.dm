@@ -84,33 +84,29 @@
 #define ACCESS_SYNDICATE_OFFICER "syndicate_officer"
 
 //wildcard
-///able to get all station and 8 syndicate accesses
+///able to get almost all station and 8 syndicate accesses
 #define WILDCARD_LIMIT_CHAMELEON_ID list( \
-	WILDCARD_NAME_COMMON = list(limit = 58, usage = list()), \
-	WILDCARD_NAME_COMMAND = list(limit = 12, usage = list()), \
-	WILDCARD_NAME_PRV_COMMAND = list(limit = 8, usage = list()), \
+	WILDCARD_NAME_COMMON = list(limit = 30, usage = list()), \
+	WILDCARD_NAME_COMMAND = list(limit = 6, usage = list()), \
+	WILDCARD_NAME_PRV_COMMAND = list(limit = 3, usage = list()), \
 	WILDCARD_NAME_CAPTAIN = list(limit = 1, usage = list()), \
 	WILDCARD_NAME_SYNDICATE = list(limit = 8, usage = list()) \
 )
 
-/// able to get any station/syndicate accesses + 6 away and one centcom access
+/// able to get any station/syndicate accesses + 6 away accesses
 #define WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED list( \
 	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()), \
-	WILDCARD_NAME_AWAY = list(limit = 6, usage = list()), \
-	WILDCARD_NAME_CENTCOM = list(limit = 1, usage = list()) \
+	WILDCARD_NAME_AWAY = list(limit = 6, usage = list()) \
 )
 
 
-/// able to get any station/syndicate accesses + 10 away and two centcom accesses
+/// able to get any station/syndicate accesses
 #define WILDCARD_LIMIT_CHAMELEON_ELITE_ID list( \
-	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()), \
-	WILDCARD_NAME_AWAY = list(limit = 10, usage = list()), \
-	WILDCARD_NAME_CENTCOM = list(limit = 2, usage = list()) \
+	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()) \
 )
 
-/// able to get any station/syndicate and away accesses + three centcom accesses
+/// able to get any station/syndicate and away accesses
 #define WILDCARD_LIMIT_CHAMELEON_ELITE_ID_EXPANDED list( \
 	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()), \
-	WILDCARD_NAME_AWAY = list(limit = -1, usage = list()), \
-	WILDCARD_NAME_CENTCOM = list(limit = 3, usage = list()) \
+	WILDCARD_NAME_AWAY = list(limit = -1, usage = list()) \
 )
