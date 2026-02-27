@@ -90,7 +90,7 @@
 	WILDCARD_NAME_COMMAND = list(limit = 6, usage = list()), \
 	WILDCARD_NAME_PRV_COMMAND = list(limit = 3, usage = list()), \
 	WILDCARD_NAME_CAPTAIN = list(limit = 1, usage = list()), \
-	WILDCARD_NAME_SYNDICATE = list(limit = 8, usage = list()) \
+	WILDCARD_NAME_SYNDICATE = list(limit = 6, usage = list()) \
 )
 
 /// able to get any station/syndicate accesses + 6 away accesses
