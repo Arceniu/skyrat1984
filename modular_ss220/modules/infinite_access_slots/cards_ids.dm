@@ -46,8 +46,8 @@
 /obj/item/card/id/advanced/simple_bot
 	wildcard_expanded = null
 
-/obj/item/card/id/advanced/chameleon/ghost_cafe
-	wildcard_expanded = null
-
 /obj/item/card/id/advanced/chameleon
 	wildcard_expanded = WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED
+
+/obj/item/card/id/advanced/chameleon/ghost_cafe
+	wildcard_expanded = null
