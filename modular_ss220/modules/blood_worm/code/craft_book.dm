@@ -32,6 +32,7 @@
 
 //version which doesn't use meat but can fail in craft, admin
 /obj/item/book/granter/crafting_recipe/blood_worm_recipe/nomeat
+	special_desc = "Creating of injector is not completed, also make sure to not stand near turrets in case to not get killed, do not fall in lava. Properly of the Syndicate."
 	crafting_recipe_types = list(
 		/datum/crafting_recipe/blood_worm_mutator_nomeat,
 	)
