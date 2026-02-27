@@ -23,9 +23,22 @@ SUBSYSTEM_DEF(traitor)
 	var/current_progression_scaling = 1 MINUTES
 
 /datum/controller/subsystem/traitor/Initialize()
+	//SS1984 ADD START
+	category_handler = new()
+	traitor_debug_panel = new(category_handler)
+	//SS1984 ADD END
 	current_progression_scaling = 1 MINUTES * CONFIG_GET(number/traitor_scaling_multiplier)
 	for(var/theft_item in subtypesof(/datum/objective_item/steal))
 		new theft_item
+	//SS1984 ADD START
+	if(fexists(configuration_path))
+		var/list/data = json_decode(file2text(file(configuration_path)))
+		for(var/typepath in data)
+			var/actual_typepath = text2path(typepath)
+			if(!actual_typepath)
+				log_world("[configuration_path] has an invalid type ([typepath]) that doesn't exist in the codebase! Please correct or remove [typepath]")
+			configuration_data[actual_typepath] = data[typepath]
+	//SS1984 ADD END
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/traitor/fire(resumed)
@@ -42,6 +55,7 @@ SUBSYSTEM_DEF(traitor)
 			handler.progression_points = current_global_progression
 		else
 			handler.progression_points += progression_increment // Should only really happen if an admin is messing with an individual's progression value
+		handler.update_objectives()	//SS1984 ADD
 		handler.on_update()
 
 /datum/controller/subsystem/traitor/proc/register_uplink_handler(datum/uplink_handler/uplink_handler)

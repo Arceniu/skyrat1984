@@ -79,6 +79,7 @@
 	src.active = enabled
 	if(!uplink_handler_override)
 		uplink_handler = new()
+		uplink_handler.has_objectives = FALSE	//SS1984 ADD
 		uplink_handler.uplink_flag = uplink_flag
 		uplink_handler.telecrystals = starting_tc
 		uplink_handler.has_progression = has_progression
@@ -168,8 +169,10 @@
 	var/list/data = list()
 	data["telecrystals"] = uplink_handler.telecrystals
 	data["progression_points"] = uplink_handler.progression_points
+	data["maximum_active_objectives"] = uplink_handler.maximum_active_objectives	//SS1984 ADD
 	data["joined_population"] = length(GLOB.joined_player_list)
 	data["current_progression_scaling"] = SStraitor.current_progression_scaling
+	data["maximum_potential_objectives"] = uplink_handler.maximum_potential_objectives	//SS1984 ADD
 
 	if(uplink_handler.primary_objectives)
 		var/list/primary_objectives = list()
@@ -183,6 +186,26 @@
 			primary_objectives += list(task_data)
 		data["primary_objectives"] = primary_objectives
 
+//SS1984 ADD START
+	if(uplink_handler.has_objectives)
+		var/list/potential_objectives = list()
+		for(var/index in 1 to uplink_handler.potential_objectives.len)
+			var/datum/traitor_objective/objective = uplink_handler.potential_objectives[index]
+			var/list/objective_data = objective.uplink_ui_data(user)
+			objective_data["id"] = index
+			potential_objectives += list(objective_data)
+
+		var/list/active_objectives = list()
+		for(var/index in 1 to uplink_handler.active_objectives.len)
+			var/datum/traitor_objective/objective = uplink_handler.active_objectives[index]
+			var/list/objective_data = objective.uplink_ui_data(user)
+			objective_data["id"] = index
+			active_objectives += list(objective_data)
+
+		data["potential_objectives"] = potential_objectives
+		data["active_objectives"] = active_objectives
+		data["completed_final_objective"] = uplink_handler.final_objective
+//SS1984 ADD END
 
 	var/list/stock_list = uplink_handler.item_stock.Copy()
 	var/list/extra_purchasable_stock = list()
@@ -224,6 +247,7 @@
 	var/list/data = list()
 	data["uplink_flag"] = uplink_handler.uplink_flag
 	data["has_progression"] = uplink_handler.has_progression
+	data["has_objectives"] = uplink_handler.has_objectives	//SS1984 ADD
 	data["lockable"] = lockable
 	data["assigned_role"] = uplink_handler.assigned_role
 	data["assigned_species"] = uplink_handler.assigned_species
