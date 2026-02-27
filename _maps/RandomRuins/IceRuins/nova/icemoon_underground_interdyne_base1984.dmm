@@ -7627,7 +7627,7 @@
 /obj/item/suppressor,
 /obj/item/toy/redbutton,
 /obj/item/folder/syndicate/mining,
-/obj/item/book/granter/crafting_recipe/blood_worm_recipe_meat,
+/obj/item/book/granter/crafting_recipe/blood_worm_recipe,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "WZ" = (

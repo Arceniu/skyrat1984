@@ -1,5 +1,5 @@
 //basic recipe with meat, spawn in IP Vault
-/obj/item/book/granter/crafting_recipe/blood_worm_recipe_meat
+/obj/item/book/granter/crafting_recipe/blood_worm_recipe
 	name = "blood research book"
 	desc = "Documents detailing how to make some blood related things."
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE
@@ -31,22 +31,9 @@
 	crafting_flags = parent_type::crafting_flags | CRAFT_MUST_BE_LEARNED
 
 //version which doesn't use meat but can fail in craft, admin
-/obj/item/book/granter/crafting_recipe/blood_worm_recipe_nomeat
-	name = "blood research book"
-	desc = "Documents detailing how to make some blood related things."
-	special_desc_requirement = EXAMINE_CHECK_SYNDICATE
-	special_desc = "Creating of injector is not completed, also make sure to not stand near turrets in case to not get killed, do not fall in lava. Properly of the Syndicate."
+/obj/item/book/granter/crafting_recipe/blood_worm_recipe/nomeat
 	crafting_recipe_types = list(
 		/datum/crafting_recipe/blood_worm_mutator_nomeat,
-	)
-	icon_state = "book1"
-	uses = INFINITY
-	remarks = list(
-		"It's written in medical font...",
-		"Decyphering...",
-		"Studying...",
-		"Do not bleed or burn...",
-		"it may not work at first time...",
 	)
 
 /datum/crafting_recipe/blood_worm_mutator_nomeat
