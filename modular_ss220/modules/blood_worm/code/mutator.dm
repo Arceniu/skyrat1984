@@ -53,6 +53,9 @@
 	if(HAS_TRAIT(user, TRAIT_BLOOD_WORM_HOST))
 		user.balloon_alert(user, "already mutated!")
 		return
+	if(!CAN_HAVE_BLOOD(victim))
+		user.balloon_alert(user, "Blood not detected!")
+		return FALSE
 	if(IS_CHANGELING(user))
 		user.balloon_alert(user, "DNA is not suitable!")
 		return FALSE
