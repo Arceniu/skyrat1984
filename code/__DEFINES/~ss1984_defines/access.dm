@@ -93,20 +93,13 @@
 	WILDCARD_NAME_SYNDICATE = list(limit = 6, usage = list()) \
 )
 
-/// able to get any station/syndicate accesses + 6 away accesses
-#define WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED list( \
-	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()), \
-	WILDCARD_NAME_AWAY = list(limit = 6, usage = list()) \
-)
-
-
 /// able to get any station/syndicate accesses
 #define WILDCARD_LIMIT_CHAMELEON_ELITE_ID list( \
 	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()) \
 )
 
 /// able to get any station/syndicate and away accesses
-#define WILDCARD_LIMIT_CHAMELEON_ELITE_ID_EXPANDED list( \
+#define WILDCARD_LIMIT_CHAMELEON_ID_EXPANDED list( \
 	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()), \
 	WILDCARD_NAME_AWAY = list(limit = -1, usage = list()) \
 )
