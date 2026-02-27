@@ -1,6 +1,6 @@
 /datum/uplink_item/bundles_tc/blood_worm_kit
 	name = "Blood Worm Kit"
-	desc = "The Syndicate has offered you the chance to upgrade yourself into a blood worm form\
+	desc = "The Syndicate has offered you the chance to upgrade yourself into a blood worm form. \
 		Upon purchase, you'll be granted special DNA injector(not compatible with changelings). \
 		Additionally, you will be provided with some bloodloss first aid gear and mini  fire extinguisher to help you survive after serious paper cut and a light bulb burn."
 	item = /obj/item/storage/box/syndicate/blood_worm_kit
