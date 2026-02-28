@@ -30,6 +30,8 @@
 	return ..()
 
 /obj/item/blood_worm_mutator/proc/try_wormification(mob/living/user)
+	if(!user)
+		return FALSE
 	spent = TRUE
 	in_use = FALSE
 	update_appearance(UPDATE_ICON_STATE | UPDATE_DESC)
@@ -39,20 +41,23 @@
 	user.apply_damage(300, OXY)
 	user.death(FALSE)
 	user.reagents.add_reagent(/datum/reagent/toxin/formaldehyde, 5)
+	to_chat(new_worm, span_userdanger("You are still yourself and keep your mind, if you weren't an antagonist before, you don't become one after using this device."))
 	return TRUE
 
 /obj/item/blood_worm_mutator/attack_self(mob/living/user)
+	if(!user)
+		return
 	if(spent)
 		user.balloon_alert(user, "already spent!")
-		return
+		return FALSE
 	if(in_use)
-		return
+		return FALSE
 	if (!ishuman(user))
 		user.balloon_alert(user, "not human!")
-		return
+		return FALSE
 	if(HAS_TRAIT(user, TRAIT_BLOOD_WORM_HOST))
 		user.balloon_alert(user, "already mutated!")
-		return
+		return FALSE
 	if(!CAN_HAVE_BLOOD(user))
 		user.balloon_alert(user, "Blood not detected!")
 		return FALSE
