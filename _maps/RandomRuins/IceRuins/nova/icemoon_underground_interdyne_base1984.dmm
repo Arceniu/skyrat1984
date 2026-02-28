@@ -7617,8 +7617,7 @@
 /area/icemoon/underground/explored)
 "WT" = (
 /obj/structure/safe{
-	dir = 4;
-	known_by = list("interdyne_vault")
+	dir = 4
 	},
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
 	name = "chameleon kit";
