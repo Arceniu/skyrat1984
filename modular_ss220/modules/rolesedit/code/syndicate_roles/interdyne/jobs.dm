@@ -24,7 +24,3 @@
 //closet
 /obj/structure/closet/secure_closet/interdynefob/deckofficer_locker
 	req_access = list(ACCESS_SYNDICATE_LEADER, ACCESS_SYNDICATE_IP)
-
-/obj/structure/closet/secure_closet/interdynefob/deckofficer_locker/PopulateContents()
-	..()
-	new /obj/item/paper/paperslip/corporate/fluff/safe_code/interdyne_vault(src)
