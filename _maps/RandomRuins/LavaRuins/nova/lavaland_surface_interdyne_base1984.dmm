@@ -2300,9 +2300,7 @@
 	},
 /area/ruin/interdyne_planetary_base/med/morgue)
 "ta" = (
-/obj/structure/safe{
-	known_by = list("interdyne_vault")
-	},
+/obj/structure/safe,
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe{
 	desc = "It's a box, for storing things.";
 	name = "chameleon kit"
