@@ -2,7 +2,8 @@
 	name = "Blood Worm Kit"
 	desc = "The Syndicate has offered you the chance to upgrade yourself into a blood worm form. \
 		Upon purchase, you'll be granted special DNA injector (not compatible with changelings and species who live without any type of blood). \
-		Additionally, you will be provided with some bloodloss first aid gear and mini  fire extinguisher to help you survive after serious paper cut and a light bulb burn."
+		Additionally, you will be provided with some bloodloss first aid gear and mini  fire extinguisher to help you survive after serious paper cut and a light bulb burn. \
+		Also it may cause slimeperson to become liquid due to forced mind transfer, so if you are slimeperson, just be cautious - you may lose your jello body. "
 	item = /obj/item/storage/box/syndicate/blood_worm_kit
 	category = /datum/uplink_category/special
 	cost = 25
