@@ -1,6 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - bugfix: "fixed a chameleon Id wildcards"
-  - balance: "ds-2 roles get syndicate card"
-  - bugfix: "interdyne get elite chameleon cards instead of basic in their crate"
