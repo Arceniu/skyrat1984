@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-03-04",
+    "author": "Arceniu",
+    "changes": [
+      "fixed a chameleon Id wildcards",
+      "ds-2 roles get syndicate card",
+      "interdyne get elite chameleon cards instead of basic in their crate",
+      "added interdyne vault's safe code to deck officer's closet",
+      "Expanded syndicate examine with DS-2 and interdyne roles"
+    ]
+  },
+  {
     "date": "2026-02-21",
     "author": "Arceniu",
     "changes": [
