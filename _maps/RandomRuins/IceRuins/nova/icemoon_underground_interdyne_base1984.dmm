@@ -2684,7 +2684,6 @@
 	control_area = "/area/ruin/interdyne_planetary_base";
 	ailock = 1
 	},
-/obj/item/folder/syndicate/red/secretformula,
 /obj/item/circuitboard/computer/ghostpad/interdyne{
 	pixel_x = 2;
 	pixel_y = 2
@@ -2697,6 +2696,8 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
+/obj/structure/rack,
+/obj/item/flatpack/ammo_workbench,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "hi" = (
@@ -7152,7 +7153,7 @@
 /area/icemoon/underground/explored)
 "Fi" = (
 /obj/machinery/light/small/directional/west,
-/obj/item/flatpack/ammo_workbench,
+/obj/machinery/announcement_system,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "FH" = (
@@ -7629,6 +7630,7 @@
 /obj/item/clothing/mask/gas/syndicate,
 /obj/item/mod/control/pre_equipped/nuclear/chameleon,
 /obj/item/tank/jetpack/harness,
+/obj/item/folder/syndicate/red/secretformula,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "WZ" = (

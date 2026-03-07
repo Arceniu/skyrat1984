@@ -3561,6 +3561,10 @@
 	},
 /turf/open/floor/iron/pool,
 /area/ruin/space/has_grav/nova/des_two/engineering)
+"pc" = (
+/obj/machinery/announcement_system,
+/turf/open/floor/plating/airless,
+/area/ruin/space/has_grav/nova/des_two/engineering)
 "pf" = (
 /obj/machinery/vending/wardrobe/sec_wardrobe,
 /turf/open/floor/iron/dark/smooth_large,
@@ -12625,7 +12629,7 @@ ST
 Ig
 yl
 Tt
-IE
+pc
 Tt
 vV
 Tt
