@@ -42,7 +42,7 @@
 /area/ruin/interdyne_planetary_base/cargo)
 "aj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/suit_storage_unit/syndicate/chameleon,
+/obj/machinery/suit_storage_unit/interdyne,
 /turf/open/floor/wood,
 /area/ruin/interdyne_planetary_base/cargo/deck)
 "ak" = (
@@ -2865,7 +2865,6 @@
 /area/ruin/interdyne_planetary_base/main)
 "hI" = (
 /obj/machinery/light/small/directional/east,
-/obj/machinery/suit_storage_unit/syndicate/chameleon,
 /obj/machinery/suit_storage_unit/interdyne,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
@@ -7627,6 +7626,9 @@
 /obj/item/suppressor,
 /obj/item/toy/redbutton,
 /obj/item/folder/syndicate/mining,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/mod/control/pre_equipped/nuclear/chameleon,
+/obj/item/tank/jetpack/harness,
 /turf/open/floor/iron/dark/textured_large,
 /area/ruin/interdyne_planetary_base/main/vault)
 "WZ" = (
