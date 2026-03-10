@@ -3,6 +3,7 @@
     "date": "2026-03-10",
     "author": "DenIS318",
     "changes": [
+      "Non-initial station crewmembers are no longer sent to cryo when SSD long time outside of game",
       "Spiders ruleset now can be executed",
       "Nucleations no longer spawn dead in morgue"
     ]
