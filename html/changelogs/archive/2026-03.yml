@@ -9,3 +9,5 @@
   DenIS318:
   - bugfix: Nucleations no longer spawn dead in morgue
   - config: Spiders ruleset now can be executed
+  - bugfix: Non-initial station crewmembers are no longer sent to cryo when SSD long
+      time outside of game
