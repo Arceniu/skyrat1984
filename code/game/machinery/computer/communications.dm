@@ -618,9 +618,9 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				data["authorizeName"] = authorize_name
 				data["canLogOut"] = !HAS_SILICON_ACCESS(user)
 				data["shuttleCanEvacOrFailReason"] = SSshuttle.canEvac()
-
 				if(syndicate || away) //ss1984 edit original 'if(syndicate)'
 					data["shuttleCanEvacOrFailReason"] = "You cannot summon the shuttle from this console!"
+
 				if (authenticated_as_non_silicon_captain(user))
 					data["canMessageAssociates"] = TRUE
 					data["canRequestNuke"] = TRUE
