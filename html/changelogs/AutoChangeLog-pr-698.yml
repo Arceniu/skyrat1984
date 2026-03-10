@@ -1,0 +1,4 @@
+author: "DenIS318"
+delete-after: True
+changes:
+  - bugfix: "Non-initial station crewmembers are no longer sent to cryo when SSD long time outside of game"
