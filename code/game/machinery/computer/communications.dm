@@ -33,12 +33,6 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 	/// Whether syndicate mode is enabled or not.
 	var/syndicate = FALSE
 
-	/// Whether away mode is enabled or not. ss1984 add
-	var/away = FALSE
-
-	/// Whether console can see  call 911 button or not. ss1984 add
-	var/can_call_911 = TRUE
-
 	/// The current state of the UI
 	var/state = STATE_MAIN
 
