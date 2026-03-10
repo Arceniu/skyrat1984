@@ -67,6 +67,10 @@
 		uplink_handler.has_progression = TRUE
 		SStraitor.register_uplink_handler(uplink_handler)
 
+		if(give_secondary_objectives)
+			uplink_handler.has_objectives = TRUE
+			uplink_handler.generate_objectives()
+
 		uplink_handler.can_replace_objectives = CALLBACK(src, PROC_REF(can_change_objectives))
 		uplink_handler.replace_objectives = CALLBACK(src, PROC_REF(submit_player_objective))
 
@@ -94,6 +98,7 @@
 
 /datum/antagonist/traitor/on_removal()
 	if(!isnull(uplink_handler))
+		uplink_handler.has_objectives = FALSE
 		uplink_handler.can_replace_objectives = null
 		uplink_handler.replace_objectives = null
 	owner.take_uplink()
@@ -272,6 +277,9 @@
 				traitor_won = FALSE
 			objectives_text += "<br><B>Objective #[count]</B>: [objective.explanation_text] [objective.get_roundend_success_suffix()]"
 			count++
+		if(uplink_handler.final_objective)
+			objectives_text += "<br>[span_greentext("[traitor_won ? "Additionally" : "However"], the final objective \"[uplink_handler.final_objective]\" was completed!")]"
+			traitor_won = TRUE
 
 	result += "<br>[owner.name] <B>[traitor_flavor["roundend_report"]]</B>"
 
