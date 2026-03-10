@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - config: "Spiders ruleset now can be executed"

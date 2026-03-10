@@ -8,3 +8,4 @@
 2026-03-10:
   DenIS318:
   - bugfix: Nucleations no longer spawn dead in morgue
+  - config: Spiders ruleset now can be executed
