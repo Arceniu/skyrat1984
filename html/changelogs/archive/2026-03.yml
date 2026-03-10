@@ -5,3 +5,6 @@
   - bugfix: interdyne get elite chameleon cards instead of basic in their crate
   - rscadd: Expanded syndicate examine with DS-2 and interdyne roles
   - map: added interdyne vault's safe code to deck officer's closet
+2026-03-10:
+  DenIS318:
+  - bugfix: Nucleations no longer spawn dead in morgue
