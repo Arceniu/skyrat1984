@@ -240,7 +240,8 @@ GLOBAL_VAR_INIT(cops_arrived, FALSE)
 				return
 			make_announcement(user)
 		if ("messageAssociates")
-			if (!authenticated_as_ai_or_captain(user)) // NOVA EDIT CHANGE - Allows AI and Captain to send messages - ORIGINAL: if (!authenticated_as_non_silicon_captain(user))
+			if (!authenticated_as_ai_or_captain(user) && !away)	//SS1984 ADD
+		//	if (!authenticated_as_ai_or_captain(user)) // NOVA EDIT CHANGE - Allows AI and Captain to send messages - ORIGINAL: if (!authenticated_as_non_silicon_captain(user)) //SS1984 DISABLE
 				return
 			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
 				return
