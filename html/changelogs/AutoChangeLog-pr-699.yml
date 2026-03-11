@@ -1,4 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - bugfix: "away and away synd comm console properly work again"

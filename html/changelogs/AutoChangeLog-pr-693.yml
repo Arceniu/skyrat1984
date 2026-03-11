@@ -1,6 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - map: "Added more factions to ds-2 and interdyne turrets, removed neutral(techically almost everyone) faction from ds-2 armory turret"
-  - map: "moved chameleon modsuit from icemoon interdyne deck officer room into vault's safe, deck officer gets interdyne modsuit"
-  - bugfix: "fixed a missing interdyne and ds-2 announcer machine on maps"
