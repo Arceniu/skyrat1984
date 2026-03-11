@@ -23,7 +23,7 @@ export function PageMain(props) {
     canToggleEngineeringOverride, // NOVA EDIT ADDITION - Engineering Override
     emagged,
     syndicate,
-    away, // SS1984 EDIT - oldstation
+    away, // ss1984 edit oldstation
     emergencyAccess,
     engineeringOverride, // NOVA EDIT ADDITION - Engineering Override
     importantActionReady,
