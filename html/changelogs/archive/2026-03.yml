@@ -19,3 +19,6 @@
   - map: moved chameleon modsuit from icemoon interdyne deck officer room into vault's
       safe, deck officer gets interdyne modsuit
   - bugfix: fixed a missing interdyne and ds-2 announcer machine on maps
+2026-03-14:
+  DenIS318:
+  - bugfix: Service security officer department preference is available again
