@@ -9489,7 +9489,7 @@
 #include "modular_nova\modules\xenoarchartifacts\obj\geosample.dm"
 #include "modular_nova\modules\xenoarchartifacts\obj\particle_battery.dm"
 #include "modular_nova\modules\xenoarchartifacts\obj\wave_scanner.dm"
-#include "modular_celadon\master_files_skyrat\code\modules\client\preferences\emote_panel.dm"
+#include "modular_celadon\master_files\code\modules\client\preferences\emote_panel.dm"
 #include "modular_celadon\modules\access_upgrader\code\upgrader.dm"
 #include "modular_celadon\modules\auto_cryo\autocryo.dm"
 #include "modular_celadon\modules\auto_cryo\autocryo_config.dm"
