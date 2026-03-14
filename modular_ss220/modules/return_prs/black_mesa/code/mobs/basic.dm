@@ -2,6 +2,8 @@
 	var/list/alert_sounds
 	var/alert_cooldown = 3 SECONDS
 	var/alert_cooldown_time
+	var/projectiletype = null
+	var/projectilesound = null
 
 /mob/living/basic/blackmesa/proc/aggro()
 	if(alert_sounds)
@@ -39,7 +41,33 @@
 
 
 
-//bull
+/*		/datum/ai_planning_subtree/escape_captivity,
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/ranged_skirmish,
+		/datum/ai_planning_subtree/attack_obstacle_in_path,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree, */
+
+
+//bullsquid
+
+/datum/ai_behavior/move_to_cardinal/bullsquid
+	minimum_distance = 4
+
+/datum/ai_planning_subtree/move_to_cardinal/bullsquid
+	move_behaviour = /datum/ai_behavior/move_to_cardinal/bullsquid
+
+/datum/ai_controller/basic_controller/blackmesa/bullsquid
+	ai_movement = /datum/ai_movement/basic_avoidance
+	idle_behavior = /datum/idle_behavior/idle_random_walk
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/escape_captivity,
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/move_to_cardinal/bullsquid,
+		/datum/ai_planning_subtree/ranged_skirmish,
+		/datum/ai_planning_subtree/attack_obstacle_in_path,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+	)
+
 /mob/living/basic/blackmesa/xen/bullsquid
 	name = "bullsquid"
 	desc = "Some highly aggressive alien creature. Thrives in toxic environments."
@@ -56,6 +84,8 @@
 	obj_damage = 50
 	melee_damage_lower = 15
 	melee_damage_upper = 18
+	projectiletype = /obj/projectile/bullsquid
+	projectilesound = 'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/goo_attack3.ogg'
 	attack_sound = 'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/attack1.ogg'
 	gold_core_spawnable = HOSTILE_SPAWN
 	alert_sounds = list(
@@ -63,17 +93,8 @@
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/detect2.ogg',
 		'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/detect3.ogg'
 	)
-	ai_controller = /datum/ai_controller/basic_controller/blackmesa
+	ai_controller = /datum/ai_controller/basic_controller/blackmesa/bullsquid
 
-	/*
-	speak_chance = 1
-	turns_per_move = 7
-	harm_intent_damage = 15
-	ranged = TRUE
-	retreat_distance = 4
-	minimum_distance = 4
-	dodging = TRUE
-	projectiletype = /obj/projectile/bullsquid
-	projectilesound = 'modular_ss220/modules/return_prs/black_mesa/sound/mobs/bullsquid/goo_attack3.ogg'
-	*/
-
+/mob/living/basic/blackmesa/xen/bullsquid/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/ranged_attacks, projectile_type = projectiletype, projectile_sound = projectilesound, cooldown_time = 2 SECONDS)
