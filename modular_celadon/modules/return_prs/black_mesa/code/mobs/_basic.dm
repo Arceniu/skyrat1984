@@ -51,11 +51,9 @@
 	)
 
 /datum/ai_controller/basic_controller/blackmesa/update_grid(datum/source, datum/spatial_grid_cell/new_cell)
-	SIGNAL_HANDLER
+	. = ..()
 	var/mob/living/basic/blackmesa/mob = pawn
-	set_new_cells()
 	if(current_movement_target)
-		check_target_max_distance()
 		if(isblackmesamob(mob))
 			mob.aggro()
 
