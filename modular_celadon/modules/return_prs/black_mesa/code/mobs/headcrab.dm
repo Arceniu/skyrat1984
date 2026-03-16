@@ -33,28 +33,15 @@
 	)
 	var/is_zombie = FALSE
 	var/mob/living/carbon/human/oldguy
-	/// Charging ability
-	var/datum/action/cooldown/mob_cooldown/charge/basic_charge/charge
 	var/throw_at_range = 10
 	var/throw_at_speed = 2
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/Initialize(mapload)
-	. = ..()
-	charge = new /datum/action/cooldown/mob_cooldown/charge/basic_charge()
-	charge.Grant(src)
-	charge.cooldown_time = 0
-
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/Destroy()
-	QDEL_NULL(charge)
-	return ..()
-
 /mob/living/simple_animal/hostile/blackmesa/xen/headcrab/Shoot(atom/targeted_atom)
 	throw_at(targeted_atom, throw_at_range, throw_at_speed)
-	playsound(
-		src,
-		pick('modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack1.ogg', 'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack2.ogg', 'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack3.ogg'),
-		100
-		)
+	playsound(src, pick(list('modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack1.ogg',
+		'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack2.ogg',
+		'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack3.ogg'
+		)), 100)
 
 /mob/living/simple_animal/hostile/blackmesa/xen/headcrab/death(gibbed)
 	. = ..()
