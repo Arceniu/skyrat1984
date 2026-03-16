@@ -32,7 +32,7 @@
 	)
 	/// Charging ability
 	var/datum/action/cooldown/mob_cooldown/charge/basic_charge/charge
-	var/charge_cooldown = 3 SECONDS
+	var/charge_cooldown = 6 SECONDS
 	var/charge_cooldown_time
 
 /mob/living/basic/blackmesa/xen/houndeye/Initialize(mapload)
@@ -46,12 +46,8 @@
 
 /mob/living/basic/blackmesa/xen/houndeye/bullet_act(obj/projectile/proj)
 	. = ..()
-	if(client)
-		return .
-	if(QDELETED(proj))
-		return .
-	if(!isdead(src))
-		if(!(world.time <= charge_cooldown_time))
+	if(!(client) && !(QDELETED(proj)))
+		if(!isdead(src) && !(world.time <= charge_cooldown_time))
 			if(charge_sounds)
 				playsound(src, pick(charge_sounds), 70)
 			charge_cooldown_time = world.time + charge_cooldown
