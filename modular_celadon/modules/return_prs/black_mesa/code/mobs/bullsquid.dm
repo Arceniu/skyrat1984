@@ -44,10 +44,6 @@
 	terminate_after_action = TRUE
 	behavior_flags = AI_BEHAVIOR_CAN_PLAN_DURING_EXECUTION
 
-/datum/ai_planning_subtree/basic_melee_attack_subtree/bullsquid
-	melee_attack_behavior = /datum/ai_behavior/basic_melee_attack/bullsquid
-	end_planning = FALSE
-
 /datum/ai_planning_subtree/blackmesa_combo_skirmish/bullsquid
 	ranged_attack_behavior = /datum/ai_behavior/blackmesa_combo_skirmish/bullsquid
 	melee_attack_behavior = /datum/ai_behavior/basic_melee_attack/bullsquid
