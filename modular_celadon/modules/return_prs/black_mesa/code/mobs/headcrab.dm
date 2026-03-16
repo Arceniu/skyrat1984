@@ -1,4 +1,4 @@
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab
+/mob/living/basic/blackmesa/xen/headcrab
 	name = "headcrab"
 	desc = "Don't let it latch onto your hea-... hey, that's kinda cool."
 	icon = 'modular_celadon/modules/return_prs/black_mesa/icons/mobs.dmi'
@@ -7,50 +7,43 @@
 	icon_dead = "headcrab_dead"
 	icon_gib = null
 	mob_biotypes = list(MOB_ORGANIC, MOB_BEAST)
-	speak_chance = 1
-	speak_emote = list("growls")
-	speed = 1
-	emote_taunt = list("growls", "snarls", "grumbles")
-	ranged_message = "jumps"
-	taunt_chance = 100
-	turns_per_move = 7
+	speak_emote = list("growls", "snarls", "grumbles", "jumps")
 	maxHealth = 50
 	health = 50
-	speed = 3
-	ranged = TRUE
-	dodging = TRUE
-	ranged_cooldown_time = 4 SECONDS
-	harm_intent_damage = 15
+	speed = 1
 	melee_damage_lower = 5
 	melee_damage_upper = 5
-	retreat_distance = 5
-	minimum_distance = 5
 	attack_sound = 'sound/items/weapons/bite.ogg'
 	gold_core_spawnable = HOSTILE_SPAWN
 	loot = list(/obj/item/stack/sheet/bone)
 	alert_sounds = list(
 		'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/alert1.ogg'
 	)
+	ai_controller = /datum/ai_controller/basic_controller/blackmesa/headcrab
 	var/is_zombie = FALSE
 	var/mob/living/carbon/human/oldguy
 	var/throw_at_range = 10
 	var/throw_at_speed = 2
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/Shoot(atom/targeted_atom)
+/mob/living/basic/blackmesa/xen/headcrab/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/ranged_attacks, projectile_type = null, projectile_sound = null, cooldown_time = 4 SECONDS)
+
+/mob/living/basic/blackmesa/xen/headcrab/proc/crab_throw(atom/targeted_atom)
 	throw_at(targeted_atom, throw_at_range, throw_at_speed)
 	playsound(src, pick(list('modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack1.ogg',
 		'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack2.ogg',
 		'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/attack3.ogg'
 		)), 100)
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/death(gibbed)
+/mob/living/basic/blackmesa/xen/headcrab/death(gibbed)
 	. = ..()
 	playsound(src, pick(list(
 		'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/die1.ogg',
 		'modular_celadon/modules/return_prs/black_mesa/sound/mobs/headcrab/die2.ogg'
 	)), 100)
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+/mob/living/basic/blackmesa/xen/headcrab/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	. = ..()
 	if(!hit_atom || stat == DEAD)
 		return
@@ -67,7 +60,7 @@
 		human_to_dunk.investigate_log("was headcrab latched by [src].", INVESTIGATE_DEATHS)
 		human_to_dunk.death(FALSE)
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/proc/zombify(mob/living/carbon/human/zombified_human)
+/mob/living/basic/blackmesa/xen/headcrab/proc/zombify(mob/living/carbon/human/zombified_human)
 	if(is_zombie)
 		return FALSE
 	is_zombie = TRUE
@@ -82,10 +75,6 @@
 	melee_damage_lower += 8
 	melee_damage_upper += 11
 	obj_damage = 21 //now that it has a corpse to puppet, it can properly attack structures
-	ranged = FALSE
-	dodging = FALSE
-	retreat_distance = 0
-	minimum_distance = 0
 	AddElement(/datum/element/wall_smasher, strength_flag = ENVIRONMENT_SMASH_STRUCTURES)
 	movement_type = GROUND
 	icon_state = ""
@@ -97,31 +86,85 @@
 	visible_message(span_warning("The corpse of [zombified_human.name] suddenly rises!"))
 	return TRUE
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/Destroy()
+/mob/living/basic/blackmesa/xen/headcrab/Destroy()
 	if(oldguy)
 		oldguy.forceMove(get_turf(src))
 		oldguy = null
 	return ..()
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/death(gibbed)
+/mob/living/basic/blackmesa/xen/headcrab/death(gibbed)
 	. = ..()
 	if(oldguy)
 		oldguy.forceMove(loc)
 		oldguy = null
 	if(is_zombie)
 		if(prob(30))
-			new /mob/living/simple_animal/hostile/blackmesa/xen/headcrab(loc) //OOOO it unlached!
+			new /mob/living/basic/blackmesa/xen/headcrab(loc) //OOOO it unlached!
 			qdel(src)
 			return
 		cut_overlays()
 		update_appearance()
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/update_overlays()
+/mob/living/basic/blackmesa/xen/headcrab/update_overlays()
 	. = ..()
 	if(is_zombie)
 		copy_overlays(oldguy, TRUE)
 		var/mutable_appearance/blob_head_overlay = mutable_appearance('modular_celadon/modules/return_prs/black_mesa/icons/mobs.dmi', "headcrab_zombie")
 		add_overlay(blob_head_overlay)
 
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/fast
+/mob/living/basic/blackmesa/xen/headcrab/fast
 	speed = -2
+
+/datum/ai_behavior/move_to_cardinal/headcrab
+	minimum_distance = 5
+	maximum_distance = 5
+
+/datum/ai_planning_subtree/move_to_cardinal/headcrab
+	move_behaviour = /datum/ai_behavior/move_to_cardinal/headcrab
+
+/datum/ai_controller/basic_controller/blackmesa/headcrab
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/escape_captivity,
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/blackmesa_combo_skirmish/headcrab,
+		/datum/ai_planning_subtree/move_to_cardinal/headcrab,
+		/datum/ai_planning_subtree/attack_obstacle_in_path,
+	)
+
+/datum/ai_behavior/basic_melee_attack/headcrab
+	action_cooldown = 2 SECONDS
+	terminate_after_action = TRUE
+	behavior_flags = AI_BEHAVIOR_CAN_PLAN_DURING_EXECUTION
+
+/datum/ai_planning_subtree/blackmesa_combo_skirmish/headcrab
+	ranged_attack_behavior = /datum/ai_behavior/blackmesa_combo_skirmish/headcrab
+	melee_attack_behavior = /datum/ai_behavior/basic_melee_attack/headcrab
+
+/datum/ai_behavior/blackmesa_combo_skirmish/headcrab
+	action_cooldown = 4 SECONDS
+
+/datum/ai_behavior/blackmesa_combo_skirmish/headcrab/perform(seconds_per_tick, datum/ai_controller/controller, target_key, targeting_strategy_key, hiding_location_key, max_range, min_range)
+	var/atom/target = controller.blackboard[target_key]
+	var/mob/living/basic/blackmesa/xen/headcrab/crab = controller.pawn
+	if(QDELETED(target))
+		return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_FAILED
+
+	var/datum/targeting_strategy/targeting_strategy = GET_TARGETING_STRATEGY(controller.blackboard[targeting_strategy_key])
+	if(!targeting_strategy.can_attack(crab, target))
+		return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_FAILED
+
+	var/hiding_target = targeting_strategy.find_hidden_mobs(crab, target)
+	controller.set_blackboard_key(hiding_location_key, hiding_target)
+
+	target = hiding_target || target
+
+	var/distance = get_dist(crab, target)
+	if(distance > max_range || distance < min_range)
+		if(distance < min_range)
+			controller.ai_interact(target, combat_mode = TRUE)
+			return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED
+		return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_FAILED
+	if(!(crab.is_zombie))
+		crab.crab_throw(target)
+	controller.ai_interact(target = target, combat_mode = TRUE)
+	return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED

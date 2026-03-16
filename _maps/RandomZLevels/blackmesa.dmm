@@ -318,7 +318,7 @@
 /turf/open/misc/dirt/planet/xen,
 /area/awaymission/black_mesa/xen/nihilanth_computer)
 "adL" = (
-/mob/living/simple_animal/hostile/blackmesa/xen/headcrab,
+/mob/living/basic/blackmesa/xen/headcrab,
 /turf/open/floor/mineral/titanium/white,
 /area/awaymission/black_mesa/entrance)
 "adM" = (

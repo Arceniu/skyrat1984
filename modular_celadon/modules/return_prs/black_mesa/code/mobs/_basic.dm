@@ -29,10 +29,6 @@
 			return TRUE
 	return FALSE
 
-/mob/living/basic/blackmesa/apply_damage()
-	aggro()
-	return ..()
-
 /mob/living/basic/blackmesa/xen
 	faction = list(FACTION_XEN)
 	habitable_atmos = null

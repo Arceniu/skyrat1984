@@ -63,8 +63,6 @@
 		/mob/living/simple_animal/hostile/blackmesa/xen/headcrab_zombie/guard,
 		/mob/living/simple_animal/hostile/blackmesa/xen/headcrab_zombie/hecu,
 		/mob/living/simple_animal/hostile/blackmesa/xen/headcrab_zombie/hev,
-		/mob/living/simple_animal/hostile/blackmesa/xen/headcrab,
-		/mob/living/simple_animal/hostile/blackmesa/xen/headcrab/fast,
 		/mob/living/simple_animal/hostile/blackmesa/hecu,
 		/mob/living/simple_animal/hostile/blackmesa/hecu/ranged,
 		/mob/living/simple_animal/hostile/blackmesa/hecu/ranged/smg,
