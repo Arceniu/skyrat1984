@@ -56,8 +56,8 @@
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/escape_captivity,
 		/datum/ai_planning_subtree/simple_find_target,
-		/datum/ai_planning_subtree/move_to_cardinal/bullsquid,
 		/datum/ai_planning_subtree/blackmesa_combo_skirmish/bullsquid,
+		/datum/ai_planning_subtree/move_to_cardinal/bullsquid,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 	)
 
