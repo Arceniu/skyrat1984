@@ -22,3 +22,7 @@
 2026-03-14:
   DenIS318:
   - bugfix: Service security officer department preference is available again
+2026-03-23:
+  DenIS318:
+  - rscdel: Shoulder handgun holster (those primary from Security Vouchers) no longer
+      can be worn "below" suit, as they were not working that way anyway.
