@@ -121,35 +121,41 @@
 /mob/living/basic/blackmesa/xen/headcrab/fast
 	speed = -2
 
-/datum/ai_planning_subtree/move_to_cardinal/headcrab
-	move_behaviour = /datum/ai_behavior/move_to_cardinal/headcrab
-	var/mob/living/basic/blackmesa/headcrab/mob = pawn
+/datum/ai_planning_subtree/headcrab/move_to_cardinal
+	var/move_behaviour = /datum/ai_behavior/move_to_cardinal/headcrab
+	var/target_key = BB_BASIC_MOB_CURRENT_TARGET
 
 /datum/ai_planning_subtree/headcrab/move_to_cardinal/SelectBehaviors(datum/ai_controller/controller, seconds_per_tick)
 	. = ..()
 	if(!controller.blackboard_key_exists(target_key))
 		return
-	if(!(mob.is_zombie()))
-		controller.queue_behavior(move_behaviour, target_key)
-
 
 /datum/ai_behavior/move_to_cardinal/headcrab
 	behavior_flags = AI_BEHAVIOR_REQUIRE_MOVEMENT | AI_BEHAVIOR_MOVE_AND_PERFORM | AI_BEHAVIOR_CAN_PLAN_DURING_EXECUTION
 	minimum_distance = 5
 	maximum_distance = 5
 
+/datum/ai_behavior/move_to_cardinal/headcrab/proc/is_zombie(datum/ai_controller/controller)
+	var/mob/living/basic/blackmesa/xen/headcrab/mob = controller.pawn
+	if(mob.is_zombie())
+		minimum_distance = 0
+		maximum_distance = 1
+	else
+		minimum_distance = 5
+		maximum_distance = 5
+
 /datum/ai_behavior/move_to_cardinal/headcrab/setup(datum/ai_controller/controller, target_key)
 	var/atom/target = controller.blackboard[target_key]
 	if(QDELETED(target))
 		return FALSE
-	if(mob.in_zombie())
-		return FALSE
+	is_zombie(controller)
 	target_nearest_cardinal(controller, target)
 	return TRUE
 
 /datum/ai_behavior/move_to_cardinal/headcrab/target_nearest_cardinal(datum/ai_controller/controller, atom/target)
-	if(mob.is_zombie())
-		return FALSE
+	var/closest = INFINITY
+	var/atom/move_target
+	is_zombie(controller)
 	for (var/dir in GLOB.cardinals)
 		var/turf/cardinal_turf = get_ranged_target_turf(target, dir, minimum_distance)
 		if (cardinal_turf.is_blocked_turf())
@@ -167,8 +173,7 @@
 	set_movement_target(controller, move_target)
 
 /datum/ai_behavior/move_to_cardinal/headcrab/perform(seconds_per_tick, datum/ai_controller/controller, target_key)
-	if(mob.is_zombie())
-		return AI_BEHAVIOR_INSTANT | AI_BEHAVIOR_FAILED
+	is_zombie(controller)
 	var/atom/target = controller.blackboard[target_key]
 	if (QDELETED(target))
 		return AI_BEHAVIOR_INSTANT | AI_BEHAVIOR_FAILED
@@ -188,7 +193,7 @@
 		/datum/ai_planning_subtree/escape_captivity,
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/blackmesa_combo_skirmish/headcrab,
-		/datum/ai_planning_subtree/move_to_cardinal/headcrab,
+		/datum/ai_planning_subtree/headcrab/move_to_cardinal,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 	)
 
