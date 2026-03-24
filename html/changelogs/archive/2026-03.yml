@@ -26,3 +26,6 @@
   DenIS318:
   - rscdel: Shoulder handgun holster (those primary from Security Vouchers) no longer
       can be worn "below" suit, as they were not working that way anyway.
+2026-03-24:
+  DenIS318:
+  - server: OOC -> Verify Discord Account is working now
