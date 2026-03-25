@@ -431,7 +431,6 @@ Allows for flashlights bayonets and adds 1 slot to equipment.
 	microfusion_gun.AddComponent(/datum/component/bayonet_attachable, \
 		offset_x = 30, \
 		offset_y = 15)
-	microfusion_gun = TRUE
 
 /obj/item/microfusion_gun_attachment/rail/remove_attachment(obj/item/gun/microfusion/microfusion_gun)
 	. = ..()
