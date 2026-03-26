@@ -1,4 +1,0 @@
-author: "Arceniu"
-delete-after: True
-changes:
-  - bugfix: "fixed a MCR rail attachment - again able to attach/detach knife and seclite"
