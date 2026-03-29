@@ -3,6 +3,7 @@
     "date": "2026-03-29",
     "author": "DenIS318",
     "changes": [
+      "missing nanomaps added for Pubby station",
       "Latejoin queue no longer shown at roundstart menu",
       "Genetic Mutation quirk cost 6 => 16 (Blind quirk have -16)",
       "Respawn timer 20 => 10 minutes",
