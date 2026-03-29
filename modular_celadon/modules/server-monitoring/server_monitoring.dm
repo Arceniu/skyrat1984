@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(server_monitoring)
 	name = "Server Monitoring"
-	flags = SS_BACKGROUND
+	ss_flags = SS_BACKGROUND
 	wait = 30 SECONDS // Default wait time before fire() invoked
 	runlevels = RUNLEVEL_LOBBY | RUNLEVEL_SETUP | RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
