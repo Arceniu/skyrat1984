@@ -819,5 +819,6 @@
   - balance: Ghosts now can hear LOOC (if close enough)
   - balance: Respawn timer 20 => 10 minutes
   - balance: Genetic Mutation quirk cost 6 => 16 (Blind quirk have -16)
+  - rscadd: missing nanomaps added for Pubby station
   sqnztb:
   - bugfix: non-assistant visitors should properly show on manifest with records again.
