@@ -93,8 +93,11 @@ ROUNDSTART_BLUE_ALERT 1
 
 ## GAME MODES ###
 
-## Uncomment to not send a roundstart intercept report. Gamemodes may override this.
+## Uncomment to not send a roundstart intercept report.
 #NO_INTERCEPT_REPORT
+
+## Uncomment to exclude dynamic info in the roundstart report.
+#NO_DYNAMIC_REPORT
 
 ## Percent weight reductions for three of the most recent modes
 
@@ -412,6 +415,7 @@ ROUNDSTART_RACES teshari
 ROUNDSTART_RACES vox_primalis
 ROUNDSTART_RACES abductorweak
 ROUNDSTART_RACES hemophage
+ROUNDSTART_RACES shadekin
 
 ## Celadon RACES DOWN THERE
 ROUNDSTART_RACES nucleation

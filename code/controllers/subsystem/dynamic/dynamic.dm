@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(dynamic)
 	name = "Dynamic"
-	flags = SS_NO_INIT
+	ss_flags = SS_NO_INIT
 	wait = 5 MINUTES
 
 	// These vars just exist for admins interfacing with dynamic
@@ -540,6 +540,10 @@ SUBSYSTEM_DEF(dynamic)
 		CRASH("queue_ruleset() was called with an invalid type: [ruleset_typepath]")
 
 	queued_rulesets += new ruleset_typepath(dynamic_config)
+	// NOVA EDIT ADDITION START - menu latejoin tracker
+	if(SSticker.current_state > GAME_STATE_SETTING_UP) // Don't flash this while we are assigning roundstart antags
+		SStitle.show_title_screen()
+	// NOVA EDIT ADDITION END - menu latejoin tracker
 
 /**
  * Unqueues a ruleset because it has executed
@@ -549,6 +553,10 @@ SUBSYSTEM_DEF(dynamic)
 		CRASH("queue_ruleset() was called with an invalid type: [ruleset.type]")
 
 	queued_rulesets -= ruleset
+	// NOVA EDIT ADDITION START - menu latejoin tracker
+	if(SSticker.current_state > GAME_STATE_SETTING_UP) // Don't flash this while we are assigning roundstart antags
+		SStitle.show_title_screen()
+	// NOVA EDIT ADDITION END - menu latejoin tracker
 
 /**
  * Get the cooldown between attempts to spawn a ruleset of the given type
