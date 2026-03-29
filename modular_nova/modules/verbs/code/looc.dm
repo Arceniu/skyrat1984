@@ -40,12 +40,14 @@
 		if(is_banned_from(ckey, BAN_LOOC))
 			to_chat(src, span_warning("You are LOOC banned!"))
 			return
-		if(mob.stat == DEAD)
-			to_chat(src, span_danger("You cannot use LOOC while dead."))
-			return
-		if(istype(mob, /mob/dead))
-			to_chat(src, span_danger("You cannot use LOOC while ghosting."))
-			return
+		// CELADON REMOVAL START
+		// if(mob.stat == DEAD)
+		// 	to_chat(src, span_danger("You cannot use LOOC while dead."))
+		// 	return
+		// if(istype(mob, /mob/dead))
+		// 	to_chat(src, span_danger("You cannot use LOOC while ghosting."))
+		// 	return
+		// CELADON REMOVAL END
 
 	msg = emoji_parse(msg)
 
@@ -77,8 +79,10 @@
 			admin_seen[hearing_client] = TRUE
 			// dont continue here, still need to show runechat
 
-		if (isobserver(hearing) && !is_holder)
-			continue //ghosts dont hear looc, apparantly
+		// CELADON REMOVAL START
+		// if (isobserver(hearing) && !is_holder)
+		// 	continue //ghosts dont hear looc, apparantly
+		// CELADON REMOVAL END
 
 		// do the runetext here so admins can still get the runetext
 		if(mob.runechat_prefs_check(hearing_client.mob) && hearing_client.prefs.read_preference(/datum/preference/toggle/enable_looc_runechat))
