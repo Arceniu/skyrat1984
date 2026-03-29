@@ -1,5 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - balance: "LOOC is now available to dead and ghosts. Using it for meta-info is still breaking rules."
-  - balance: "Ghosts now can hear LOOC (if close enough)"

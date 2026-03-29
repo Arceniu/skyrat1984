@@ -399,6 +399,9 @@
   - rscadd: AIs can now rotate their hologram by using the "block movement" keybind.
   DaddyChristmas:
   - balance: Golem shells can now be deconstructed with a crowbar (Not Golem the species!)
+  DenIS318:
+  - rscdel: Shoulder handgun holster (those primary from Security Vouchers) no longer
+      can be worn "below" suit, as they were not working that way anyway.
   Dominion:
   - rscadd: Incapacitation status effects and dead now trigger you to forcefully say
       whatever was in your input prompt.
@@ -696,12 +699,7 @@
   - qol: Your HUD prefs are respected on more mobs now.
   - qol: Improved the HUD of simple/basic animals, as well as Cyborgs, AIs, pAIs and
       Xenomorphs.
-  DenIS318:
-  - rscdel: Shoulder handgun holster (those primary from Security Vouchers) no longer
-      can be worn "below" suit, as they were not working that way anyway.
 2026-03-24:
-  DenIS318:
-  - server: OOC -> Verify Discord Account is working now
   Absolucy:
   - bugfix: Some indicators (combat, ssd, temporary flavor text) will no longer be
       completely dark sometimes on multi-Z maps.
@@ -715,6 +713,8 @@
   - bugfix: Cargo goodies are now visible in the ordering and request consoles.
   Bugwasabi, vinylspiders:
   - code_imp: Uses defines instead of magic numbers on carbon_stripping.dm
+  DenIS318:
+  - server: OOC -> Verify Discord Account is working now
   Happyowl93:
   - rscadd: 'Adds a new species: shadekins'
   Iajret:
@@ -757,11 +757,11 @@
   - qol: adds a new verb, 'Connect-to-Relay' that can be typed or found in the OOC
       tab
 2026-03-26:
+  Arceniu:
+  - bugfix: fixed a MCR rail attachment - again able to attach/detach knife and seclite
   vinylspiders:
   - bugfix: fixes an issue where genitals were rendering the incorrect variant at
       random
-  Arceniu:
-  - bugfix: fixed a MCR rail attachment - again able to attach/detach knife and seclite
 2026-03-27:
   Absolucy:
   - qol: Slime Link messages now notify listeners with a balloon alert.
@@ -809,8 +809,15 @@
   - bugfix: fixes an issue where casting spells after your mob gets deleted can leave
       you in a permanently bugged state.
 2026-03-29:
-  sqnztb:
-  - bugfix: non-assistant visitors should properly show on manifest with records again.
   Artemchik542:
   - bugfix: emote sounds
   - bugfix: dice now not rotating anymore
+  DenIS318:
+  - rscdel: Latejoin queue no longer shown at roundstart menu
+  - balance: LOOC is now available to dead and ghosts. Using it for meta-info is still
+      breaking rules.
+  - balance: Ghosts now can hear LOOC (if close enough)
+  - balance: Respawn timer 20 => 10 minutes
+  - balance: Genetic Mutation quirk cost 6 => 16 (Blind quirk have -16)
+  sqnztb:
+  - bugfix: non-assistant visitors should properly show on manifest with records again.
