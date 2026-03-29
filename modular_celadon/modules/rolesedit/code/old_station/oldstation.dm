@@ -412,7 +412,7 @@
 	name = "Prototype skillchip"
 	desc = "Endorsed by the Nanotrasen Navy."
 	complexity = 2
-	abstract_parent_type = /obj/item/skillchip/job/oldstation
+	abstract_type  = /obj/item/skillchip/job/oldstation
 
 /obj/item/skillchip/job/oldstation/engineering
 	name = "Prototype Engineering C0-RCU-1T-N11H5M2R1 skillchip"
