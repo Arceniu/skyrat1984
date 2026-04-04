@@ -3,6 +3,7 @@
     "date": "2026-04-04",
     "author": "DenIS318",
     "changes": [
+      "Parallax (space overlay) fixed and now shown",
       "Detective wooden TV console can be assembled from circuit, instead of normal security camera console. The difference is only visual",
       "Remove \"Connect to relay\" option in \"File\" menu and OOC verb. They were not used anyway.",
       "Roll 20 emote removed (it's just says text to LOOC that can be easily faked)",
