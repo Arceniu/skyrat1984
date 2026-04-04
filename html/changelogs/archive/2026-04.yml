@@ -8,3 +8,4 @@
   - spellcheck: Silicon sounds localized
   - qol: Detective wooden TV console can be assembled from circuit, instead of normal
       security camera console. The difference is only visual
+  - bugfix: Parallax (space overlay) fixed and now shown
