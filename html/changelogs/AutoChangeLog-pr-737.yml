@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - rscdel: "Remove \"Connect to relay\" option in \"File\" menu and OOC verb. They were not used anyway."

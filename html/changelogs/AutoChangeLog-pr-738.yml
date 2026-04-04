@@ -1,4 +1,0 @@
-author: "DenIS318"
-delete-after: True
-changes:
-  - rscdel: "Roll 20 emote removed (it's just says text to LOOC that can be easily faked)"
