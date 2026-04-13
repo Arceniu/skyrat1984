@@ -9,3 +9,7 @@
   - qol: Detective wooden TV console can be assembled from circuit, instead of normal
       security camera console. The difference is only visual
   - bugfix: Parallax (space overlay) fixed and now shown
+2026-04-13:
+  DenIS318:
+  - bugfix: Missing engineering secure storage button is added to maps that it had
+  - bugfix: Error pizza now is normal pizza
