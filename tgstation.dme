@@ -9539,6 +9539,7 @@
 #include "modular_celadon\modules\auto_cryo\autocryo_config.dm"
 #include "modular_celadon\modules\cargo\code\_changes.dm"
 #include "modular_celadon\modules\cargo\code\_import_code.dm"
+#include "modular_celadon\modules\cargo\code\mining\machine_redemption.dm"
 #include "modular_celadon\modules\cargo\code\console.dm"
 #include "modular_celadon\modules\cargo\code\akh_frontier_celadon.dm"
 #include "modular_celadon\modules\cargo\code\deforest_medical_celadon.dm"
