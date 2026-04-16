@@ -1,0 +1,4 @@
+author: "Arceniu"
+delete-after: True
+changes:
+  - balance: "ore redemption machine now get buffs from better parts(servo increase points and matter bin + laser increase ore mult, max buff is +30%)"
