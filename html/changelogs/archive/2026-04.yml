@@ -13,3 +13,7 @@
   DenIS318:
   - bugfix: Missing engineering secure storage button is added to maps that it had
   - bugfix: Error pizza now is normal pizza
+2026-04-16:
+  Arceniu:
+  - balance: ore redemption machine now get buffs from better parts(servo increase
+      points and matter bin + laser increase ore mult, max buff is +30%)
