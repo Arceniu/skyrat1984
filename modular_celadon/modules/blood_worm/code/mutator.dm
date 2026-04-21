@@ -13,6 +13,10 @@
 
 	w_class = WEIGHT_CLASS_SMALL
 	var/spent = FALSE
+	//admin var, able to turn to TRUE for no blood species worms, changeling worms and etc.
+	var/no_check = FALSE
+	//should synthetics (race with "blood"-oil) use this or not, doesn't do anything if no_check enabled
+	var/synthetic_allowed = FALSE
 	VAR_PROTECTED/in_use = FALSE
 
 /obj/item/blood_worm_mutator/Initialize(mapload)
@@ -58,12 +62,16 @@
 	if(HAS_TRAIT(user, TRAIT_BLOOD_WORM_HOST))
 		user.balloon_alert(user, "already mutated!")
 		return FALSE
-	if(!CAN_HAVE_BLOOD(user))
-		user.balloon_alert(user, "Blood not detected!")
-		return FALSE
-	if(IS_CHANGELING(user))
-		user.balloon_alert(user, "DNA is not suitable!")
-		return FALSE
+	if(!no_check)
+		if(!CAN_HAVE_BLOOD(user))
+			user.balloon_alert(user, "Blood not detected!")
+			return FALSE
+		if(IS_CHANGELING(user))
+			user.balloon_alert(user, "DNA is not suitable!")
+			return FALSE
+		if(!synthetic_allowed && issynthetic(user))
+			user.balloon_alert(user, "DNA is not suitable!")
+			return FALSE
 	if (!user.try_inject(user, injection_flags = INJECT_TRY_SHOW_ERROR_MESSAGE))
 		return
 	in_use = TRUE
