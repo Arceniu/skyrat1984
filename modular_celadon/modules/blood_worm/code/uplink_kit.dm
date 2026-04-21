@@ -20,6 +20,6 @@
 	new /obj/item/storage/pill_bottle/iron(src)
 	new /obj/item/stack/medical/suture/bloody(src)
 	new /obj/item/stack/medical/mesh/bloody(src)
-	new /obj/item/stack/medical/gauze/sterilized(src)
+	new /obj/item/stack/medical/wrap/gauze/sterilized(src)
 	new /obj/item/reagent_containers/hypospray/medipen/deforest/coagulants(src)
 	new /obj/item/stack/medical/suture/coagulant(src)
