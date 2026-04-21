@@ -41,9 +41,9 @@
 	reqs = list(
 		/obj/item/blood_worm_tester = 1,
 		/obj/item/food/monkeycube = 1,
-		/obj/item/organ/monster_core/regenerative_core/legion = 2,
-		/obj/item/mining_stabilizer =2,
-		/obj/item/lazarus_injector = 2
+		/obj/item/organ/monster_core/regenerative_core/legion = 3,
+		/obj/item/mining_stabilizer = 3,
+		/obj/item/lazarus_injector = 3
 	)
 	result = /obj/effect/spawner/random/blood_worm_mutator
 
