@@ -5,7 +5,7 @@
 	special_desc_requirement = EXAMINE_CHECK_SYNDICATE
 	special_desc = "Creating of prototype bloodworm injector, also make sure to not stand near turrets in case to not get killed, do not fall in lava. Properly of the Syndicate."
 	crafting_recipe_types = list(
-		/datum/crafting_recipe/blood_worm_mutator_meat,
+		/datum/crafting_recipe/blood_worm_mutator,
 	)
 	icon_state = "book1"
 	uses = INFINITY
@@ -16,7 +16,7 @@
 		"Do not bleed or burn...",
 	)
 
-/datum/crafting_recipe/blood_worm_mutator_meat
+/datum/crafting_recipe/blood_worm_mutator
 	time = 15 SECONDS
 	name = "ominous injector"
 	reqs = list(
@@ -34,12 +34,10 @@
 /obj/item/book/granter/crafting_recipe/blood_worm_recipe/nomeat
 	special_desc = "Creating of injector is not completed, also make sure to not stand near turrets in case to not get killed, do not fall in lava. Properly of the Syndicate."
 	crafting_recipe_types = list(
-		/datum/crafting_recipe/blood_worm_mutator_nomeat,
+		/datum/crafting_recipe/blood_worm_mutator/nomeat,
 	)
 
-/datum/crafting_recipe/blood_worm_mutator_nomeat
-	time = 15 SECONDS
-	name = "ominous injector"
+/datum/crafting_recipe/blood_worm_mutator/nomeat
 	reqs = list(
 		/obj/item/blood_worm_tester = 1,
 		/obj/item/food/monkeycube = 1,
@@ -48,8 +46,6 @@
 		/obj/item/lazarus_injector = 2
 	)
 	result = /obj/effect/spawner/random/blood_worm_mutator
-	category = CAT_MISC
-	crafting_flags = parent_type::crafting_flags | CRAFT_MUST_BE_LEARNED
 
 /obj/effect/spawner/random/blood_worm_mutator
 	name = "ominous injector"
