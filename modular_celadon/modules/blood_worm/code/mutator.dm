@@ -56,7 +56,7 @@
 
 /obj/item/blood_worm_mutator/attack_self(mob/living/user)
 	if(!user)
-		return
+		return FALSE
 	if(spent)
 		user.balloon_alert(user, "already spent!")
 		return FALSE
@@ -79,7 +79,7 @@
 			user.balloon_alert(user, "DNA is not suitable!")
 			return FALSE
 	if (!user.try_inject(user, injection_flags = INJECT_TRY_SHOW_ERROR_MESSAGE))
-		return
+		return FALSE
 	in_use = TRUE
 	user.painful_scream()
 	user.visible_message(span_warning("[user] jabbed himself with [src]."), span_warning("You jabbed yourself with [src] and begin injection."))
@@ -88,6 +88,6 @@
 		user.balloon_alert(user, "interrupted!")
 		playsound(src, 'sound/machines/buzz/buzz-two.ogg', vol = 40, vary = TRUE)
 		in_use = FALSE
-		return
+		return FALSE
 	user.apply_damage(rand(10, 15), BRUTE, def_zone = check_zone(user.zone_selected), wound_bonus = CANT_WOUND, attack_direction = get_dir(user, user), attacking_item = src)
 	return try_wormification(user)
