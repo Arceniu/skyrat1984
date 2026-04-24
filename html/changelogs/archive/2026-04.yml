@@ -17,3 +17,6 @@
   Arceniu:
   - balance: ore redemption machine now get buffs from better parts(servo increase
       points and matter bin + laser increase ore mult, max buff is +30%)
+2026-04-24:
+  DenIS318:
+  - bugfix: Materials dupe from ORM with tiles fixed
