@@ -122,3 +122,4 @@ _maps/RandomRuins/SpaceRuins/nova/des_two.dmm
 #_maps/RandomRuins/SpaceRuins/nova/whiteshipruin_box.dmm
 #_maps/RandomRuins/SpaceRuins/nova/wreckedfriendship.dmm
 #_maps/RandomRuins/SpaceRuins/nova/wreckedhomestead.dmm
+#_maps/RandomRuins/SpaceRuins/nova/geneticsship.dmm
