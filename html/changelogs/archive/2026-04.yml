@@ -713,3 +713,8 @@
 2026-04-24:
   DenIS318:
   - bugfix: Materials dupe from ORM with tiles fixed
+2026-04-25:
+  DenIS318:
+  - balance: Revert "Removes russian revolvers and replaces it with Renard revolvers.
+      Adds 2k to the Greed chappel."
+  - rscadd: Revert "Removed the design for the X-Ray laser"
