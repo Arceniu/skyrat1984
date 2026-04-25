@@ -43,8 +43,6 @@
 	var/justice_state = JUSTICE_IDLE
 	/// Refs to our engines
 	var/list/obj/justice_engines = list()
-	/// UI arrow which directs justice mech during charge
-	var/atom/movable/screen/justice_charge_arrow/charge_arrow
 	/// Track turf to where justice wanna charge while drag right mouse button
 	var/turf/turf_to_charge
 	/// Maximum range of charge attack.
@@ -122,6 +120,7 @@
 	var/datum/hud/user_hud = he_drive.hud_used
 	if(!user_hud)
 		return
+	var/atom/movable/screen/charge_arrow
 	charge_arrow = user_hud.add_screen_object(/atom/movable/screen/justice_charge_arrow, HUD_JUSTICE_ARROW, HUD_GROUP_INFO, update_screen = TRUE)
 	charge_arrow.icon_state = charge_arrow.inactive_icon
 	user_hud.show_hud(user_hud.hud_version)
@@ -162,13 +161,16 @@
 		return
 
 	turf_to_charge = get_turf(target)
+	var/atom/movable/screen/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
 	if(!isnull(turf_to_charge))
 		var/rotate_dir = get_dir(src, turf_to_charge)
-		animate(charge_arrow, transform = matrix(dir2angle(rotate_dir), MATRIX_ROTATE), 0.2 SECONDS)
+		if (charge_arrow)
+			animate(charge_arrow, transform = matrix(dir2angle(rotate_dir), MATRIX_ROTATE), 0.2 SECONDS)
 		dir = rotate_dir
 	else
 		set_charge_mouse_pointer(TRUE)
-	charge_arrow.icon_state = charge_arrow.active_icon
+	if (charge_arrow)
+		charge_arrow.icon_state = charge_arrow.active_icon
 	justice_state = JUSTICE_CHARGE
 	movedelay = MOVEDELAY_PRE_CHARGE
 	remember_strafe = strafe
@@ -196,7 +198,9 @@
 		return
 	set_charge_mouse_pointer()
 	var/rotate_dir = get_dir(src, turf_to_charge)
-	animate(charge_arrow, transform = matrix(dir2angle(rotate_dir), MATRIX_ROTATE), 0.2 SECONDS)
+	var/atom/movable/screen/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
+	if (charge_arrow)
+		animate(charge_arrow, transform = matrix(dir2angle(rotate_dir), MATRIX_ROTATE), 0.2 SECONDS)
 	dir = rotate_dir
 
 /obj/vehicle/sealed/mecha/justice/proc/driver_mouseup(client/source, atom/target, turf/location, control, params)
@@ -211,7 +215,9 @@
 
 	UnregisterSignal(source, COMSIG_CLIENT_MOUSEUP)
 	UnregisterSignal(source, COMSIG_CLIENT_MOUSEDRAG)
-	charge_arrow.icon_state = charge_arrow.inactive_icon
+	var/atom/movable/screen/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
+	if (charge_arrow)
+		charge_arrow.icon_state = charge_arrow.inactive_icon
 	strafe = remember_strafe
 	justice_state = JUSTICE_IDLE
 	movedelay = MOVEDELAY_IDLE
