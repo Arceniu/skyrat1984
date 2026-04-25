@@ -120,7 +120,7 @@
 	var/datum/hud/user_hud = he_drive.hud_used
 	if(!user_hud)
 		return
-	var/atom/movable/screen/charge_arrow
+	var/atom/movable/screen/justice_charge_arrow/charge_arrow
 	charge_arrow = user_hud.add_screen_object(/atom/movable/screen/justice_charge_arrow, HUD_JUSTICE_ARROW, HUD_GROUP_INFO, update_screen = TRUE)
 	charge_arrow.icon_state = charge_arrow.inactive_icon
 	user_hud.show_hud(user_hud.hud_version)
@@ -161,7 +161,7 @@
 		return
 
 	turf_to_charge = get_turf(target)
-	var/atom/movable/screen/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
+	var/atom/movable/screen/justice_charge_arrow/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
 	if(!isnull(turf_to_charge))
 		var/rotate_dir = get_dir(src, turf_to_charge)
 		if (charge_arrow)
@@ -198,7 +198,7 @@
 		return
 	set_charge_mouse_pointer()
 	var/rotate_dir = get_dir(src, turf_to_charge)
-	var/atom/movable/screen/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
+	var/atom/movable/screen/justice_charge_arrow/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
 	if (charge_arrow)
 		animate(charge_arrow, transform = matrix(dir2angle(rotate_dir), MATRIX_ROTATE), 0.2 SECONDS)
 	dir = rotate_dir
@@ -215,7 +215,7 @@
 
 	UnregisterSignal(source, COMSIG_CLIENT_MOUSEUP)
 	UnregisterSignal(source, COMSIG_CLIENT_MOUSEDRAG)
-	var/atom/movable/screen/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
+	var/atom/movable/screen/justice_charge_arrow/charge_arrow = source?.mob?.hud_used?.screen_objects[HUD_JUSTICE_ARROW]
 	if (charge_arrow)
 		charge_arrow.icon_state = charge_arrow.inactive_icon
 	strafe = remember_strafe
