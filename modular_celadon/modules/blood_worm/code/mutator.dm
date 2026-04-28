@@ -41,14 +41,7 @@
 	update_appearance(UPDATE_ICON_STATE | UPDATE_DESC)
 	log_combat(user, user, "wormified", src)
 	var/mob/living/basic/blood_worm/hatchling/uplink/new_worm = new(get_turf(user.loc))
-	if(isjellyperson(user))	//slime people will get fake death
-		user.reagents.add_reagent(/datum/reagent/toxin/zombiepowder, 5)
-		user.apply_damage(300, STAMINA)
-		user.resting = TRUE
-		user.emote("deathgasp")
-		user.stat = DEAD
-	else
-		user.death(FALSE)
+	user.death(FALSE)
 	user.reagents.add_reagent(/datum/reagent/toxin/formaldehyde, 5)
 	user.mind.transfer_to(new_worm, force_key_move = TRUE)
 	to_chat(new_worm, span_userdanger("You are still yourself and keep your mind, if you weren't an antagonist before, you don't become one after using this device."))
@@ -73,6 +66,9 @@
 			user.balloon_alert(user, "Blood not detected!")
 			return FALSE
 		if(IS_CHANGELING(user))
+			user.balloon_alert(user, "DNA is not suitable!")
+			return FALSE
+		if(isjellyperson(user))
 			user.balloon_alert(user, "DNA is not suitable!")
 			return FALSE
 		if(!synthetic_allowed && issynthetic(user))

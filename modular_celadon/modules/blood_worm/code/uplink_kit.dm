@@ -3,7 +3,7 @@
 	desc = "The Syndicate has offered you the chance to upgrade yourself into a blood worm form. \
 		Upon purchase, you'll be granted special DNA injector (not compatible with changelings and species who live without any type of blood). \
 		Additionally, you will be provided with some bloodloss first aid gear and mini fire extinguisher to help you survive after serious paper cut and a light bulb burn. \
-		Now totally safe for slimepersons, theoretically. "
+		Not compatible with slimepersons, No refunds!"
 	item = /obj/item/storage/box/syndicate/blood_worm_kit
 	category = /datum/uplink_category/special
 	cost = 25
