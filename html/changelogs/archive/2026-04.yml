@@ -718,3 +718,7 @@
   - balance: Revert "Removes russian revolvers and replaces it with Renard revolvers.
       Adds 2k to the Greed chappel."
   - rscadd: Revert "Removed the design for the X-Ray laser"
+2026-04-29:
+  Arceniu:
+  - rscadd: Added new bloodworm mutator uplink item
+  - map: Added bloodworm mutator recipe book in IP vault
