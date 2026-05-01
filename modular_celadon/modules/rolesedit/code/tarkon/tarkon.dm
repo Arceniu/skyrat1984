@@ -1,18 +1,39 @@
+//id trims
 /datum/id_trim/away/tarkon
-	assignment = "P-T Visitor"
+	assignment = JOB_TARKON_VISITOR
 	sechud_icon_state = SECHUD_ASSISTANT
 
 /datum/id_trim/away/tarkon/deck
-	assignment = "P-T Deck Worker"
+	assignment = JOB_TARKON_WORKER
 	sechud_icon_state = SECHUD_BRIDGE_ASSISTANT
 
+/datum/id_trim/away/tarkon/cargo
+	assignment = JOB_TARKON_CARGO
+
+/datum/id_trim/away/tarkon/sec
+	assignment = JOB_TARKON_GUARD
+
+/datum/id_trim/away/tarkon/med
+	assignment = JOB_TARKON_MEDIC
+
+/datum/id_trim/away/tarkon/eng
+	assignment = JOB_TARKON_ENGINEER
+
+/datum/id_trim/away/tarkon/sci
+	assignment = JOB_TARKON_RESEARCHER
+
 /datum/id_trim/away/tarkon/robo
-	assignment = "P-T Cyborg Access"
+	assignment = JOB_TARKON_CYBORG_ACCESS
 	sechud_icon_state = SECHUD_ROBOTICIST
 
+/datum/id_trim/away/tarkon/ensign
+	assignment = JOB_TARKON_ENSIGN
+
 /datum/id_trim/away/tarkon/director
+	assignment = JOB_TARKON_DIRECTOR
 	sechud_icon_state = SECHUD_CAPTAIN
 
+//id cards
 /obj/item/card/id/advanced/tarkon
 	name = "Tarkon visitor pass"
 
