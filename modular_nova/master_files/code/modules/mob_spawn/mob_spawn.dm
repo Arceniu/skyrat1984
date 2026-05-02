@@ -42,8 +42,10 @@
 		spawned_human?.equip_outfit_and_loadout(outfit, spawned_mob.client.prefs, FALSE, null, allow_mechanical_loadout_items)
 	else if (!isnull(spawned_human))
 		equip(spawned_human)
-		var/mutable_appearance/character_appearance = new(spawned_human.appearance)
-		GLOB.name_to_appearance[spawned_human.real_name] = character_appearance // Cache this for Character Directory
+		// CELADON REMOVAL START
+		// var/mutable_appearance/character_appearance = new(spawned_human.appearance)
+		// GLOB.name_to_appearance[spawned_human.real_name] = character_appearance // Cache this for Character Directory
+		// CELADON REMOVAL END
 	if (!isnull(spawned_mob)) // Celadon ADDITION
 		after_create_nova(spawned_mob) // Celadon ADDITION
 
