@@ -49,12 +49,28 @@
 	SIGNAL_HANDLER
 	var/datum/action/cooldown/bot_announcement/announcement = blackboard[BB_ANNOUNCE_ABILITY]
 	var/threat_level = 5 || blackboard[BB_CURRENT_CRIMINAL_ASSESSMENT]
-	INVOKE_ASYNC(announcement, TYPE_PROC_REF(/datum/action/cooldown/bot_announcement, announce), "Level [threat_level] infraction alert!")
-	playsound(pawn, pick(
-		'sound/mobs/non-humanoids/beepsky/criminal.ogg',
-		'sound/mobs/non-humanoids/beepsky/justice.ogg',
-		'sound/mobs/non-humanoids/beepsky/freeze.ogg',
-	), 50, FALSE)
+	INVOKE_ASYNC(announcement, TYPE_PROC_REF(/datum/action/cooldown/bot_announcement, announce), "Угроза [threat_level]-го уровня!") // CELADON EDIT, original: INVOKE_ASYNC(announcement, TYPE_PROC_REF(/datum/action/cooldown/bot_announcement, announce), "Level [threat_level] infraction alert!")
+	// CELADON REMOVAL START
+	// playsound(pawn, pick(
+	// 	'sound/mobs/non-humanoids/beepsky/criminal.ogg',
+	// 	'sound/mobs/non-humanoids/beepsky/justice.ogg',
+	// 	'sound/mobs/non-humanoids/beepsky/freeze.ogg',
+	// ), 50, FALSE)
+	// CELADON REMOVAL END
+	// CELADON ADDITION START
+	if(check_holidays(APRIL_FOOLS))
+		playsound(src, pick(
+			'modular_celadon/modules/april_fools_day/beepsky/sounds/gad.ogg',
+			'modular_celadon/modules/april_fools_day/beepsky/sounds/trahnu.ogg',
+			'modular_celadon/modules/april_fools_day/beepsky/sounds/dog_shit.ogg',
+		), 100, FALSE)
+	else
+		playsound(src, pick(
+			'sound/mobs/non-humanoids/beepsky/criminal.ogg',
+			'sound/mobs/non-humanoids/beepsky/justice.ogg',
+			'sound/mobs/non-humanoids/beepsky/freeze.ogg',
+		), 50, FALSE)
+	// CELADON ADDITION END
 	var/mob/living/basic/bot/secbot/my_bot = pawn
 	my_bot.update_bot_mode(new_mode = BOT_HUNT)
 
