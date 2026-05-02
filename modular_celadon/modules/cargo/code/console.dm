@@ -32,31 +32,6 @@
 		VITEZSTVI_AMMO_NAME_CELADON,
 	)
 
-/obj/machinery/computer/cargo/express/ghost/packin_up(forced = FALSE) //we're the ghost role, add the company imports stuff to our express console
-	. = ..()
-
-	if(meme_pack_data["Company Imports"])
-		return
-
-	meme_pack_data["Company Imports"] = list(
-		"name" = "Company Imports",
-		"packs" = list()
-	)
-
-	for(var/armament_category in SSarmaments.entries)
-		for(var/subcategory in SSarmaments.entries[armament_category][CATEGORY_ENTRY])
-			if(armament_category in allowed_categories)
-				for(var/datum/armament_entry/armament_entry as anything in SSarmaments.entries[armament_category][CATEGORY_ENTRY][subcategory])
-					meme_pack_data["Company Imports"]["packs"] += list(list(
-						"name" = "[armament_category]: [armament_entry.name]",
-						"first_item_icon" = armament_entry?.item_type.icon,
-						"first_item_icon_state" = armament_entry?.item_type.icon_state,
-						"cost" = armament_entry.cost,
-						"id" = REF(armament_entry),
-						"description" = armament_entry.description,
-						"desc" = armament_entry.description,
-					))
-
 /obj/machinery/computer/cargo/express/ghost/ui_act(action, params, datum/tgui/ui)
 	if(action == "add") // if we're generating a supply order
 		if (!beacon || !using_beacon ) // checks if using a beacon or not.
