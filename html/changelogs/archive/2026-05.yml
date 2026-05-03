@@ -51,3 +51,9 @@
   - bugfix: fixes blue and green cybernetic cat ears being switched
   - bugfix: fixes an issue where protean genitals were visible as 'cybernetic modifications'
       on health scanners
+2026-05-03:
+  Arceniu:
+  - qol: Added nttc colors/command bold text to ghostroles radio speech - oldstation,
+      tarkon, ds2, interdyne
+  WhiteSnek, Gandalf2k15:
+  - rscadd: Naga once again able to use their turf command
