@@ -23,7 +23,7 @@ CRYO_MIN_SSD_TIME 25
 #LOG_SUBTLER
 
 ## Enables autotransfer system
-AUTOTRANSFER
+# AUTOTRANSFER
 
 ## Enables starting transfer votes by the crew at large.
 ALLOW_VOTE_TRANSFER
