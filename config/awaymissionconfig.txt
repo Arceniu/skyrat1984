@@ -18,3 +18,6 @@ _maps/RandomZLevels/moonoutpost19.dmm
 #_maps/RandomZLevels/mothership_astrum.dmm
 _maps/RandomZLevels/heretic.dmm
 _maps/RandomZLevels/maintsroom.dmm
+
+# Celadon Away Missions
+_maps/RandomZLevels/blackmesa.dmm
