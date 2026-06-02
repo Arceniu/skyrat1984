@@ -2,6 +2,7 @@
 /datum/id_trim/away/tarkon
 	assignment = JOB_TARKON_VISITOR
 	sechud_icon_state = SECHUD_ASSISTANT
+	wildcard_access = list(ACCESS_AWAY_GENERAL, ACCESS_WEAPONS, ACCESS_TARKON)
 
 /datum/id_trim/away/tarkon/deck
 	assignment = JOB_TARKON_WORKER
@@ -15,32 +16,49 @@
 
 /datum/id_trim/away/tarkon/med
 	assignment = JOB_TARKON_MEDIC
+	wildcard_access = list(ACCESS_MEDICAL, ACCESS_AWAY_GENERAL, ACCESS_WEAPONS, ACCESS_TARKON)
 
 /datum/id_trim/away/tarkon/eng
 	assignment = JOB_TARKON_ENGINEER
 
 /datum/id_trim/away/tarkon/sci
 	assignment = JOB_TARKON_RESEARCHER
+	access = list(ACCESS_TARKON, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_WEAPONS)
+	wildcard_access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_WEAPONS, ACCESS_TARKON)
 
 /datum/id_trim/away/tarkon/robo
 	assignment = JOB_TARKON_CYBORG_ACCESS
 	sechud_icon_state = SECHUD_ROBOTICIST
+	wildcard_access = list()
 
 /datum/id_trim/away/tarkon/ensign
 	assignment = JOB_TARKON_ENSIGN
+	access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
+	wildcard_access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
 
 /datum/id_trim/away/tarkon/director
 	assignment = JOB_TARKON_DIRECTOR
 	sechud_icon_state = SECHUD_CAPTAIN
+	access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_TARKON_DIRECTOR, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
+	wildcard_access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_TARKON_DIRECTOR, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
 
 //id cards
 /obj/item/card/id/advanced/tarkon
 	name = "Tarkon visitor pass"
+	wildcard_slots = WILDCARD_LIMIT_AWAY
 
 /obj/item/card/id/advanced/tarkon/deck
 	name = "P-T deck worker's access card"
 	desc = "An access card designated for \"civilians\". You are professional assistant."
 	trim = /datum/id_trim/away/tarkon/deck
+
+/obj/item/card/id/advanced/tarkon/printed
+	name = "Tarkon ID card"
+	desc = "A Port Tarkon ID, A small tagline reading \"Port Tarkon, The first step to Civilian Partnership in Space Homesteading\"."
+	trim = null
+
+/obj/item/card/id/away/tarkonrobo
+	wildcard_slots = WILDCARD_LIMIT_AWAY
 
 //for custom bank machine
 /obj/item/card/id/departmental_budget/tarkon
@@ -76,6 +94,3 @@
 
 /obj/effect/mob_spawn/ghost_role/human/tarkon/director
 	spawner_job_path = /datum/job/tarkon/command
-
-/obj/machinery/computer/cargo/express/ghost/tarkon
-	landingzone = /area/ruin/space/has_grav/port_tarkon/cargo
