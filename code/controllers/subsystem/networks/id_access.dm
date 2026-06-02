@@ -285,6 +285,13 @@ SUBSYSTEM_DEF(id_access)
 		// Celadon ADDITION END
 		centcom_job_templates[trim_path] = trim.assignment
 
+//Celadon Add Start
+	var/list/tarkon_job_trims = typesof(/datum/id_trim/away/tarkon)
+	for(var/trim_path in tarkon_job_trims)
+		var/datum/id_trim/trim = trim_singletons_by_path[trim_path]
+		tarkon_job_templates[trim_path] = trim.assignment
+//Celadon Add End
+
 	var/list/all_pda_paths = typesof(/obj/item/modular_computer/pda)
 	var/list/pda_regions = PDA_PAINTING_REGIONS
 	for(var/pda_path in all_pda_paths)

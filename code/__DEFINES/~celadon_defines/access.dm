@@ -101,6 +101,7 @@
 #define TARKON_DIRECTOR_ACCESS list( \
 	ACCESS_TARKON_DIRECTOR, \
 	ACCESS_AWAY_GENERAL, \
+	ACCESS_AWAY_SCIENCE, \
 	ACCESS_MEDICAL, \
 	ACCESS_ROBOTICS, \
 	ACCESS_WEAPONS, \
@@ -136,3 +137,19 @@
 	WILDCARD_NAME_SYNDICATE = list(limit = -1, usage = list()), \
 	WILDCARD_NAME_AWAY = list(limit = -1, usage = list()) \
 )
+
+/// away
+#define WILDCARD_LIMIT_AWAY list( \
+	WILDCARD_NAME_COMMON = list(limit = 6, usage = list()), \
+	WILDCARD_NAME_AWAY = list(limit = 6, usage = list()) \
+)
+
+// away command
+#define WILDCARD_LIMIT_AWAY_COMMAND list( \
+	WILDCARD_NAME_COMMON = list(limit = 10, usage = list()), \
+	WILDCARD_NAME_COMMAND = list(limit = 4, usage = list()), \
+	WILDCARD_NAME_AWAY = list(limit = 8, usage = list()) \
+)
+//pda painter
+#define PDA_PAINTER_CENTCOM (1<<0)
+#define PDA_PAINTER_TARKON (1<<1)
