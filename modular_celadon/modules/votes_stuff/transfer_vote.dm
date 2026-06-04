@@ -63,3 +63,9 @@
 		choices[CHOICE_CONTINUE] += length(non_voters)
 
 	return ..()
+
+/datum/controller/subsystem/autotransfer/new_shift(real_round_start_time)
+	if(!CONFIG_GET(flag/autotransfer))	// autotransfer enabled?
+		return
+
+	return ..()
