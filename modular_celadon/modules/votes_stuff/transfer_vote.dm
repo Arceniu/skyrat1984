@@ -28,7 +28,13 @@
 		return VOTE_AVAILABLE
 	return "This vote is only accesible after [EARLY_VOTE_FORBID_BEFORE_THRESHOLD_IN_MINS] minutes round time, however after [EARLY_VOTE_FORBID_AFTER_THRESHOLD_IN_MINS] minutes it will be disabled. But, once [LATE_VOTE_ALLOW_THRESHOLD_IN_MINS] minutes is passed, vote is enabled again."
 
+/datum/vote/transfer_vote/is_config_enabled()
+	return CONFIG_GET(flag/allow_vote_transfer)
+
 /datum/vote/transfer_vote/proc/get_available_at_time()
+	if(is_config_enabled())
+		return FALSE
+
 	if (!SSticker || !Master)
 		return FALSE
 
