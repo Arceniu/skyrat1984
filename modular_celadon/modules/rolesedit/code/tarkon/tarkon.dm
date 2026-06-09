@@ -2,44 +2,51 @@
 /datum/id_trim/away/tarkon
 	assignment = JOB_TARKON_VISITOR
 	sechud_icon_state = SECHUD_ASSISTANT
-	wildcard_access = list(ACCESS_AWAY_GENERAL, ACCESS_WEAPONS, ACCESS_TARKON)
+	access = list()
+	wildcard_access = list(ACCESS_TARKON, ACCESS_AWAY_GENERAL, ACCESS_WEAPONS)
 
 /datum/id_trim/away/tarkon/deck
 	assignment = JOB_TARKON_WORKER
 	sechud_icon_state = SECHUD_BRIDGE_ASSISTANT
+	access = list()
 
 /datum/id_trim/away/tarkon/cargo
 	assignment = JOB_TARKON_CARGO
+	access = list()
 
 /datum/id_trim/away/tarkon/sec
 	assignment = JOB_TARKON_GUARD
+	access = list()
 
 /datum/id_trim/away/tarkon/med
 	assignment = JOB_TARKON_MEDIC
-	wildcard_access = list(ACCESS_MEDICAL, ACCESS_AWAY_GENERAL, ACCESS_WEAPONS, ACCESS_TARKON)
+	access = list()
+	wildcard_access = list(ACCESS_AWAY_GENERAL, ACCESS_MEDICAL, ACCESS_WEAPONS)
 
 /datum/id_trim/away/tarkon/eng
 	assignment = JOB_TARKON_ENGINEER
+	access = list()
 
 /datum/id_trim/away/tarkon/sci
 	assignment = JOB_TARKON_RESEARCHER
-	access = list(ACCESS_TARKON, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_WEAPONS)
-	wildcard_access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_WEAPONS, ACCESS_TARKON)
+	access = list()
+	wildcard_access = list(ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_WEAPONS)
 
 /datum/id_trim/away/tarkon/robo
 	assignment = JOB_TARKON_CYBORG_ACCESS
 	sechud_icon_state = SECHUD_ROBOTICIST
-	wildcard_access = list()
+	access = list()
+	wildcard_access = list(ACCESS_ROBOTICS)
 
 /datum/id_trim/away/tarkon/ensign
 	assignment = JOB_TARKON_ENSIGN
-	access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
+	access = list()
 	wildcard_access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
 
 /datum/id_trim/away/tarkon/director
 	assignment = JOB_TARKON_DIRECTOR
 	sechud_icon_state = SECHUD_CAPTAIN
-	access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_TARKON_DIRECTOR, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
+	access = list()
 	wildcard_access = list(ACCESS_TARKON, ACCESS_TARKON_COMMAND, ACCESS_TARKON_DIRECTOR, ACCESS_AWAY_GENERAL, ACCESS_AWAY_SCIENCE, ACCESS_MEDICAL, ACCESS_ROBOTICS, ACCESS_WEAPONS)
 
 //id cards
@@ -88,6 +95,9 @@
 
 /datum/outfit/tarkon/director
 	role_job = /datum/job/tarkon/command
+
+/datum/outfit/tarkon/loot
+	id_trim = null
 
 /obj/effect/mob_spawn/ghost_role/human/tarkon/ensign
 	spawner_job_path = /datum/job/tarkon/command
