@@ -118,6 +118,8 @@
 // 		"Bouncer",
 // 		"Service Guard",
 // 		"Doorman",
+//		"Civil Protection Officer",
+//		"Public Peacekeeper",
 // 	)
 // Celadon REMOVAL END
 
@@ -251,6 +253,8 @@
 // 	alt_titles = list(
 // 		"Customs Agent",
 // 		"Supply Guard",
+//		"Deck Defense Officer",
+//		"Delivery Escort",
 // 	)
 // Celadon REMOVAL END
 
@@ -287,7 +291,14 @@
 		"Registered Nurse",
 	)
 
-// Celadon REMOVAL /datum/job/engineering_guard //see orderly
+// Celadon REMOVAL START
+///datum/job/engineering_guard //see orderly
+//	alt_titles = list(
+//		"Engineering Guard",
+//		"Tide Deterrent",
+//		"Power Plant Guard",
+//		"Construction Guard",
+//	)
 
 /datum/job/geneticist
 	alt_titles = list(
@@ -371,6 +382,7 @@
 // 	alt_titles = list(
 // 		"Orderly",
 // 		"Medical Guard",
+//		"Medical Escort",
 // 	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
 // Celadon REMOVAL END
 
@@ -435,7 +447,14 @@
 		"Apprentice Roboticist",
 	)
 
-// Celadon REMOVAL /datum/job/science_guard //See orderly
+// Celadon REMOVAL START
+///datum/job/science_guard //See orderly
+//	alt_titles = list(
+//		"Science Guard",
+//		"Hazardous Experiment Overwatch",
+//		"Xenobiological Recontainment Officer",
+//		"Expedition Protection Agent",
+//	)
 
 /datum/job/scientist
 	alt_titles = list(

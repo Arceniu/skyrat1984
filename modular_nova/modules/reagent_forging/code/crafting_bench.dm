@@ -385,3 +385,4 @@
 	return .
 
 #undef WEAPON_COMPLETION_WOOD_AMOUNT
+#undef BAD_HIT_PENALTY
