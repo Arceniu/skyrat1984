@@ -545,6 +545,7 @@
 #include "code\__DEFINES\~celadon_defines\atom_hud.dm"
 #include "code\__DEFINES\~celadon_defines\cargo.dm"
 #include "code\__DEFINES\~celadon_defines\colors.dm"
+#include "code\__DEFINES\~celadon_defines\erp_items_dummy.dm"
 #include "code\__DEFINES\~celadon_defines\factions.dm"
 #include "code\__DEFINES\~celadon_defines\job.dm"
 #include "code\__DEFINES\~celadon_defines\prisoner.dm"

@@ -427,7 +427,7 @@
 //	group = "Bunny Suits"
 //	restricted_roles = list(ALL_JOBS_CARGO)
 // CELADON REMOVAL END
-
+/*
 //SEC
 /datum/loadout_item/under/jumpsuit/imphos
 	name = "Head of Security's Naval Uniform"
@@ -519,53 +519,53 @@
 	restricted_roles = list(ALL_JOBS_SEC)
 	group = "Job-Locked"
 
-// CELADON REMOVAL START
-// /datum/loadout_item/under/bunny/sec
-// 	name = "Bunny Suit (Security)"
-// 	item_path = /obj/item/clothing/under/rank/security/security_bunnysuit
-// 	erp_item = TRUE
-// 	group = "Bunny Suits"
-// 	restricted_roles = list(ALL_JOBS_SEC)
 
-// /datum/loadout_item/under/bunny/sec/dept
-// 	name = "Bunny Suit (Deputy)"
-// 	item_path = /obj/item/clothing/under/rank/security/security_assistant_bunnysuit
-// 	erp_item = TRUE
-// 	group = "Bunny Suits"
-// 	restricted_roles = list(ALL_JOBS_SEC)
+/datum/loadout_item/under/bunny/sec
+	name = "Bunny Suit (Security)"
+	item_path = /obj/item/clothing/under/rank/security/security_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SEC)
 
-// /datum/loadout_item/under/bunny/sec/med
-// 	name = "Bunny Suit (SecMed)"
-// 	item_path = /obj/item/clothing/under/rank/security/brig_phys_bunnysuit
-// 	erp_item = TRUE
-// 	group = "Bunny Suits"
-// 	restricted_roles = list(ALL_JOBS_SEC)
+/datum/loadout_item/under/bunny/sec/dept
+	name = "Bunny Suit (Deputy)"
+	item_path = /obj/item/clothing/under/rank/security/security_assistant_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SEC)
 
-// /datum/loadout_item/under/bunny/sec/warden
-// 	name = "Bunny Suit (Warden)"
-// 	item_path = /obj/item/clothing/under/rank/security/warden_bunnysuit
-// 	erp_item = TRUE
-// 	group = "Bunny Suits"
-// 	restricted_roles = list(JOB_WARDEN, JOB_HEAD_OF_SECURITY)
+/datum/loadout_item/under/bunny/sec/med
+	name = "Bunny Suit (SecMed)"
+	item_path = /obj/item/clothing/under/rank/security/brig_phys_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(ALL_JOBS_SEC)
 
-// /datum/loadout_item/under/bunny/sec/det
-// 	name = "Bunny Suit (Detective)"
-// 	item_path = /obj/item/clothing/under/rank/security/detective_bunnysuit
-// 	erp_item = TRUE
-// 	group = "Bunny Suits"
-// 	restricted_roles = list(JOB_DETECTIVE)
+/datum/loadout_item/under/bunny/sec/warden
+	name = "Bunny Suit (Warden)"
+	item_path = /obj/item/clothing/under/rank/security/warden_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 
-// /datum/loadout_item/under/bunny/sec/det/noir
-// 	name = "Bunny Suit (Noir Detective)"
-// 	item_path = /obj/item/clothing/under/rank/security/detective_bunnysuit/noir
-// 	erp_item = TRUE
-// 	group = "Bunny Suits"
-// 	restricted_roles = list(JOB_DETECTIVE)
+/datum/loadout_item/under/bunny/sec/det
+	name = "Bunny Suit (Detective)"
+	item_path = /obj/item/clothing/under/rank/security/detective_bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_DETECTIVE)
 
-///datum/loadout_item/under/bunny/sec/hos
-//	name = "Bunny Suit (Head of Security)"
-//	item_path = /obj/item/clothing/under/rank/security/head_of_security/bunnysuit
-//	erp_item = TRUE
-//	group = "Bunny Suits"
-//	restricted_roles = list(JOB_HEAD_OF_SECURITY)
-// CELADON REMOVAL END
+/datum/loadout_item/under/bunny/sec/det/noir
+	name = "Bunny Suit (Noir Detective)"
+	item_path = /obj/item/clothing/under/rank/security/detective_bunnysuit/noir
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_DETECTIVE)
+
+/datum/loadout_item/under/bunny/sec/hos
+	name = "Bunny Suit (Head of Security)"
+	item_path = /obj/item/clothing/under/rank/security/head_of_security/bunnysuit
+	erp_item = TRUE
+	group = "Bunny Suits"
+	restricted_roles = list(JOB_HEAD_OF_SECURITY)
+*/

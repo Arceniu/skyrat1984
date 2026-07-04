@@ -24,7 +24,7 @@
 
 /obj/projectile/bullet/strilka310/qmhunter/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/bane, mob_biotypes = MOB_BEAST, damage_multiplier = 8)
+	AddComponent(/datum/component/bane, affected_biotypes = MOB_BEAST, damage_multiplier = 8)
 
 /obj/item/ammo_casing/strilka310/qmhunter
 	name = ".310 Strilka hunter bullet casing"
