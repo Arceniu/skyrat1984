@@ -113,12 +113,14 @@
 	)
 
 // Celadon REMOVAL START
-// /datum/job/bouncer
-// 	alt_titles = list(
-// 		"Bouncer",
-// 		"Service Guard",
-// 		"Doorman",
-// 	)
+///datum/job/bouncer
+//	alt_titles = list(
+//		"Bouncer",
+//		"Service Guard",
+//		"Doorman",
+//		"Civil Protection Officer",
+//		"Public Peacekeeper",
+//	)
 // Celadon REMOVAL END
 
 /datum/job/corrections_officer
@@ -247,11 +249,13 @@
 	)
 
 // Celadon REMOVAL START
-// /datum/job/customs_agent
-// 	alt_titles = list(
-// 		"Customs Agent",
-// 		"Supply Guard",
-// 	)
+///datum/job/customs_agent
+//	alt_titles = list(
+//		"Customs Agent",
+//		"Supply Guard",
+//		"Deck Defense Officer",
+//		"Delivery Escort",
+//	)
 // Celadon REMOVAL END
 
 /datum/job/cyborg
@@ -287,7 +291,15 @@
 		"Registered Nurse",
 	)
 
-// Celadon REMOVAL /datum/job/engineering_guard //see orderly
+// Celadon REMOVAL START
+///datum/job/engineering_guard //see orderly
+//	alt_titles = list(
+//		"Engineering Guard",
+//		"Tide Deterrent",
+//		"Power Plant Guard",
+//		"Construction Guard",
+//	)
+// Celadon REMOVAL END
 
 /datum/job/geneticist
 	alt_titles = list(
@@ -367,11 +379,12 @@
 	)
 
 // Celadon REMOVAL START
-// /datum/job/orderly
-// 	alt_titles = list(
-// 		"Orderly",
-// 		"Medical Guard",
-// 	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
+///datum/job/orderly
+//	alt_titles = list(
+//		"Orderly",
+//		"Medical Guard",
+//		"Medical Escort",
+//	) //other dept guards' alt-titles should be kept to [department] guard to avoid confusion, unless the department gets a re-do.
 // Celadon REMOVAL END
 
 /datum/job/paramedic
@@ -435,7 +448,15 @@
 		"Apprentice Roboticist",
 	)
 
-// Celadon REMOVAL /datum/job/science_guard //See orderly
+// Celadon REMOVAL START
+///datum/job/science_guard //See orderly
+//	alt_titles = list(
+//		"Science Guard",
+//		"Hazardous Experiment Overwatch",
+//		"Xenobiological Recontainment Officer",
+//		"Expedition Protection Agent",
+//	)
+// Celadon REMOVAL END
 
 /datum/job/scientist
 	alt_titles = list(
