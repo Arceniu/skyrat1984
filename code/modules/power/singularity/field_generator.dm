@@ -54,7 +54,6 @@ no power level overlay is currently in the overlays list.
 	/// we warm up and cool down instantly
 	var/instantenous = FALSE
 
-	var/shield_floor = TRUE
 /datum/armor/field_generator
 	melee = 25
 	bullet = 10
@@ -350,7 +349,7 @@ no power level overlay is currently in the overlays list.
 
 	connected_gens |= found_generator
 	found_generator.connected_gens |= src
-	if(shield_floor)
+	if(shield_floor)	//CELADON ADD
 		shield_floor(TRUE)
 	update_appearance()
 
