@@ -129,8 +129,10 @@
 
 
 /obj/structure/particle_accelerator/deconstruct(disassembled = TRUE)
-	new /obj/item/stack/sheet/iron (loc, 5)
-	qdel(src)
+	new /obj/item/stack/sheet/iron(loc, 5)
+	new /obj/effect/decal/cleanable/rubble(loc)
+	new /obj/effect/decal/cleanable/plastic(loc)
+	return ..()
 
 /obj/structure/particle_accelerator/Move()
 	. = ..()
