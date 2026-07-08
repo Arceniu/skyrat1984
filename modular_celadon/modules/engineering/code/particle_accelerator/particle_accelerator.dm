@@ -128,7 +128,7 @@
 	return ..()
 
 
-/obj/structure/particle_accelerator/deconstruct(disassembled = TRUE)
+/obj/structure/particle_accelerator/handle_deconstruct(disassembled = TRUE)
 	new /obj/item/stack/sheet/iron(loc, 5)
 	new /obj/effect/decal/cleanable/rubble(loc)
 	new /obj/effect/decal/cleanable/plastic(loc)
