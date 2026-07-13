@@ -9942,6 +9942,7 @@
 #include "modular_celadon\modules\upstream-fixes\aicontroller_ghostize\ai_controller.dm"
 #include "modular_celadon\modules\upstream-fixes\emotes_restrictions\emote.dm"
 #include "modular_celadon\modules\upstream-fixes\hulk_loss_on_death\hulk.dm"
+#include "modular_celadon\modules\upstream-fixes\rnd\server.dm"
 #include "modular_celadon\modules\upstream-fixes\airlock_ntos\airlock_electronics.dm"
 #include "modular_celadon\modules\upstream-fixes\split_slime_icon\action.dm"
 #include "modular_celadon\modules\upstream-fixes\split_slime_icon\jellypeople.dm"
