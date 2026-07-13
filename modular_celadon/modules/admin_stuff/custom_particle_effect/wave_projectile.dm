@@ -44,8 +44,8 @@
 	alpha = 150
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
-	hitsound = 'modular_celadon/modules/admin_spawn_stuff/custom_particle_effect/sound/loud_slash.ogg'
-	hitsound_wall = 'modular_celadon/modules/admin_spawn_stuff/custom_particle_effect/sound/loud_slash.ogg'
+	hitsound = 'modular_celadon/modules/admin_stuff/custom_particle_effect/sound/loud_slash.ogg'
+	hitsound_wall = 'modular_celadon/modules/admin_stuff/custom_particle_effect/sound/loud_slash.ogg'
 	always_impact_on_living = TRUE
 
 	var/effect_on_hit = /datum/status_effect/black_flame
