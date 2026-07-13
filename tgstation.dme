@@ -7256,6 +7256,7 @@
 #include "modular_nova\master_files\code\game\objects\structures\crates_lockers\secure\medical.dm"
 #include "modular_nova\master_files\code\game\objects\structures\crates_lockers\secure\scientist.dm"
 #include "modular_nova\master_files\code\game\objects\structures\plaques\static_plaques.dm"
+#include "modular_nova\master_files\code\game\objects\structures\crates_lockers\secure\security.dm"
 #include "modular_nova\master_files\code\game\objects\structures\signs\signs_maps.dm"
 #include "modular_nova\master_files\code\game\turfs\closed\_closed.dm"
 #include "modular_nova\master_files\code\game\turfs\closed\minerals.dm"
@@ -10100,5 +10101,4 @@
 #include "modular_celadon\modules\weapons_addon\code\solguns\magazines.dm"
 #include "modular_celadon\modules\weapons_addon\code\solguns\pistol.dm"
 #include "modular_celadon\modules\weapons_addon\code\tribal\arrow.dm"
-#include "modular_nova\master_files\code\game\objects\structures\crates_lockers\secure\security.dm" // have to place it here for proper double stuff
 // END_INCLUDE
