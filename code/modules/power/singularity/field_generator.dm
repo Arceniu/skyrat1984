@@ -349,8 +349,7 @@ no power level overlay is currently in the overlays list.
 
 	connected_gens |= found_generator
 	found_generator.connected_gens |= src
-	if(shield_floor)	//CELADON ADD
-		shield_floor(TRUE)
+	shield_floor(TRUE)
 	update_appearance()
 
 

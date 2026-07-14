@@ -27,9 +27,6 @@
 /obj/effect/temp_visual/hawking_radiation
 	icon_state = "electricity"
 
-/obj/machinery/field/generator/singularity
-	shield_floor = FALSE
-
 /obj/singularity
 	invisibility = INVISIBILITY_OBSERVER
 

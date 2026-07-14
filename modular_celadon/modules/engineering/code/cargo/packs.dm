@@ -32,6 +32,6 @@
 /datum/supply_pack/engine/tesla_gen
 	name = "Tesla Generator Crate"
 	desc = "The key to unlocking the power of the Tesla energy ball. Particle Accelerator not included."
-	cost = 25000 // bullshit 25k
+	cost = 25000
 	contains = list(/obj/machinery/singularity_generator/tesla)
 	crate_name = "tesla generator crate"
