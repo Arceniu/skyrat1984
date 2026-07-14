@@ -289,6 +289,7 @@
 	)
 	template_access = list(
 		ACCESS_CENT_LIVING,
+		ACCESS_CHANGE_IDS,
 		ACCESS_CAPTAIN,
 	)
 	job = /datum/job/blueshield
