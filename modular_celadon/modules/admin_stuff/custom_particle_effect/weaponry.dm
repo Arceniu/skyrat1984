@@ -22,7 +22,7 @@
 	action_slots = ITEM_SLOT_HANDS
 
 	var/slash_color_primary = COLOR_DARK_RED // used both for slash and particles
-	var/slash_sound = 'modular_celadon/modules/admin_spawn_stuff/custom_particle_effect/sound/loud_slash.ogg'
+	var/slash_sound = 'modular_celadon/modules/admin_stuff/custom_particle_effect/sound/loud_slash.ogg'
 	var/next_attack_time = 0
 	var/particle_over_slash = /particles/custom_effect/two_color_darkred_black/intense
 	var/particle_for_owner_on_slash = /particles/custom_effect/two_color_darkred_black
