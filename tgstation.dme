@@ -529,7 +529,7 @@
 #include "code\__DEFINES\~celadon_defines\colors.dm"
 #include "code\__DEFINES\~celadon_defines\economy.dm"
 #include "code\__DEFINES\~celadon_defines\factions.dm"
-#include "code\__DEFINES\~celadon_defines\job.dm"
+#include "code\__DEFINES\~celadon_defines\jobs.dm"
 #include "code\__DEFINES\~celadon_defines\particle_accelerator.dm"
 #include "code\__DEFINES\~celadon_defines\preferences.dm"
 #include "code\__DEFINES\~celadon_defines\prisoner.dm"
