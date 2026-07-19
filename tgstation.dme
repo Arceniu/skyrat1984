@@ -9988,6 +9988,7 @@
 #include "modular_celadon\modules\rolesedit\code\blackmarket\trader.dm"
 #include "modular_celadon\modules\rolesedit\code\cargodiselost\cargodise.dm"
 #include "modular_celadon\modules\rolesedit\code\centcom\crew\_access_override.dm"
+#include "modular_celadon\modules\rolesedit\code\centcom\crew\card.dm"
 #include "modular_celadon\modules\rolesedit\code\centcom\ert\deathsquad.dm"
 #include "modular_celadon\modules\rolesedit\code\centcom\ert\nanotrasen_ert.dm"
 #include "modular_celadon\modules\rolesedit\code\jobs\blueshield.dm"
