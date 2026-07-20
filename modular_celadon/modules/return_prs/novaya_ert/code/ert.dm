@@ -549,8 +549,19 @@
 	id_trim = /datum/id_trim/nri/diplomat/doctor
 
 /datum/outfit/centcom/ert/nri/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	return
-	//Two reasons for this; one, Russians aren't NT and dont need implants used mostly for NT-sympathizers. Two, the HUD looks ugly with the blue mindshield outline.
+	if(visuals_only)
+		return
+
+	var/obj/item/radio/headset/R = H.ears
+	if(additional_radio)
+		R.keyslot2 = new additional_radio()
+		R.recalculateChannels()
+
+	var/obj/item/card/id/W = H.wear_id
+	if(W)
+		W.registered_name = H.real_name
+		W.update_label()
+		W.update_icon()
 
 //outfits end
 //id start
