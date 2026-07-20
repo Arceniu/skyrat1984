@@ -548,7 +548,7 @@
 	id = /obj/item/card/id/advanced/centcom/ert/nri
 	id_trim = /datum/id_trim/nri/diplomat/doctor
 
-/datum/outfit/centcom/ert/nri/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/centcom/ert/nri/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	if(visuals_only)
 		return
 
