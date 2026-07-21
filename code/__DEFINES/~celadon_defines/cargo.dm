@@ -15,3 +15,6 @@
 #define EXPORT_MARKET_DS_INTERDYNE "ds_interdyne"
 #define EXPORT_MARKET_TARKON "tarkon"
 #define EXPORT_MARKET_BLACKMARKET "blackmarket" // some "fallback" market for very weird cases
+
+//keep updated with code\__DEFINES\~nova_defines\cargo.dm
+#define CARGO_CONSOLE_NT_CENTCOM		(1<<6)
