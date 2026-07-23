@@ -1,3 +1,5 @@
+//casings
+
 /obj/item/ammo_casing/energy/electrode
 	e_cost = LASER_SHOTS(15, STANDARD_CELL_CHARGE)
 	delay = 15
@@ -7,6 +9,7 @@
 	projectile_type = /obj/item/ammo_casing/energy/electrode/old_electrode
 	delay = 0
 
+//projectiles
 /obj/projectile/energy/electrode
 	apply_tase_effect = FALSE
 	show_beam_effect = FALSE
@@ -24,3 +27,8 @@
 	paralyze = 0 SECONDS // all that stuff handled by tase effect
 	stutter = 0 SECONDS
 	jitter = 0 SECONDS
+
+//melee
+/obj/item/melee/baton/security/cattleprod
+	knockdown_time = 1 // 1 tick, original 1.5 SECONDS (30 ticks), keep in mind that there's also time gap to get up after knockdown
+	w_class = WEIGHT_CLASS_NORMAL

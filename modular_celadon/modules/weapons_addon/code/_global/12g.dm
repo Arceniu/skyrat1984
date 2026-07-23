@@ -1,12 +1,12 @@
-/obj/item/gun/ballistic/shotgun/katyusha
-	fire_delay = 0.55 SECONDS
-
+// tg variant
 /obj/projectile/bullet/shotgun_slug
-	// tg variant
 	damage = 25
 	armour_penetration = 30
 	wound_bonus = 0
 	exposed_wound_bonus = 15
+
+/obj/projectile/bullet/shotgun_slug/hunter
+	biotype_damage_multiplier = 4
 
 /obj/projectile/bullet/shotgun_slug/milspec
 	damage = 50
@@ -54,3 +54,4 @@
 
 /datum/embedding/bullet/flechette
 	embed_chance = 25
+
