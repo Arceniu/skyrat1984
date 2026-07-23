@@ -10098,5 +10098,6 @@
 #include "modular_celadon\modules\weapons_addon\code\solfed\gun.dm"
 #include "modular_celadon\modules\weapons_addon\code\solfed\magazine.dm"
 #include "modular_celadon\modules\weapons_addon\code\solfed\projectile.dm"
+#include "modular_celadon\modules\weapons_addon\code\syndicate\gun.dm"
 #include "modular_celadon\modules\weapons_addon\code\tribal\arrow.dm"
 // END_INCLUDE
