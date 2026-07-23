@@ -23,6 +23,3 @@
 
 /obj/projectile/bullet/c38/iceblox
 	damage = 20
-
-/obj/projectile/bullet/c38/haywire
-	damage = 20
