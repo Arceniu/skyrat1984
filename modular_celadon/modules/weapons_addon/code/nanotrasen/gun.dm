@@ -70,9 +70,6 @@ all of(/obj/item/gun/ballistic/automatic/ar)
 /obj/item/gun/ballistic/automatic/gyropistol/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)
 
-/obj/item/gun/ballistic/automatic/pistol/em1911/give_manufacturer_examine()
-	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)
-
 //list of pistols
 /*
 /obj/item/gun/ballistic/automatic/gyropistol

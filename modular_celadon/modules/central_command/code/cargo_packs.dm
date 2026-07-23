@@ -150,9 +150,7 @@
 	desc = "A special laser pistol, designed to look like the M1911. Specially made for NanoTasen Officials."
 	cost = CARGO_CRATE_VALUE * 100
 	contains = list(
-		/obj/item/gun/ballistic/automatic/pistol/em1911,
-		/obj/item/ammo_box/magazine/recharge/m1911 = 2,
-		/obj/item/ammo_box/magazine/recharge/m1911/disabler = 2,
+		/obj/item/storage/toolbox/guncase/nova/ntspecial/pistol/ntc,
 	)
 	access = ACCESS_CENT_OFFICIAL
 	access_view = ACCESS_CENT_OFFICIAL
