@@ -179,10 +179,10 @@ const FilterItemList = (items: LoadoutItem[]) => {
 
   return items.filter((item: LoadoutItem) => {
     if (item.ckey_whitelist && item.ckey_whitelist.indexOf(ckey) === -1) {
-      return false;
+      return true;// Celadon EDIT : original return false;
     }
     if (item.donator_only && !is_donator) {
-      return false;
+      return true;// Celadon EDIT : original return false;
     }
     if (nova_star_restrictions && item.nova_stars_only && !is_nova_star) {
       return false;
