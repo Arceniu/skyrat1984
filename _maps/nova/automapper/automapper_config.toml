@@ -100,8 +100,8 @@ coordinates = [157, 156, 1]
 trait_name = "Station"
 
 # METASTATION CELADON brigmed
-[templates.metastation_celadon_celadon_brigmed]
-map_files = ["metastation_celadon_celadon_brigmed.dmm"]
+[templates.metastation_celadon_brigmed]
+map_files = ["metastation_celadon_brigmed.dmm"]
 directory = "_maps/nova/automapper/templates/metastation/"
 required_map = "MetaStation.dmm"
 coordinates = [94, 170, 1]
@@ -302,7 +302,7 @@ coordinates = [134, 145, 3]
 trait_name = "Station"
 
 # ICEBOX CELADON brigmed
-[templates.icebox_celadon_celadon_brigmed]
+[templates.icebox_celadon_brigmed]
 map_files = ["icebox_celadon_brigmed.dmm"]
 directory = "_maps/nova/automapper/templates/icebox/"
 required_map = "IceBoxStation.dmm"
@@ -383,8 +383,8 @@ coordinates = [115, 99, 1]
 trait_name = "Station"
 
 # Tramstation CELADON brigmed
-[templates.tramstation_celadon_celadon_brigmed]
-map_files = ["tramstation_celadon_celadon_brigmed.dmm"]
+[templates.tramstation_celadon_brigmed]
+map_files = ["tramstation_celadon_brigmed.dmm"]
 directory = "_maps/nova/automapper/templates/tramstation/"
 required_map = "tramstation.dmm"
 coordinates = [60, 151, 2]
