@@ -302,7 +302,7 @@ coordinates = [134, 145, 3]
 trait_name = "Station"
 
 # ICEBOX CELADON brigmed
-[templates.icebox_celadon_celadon_brigmed]
+[templates.icebox_celadon_brigmed]
 map_files = ["icebox_celadon_brigmed.dmm"]
 directory = "_maps/nova/automapper/templates/icebox/"
 required_map = "IceBoxStation.dmm"
