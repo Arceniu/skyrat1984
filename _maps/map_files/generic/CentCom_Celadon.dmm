@@ -1465,7 +1465,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
 /obj/machinery/button/door/indestructible{
-	id = "CCSFerry";
+	id = "CCFerry";
 	name = "Hanger Bay Shutters";
 	pixel_y = -38
 	},
@@ -14012,7 +14012,7 @@
 /area/centcom/central_command_areas/security)
 "WJ" = (
 /obj/machinery/button/door/indestructible{
-	id = "CCSFerry";
+	id = "CCFerry";
 	name = "Hanger Bay Shutters";
 	pixel_y = 24;
 	req_access = list("cent_general")
