@@ -36,7 +36,7 @@
 
 Name = Developer
 Include = SERVER DEBUG POLL VAREDIT SPAWN ADMIN
-Exclude = AUTOLOGIN AUTOADMIN
+Exclude = AUTOADMIN
 Edit =
 
 Name = Eventologist
