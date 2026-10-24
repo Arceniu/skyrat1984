@@ -40,8 +40,8 @@ Exclude = AUTOLOGIN AUTOADMIN
 Edit =
 
 Name = Eventologist
-Include = BUILDMODE BUILD ADMIN FUN SERVER POSSESS POLL VAREDIT SOUND SPAWN
-Exclude = AUTOLOGIN AUTOADMIN
+Include = BUILD ADMIN FUN SERVER POSSESS POLL VAREDIT SOUND SPAWN
+Exclude = AUTOADMIN
 Edit =
 
 Name = Discord Moderator
@@ -50,7 +50,7 @@ Exclude =
 Edit =
 
 Name = Mentor
-Include = AUTOLOGIN AUTOADMIN
+Include = AUTOADMIN
 Exclude =
 Edit =
 
@@ -65,7 +65,7 @@ Exclude =
 Edit =
 
 Name = Admin
-Include = @ BUILDMODE BUILD FUN SERVER DEBUG POSSESS STEALTH POLL SOUND
+Include = @ BUILD FUN SERVER DEBUG POSSESS STEALTH POLL SOUND
 Exclude =
 Edit =
 
