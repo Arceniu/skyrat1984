@@ -109,7 +109,7 @@
 /datum/loadout_item/gloves/pink_clown_gloves
 	name = "Pink Clown Gloves"
 	item_path = /obj/item/clothing/gloves/pink_clown
-
+	
 /datum/loadout_item/gloves/recolorable
 	name = "Gloves (Colorable)"
 	item_path = /obj/item/clothing/gloves/recolorable
@@ -117,11 +117,11 @@
 /datum/loadout_item/gloves/recolorable_fingerless
 	name = "Fingerless Gloves (Colorable)"
 	item_path = /obj/item/clothing/gloves/recolorable/fingerless
-
+	
 /datum/loadout_item/gloves/recolorable_long
 	name = "Long Gloves (Colorable)"
 	item_path = /obj/item/clothing/gloves/recolorable/long
-
+	
 /datum/loadout_item/gloves/recolorable_fingerless_long
 	name = "Long Fingerless Gloves (Colorable)"
 	item_path = /obj/item/clothing/gloves/recolorable/fingerless/long
