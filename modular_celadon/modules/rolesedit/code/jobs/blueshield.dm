@@ -125,6 +125,7 @@
 	wound = 15
 
 /obj/item/clothing/head/beret/blueshield
+	icon_state = "beret_badge_police"
 	armor_type = /datum/armor/helmet_blueshield
 
 /datum/armor/cosmetic_blueshield
