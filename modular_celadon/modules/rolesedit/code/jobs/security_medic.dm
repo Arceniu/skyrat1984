@@ -133,7 +133,7 @@
 /obj/effect/landmark/start/security_medic
 	name = "Security Medic"
 	icon_state = "Security Medic"
-	icon = 'modular_nova/master_files/icons/mob/landmarks.dmi'
+	icon = 'modular_celadon/master_files/icons/mob/landmarks.dmi'
 
 /datum/area_spawn/secmed_landmark
 	target_areas = list(/area/station/security/medical, /area/station/security/brig)

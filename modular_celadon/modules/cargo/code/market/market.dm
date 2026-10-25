@@ -10,9 +10,9 @@
 	desc = "An legal military uplink. Used by ERT's."
 	icon_state = "bs_beacon"
 	inhand_icon_state = "bs_beacon"
-	icon = 'modular_celadon/modules/cargo/icons/remote.dmi'
-	lefthand_file = 'modular_celadon/modules/cargo/icons/lefthand_remote.dmi'
-	righthand_file = 'modular_celadon/modules/cargo/icons/righthand_remote.dmi'
+	icon = 'modular_celadon/master_files/icons/remote.dmi'
+	lefthand_file = 'modular_celadon/master_files/icons/inhand/mobs/lefthand_remote.dmi'
+	righthand_file = 'modular_celadon/master_files/icons/inhand/mobs/righthand_remote.dmi'
 	accessible_markets = list(/datum/market/blueshield)
 
 /obj/item/market_uplink/blueshield/ui_interact(mob/user, datum/tgui/ui)
