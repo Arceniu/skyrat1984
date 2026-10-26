@@ -9991,8 +9991,6 @@
 #include "modular_celadon\modules\qol_casual_celadon\rad_collectors_research\engineering_nodes.dm"
 #include "modular_celadon\modules\qol_casual_celadon\whetstone_vendor\drinnerware.dm"
 #include "modular_celadon\modules\qol_casual_celadon\wooden_tv_construction\computer_circuitboards.dm"
-#include "modular_celadon\modules\reboot_callbacks\code\game\callback_procs.dm"
-#include "modular_celadon\modules\reconnect-fix\reconnect_procs.dm"
 #include "modular_celadon\modules\restrict-species\restrict_species.dm"
 #include "modular_celadon\modules\return_prs\_vars\vars.dm"
 #include "modular_celadon\modules\return_prs\afad_medbeam\afad.dm"
