@@ -68,6 +68,7 @@ GLOBAL_PROTECT(exp_to_update)
 
 /datum/controller/subsystem/blackbox/proc/update_exp(mins)
 	if(!SSdbcore.Connect())
+		message_admins("No connection to SSdbcore in update_exp proc")
 		return -1
 	for(var/client/L in GLOB.clients)
 		if(L.is_afk())
@@ -75,6 +76,7 @@ GLOBAL_PROTECT(exp_to_update)
 		L.update_exp_list(mins)
 
 /datum/controller/subsystem/blackbox/proc/update_exp_db()
+	message_admins("send an update exp db proc to blackbox")
 	set waitfor = FALSE
 	var/list/old_minutes = GLOB.exp_to_update
 	GLOB.exp_to_update = null
@@ -147,10 +149,13 @@ GLOBAL_PROTECT(exp_to_update)
  */
 /client/proc/update_exp_list(minutes)
 	if(!CONFIG_GET(flag/use_exp_tracking))
+		message_admins("config disabled for update_exp_list")
 		return -1
 	if(!SSdbcore.Connect())
+		message_admins("No connection to SSdbcore in update_exp_list proc")
 		return -1
 	if (!isnum(minutes))
+		message_admins("Not a number in update_exp_list proc part one")
 		return -1
 
 	var/list/play_records = list()
@@ -178,6 +183,7 @@ GLOBAL_PROTECT(exp_to_update)
 		if (!jvalue)
 			continue
 		if (!isnum(jvalue))
+			message_admins("Not a number in update_exp_list proc part two-crash")
 			CRASH("invalid job value [jtype]:[jvalue]")
 		LAZYINITLIST(GLOB.exp_to_update)
 		GLOB.exp_to_update.Add(list(list(
