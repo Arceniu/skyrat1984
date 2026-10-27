@@ -451,9 +451,8 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 	if (!table || !rows || !istype(rows))
 		return
 
-	if(table = (format_table_name("role_time")))
-		message_admins("send an mass insert command to dbcore")
-
+	if(table)
+		message_admins("send table to dbcore")
 
 	// Prepare column list
 	var/list/columns = list()

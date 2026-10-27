@@ -76,8 +76,8 @@ GLOBAL_PROTECT(exp_to_update)
 		L.update_exp_list(mins)
 
 /datum/controller/subsystem/blackbox/proc/update_exp_db()
-	message_admins("send an update exp db proc to blackbox")
 	set waitfor = FALSE
+	message_admins("send an update exp db proc to blackbox")
 	var/list/old_minutes = GLOB.exp_to_update
 	GLOB.exp_to_update = null
 	SSdbcore.MassInsert(format_table_name("role_time"), old_minutes, duplicate_key = "ON DUPLICATE KEY UPDATE minutes = minutes + VALUES(minutes)")
