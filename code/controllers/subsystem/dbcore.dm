@@ -519,7 +519,7 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 
 	ASSERT(fexists(daemon), "Configured db_daemon doesn't exist")
 
-	var/list/result = world.shelleo("echo \"Starting ezdb daemon, do not close this window\" && [daemon]")
+	var/list/result = world.shelleo(SHELLEO_COMMAND_DMSTART)
 	var/result_code = result[1]
 	if (!result_code || result_code == 1)
 		return
@@ -540,10 +540,10 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 
 	switch (world.system_type)
 		if (MS_WINDOWS)
-			var/list/result = world.shelleo("Get-Process | ? { $_.Path -eq '[daemon]' } | Stop-Process")
+			var/list/result = world.shelleo(command_type = SHELLEO_COMMAND_DMSTOPMSWINDOWS)
 			ASSERT(result[1], "Failed to stop DB daemon: [result[3]]")
 		if (UNIX)
-			var/list/result = world.shelleo("kill $(pgrep -f '[daemon]')")
+			var/list/result = world.shelleo(command_type = SHELLEO_COMMAND_DMSTOPUNIX)
 			ASSERT(result[1], "Failed to stop DB daemon: [result[3]]")
 
 /datum/db_query
